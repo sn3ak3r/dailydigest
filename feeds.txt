@@ -1,0 +1,23 @@
+# security
+https://krebsonsecurity.com/feed/
+https://www.bleepingcomputer.com/feed/
+https://feeds.feedburner.com/TheHackersNews
+https://www.darkreading.com/rss.xml
+https://rss.arxiv.org/rss/cs.CR
+https://blog.talosintelligence.com/rss/
+https://googleprojectzero.blogspot.com/feeds/posts/default
+
+# gaming
+https://www.rockpapershotgun.com/feed
+https://www.eurogamer.net/feed
+https://www.pcgamer.com/rss/
+
+# science
+https://www.quantamagazine.org/feed/
+https://phys.org/rss-feed/
+https://feeds.arstechnica.com/arstechnica/science
+
+# projects
+https://hackaday.com/feed
+https://news.ycombinator.com/rss
+https://lobste.rs/rss
