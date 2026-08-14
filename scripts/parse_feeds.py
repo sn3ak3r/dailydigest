@@ -6,6 +6,8 @@ from pathlib import Path
 UA = {"User-Agent": "Mozilla/5.0 (compatible; digest-bot/1.0)"}
 ROOT = Path(__file__).resolve().parent.parent
 
+
+
 def tag(el): return el.tag.split("}")[-1]
 
 def parse(xml_bytes):
@@ -32,7 +34,7 @@ def main():
     items = []
     for url in feeds:
         try:
-            req = urllib.request.Request(url, headers=UA)
+            req = urllib.request.Request(url, headers={**UA, "Accept": "application/rss+xml, application/xml, text/xml, */*"})
             got = parse(urllib.request.urlopen(req, timeout=20).read())
             print(f"OK   {len(got):3d}  {url}", file=sys.stderr)
             items += [dict(i, feed=url) for i in got]
