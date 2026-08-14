@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Mini Crackme: x86-64 (Windows)</title><link></link><description>Find the 32-bit value that must be passed in ecx for `check` to return 1.
+
+check:
+    mov     eax, ecx
+    xor     eax, 5Ah
+    cmp     eax, 1Ah
+    jne     fail
+    mov     eax, 1
+    ret
+fail:
+    xor     eax, eax
+    ret
+
+Answer: ecx = 0x40 (64 decimal).
+
+1. eax is loaded with ecx, then XOR&#x27;d with 0x5A; the branch only avoids fail when that result equals 0x1A.
+2. So we need ecx ^ 0x5A == 0x1A. XOR is its own inverse, so ecx = 0x1A ^ 0x5A = 0x40.
+3. With ecx = 0x40, eax becomes 0x1A, the cmp/jne falls through, and eax is set to 1 before ret.</description><guid isPermaLink='false'>2026-08-14</guid><pubDate>Fri, 14 Aug 2026 21:24:56 +0000</pubDate></item></channel></rss>
