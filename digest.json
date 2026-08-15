@@ -1,62 +1,52 @@
 [
   {
-    "title": "Microsoft patches LegacyHive Windows zero-day vulnerability",
-    "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-legacyhive-windows-zero-day-vulnerability/",
-    "guid": "https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-legacyhive-windows-zero-day-vulnerability/",
-    "blurb": "**Problem:** Windows' User Profile Service had a privilege-escalation hole \u2014 a normal user shouldn't become admin unassisted.\n\n**Approach:** An attacker with a second local account edits the classes registry hive so it points somewhere it shouldn't (\"link following\"). When an admin next logs in, Windows resolves that link and runs the attacker's code with admin rights \u2014 no click needed.\n\n**Result:** Any authenticated local user could escalate to admin. Microsoft patched it in August's Patch Tuesday as CVE-2026-62832.\n\n**Why it matters:** It's one of several zero-days from the same researcher hitting Defender, BitLocker, and other core Windows pieces \u2014 worth watching for chained attacks.\n\n**Glossary:** Privilege escalation, link following, registry hive, CVE."
+    "title": "Full-Key Recovery and Forgery from One MQOM v2.1 Signature",
+    "link": "https://arxiv.org/abs/2608.09699",
+    "blurb": "A full key-recovery break of a post-quantum signature scheme — a reminder that new PQC candidates need years of cryptanalysis before they can be trusted."
   },
   {
-    "title": "Dissecting the JWR phishing framework",
-    "link": "https://blog.talosintelligence.com/dissecting-the-jwr-phishing-framework/",
-    "guid": "6a79d3482311cb00014d9d07",
-    "blurb": "**Problem:** How do modern phishing-as-a-service kits actually work under the hood?\n\n**Approach:** Talos reverse-engineered JWR, a live kit impersonating Shopify, PayPal, Apple, and Klarna checkouts. A script on the fake page opens a persistent WebSocket to the attacker's server, encrypted with AES-CTR, relaying commands into a Vue-based iframe that renders the phishing form.\n\n**Result:** Victims' keystrokes stream to the operator live, letting a human react in real time. The kit harvests IDs, SSNs, 2FA codes, and device fingerprints via 40+ operator commands, and was pushed by SMS smishing across Southeast Asia and the Middle East.\n\n**Why it matters:** Live, human-operated phishing beats static credential pages and slips past automated defenses built for the old kind.\n\n**Glossary:** PhaaS, WebSocket, AES-CTR, smishing."
+    "title": "InSPECtor: Improving SLEIGH Processor Specification Veracity via Proxy",
+    "link": "https://arxiv.org/abs/2608.13042",
+    "blurb": "Checks whether Ghidra's SLEIGH processor specs actually match real hardware behavior — errors here silently corrupt every disassembly built on top of them."
   },
   {
-    "title": "Akira hackers disable EDR with Safe Mode, steal data but fail to encrypt",
-    "link": "https://www.bleepingcomputer.com/news/security/akira-hackers-disable-edr-with-safe-mode-steal-data-but-fail-to-encrypt/",
-    "guid": "https://www.bleepingcomputer.com/news/security/akira-hackers-disable-edr-with-safe-mode-steal-data-but-fail-to-encrypt/",
-    "blurb": "Ransomware crew disabling EDR by booting into Windows Safe Mode shows attackers adapting faster than detection tooling."
+    "title": "Critical VMware vCenter RCE flaw exploited for reverse SSH access",
+    "link": "https://www.bleepingcomputer.com/news/security/critical-vmware-vcenter-rce-flaw-exploited-for-reverse-ssh-access/",
+    "blurb": "**Problem:** vCenter Server, VMware's central console for managing virtual infrastructure, had a critical directory-traversal bug in its Syslog Server component — letting an unauthenticated network attacker run code.\n\n**Approach:** Attackers exploit the traversal flaw for initial access, then drop the open-source `reverse_ssh` tool to open an outbound tunnel home, slipping past firewalls built to block inbound connections.\n\n**Result:** Broadcom patched vCenter 9.1/9.0/8.0 on August 3. Within five days, 343+ compromised IPs across dozens of countries were already seen, and the count kept climbing.\n\n**Why it matters:** vCenter runs the infrastructure that runs everything else — one flaw here can cascade into every VM it manages.\n\n**Glossary:** Directory traversal, RCE, reverse SSH, CVE."
   },
   {
-    "title": "Netflix closes Oxenfree developer Night School, a month after praising its new game",
-    "link": "https://www.pcgamer.com/gaming-industry/netflix-closes-oxenfree-developer-night-school-just-a-month-after-praising-its-new-game-as-one-of-the-companys-most-successful-cloud-game-debuts/",
-    "guid": "dVg7aJsn2iYiCtpAFUSUjN",
-    "blurb": "A month after praise, Netflix shutters Oxenfree's studio \u2014 platform investment in games remains fickle."
+    "title": "US Senate launches investigation into Roblox: 'Children on your platform are hurting. Congress will not look the other way'",
+    "link": "https://www.pcgamer.com/software/platforms/us-senate-launches-investigation-into-roblox-children-on-your-platform-are-hurting-congress-will-not-look-the-other-way/",
+    "blurb": "Congress is turning regulatory pressure on Roblox over child safety — the kind of scrutiny that can reshape how platforms handle minors going forward."
   },
   {
-    "title": "If you're not paying attention to retro game recompilations, you're missing the most exciting thing in gaming right now",
-    "link": "https://www.pcgamer.com/gaming-industry/if-youre-not-paying-attention-to-retro-game-recompilations-youre-missing-the-most-exciting-thing-in-gaming-right-now/",
-    "guid": "7ZpNAs5kn8NE7BqVUtaWKj",
-    "blurb": "Static recompilation is quietly becoming the best way to preserve and modernize old games' original code."
+    "title": "Twitch are scraping streams for AI training by default, and even their own execs don't know what user data may have been swept up",
+    "link": "https://www.rockpapershotgun.com/twitch-are-scraping-streams-for-ai-training-by-default-and-even-their-own-execs-dont-know-what-user-data-may-have-been-swept-up",
+    "blurb": "An opt-out AI-training policy on livestreams that most creators never noticed raises fresh questions about what platforms can quietly do with your content."
   },
   {
-    "title": "Have physicists finally discovered glueballs? New evidence points to yes.",
-    "link": "https://arstechnica.com/science/2026/08/have-physicists-finally-discovered-glueballs-new-evidence-points-to-yes/",
-    "guid": "https://arstechnica.com/science/2026/08/have-physicists-finally-discovered-glueballs-new-evidence-points-to-yes/",
-    "blurb": "New evidence for a decades-predicted particle made of pure force could confirm a key QCD prediction."
+    "title": "Wheat gene behind Hessian fly resistance cloned after 50-year search",
+    "link": "https://phys.org/news/2026-08-wheat-gene-hessian-fly-resistance.html",
+    "blurb": "Pinning down the actual gene lets breeders engineer resistant wheat directly instead of guessing through decades of crossbreeding."
   },
   {
-    "title": "We've flown a radiation-blocking vest to the Moon and back, and it worked",
-    "link": "https://arstechnica.com/science/2026/08/weve-flown-a-radiation-blocking-vest-to-the-moon-and-back-and-it-worked/",
-    "guid": "https://arstechnica.com/science/2026/08/weve-flown-a-radiation-blocking-vest-to-the-moon-and-back-and-it-worked/",
-    "blurb": "A radiation-blocking vest flown to the Moon and back is a real data point for protecting future lunar astronauts."
+    "title": "New findings overturn 100-year-old assumption about common bacteria in the lungs",
+    "link": "https://phys.org/news/2026-08-overturn-year-assumption-common-bacteria.html",
+    "blurb": "A century-old textbook assumption about lung bacteria turns out to be wrong, with implications for how respiratory disease gets studied."
   },
   {
-    "title": "Automatic Naptime with BabyBjorn Bouncing Servo",
-    "link": "https://hackaday.com/2026/08/14/automatic-naptime-with-babybjorn-bouncing-servo/",
-    "guid": "https://hackaday.com/?p=1138550",
-    "blurb": "A DIY servo rig automates a bouncy baby seat \u2014 a fun, well-documented build for parents who hack."
+    "title": "Unlocking _everything_ on the CPU with DRAM scrambling",
+    "link": "https://github.com/xoreaxeaxeax/skitter-creek-bath-salts",
+    "blurb": "A hands-on attack on DRAM address scrambling that undermines a security assumption chipmakers have leaned on for years."
   },
   {
-    "title": "I turned my RSS feeds into an e-ink newspaper to stop reading on my phone",
-    "link": "https://heyjonny.dev/posts/rss-to-eink-newspaper/",
-    "guid": "https://heyjonny.dev/posts/rss-to-eink-newspaper/",
-    "blurb": "One dev's RSS-to-e-ink pipeline is a neat blueprint for reading news without a phone screen."
+    "title": "Snooping Flume Water Monitor Data On The Wire",
+    "link": "https://hackaday.com/2026/08/14/snooping-flume-water-monitor-data-on-the-wire/",
+    "blurb": "**Problem:** A hacker wanted to see what a Flume smart water monitor actually sends to the cloud — the device offers no local access to its own readings.\n\n**Approach:** They pulled the unit's static secret key out of its flash memory, then built a man-in-the-middle relay that decrypts and re-forwards traffic between the bridge and Flume's servers, defeating the LibHydrogen encryption the device relies on.\n\n**Result:** A working local logger for water-flow data, independent of the cloud, with the relay tool published for others to use.\n\n**Why it matters:** Authenticating with one static, device-wide secret instead of rotating session keys means every unit is breakable the same way once a single key leaks.\n\n**Glossary:** LibHydrogen, MITM, session key, static secret."
   },
   {
-    "title": "We implemented the IPv8 Internet-Draft in the Linux Kernel, Musl Libc, and BGP",
-    "link": "https://goonhost.rocks/blog/implementing-ipv8-internet-draft",
-    "guid": "https://lobste.rs/s/j9mwib",
-    "blurb": "Implementing an experimental internet draft across kernel, libc, and BGP is a serious feat of protocol engineering."
+    "title": "Curl Performance",
+    "link": "https://daniel.haxx.se/blog/2026/08/14/curl-performance-2/",
+    "blurb": "A deep look at where curl spends its cycles — useful reading for anyone optimizing C network code at scale."
   }
 ]
