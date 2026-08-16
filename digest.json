@@ -1,52 +1,52 @@
 [
   {
-    "title": "Full-Key Recovery and Forgery from One MQOM v2.1 Signature",
-    "link": "https://arxiv.org/abs/2608.09699",
-    "blurb": "A full key-recovery break of a post-quantum signature scheme — a reminder that new PQC candidates need years of cryptanalysis before they can be trusted."
+    "title": "New Evooo1Bot Linux botnet turns routers into traffic relay nodes",
+    "link": "https://www.bleepingcomputer.com/news/security/new-evooo1bot-linux-botnet-turns-routers-into-traffic-relay-nodes/",
+    "blurb": "A new Linux botnet is compromising home/office routers and turning them into relay nodes for attacker traffic."
   },
   {
-    "title": "InSPECtor: Improving SLEIGH Processor Specification Veracity via Proxy",
-    "link": "https://arxiv.org/abs/2608.13042",
-    "blurb": "Checks whether Ghidra's SLEIGH processor specs actually match real hardware behavior — errors here silently corrupt every disassembly built on top of them."
+    "title": "Hackers exploit macOS Screen Sharing flaw to deploy Monero miner",
+    "link": "https://www.bleepingcomputer.com/news/security/hackers-exploit-macos-screen-sharing-flaw-to-deploy-monero-miner/",
+    "blurb": "Attackers are abusing a macOS Screen Sharing flaw to gain access and drop cryptomining malware on victim Macs."
   },
   {
-    "title": "Critical VMware vCenter RCE flaw exploited for reverse SSH access",
-    "link": "https://www.bleepingcomputer.com/news/security/critical-vmware-vcenter-rce-flaw-exploited-for-reverse-ssh-access/",
-    "blurb": "**Problem:** vCenter Server, VMware's central console for managing virtual infrastructure, had a critical directory-traversal bug in its Syslog Server component — letting an unauthenticated network attacker run code.\n\n**Approach:** Attackers exploit the traversal flaw for initial access, then drop the open-source `reverse_ssh` tool to open an outbound tunnel home, slipping past firewalls built to block inbound connections.\n\n**Result:** Broadcom patched vCenter 9.1/9.0/8.0 on August 3. Within five days, 343+ compromised IPs across dozens of countries were already seen, and the count kept climbing.\n\n**Why it matters:** vCenter runs the infrastructure that runs everything else — one flaw here can cascade into every VM it manages.\n\n**Glossary:** Directory traversal, RCE, reverse SSH, CVE."
+    "title": "Max severity SAP Commerce Cloud flaw now targeted in attacks",
+    "link": "https://www.bleepingcomputer.com/news/security/max-severity-sap-commerce-cloud-flaw-now-targeted-in-attacks/",
+    "blurb": "A critical, maximum-severity vulnerability in SAP Commerce Cloud is now being actively exploited in the wild."
   },
   {
-    "title": "US Senate launches investigation into Roblox: 'Children on your platform are hurting. Congress will not look the other way'",
-    "link": "https://www.pcgamer.com/software/platforms/us-senate-launches-investigation-into-roblox-children-on-your-platform-are-hurting-congress-will-not-look-the-other-way/",
-    "blurb": "Congress is turning regulatory pressure on Roblox over child safety — the kind of scrutiny that can reshape how platforms handle minors going forward."
+    "title": "Stalker 2's meaty 2.0 update brings functional fog and A-Life improvements",
+    "link": "https://www.rockpapershotgun.com/stalker-2-heart-of-chornobyls-meaty-20-update-brings-functional-fog-a-suite-of-a-life-improvements-and-more-when-it-arrives-next-week",
+    "blurb": "Stalker 2's upcoming 2.0 patch overhauls its A-Life NPC simulation and adds functional weather effects like fog."
   },
   {
-    "title": "Twitch are scraping streams for AI training by default, and even their own execs don't know what user data may have been swept up",
-    "link": "https://www.rockpapershotgun.com/twitch-are-scraping-streams-for-ai-training-by-default-and-even-their-own-execs-dont-know-what-user-data-may-have-been-swept-up",
-    "blurb": "An opt-out AI-training policy on livestreams that most creators never noticed raises fresh questions about what platforms can quietly do with your content."
+    "title": "Compulsion Games becomes publisher of South of Midnight on Steam",
+    "link": "https://www.eurogamer.net/compulsion-games-south-of-midnight-publisher-xbox-restructuring",
+    "blurb": "Compulsion Games has taken over as publisher of its own title on Steam, signaling a split from Xbox after restructuring."
   },
   {
-    "title": "Wheat gene behind Hessian fly resistance cloned after 50-year search",
-    "link": "https://phys.org/news/2026-08-wheat-gene-hessian-fly-resistance.html",
-    "blurb": "Pinning down the actual gene lets breeders engineer resistant wheat directly instead of guessing through decades of crossbreeding."
+    "title": "Ultrafast spectroscopy reveals precursors of exciton condensation in quantum materials",
+    "link": "https://phys.org/news/2026-08-ultrafast-core-spectroscopy-reveals-elusive.html",
+    "blurb": "Problem: Physicists debate whether spontaneously-forming electron-hole pairs (excitons) drive a known phase transition in the quantum material 1T-TiSe2, but the fleeting fluctuations that precede the transition are hard to catch directly.\nApproach: Researchers fired ultrashort UV laser pulses at the material and timed how fast its electrons \"reset\" afterward, at temperatures above, at, and below the ~200K transition point.\nResult: Right at the transition temperature, the electronic response snapped back unusually fast regardless of pulse strength \u2014 a fingerprint of excitons already pairing up before the ordered phase locks in.\nWhy it matters: Confirms excitons as a driver of this transition and gives a general technique for catching hidden fluctuations behind emergent phases in other quantum materials.\nJargon: Exciton = a bound electron-hole pair. Charge-density wave = a periodic ripple in electron density and atomic spacing. Ultrafast spectroscopy = watching electrons move with extremely short laser pulses. Phase transition = a sudden change in a material's properties."
   },
   {
-    "title": "New findings overturn 100-year-old assumption about common bacteria in the lungs",
-    "link": "https://phys.org/news/2026-08-overturn-year-assumption-common-bacteria.html",
-    "blurb": "A century-old textbook assumption about lung bacteria turns out to be wrong, with implications for how respiratory disease gets studied."
+    "title": "Neptune's tiny moons tell the story of Triton's destructive capture",
+    "link": "https://phys.org/news/2026-07-neptune-tiny-moons-story-triton.html",
+    "blurb": "Neptune's small inner moons preserve orbital clues showing how the capture of its large moon Triton violently reshaped the system."
   },
   {
-    "title": "Unlocking _everything_ on the CPU with DRAM scrambling",
-    "link": "https://github.com/xoreaxeaxeax/skitter-creek-bath-salts",
-    "blurb": "A hands-on attack on DRAM address scrambling that undermines a security assumption chipmakers have leaned on for years."
+    "title": "Scanning for Lifesigns with ESP32 and Raspberry Pi, now open source",
+    "link": "https://hackaday.com/2026/08/15/scanning-for-lifesigns-with-esp32-and-raspberry-pi-now-open-source/",
+    "blurb": "Problem: Motion sensors miss people who are sitting still, and dedicated presence sensors (radar, thermal) are specialized and costly.\nApproach: An ESP32-S3 chip samples the ambient 2.4GHz WiFi signal 100 times a second; a Raspberry Pi crunches the tiny fluctuations a person's breathing causes in that signal, even through walls.\nResult: A working, open-source presence detector with a live dashboard \u2014 it reliably tells whether a living body is in a room, though not where or how many.\nWhy it matters: Turns WiFi hardware everyone already owns into a whole-house occupancy sensor, cheaper and less intrusive than cameras or radar, for smart lighting, security, or eldercare monitoring.\nJargon: ESP32-S3 = a cheap microcontroller chip used in DIY electronics. WiFi sensing = inferring motion/presence from how bodies disturb radio signals. Signal processing = extracting useful patterns from noisy raw data. 2.4GHz band = the radio frequency WiFi and Bluetooth use."
   },
   {
-    "title": "Snooping Flume Water Monitor Data On The Wire",
-    "link": "https://hackaday.com/2026/08/14/snooping-flume-water-monitor-data-on-the-wire/",
-    "blurb": "**Problem:** A hacker wanted to see what a Flume smart water monitor actually sends to the cloud — the device offers no local access to its own readings.\n\n**Approach:** They pulled the unit's static secret key out of its flash memory, then built a man-in-the-middle relay that decrypts and re-forwards traffic between the bridge and Flume's servers, defeating the LibHydrogen encryption the device relies on.\n\n**Result:** A working local logger for water-flow data, independent of the cloud, with the relay tool published for others to use.\n\n**Why it matters:** Authenticating with one static, device-wide secret instead of rotating session keys means every unit is breakable the same way once a single key leaks.\n\n**Glossary:** LibHydrogen, MITM, session key, static secret."
+    "title": "Auto-research with codex: How I achieved a 232x Faster Kernel",
+    "link": "https://sankalp.bearblog.dev/autoresearch/",
+    "blurb": "A developer documents using an AI coding agent to iteratively optimize a compute kernel, reaching a 232x speedup."
   },
   {
-    "title": "Curl Performance",
-    "link": "https://daniel.haxx.se/blog/2026/08/14/curl-performance-2/",
-    "blurb": "A deep look at where curl spends its cycles — useful reading for anyone optimizing C network code at scale."
+    "title": "Printytron \u2013 Describe a part, get a printable STL",
+    "link": "https://printytron.com",
+    "blurb": "A tool that generates a printable 3D STL file directly from a plain-language description of the part you need."
   }
 ]
