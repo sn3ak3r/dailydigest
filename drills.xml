@@ -1,11 +1,28 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Decode One Instruction: x86-64 (Windows)</title><link></link><description>Decode the raw x86-64 instruction bytes: 48 8D 04 D9
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse a Short Function: x86-64 (Windows)</title><link></link><description>Target: Windows x86-64 (first integer arg in ecx). Reverse this function to equivalent C.
 
-(48 = REX.W prefix; 8D = lea opcode; ModRM byte follows, then a SIB byte since rm=100.)
+func:
+    xor     eax, eax
+    xor     r8d, r8d
+.loop:
+    mov     edx, r8d
+    imul    edx, edx
+    add     eax, edx
+    inc     r8d
+    cmp     r8d, ecx
+    jl      .loop
+    ret
 
-What instruction is this, and what does it compute?
+What does func compute, in terms of its single parameter?
 
-Answer: lea rax, [rcx + rbx*8]
+Answer:
+int func(int n) {
+    int sum = 0;
+    for (int i = 0; i &lt; n; i++) {
+        sum += i * i;
+    }
+    return sum;
+}
 
-1. 48 = REX.W (64-bit operands). 8D = lea opcode, reg field selects the destination register.
-2. ModRM 04 = 00_000_100 -- mod=00 (no displacement), reg=000 (rax, destination), rm=100 (SIB byte follows).
-3. SIB D9 = 11_011_001 -- scale=11 (x8), index=011 (rbx), base=001 (rcx), giving rax = rcx + rbx*8 -- pure address arithmetic, no memory read.</description><guid isPermaLink='false'>2026-08-15</guid><pubDate>Sat, 15 Aug 2026 02:37:16 +0000</pubDate></item></channel></rss>
+1. eax (return value) and r8d (loop counter i) are both zeroed before the loop starts.
+2. Each iteration computes i*i into edx via imul edx, edx, then adds it into the running total eax.
+3. inc r8d / cmp r8d, ecx / jl .loop implements for (i = 0; i &lt; n; i++), comparing against ecx -- the Windows x64 first-argument register n -- so func returns the sum of squares from 0 to n-1.</description><guid isPermaLink='false'>2026-08-16</guid><pubDate>Sun, 16 Aug 2026 02:37:23 +0000</pubDate></item></channel></rss>
