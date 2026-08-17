@@ -1,52 +1,52 @@
 [
   {
-    "title": "New Evooo1Bot Linux botnet turns routers into traffic relay nodes",
-    "link": "https://www.bleepingcomputer.com/news/security/new-evooo1bot-linux-botnet-turns-routers-into-traffic-relay-nodes/",
-    "blurb": "A new Linux botnet is compromising home/office routers and turning them into relay nodes for attacker traffic."
+    "title": "New AmnesiaStealer macOS malware hijacks browser sessions via remote control",
+    "link": "https://www.bleepingcomputer.com/news/security/new-amnesiastealer-macos-malware-hijacks-browser-sessions-via-remote-control/",
+    "blurb": "Problem: Stealing static passwords is easy to defend against; getting live access to a victim's already logged-in accounts is harder. Approach: AmnesiaStealer clones a victim's Chromium browser profile, launches it hidden in headless mode, and connects to it over the browser's own remote-debugging interface, giving the attacker a live video feed and mouse/keyboard control. Result: Full interactive access to 16 Chromium-based browsers' cookies, saved logins, crypto wallets, keychain passwords, and Telegram sessions -- while still logged in. Why it matters: First documented macOS malware pairing profile cloning with live remote control, moving past theft into active session hijacking. Jargon: infostealer -- malware that harvests saved credentials/data. CDP (Chrome DevTools Protocol) -- browser's built-in remote-debugging API. Headless browser -- one running with no visible window. ClickFix -- fake-verification trick that tricks users into running malicious scripts."
   },
   {
-    "title": "Hackers exploit macOS Screen Sharing flaw to deploy Monero miner",
-    "link": "https://www.bleepingcomputer.com/news/security/hackers-exploit-macos-screen-sharing-flaw-to-deploy-monero-miner/",
-    "blurb": "Attackers are abusing a macOS Screen Sharing flaw to gain access and drop cryptomining malware on victim Macs."
+    "title": "Large-scale DDoS attacks disrupted Threema secure messaging service",
+    "link": "https://www.bleepingcomputer.com/news/security/large-scale-ddos-attacks-disrupted-threema-secure-messaging-service/",
+    "blurb": "Large-scale DDoS knocked the privacy-focused messenger offline, a reminder that even security-first services remain exposed to brute infrastructure attacks."
   },
   {
-    "title": "Max severity SAP Commerce Cloud flaw now targeted in attacks",
-    "link": "https://www.bleepingcomputer.com/news/security/max-severity-sap-commerce-cloud-flaw-now-targeted-in-attacks/",
-    "blurb": "A critical, maximum-severity vulnerability in SAP Commerce Cloud is now being actively exploited in the wild."
+    "title": "Anthropic confirms Claude is down in major outage affecting multiple services",
+    "link": "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-confirms-claude-is-down-in-major-outage-affecting-multiple-services/",
+    "blurb": "A major outage took down Claude and dependent services, underscoring how much now runs on a single AI provider's uptime."
   },
   {
-    "title": "Stalker 2's meaty 2.0 update brings functional fog and A-Life improvements",
-    "link": "https://www.rockpapershotgun.com/stalker-2-heart-of-chornobyls-meaty-20-update-brings-functional-fog-a-suite-of-a-life-improvements-and-more-when-it-arrives-next-week",
-    "blurb": "Stalker 2's upcoming 2.0 patch overhauls its A-Life NPC simulation and adds functional weather effects like fog."
+    "title": "Ron Gilbert talks the untraditional way he got Thimbleweed Park 2 funded, and his frustrations with modern publishing deals",
+    "link": "https://www.rockpapershotgun.com/ron-gilbert-talks-the-untraditional-way-he-got-thimbleweed-park-2-funded-and-his-frustrations-with-modern-publishing-deals",
+    "blurb": "Gilbert bypassed traditional publishing to fund Thimbleweed Park 2 directly, a case study in indie devs sidestepping modern publisher deals."
   },
   {
-    "title": "Compulsion Games becomes publisher of South of Midnight on Steam",
-    "link": "https://www.eurogamer.net/compulsion-games-south-of-midnight-publisher-xbox-restructuring",
-    "blurb": "Compulsion Games has taken over as publisher of its own title on Steam, signaling a split from Xbox after restructuring."
+    "title": "The Quake community simply cannot stop delivering, having just released a 22-map 'Deathmatch Jam' to celebrate the shooter's 30th birthday",
+    "link": "https://www.pcgamer.com/games/fps/the-quake-community-simply-cannot-stop-delivering-having-just-released-a-22-map-deathmatch-jam-to-celebrate-the-shooters-30th-birthday/",
+    "blurb": "Fans released a 22-map community pack for Quake's 30th anniversary, proof the shooter's mapping scene is still thriving three decades on."
   },
   {
-    "title": "Ultrafast spectroscopy reveals precursors of exciton condensation in quantum materials",
-    "link": "https://phys.org/news/2026-08-ultrafast-core-spectroscopy-reveals-elusive.html",
-    "blurb": "Problem: Physicists debate whether spontaneously-forming electron-hole pairs (excitons) drive a known phase transition in the quantum material 1T-TiSe2, but the fleeting fluctuations that precede the transition are hard to catch directly.\nApproach: Researchers fired ultrashort UV laser pulses at the material and timed how fast its electrons \"reset\" afterward, at temperatures above, at, and below the ~200K transition point.\nResult: Right at the transition temperature, the electronic response snapped back unusually fast regardless of pulse strength \u2014 a fingerprint of excitons already pairing up before the ordered phase locks in.\nWhy it matters: Confirms excitons as a driver of this transition and gives a general technique for catching hidden fluctuations behind emergent phases in other quantum materials.\nJargon: Exciton = a bound electron-hole pair. Charge-density wave = a periodic ripple in electron density and atomic spacing. Ultrafast spectroscopy = watching electrons move with extremely short laser pulses. Phase transition = a sudden change in a material's properties."
+    "title": "Black hole star: Astronomers discover a brand-new type of astrophysical object",
+    "link": "https://phys.org/news/2026-08-black-hole-star-astronomers-brand.html",
+    "blurb": "Astronomers identified an object straddling the line between a black hole and a star, challenging existing classification models."
   },
   {
-    "title": "Neptune's tiny moons tell the story of Triton's destructive capture",
-    "link": "https://phys.org/news/2026-07-neptune-tiny-moons-story-triton.html",
-    "blurb": "Neptune's small inner moons preserve orbital clues showing how the capture of its large moon Triton violently reshaped the system."
+    "title": "Strain flips Hall signal in altermagnetic manganese telluride, suggesting a path to practical spintronics",
+    "link": "https://phys.org/news/2026-08-strain-flips-hall-altermagnetic-manganese.html",
+    "blurb": "Problem: Altermagnets carry almost no net magnetization yet still break time-reversal symmetry -- but natural magnetic domains scramble that signal, making it hard to isolate or control. Approach: Rice University researchers stretched hexagonal manganese telluride along one axis to align its domains, then varied the strain while measuring the anomalous Hall effect, a sideways voltage produced by internal magnetic structure. Result: About 1% strain flipped the Hall signal's polarity entirely without disturbing the magnetic order -- an effect otherwise requiring a 150C temperature swing. Why it matters: A simple mechanical way to control altermagnetic behavior at room temperature, useful for strain-tunable spintronic sensors. Jargon: Altermagnet -- magnet with near-zero net moment but broken time-reversal symmetry. Anomalous Hall effect -- voltage from internal magnetism, not an external field. Strain -- mechanical stretching/deformation. Time-reversal symmetry -- physics law that a reversed-time system behaves identically; altermagnets break it."
   },
   {
-    "title": "Scanning for Lifesigns with ESP32 and Raspberry Pi, now open source",
-    "link": "https://hackaday.com/2026/08/15/scanning-for-lifesigns-with-esp32-and-raspberry-pi-now-open-source/",
-    "blurb": "Problem: Motion sensors miss people who are sitting still, and dedicated presence sensors (radar, thermal) are specialized and costly.\nApproach: An ESP32-S3 chip samples the ambient 2.4GHz WiFi signal 100 times a second; a Raspberry Pi crunches the tiny fluctuations a person's breathing causes in that signal, even through walls.\nResult: A working, open-source presence detector with a live dashboard \u2014 it reliably tells whether a living body is in a room, though not where or how many.\nWhy it matters: Turns WiFi hardware everyone already owns into a whole-house occupancy sensor, cheaper and less intrusive than cameras or radar, for smart lighting, security, or eldercare monitoring.\nJargon: ESP32-S3 = a cheap microcontroller chip used in DIY electronics. WiFi sensing = inferring motion/presence from how bodies disturb radio signals. Signal processing = extracting useful patterns from noisy raw data. 2.4GHz band = the radio frequency WiFi and Bluetooth use."
+    "title": "nokia-dct3-emulator: Open-source emulator + analysis toolkit for Nokia DCT3 phones",
+    "link": "https://github.com/djr-747/nokia-dct3-emulator",
+    "blurb": "An open-source emulator and analysis toolkit for Nokia's DCT3 baseband platform, useful for reverse-engineering and preserving decades-old phone firmware."
   },
   {
-    "title": "Auto-research with codex: How I achieved a 232x Faster Kernel",
-    "link": "https://sankalp.bearblog.dev/autoresearch/",
-    "blurb": "A developer documents using an AI coding agent to iteratively optimize a compute kernel, reaching a 232x speedup."
+    "title": "Building an Actuator for a Walking Robot",
+    "link": "https://hackaday.com/2026/08/16/building-an-actuator-for-a-walking-robot/",
+    "blurb": "A second-generation compact actuator reached 20 Nm of torque after the builder traced a resistance-wiring bug -- a concrete data point for legged-robot joint design."
   },
   {
-    "title": "Printytron \u2013 Describe a part, get a printable STL",
-    "link": "https://printytron.com",
-    "blurb": "A tool that generates a printable 3D STL file directly from a plain-language description of the part you need."
+    "title": "Reticulum – Decentralized Mesh Network",
+    "link": "https://reticulum.network/",
+    "blurb": "A decentralized, encrypted mesh networking stack designed to run over almost any medium, from radio to LoRa, without central infrastructure."
   }
 ]
