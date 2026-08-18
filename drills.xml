@@ -1,23 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Mini Crackme: x86-64 (Windows)</title><link></link><description>Target: Windows x64, single argument passed in ecx. Find the decimal value (0-255) passed in ecx that makes check return 1.
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Decode One Instruction: sub rsp, 0x28</title><link></link><description>Target: Windows x86-64, MSVC-compiled binary, function prologue. Decode this raw byte sequence into its assembly instruction, and briefly explain what each part of the encoding means: 48 83 EC 28
 
-check:
-    mov     eax, ecx
-    shr     eax, 4
-    and     eax, 0Fh
-    cmp     eax, 5
-    jne     fail
-    mov     eax, ecx
-    and     eax, 0Fh
-    cmp     eax, 0Ah
-    jne     fail
-    mov     eax, 1
-    ret
-fail:
-    mov     eax, 0
-    ret
+Answer: sub rsp, 0x28
 
-Answer: 90 (0x5A)
+Byte breakdown: 48 is the REX.W prefix - the REX prefix byte (0100WRXB) extends the legacy x86 encoding for 64-bit mode; the W bit set to 1 forces the operation to use a 64-bit operand size (rsp instead of esp). 83 is the opcode for the Group 1 arithmetic instructions using a sign-extended 8-bit immediate; which arithmetic operation it performs is selected by the ModRM reg field, not the opcode alone. EC is the ModRM byte: mod=11 (register-direct), reg=101 (opcode extension /5, meaning SUB), rm=100 (RSP) - so this says &#x27;SUB, operand is RSP itself.&#x27; 28 is the immediate operand, 0x28 (40 decimal), sign-extended to 64 bits and subtracted from RSP.
 
-1. The first block shifts the input right 4 bits and masks with 0Fh, isolating the high nibble -- it must equal 5.
-2. The second block masks the original value with 0Fh directly, isolating the low nibble -- it must equal 0xA.
-3. The only byte satisfying both nibble constraints is 0x5A, which is 90 in decimal.</description><guid isPermaLink='false'>2026-08-17</guid><pubDate>Mon, 17 Aug 2026 02:37:05 +0000</pubDate></item></channel></rss>
+This is a classic MSVC function prologue: it reserves 0x28 bytes of stack space for locals and the shadow space required by the Windows x64 calling convention.</description><guid isPermaLink='false'>2026-08-18</guid><pubDate>Tue, 18 Aug 2026 02:37:33 +0000</pubDate></item></channel></rss>
