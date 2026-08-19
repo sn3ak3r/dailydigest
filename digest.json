@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Unisoc VoLTE Video Call Exploit Chain Can Give Attackers Full Android Kernel Access",
+    "link": "https://thehackernews.com/2026/08/unisoc-volte-video-call-exploit-chain.html",
+    "blurb": "A chained flaw in Unisoc modems lets a malicious video call escalate from baseband to full Android kernel access."
+  },
+  {
+    "title": "Certighost and the Privilege Hiding in Your Certificate Authority",
+    "link": "https://www.bleepingcomputer.com/news/security/certighost-and-the-privilege-hiding-in-your-certificate-authority/",
+    "blurb": "A look at how misconfigured CA permissions quietly grant attackers privilege escalation paths inside PKI infrastructure."
+  },
+  {
+    "title": "Attackers Exploit MLflow SSRF Flaw to Steal Cloud Credentials and Secrets",
+    "link": "https://thehackernews.com/2026/08/attackers-exploit-mlflow-ssrf-flaw-to.html",
+    "blurb": "An SSRF bug in MLflow is being actively exploited to reach cloud metadata endpoints and steal credentials."
+  },
+  {
+    "title": "Deus Ex director and immersive sim legend Warren Spector is retiring, despite having \"three games in particular\" he'd still like to make",
+    "link": "https://www.rockpapershotgun.com/deus-ex-director-and-immersive-sim-legend-warren-spector-is-retiring-despite-having-three-games-in-particular-hed-still-like-to-make",
+    "blurb": "The Deus Ex and Epic Mickey director is stepping back from the industry after decades shaping the immersive sim genre."
+  },
+  {
+    "title": "The Quake shareware CD-ROM contained encrypted copies of every id Software game—and yes, it was cracked 39 days after release",
+    "link": "https://www.pcgamer.com/hardware/the-quake-shareware-cd-rom-contained-encrypted-copies-of-every-id-software-game-and-yes-it-was-cracked-39-days-after-release/",
+    "blurb": "The 1996 Quake shareware disc hid encrypted copies of id's whole catalog behind DRM that crackers broke within weeks."
+  },
+  {
+    "title": "Theory of Fluids Enters the 21st Century",
+    "link": "https://www.quantamagazine.org/theory-of-fluids-enters-the-21st-century-20260817/",
+    "blurb": "**Problem:** The 1800s Navier-Stokes equations predict fluid flow well but ignore that matter is made of atoms — fluid theory never got the microscopic upgrade the rest of physics did.\n\n**Approach:** Physicists applied Kenneth Wilson's effective field theory (build up from symmetries) plus an idea borrowed from black-hole cosmology: fluids share \"swapping\" symmetries with the expanding universe — moving fluid parcels around costs no energy — linked to a time-reversal symmetry tied to heat.\n\n**Result:** Navier-Stokes falls out of these symmetries alone, revealing new terms for random molecular jitter and extending the theory to exotic states like fracton matter.\n\n**Why it matters:** A fluid is now defined by its symmetries, not its ingredients — unifying water, oil, and mercury, and reaching into quantum regimes classical theory couldn't touch.\n\n**Jargon:** Effective field theory — building macro theories from what survives zooming out. Symmetry — a transformation that leaves a system unchanged. Viscosity — internal friction in a fluid. Fracton matter — a quantum phase where only collective particle groups can move."
+  },
+  {
+    "title": "Krypton gas emerges as a new ingredient for quantum computing",
+    "link": "https://phys.org/news/2026-08-krypton-gas-emerges-ingredient-quantum.html",
+    "blurb": "Researchers show krypton gas can serve as a useful medium for building quantum computing hardware."
+  },
+  {
+    "title": "Reverse Engineered Grill Controller Gets Open Firmware",
+    "link": "https://hackaday.com/2026/08/18/reverse-engineered-grill-controller-gets-open-firmware/",
+    "blurb": "**Problem:** A Gravity 800 grill's proprietary firmware locked its owner out of remote control or customization.\n\n**Approach:** Opened the controller, found an ESP32 with an exposed programming header, dumped the stock firmware with `espflash`, then mapped the board: thermistor, CS1621 display driver, fan driver, and a 16-pin UART/ADC chip.\n\n**Result:** A drop-in open-source firmware with PID temperature control, over-the-air updates, and a real-time web dashboard.\n\n**Why it matters:** A concrete playbook for freeing \"smart\" appliances from vendor lock-in — dump the flash, trace the chips, rebuild the firmware.\n\n**Jargon:** ESP32 — WiFi/Bluetooth microcontroller. Thermistor — temperature-sensitive resistor. PID control — feedback loop that holds a setpoint. UART/ADC — serial link carrying analog-to-digital converted sensor data."
+  },
+  {
+    "title": "Fixing a bricked AMD 7040 series Framework 13” laptop with $20 tools",
+    "link": "https://quantum5.ca/2026/08/16/fixing-bricked-amd-7040-series-framework-13-laptop-with-20-tools/",
+    "blurb": "A step-by-step recovery of a bricked Framework 13 using cheap hardware tools instead of costly board replacement."
+  },
+  {
+    "title": "Solo – a .so loader for static Linux binaries",
+    "link": "https://github.com/pg83/solo",
+    "blurb": "A small utility that lets statically linked Linux binaries load shared objects at runtime."
+  }
+]
