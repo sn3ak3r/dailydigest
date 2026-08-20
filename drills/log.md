@@ -4,3 +4,4 @@
 2026-08-17 | crackme | nibble-isolation check via shr/and, dual-branch fail path
 2026-08-18 | decode-instruction | REX.W prefix, Group 1 opcode with ModRM opcode-extension field, sub rsp prologue
 2026-08-19 | reverse-function | conditional move (cmovle) replacing a branch, max(a,b) pattern
+2026-08-20 | crackme | xor mask combined with 32-bit rotate (ror), backward-solving via inverse rotate
