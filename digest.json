@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Critical RCE flaw in Windows IKE Extension now actively exploited",
+    "link": "https://www.bleepingcomputer.com/news/security/cisa-critical-windows-ike-extension-flaw-now-exploited-in-attacks/",
+    "guid": "https://www.bleepingcomputer.com/news/security/cisa-critical-windows-ike-extension-flaw-now-exploited-in-attacks/",
+    "blurb": "Problem: Windows systems running the IKE service (used for encrypted VPN/IPsec tunnels) have a remotely triggerable memory bug — no login required.\n\nApproach: An attacker sends malformed packets to UDP ports 500/4500. The flaw is a \"double free\" — the code releases the same memory block twice, corrupting memory in a way that can be steered into running attacker-supplied code.\n\nResult: Full remote code execution on any unpatched Windows 10/11/Server host with IKE exposed. CISA confirmed active exploitation and ordered federal agencies to patch on a deadline.\n\nWhy it matters: Since 2021, 385 actively-exploited Microsoft vulnerabilities have been catalogued, 112 later weaponized by ransomware crews — an unauthenticated, network-reachable RCE like this fits that pipeline exactly.\n\nJargon: IKE — protocol that negotiates encrypted VPN tunnels. IPsec — the encryption framework IKE serves. Double free — a memory-safety bug from releasing the same buffer twice. RCE — remote code execution, running attacker code with no local access."
+  },
+  {
+    "title": "Clop-Linked Windchill Web Shell Decrypts Credentials and Maps Engineering Data",
+    "link": "https://thehackernews.com/2026/08/clop-linked-windchill-web-shell.html",
+    "guid": "https://thehackernews.com/2026/08/clop-linked-windchill-web-shell.html",
+    "blurb": "Shows Clop building custom malware tooling beyond off-the-shelf ransomware, aimed squarely at engineering/PLM data theft."
+  },
+  {
+    "title": "SilkParasite Espionage Campaign Targets Central Asian Governments with Five New RATs",
+    "link": "https://thehackernews.com/2026/08/silkparasite-espionage-campaign-targets.html",
+    "guid": "https://thehackernews.com/2026/08/silkparasite-espionage-campaign-targets.html",
+    "blurb": "A state-linked group deploying five distinct RAT families in one campaign — useful signal for defenders building detection coverage."
+  },
+  {
+    "title": "STALKER 2 gets serious performance and visual upgrades with its 2.0 update, testing confirms",
+    "link": "https://www.rockpapershotgun.com/stalker-2-gets-serious-performance-and-visual-upgrades-with-its-20-update-testing-confirms-polishing-up-one-of-the-biggest-flawed-gems-in-fps-games",
+    "guid": "https://www.rockpapershotgun.com/stalker-2-gets-serious-performance-and-visual-upgrades-with-its-20-update-testing-confirms-polishing-up-one-of-the-biggest-flawed-gems-in-fps-games",
+    "blurb": "A real technical postmortem on a rocky launch fixed — the studio published measurable before/after performance data."
+  },
+  {
+    "title": "Sony reportedly reverses course on live service co-op Horizon game after 'negative player feedback'",
+    "link": "https://www.pcgamer.com/games/action/sony-reportedly-reverses-course-on-live-service-co-op-horizon-game-after-negative-player-feedback/",
+    "guid": "https://www.pcgamer.com/games/action/sony-reportedly-reverses-course-on-live-service-co-op-horizon-game-after-negative-player-feedback/",
+    "blurb": "Another live-service cancellation before launch, reinforcing the industry's pullback from GaaS bets."
+  },
+  {
+    "title": "Building a Quantum Computer, One Fragile Qubit at a Time",
+    "link": "https://www.quantamagazine.org/building-a-quantum-computer-one-fragile-qubit-at-a-time-20260819/",
+    "guid": "https://www.quantamagazine.org/building-a-quantum-computer-one-fragile-qubit-at-a-time-20260819/",
+    "blurb": "Problem: Quantum computers need qubits that hold delicate quantum states, but any stray interaction with the environment destroys that state, forcing builders to keep qubits isolated yet still controllable.\n\nApproach: Three competing hardware paths: trap ionized atoms with electric fields (trapped-ion), hold neutral atoms in focused laser \"tweezers\" (neutral-atom arrays), or etch artificial circuits from aluminum/niobium and chill them near absolute zero (superconducting).\n\nResult: Caltech trapped 6,100 individually controlled atoms; IBM's Nighthawk chip packs 120 superconducting qubits. None are near the scale — tens of thousands to millions of qubits — real workloads need.\n\nWhy it matters: No approach has hit quantum computing's \"transistor moment\" yet; whichever design scales first likely sets the field's dominant architecture for decades.\n\nJargon: Qubit — a quantum bit that can be 0, 1, or both at once. Coherence time — how long a qubit holds its quantum state before noise destroys it. Optical tweezers — focused laser beams that trap single atoms. Dilution refrigerator — a device that cools circuits to near absolute zero."
+  },
+  {
+    "title": "Scientists find closest star to the Milky Way's central black hole",
+    "link": "https://arstechnica.com/science/2026/08/scientists-find-closest-star-to-the-milky-ways-central-black-hole/",
+    "guid": "https://arstechnica.com/science/2026/08/scientists-find-closest-star-to-the-milky-ways-central-black-hole/",
+    "blurb": "A direct observational result narrowing our picture of what orbits the Milky Way's central black hole."
+  },
+  {
+    "title": "Unlocking a locked/deactivated e-waste Cricut Maker",
+    "link": "https://sprocketfox.io/xssfox/2026/07/01/cricut-unlock/",
+    "guid": "https://sprocketfox.io/xssfox/2026/07/01/cricut-unlock/",
+    "blurb": "A concrete teardown of how a locked e-waste device was reactivated — a reusable technique for other bricked hardware."
+  },
+  {
+    "title": "Fixing a bricked AMD 7040 series Framework 13\" laptop with $20 tools",
+    "link": "https://quantum5.ca/2026/08/16/fixing-bricked-amd-7040-series-framework-13-laptop-with-20-tools/",
+    "guid": "https://quantum5.ca/2026/08/16/fixing-bricked-amd-7040-series-framework-13-laptop-with-20-tools/",
+    "blurb": "A documented $20 repair that saved a bricked laptop from landfill, with reproducible steps."
+  },
+  {
+    "title": "Geolocating a random island using geometry and CUDA programming",
+    "link": "https://yassa9.github.io/osint/gralhix-004/",
+    "guid": "https://yassa9.github.io/osint/gralhix-004/",
+    "blurb": "A worked OSINT example combining geometry and GPU compute to pin down a location from limited clues."
+  }
+]
