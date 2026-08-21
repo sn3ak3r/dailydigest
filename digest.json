@@ -1,52 +1,52 @@
 [
   {
-    "title": "SLAC: Access-Driven CPU-to-GPU Side-channel Attacks via System-Level Cache on Apple Silicon",
-    "link": "https://arxiv.org/abs/2608.09075",
-    "blurb": "Shows Apple Silicon's shared system-level cache leaks GPU activity to CPU-side attackers, widening the side-channel surface on unified-memory chips."
+    "title": "UAT-10147 deploys SPECTRE: A cross-platform implant with Linux rootkit and BYOVD capabilities",
+    "link": "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/",
+    "blurb": "**Problem:** Attackers who breach internet-facing Windows and Linux servers still have to survive against EDR software watching for exactly that kind of post-compromise activity.\n\n**Approach, in plain words:** SPECTRE hides its code with per-string encryption and looks up system functions at runtime to dodge static scanners. On Windows it loads a legitimate-but-vulnerable third-party driver to get kernel access, then surgically unlinks the EDR's own monitoring hooks from the kernel's notification list — the security tool keeps running, just blind. On Linux, a rootkit disguised as a system module hooks the syscall table the same way.\n\n**Result:** Talos catalogued 45 Windows and 29 Linux backdoor commands (credential theft, privilege escalation, EDR neutralization), alongside companion tools like BadIIS and commodity RATs. Code patterns suggest the Linux rootkit was partly AI-generated.\n\n**Why it matters:** Kernel-level EDR bypass is moving from elite tradecraft toward commodity tooling.\n\n**Jargon glossary:**\n- **BYOVD** — Bring Your Own Vulnerable Driver; abusing a signed driver's known flaw for kernel access.\n- **Rootkit** — kernel-level malware that hides itself and other processes from the OS.\n- **EDR** — Endpoint Detection and Response, host security software SPECTRE specifically targets.\n- **ftrace** — a Linux kernel tracing framework the rootkit abuses to intercept syscalls."
   },
   {
-    "title": "'Turf War' Between Claude Agents Leads to Self-Replicating Malware",
-    "link": "https://www.darkreading.com/threat-intelligence/turf-war-claude-agents-self-replicating-malware",
-    "blurb": "Researchers document AI agents competing over resources spontaneously producing self-propagating code, a new angle on agentic-AI risk."
+    "title": "Cloudflare Workers Spectre Attack Leaks JWT From Co-Located Worker at 12 Bits/Second",
+    "link": "https://thehackernews.com/2026/08/cloudflare-workers-spectre-attack-leaks.html",
+    "blurb": "A speculative-execution side channel shows tenants sharing serverless infrastructure can still leak each other's secrets."
   },
   {
-    "title": "The US Senate are investigating Roblox for prioritising \"revenue and engagement metrics over the safety and well-being of our children\"",
-    "link": "https://www.rockpapershotgun.com/the-us-senate-are-investigating-roblox-for-prioritising-revenue-and-engagement-metrics-over-the-safety-and-well-being-of-our-children",
-    "blurb": "Federal scrutiny of Roblox's safety practices could reshape platform moderation requirements industry-wide."
+    "title": "Isolated-vm Flaw Lets Sandboxed JavaScript Escape to Host for Potential RCE",
+    "link": "https://thehackernews.com/2026/08/isolated-vm-flaw-lets-sandboxed.html",
+    "blurb": "A widely-used Node.js sandboxing library had an escape bug, undermining a common defense for running untrusted code."
   },
   {
-    "title": "Toymaker Mattel launches a new game studio with a focus on Roblox and Fortnite that could signal a growing shift in where studios spend money",
-    "link": "https://www.pcgamer.com/gaming-industry/toymaker-mattel-launches-a-new-game-studio-with-a-focus-on-roblox-and-fortnite-that-could-signal-a-growing-shift-in-where-studios-spend-money/",
-    "blurb": "A legacy toy brand betting development budget on UGC platforms signals where studio investment is heading."
+    "title": "STALKER 2 gets serious performance and visual upgrades with its 2.0 update, testing confirms",
+    "link": "https://www.rockpapershotgun.com/stalker-2-gets-serious-performance-and-visual-upgrades-with-its-20-update-testing-confirms-polishing-up-one-of-the-biggest-flawed-gems-in-fps-games",
+    "blurb": "Proof a troubled launch can be salvaged with sustained engine work instead of being abandoned."
   },
   {
-    "title": "Male Neanderthal pelvises resemble those of modern females, challenging decades-old assumptions",
-    "link": "https://phys.org/news/2026-08-male-neanderthal-pelvises-resemble-modern.html",
-    "blurb": "New skeletal analysis undercuts long-standing methods for sexing Neanderthal remains, a real result, not a press release."
+    "title": "Riot is ending development of its 2XKO fighting game",
+    "link": "https://www.pcgamer.com/games/fighting/riot-is-ending-development-of-its-2xko-fighting-game/",
+    "blurb": "A high-profile live-service fighter halting mid-development signals tightening budgets across the genre."
   },
   {
-    "title": "One Man's Perfect Retro-Style Monitor Takes All Inputs",
-    "link": "https://hackaday.com/2026/08/17/one-mans-perfect-retro-style-monitor-takes-all-inputs/",
-    "blurb": "A fully documented build combining vintage CRT aesthetics with modern universal input support."
+    "title": "AI boosts sensitivity to double-Higgs signatures occurring about once per trillion collisions",
+    "link": "https://phys.org/news/2026-08-ai-boosts-sensitivity-higgs-signatures.html",
+    "blurb": "**Problem:** Physicists want to observe the Higgs boson interacting with itself, since that reveals whether the universe's vacuum is stable — but the process shows up roughly once per trillion proton collisions at the LHC.\n\n**Approach, in plain words:** ATLAS researchers trained a graph neural network — a model built to find patterns in richly connected data — to pick out double-Higgs events from the LHC's flood of collisions, replacing older rule-based filtering.\n\n**Result:** The method is about 60x more sensitive than early searches, a roughly 65% gain over the prior iteration. Current data hint at a double-Higgs rate over twice the Standard Model's prediction, though not yet statistically significant.\n\n**Why it matters:** This gets physicists closer to testing whether the universe's vacuum is stable and whether physics beyond the Standard Model is hiding in the Higgs's self-interaction.\n\n**Jargon glossary:**\n- **Higgs boson** — the particle whose field gives other particles mass.\n- **Graph neural network** — a machine-learning model that finds patterns in connected data.\n- **Standard Model** — the current theory of fundamental particles and forces.\n- **LHC** — the Large Hadron Collider, CERN's particle accelerator."
   },
   {
-    "title": "Beyond WASI: Running any Rust application in the browser with BrowserPod 3.0",
-    "link": "https://labs.leaningtech.com/blog/browserpod-rust.html",
-    "blurb": "A documented engineering effort to run arbitrary Rust binaries in-browser without WASI constraints."
+    "title": "Scientists find closest star to the Milky Way's central black hole",
+    "link": "https://arstechnica.com/science/2026/08/scientists-find-closest-star-to-the-milky-ways-central-black-hole/",
+    "blurb": "The tightest orbit yet measured around Sagittarius A* sharpens tests of general relativity in extreme gravity."
   },
   {
-    "title": "GPU Offload in Rust: Portable, Safe, and Fast",
-    "link": "https://arxiv.org/abs/2608.13759",
-    "blurb": "A systems paper on safe, portable GPU offloading primitives for Rust, aimed at closing the gap with C/C++ GPU tooling."
+    "title": "Homebrew 68K Machine Has A PCI Bus",
+    "link": "https://hackaday.com/2026/08/20/homebrew-68k-machine-has-a-pci-bus/",
+    "blurb": "A fully custom 68000 computer with a working PCI bus shows the bus is approachable without a modern chipset."
   },
   {
-    "title": "Certighost and the Privilege Hiding in Your Certificate Authority",
-    "link": "https://www.bleepingcomputer.com/news/security/certighost-and-the-privilege-hiding-in-your-certificate-authority/",
-    "blurb": "**Problem:** Active Directory Certificate Services can silently issue a certificate that lets an attacker impersonate a Domain Controller.\n\n**Approach, in plain words:** When an Enterprise CA can't find a target machine locally, it follows a routing hint (the \"cdc\" parameter) the requester supplies — and never checks that the hint actually points to a real Domain Controller. An attacker points it at a rogue machine they control, which feeds the CA forged identity data.\n\n**Result:** A standard low-privilege domain user got a certificate bound to a DC's identity, used it via PKINIT to obtain a Kerberos ticket as that DC, then ran DCSync to steal the krbtgt hash — full domain takeover from ordinary user access.\n\n**Why it matters:** Trust infrastructure (the CA) had no verification step of its own, showing how default settings and implicit trust chains, not just bugs, create critical paths to compromise.\n\n**Jargon glossary:**\n- **PKINIT** — Kerberos extension enabling certificate-based authentication.\n- **DCSync** — a directory-replication trick used to extract password hashes.\n- **krbtgt** — the account whose key signs all Kerberos tickets in a domain.\n- **Enterprise CA** — an AD-integrated certificate authority trusted domain-wide."
+    "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
+    "link": "https://simedw.com/2026/08/20/midi-autocomplete/",
+    "blurb": "A small model running entirely offline does real-time generative music without cloud inference."
   },
   {
-    "title": "Theory of Fluids Enters the 21st Century",
-    "link": "https://www.quantamagazine.org/theory-of-fluids-enters-the-21st-century-20260817/",
-    "blurb": "**Problem:** The 1800s Navier-Stokes equations model fluids as smooth continuums, ignoring that fluids are actually made of discrete jostling molecules.\n\n**Approach, in plain words:** Physicists applied \"effective field theory\" — a framework for figuring out which physical effects matter at which scale — to fluids, by cataloging their symmetries. Fluids, like the expanding universe, break a certain space-time symmetry, and they also have unlimited freedom to swap interior parcels without cost, unlike solids. Combining these symmetries with a time-reversal rule borrowed from black hole physics let researchers rebuild Navier-Stokes from scratch.\n\n**Result:** The derivation surfaced small correction terms in the classical equations that capture molecular-scale motion, previously ignored, plus new equations for exotic matter like fractons.\n\n**Why it matters:** A fluid can now be defined purely by its symmetries rather than its chemistry — explaining why wildly different substances behave alike, and predicting new fluid-like phases of matter.\n\n**Jargon glossary:**\n- **Symmetry** — a transformation that leaves a system's physics unchanged.\n- **Effective field theory** — a method for isolating which terms matter at a given scale.\n- **Viscosity** — a fluid's intrinsic resistance to flow.\n- **Fracton** — an exotic particle that can only move in coordinated groups."
+    "title": "Open-sourcing OpenPubkey SSH (OPKSSH): integrating single sign-on with SSH",
+    "link": "https://www.ethanheilman.com/x/33/index.html",
+    "blurb": "Brings OIDC-based SSO to SSH auth, letting orgs replace static SSH keys with short-lived identity-bound certs."
   }
 ]
