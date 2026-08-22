@@ -1,52 +1,52 @@
 [
   {
-    "title": "UAT-10147 deploys SPECTRE: A cross-platform implant with Linux rootkit and BYOVD capabilities",
-    "link": "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/",
-    "blurb": "**Problem:** Attackers who breach internet-facing Windows and Linux servers still have to survive against EDR software watching for exactly that kind of post-compromise activity.\n\n**Approach, in plain words:** SPECTRE hides its code with per-string encryption and looks up system functions at runtime to dodge static scanners. On Windows it loads a legitimate-but-vulnerable third-party driver to get kernel access, then surgically unlinks the EDR's own monitoring hooks from the kernel's notification list — the security tool keeps running, just blind. On Linux, a rootkit disguised as a system module hooks the syscall table the same way.\n\n**Result:** Talos catalogued 45 Windows and 29 Linux backdoor commands (credential theft, privilege escalation, EDR neutralization), alongside companion tools like BadIIS and commodity RATs. Code patterns suggest the Linux rootkit was partly AI-generated.\n\n**Why it matters:** Kernel-level EDR bypass is moving from elite tradecraft toward commodity tooling.\n\n**Jargon glossary:**\n- **BYOVD** — Bring Your Own Vulnerable Driver; abusing a signed driver's known flaw for kernel access.\n- **Rootkit** — kernel-level malware that hides itself and other processes from the OS.\n- **EDR** — Endpoint Detection and Response, host security software SPECTRE specifically targets.\n- **ftrace** — a Linux kernel tracing framework the rootkit abuses to intercept syscalls."
+    "title": "Microsoft Defender's Own Driver Can Be Weaponized to Delete Security Software at Boot",
+    "link": "https://thehackernews.com/2026/08/microsoft-defenders-own-driver-can-be.html",
+    "blurb": "A signed Defender component can be abused to disable security tooling before Windows finishes booting."
   },
   {
-    "title": "Cloudflare Workers Spectre Attack Leaks JWT From Co-Located Worker at 12 Bits/Second",
-    "link": "https://thehackernews.com/2026/08/cloudflare-workers-spectre-attack-leaks.html",
-    "blurb": "A speculative-execution side channel shows tenants sharing serverless infrastructure can still leak each other's secrets."
+    "title": "Rust Supply Chain Attack Puts Build-Time Malware in Crates with 245 Million Downloads",
+    "link": "https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html",
+    "blurb": "A poisoned crate shows Rust's build scripts are as exploitable as npm's install hooks."
   },
   {
-    "title": "Isolated-vm Flaw Lets Sandboxed JavaScript Escape to Host for Potential RCE",
-    "link": "https://thehackernews.com/2026/08/isolated-vm-flaw-lets-sandboxed.html",
-    "blurb": "A widely-used Node.js sandboxing library had an escape bug, undermining a common defense for running untrusted code."
+    "title": "Lone game dev builds an explorable cyberpunk city almost entirely out of ASCII characters",
+    "link": "https://www.pcgamer.com/hardware/lone-game-dev-builds-an-explorable-cyberpunk-city-almost-entirely-out-of-ascii-characters/",
+    "blurb": "A solo project pushes text-mode rendering into walkable 3D space."
   },
   {
-    "title": "STALKER 2 gets serious performance and visual upgrades with its 2.0 update, testing confirms",
-    "link": "https://www.rockpapershotgun.com/stalker-2-gets-serious-performance-and-visual-upgrades-with-its-20-update-testing-confirms-polishing-up-one-of-the-biggest-flawed-gems-in-fps-games",
-    "blurb": "Proof a troubled launch can be salvaged with sustained engine work instead of being abandoned."
+    "title": "Sandustry is the first factory simulation game I've played that gets heaps right",
+    "link": "https://www.rockpapershotgun.com/sandustry-is-the-first-factory-simulation-game-ive-played-that-gets-heaps-right",
+    "blurb": "A genre regularly cluttered by conveyor-belt busywork finds a physical-simulation hook that actually clicks."
   },
   {
-    "title": "Riot is ending development of its 2XKO fighting game",
-    "link": "https://www.pcgamer.com/games/fighting/riot-is-ending-development-of-its-2xko-fighting-game/",
-    "blurb": "A high-profile live-service fighter halting mid-development signals tightening budgets across the genre."
+    "title": "LHC collisions reveal oxygen and neon's shifting nuclear geometry",
+    "link": "https://phys.org/news/2026-08-lhc-collisions-reveal-oxygen-neon.html",
+    "blurb": "Smashing light nuclei at the LHC maps how their shape deforms mid-collision."
   },
   {
-    "title": "AI boosts sensitivity to double-Higgs signatures occurring about once per trillion collisions",
-    "link": "https://phys.org/news/2026-08-ai-boosts-sensitivity-higgs-signatures.html",
-    "blurb": "**Problem:** Physicists want to observe the Higgs boson interacting with itself, since that reveals whether the universe's vacuum is stable — but the process shows up roughly once per trillion proton collisions at the LHC.\n\n**Approach, in plain words:** ATLAS researchers trained a graph neural network — a model built to find patterns in richly connected data — to pick out double-Higgs events from the LHC's flood of collisions, replacing older rule-based filtering.\n\n**Result:** The method is about 60x more sensitive than early searches, a roughly 65% gain over the prior iteration. Current data hint at a double-Higgs rate over twice the Standard Model's prediction, though not yet statistically significant.\n\n**Why it matters:** This gets physicists closer to testing whether the universe's vacuum is stable and whether physics beyond the Standard Model is hiding in the Higgs's self-interaction.\n\n**Jargon glossary:**\n- **Higgs boson** — the particle whose field gives other particles mass.\n- **Graph neural network** — a machine-learning model that finds patterns in connected data.\n- **Standard Model** — the current theory of fundamental particles and forces.\n- **LHC** — the Large Hadron Collider, CERN's particle accelerator."
+    "title": "Building a Discrete Component 75 Baud Modem",
+    "link": "https://hackaday.com/2026/08/21/building-a-discrete-component-75-baud-modem/",
+    "blurb": "A modem built from raw transistors and logic gates, no modem chip involved."
   },
   {
-    "title": "Scientists find closest star to the Milky Way's central black hole",
-    "link": "https://arstechnica.com/science/2026/08/scientists-find-closest-star-to-the-milky-ways-central-black-hole/",
-    "blurb": "The tightest orbit yet measured around Sagittarius A* sharpens tests of general relativity in extreme gravity."
+    "title": "PVC Pipe Turned DIY Digital Telescope",
+    "link": "https://hackaday.com/2026/08/21/pvc-pipe-turned-diy-digital-telescope/",
+    "blurb": "Plumbing parts and a camera sensor turned into a working digital telescope."
   },
   {
-    "title": "Homebrew 68K Machine Has A PCI Bus",
-    "link": "https://hackaday.com/2026/08/20/homebrew-68k-machine-has-a-pci-bus/",
-    "blurb": "A fully custom 68000 computer with a working PCI bus shows the bus is approachable without a modern chipset."
+    "title": "How we made a text-to-speech model respond in sub-50 ms",
+    "link": "https://nari-labs.com/blog/qwen3-tts-speed-cost-frontier/",
+    "blurb": "An engineering writeup on shaving TTS latency down to conversational speed."
   },
   {
-    "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
-    "link": "https://simedw.com/2026/08/20/midi-autocomplete/",
-    "blurb": "A small model running entirely offline does real-time generative music without cloud inference."
+    "title": "UAT-10147: Chinese-speaking adversary integrates agentic AI into post-compromise operations",
+    "link": "https://blog.talosintelligence.com/uat-10147-chinese-speaking-adversary-integrates-agentic-ai-into-post-compromise-operations/",
+    "blurb": "**Problem:** Breaking into a server used to require a skilled human operator at every step — finding the flaw, writing the exploit, escalating privileges, cleaning up.\n\n**Approach, in plain words:** This Chinese-speaking crew broke into government and university servers through known, already-patched bugs, then handed off to AI tools (PentestGPT, DeepAudit) that wrote exploitation playbooks, generated implant scripts, and tested whether the exploits worked before deploying them.\n\n**Result:** Talos found roughly 170,000 catalogued target URLs and a toolkit of RATs, rootkits, and privilege-escalation exploits for Windows and Linux, with AI handling reconnaissance, payload generation, and QA.\n\n**Why it matters:** The bottleneck on cybercrime has historically been operator skill and time. AI-driven \"offensive orchestration\" cuts both, letting less-skilled actors run more attacks at once.\n\n**Jargon glossary:**\n- **One-day exploit** — an attack against a vulnerability that's already been publicly disclosed and often patched, but not everywhere.\n- **RAT** — Remote Access Trojan; malware giving an attacker remote control of a machine.\n- **Privilege escalation** — turning limited access into full administrative control.\n- **Deserialization bug** — a flaw where an app unsafely rebuilds objects from untrusted data, letting attackers run code."
   },
   {
-    "title": "Open-sourcing OpenPubkey SSH (OPKSSH): integrating single sign-on with SSH",
-    "link": "https://www.ethanheilman.com/x/33/index.html",
-    "blurb": "Brings OIDC-based SSO to SSH auth, letting orgs replace static SSH keys with short-lived identity-bound certs."
+    "title": "'Huge Breakthrough' in the Math of Imbalance",
+    "link": "https://www.quantamagazine.org/huge-breakthrough-in-the-math-of-imbalance-20260821/",
+    "blurb": "**Problem:** Split any collection of things into two groups as evenly as possible across many attributes at once. How close to perfectly even can you always get?\n\n**Approach, in plain words:** In 1998, the best known guarantee scaled with the square root of the item count. Nikhil Bansal and Haotian Jiang found an algorithm that halves each item between groups, measures how nudging one attribute disturbs the others, then perturbs the split to avoid compounding those disturbances.\n\n**Result:** Their bound scales with the fourth root of the count instead of the square root — the first improvement since 1998. For a set the size of the number of atoms in the universe, the new bound is about 3.\n\n**Why it matters:** It's a big step toward an unproven 1980s conjecture that the imbalance is bounded by a constant regardless of scale, with knock-on relevance to optimization, physics, and machine learning problems that reduce to the same balancing question.\n\n**Jargon glossary:**\n- **Discrepancy** — how far from perfectly balanced a split can be forced to be.\n- **Komlós conjecture** — the unproven claim that this imbalance never grows, however large the problem.\n- **Unit vector** — here, an item represented as a set of numeric attributes."
   }
 ]
