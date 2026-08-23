@@ -1,52 +1,52 @@
 [
   {
-    "title": "Microsoft Defender's Own Driver Can Be Weaponized to Delete Security Software at Boot",
-    "link": "https://thehackernews.com/2026/08/microsoft-defenders-own-driver-can-be.html",
-    "blurb": "A signed Defender component can be abused to disable security tooling before Windows finishes booting."
+    "title": "14 Trojanized npm Packages Drop RedC2 4.0 Linux Backdoor With AI-Assisted C2",
+    "link": "https://thehackernews.com/2026/08/14-trojanized-npm-packages-drop-redc2.html",
+    "blurb": "Malicious npm updates plant an AI-assisted backdoor; audit dependency updates, not just installs."
   },
   {
-    "title": "Rust Supply Chain Attack Puts Build-Time Malware in Crates with 245 Million Downloads",
-    "link": "https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html",
-    "blurb": "A poisoned crate shows Rust's build scripts are as exploitable as npm's install hooks."
+    "title": "GitLab CVE-2026-19478 Comes Under Active Exploitation Within Days of Disclosure",
+    "link": "https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html",
+    "blurb": "A GitLab flaw is already being exploited in the wild days after disclosure; self-hosters should patch now."
   },
   {
-    "title": "Lone game dev builds an explorable cyberpunk city almost entirely out of ASCII characters",
-    "link": "https://www.pcgamer.com/hardware/lone-game-dev-builds-an-explorable-cyberpunk-city-almost-entirely-out-of-ascii-characters/",
-    "blurb": "A solo project pushes text-mode rendering into walkable 3D space."
+    "title": "This mod transforms Doom into a terrifying tactical shooter, and it's partly inspired by another PC gaming classic",
+    "link": "https://www.pcgamer.com/games/fps/this-mod-transforms-doom-into-a-terrifying-tactical-shooter-and-its-partly-inspired-by-another-pc-gaming-classic/",
+    "blurb": "A community mod reworks id Tech's 30-year-old engine into a slower, tactical shooter."
   },
   {
-    "title": "Sandustry is the first factory simulation game I've played that gets heaps right",
-    "link": "https://www.rockpapershotgun.com/sandustry-is-the-first-factory-simulation-game-ive-played-that-gets-heaps-right",
-    "blurb": "A genre regularly cluttered by conveyor-belt busywork finds a physical-simulation hook that actually clicks."
+    "title": "Someone has managed to run Zork on the Steam Controller's internal hardware, but it's risky business",
+    "link": "https://www.pcgamer.com/hardware/controllers/someone-has-managed-to-run-zork-on-the-steam-controllers-internal-hardware-but-its-risky-business/",
+    "blurb": "A hacker gets the classic text adventure running directly on a controller's embedded chip."
   },
   {
-    "title": "LHC collisions reveal oxygen and neon's shifting nuclear geometry",
-    "link": "https://phys.org/news/2026-08-lhc-collisions-reveal-oxygen-neon.html",
-    "blurb": "Smashing light nuclei at the LHC maps how their shape deforms mid-collision."
+    "title": "Putting mice into hibernation causes a major loss of synapses",
+    "link": "https://arstechnica.com/science/2026/08/memories-stick-around-even-after-half-the-synapses-are-gone/",
+    "blurb": "Hibernating mice lose roughly half their synapses yet keep their memories, challenging assumptions about where memory physically lives."
   },
   {
-    "title": "Building a Discrete Component 75 Baud Modem",
-    "link": "https://hackaday.com/2026/08/21/building-a-discrete-component-75-baud-modem/",
-    "blurb": "A modem built from raw transistors and logic gates, no modem chip involved."
+    "title": "Building an Analog Geiger Counter",
+    "link": "https://hackaday.com/2026/08/22/building-an-analog-geiger-counter/",
+    "blurb": "A fully analog radiation counter build, no microcontroller involved."
   },
   {
-    "title": "PVC Pipe Turned DIY Digital Telescope",
-    "link": "https://hackaday.com/2026/08/21/pvc-pipe-turned-diy-digital-telescope/",
-    "blurb": "Plumbing parts and a camera sensor turned into a working digital telescope."
+    "title": "InjectionBunny, a NTFS3 SUID injection for privilege escalation",
+    "link": "https://lore.kernel.org/ntfs3/CAGBKPgPiXyKWtjgYSACnugmG1XPs=mPg-Zu-xQziUZ1k921+qA@mail.gmail.com/T/#mc251816dfcb7d4dcbf07368f0d288dbfb1b8e1c9",
+    "blurb": "A newly documented Linux NTFS3 privilege-escalation technique posted to the kernel mailing list for review."
   },
   {
-    "title": "How we made a text-to-speech model respond in sub-50 ms",
-    "link": "https://nari-labs.com/blog/qwen3-tts-speed-cost-frontier/",
-    "blurb": "An engineering writeup on shaving TTS latency down to conversational speed."
+    "title": "Turning My CASIO F-91W Into a Contactless Payment Device",
+    "link": "https://hackernoon.com/how-i-hacked-and-turned-my-casio-f-91w-into-a-contactless-payment-device",
+    "blurb": "A writeup on wiring an NFC payment chip into a classic $15 digital watch."
   },
   {
-    "title": "UAT-10147: Chinese-speaking adversary integrates agentic AI into post-compromise operations",
-    "link": "https://blog.talosintelligence.com/uat-10147-chinese-speaking-adversary-integrates-agentic-ai-into-post-compromise-operations/",
-    "blurb": "**Problem:** Breaking into a server used to require a skilled human operator at every step — finding the flaw, writing the exploit, escalating privileges, cleaning up.\n\n**Approach, in plain words:** This Chinese-speaking crew broke into government and university servers through known, already-patched bugs, then handed off to AI tools (PentestGPT, DeepAudit) that wrote exploitation playbooks, generated implant scripts, and tested whether the exploits worked before deploying them.\n\n**Result:** Talos found roughly 170,000 catalogued target URLs and a toolkit of RATs, rootkits, and privilege-escalation exploits for Windows and Linux, with AI handling reconnaissance, payload generation, and QA.\n\n**Why it matters:** The bottleneck on cybercrime has historically been operator skill and time. AI-driven \"offensive orchestration\" cuts both, letting less-skilled actors run more attacks at once.\n\n**Jargon glossary:**\n- **One-day exploit** — an attack against a vulnerability that's already been publicly disclosed and often patched, but not everywhere.\n- **RAT** — Remote Access Trojan; malware giving an attacker remote control of a machine.\n- **Privilege escalation** — turning limited access into full administrative control.\n- **Deserialization bug** — a flaw where an app unsafely rebuilds objects from untrusted data, letting attackers run code."
+    "title": "Named Pipes Under Attack: Securing Windows Interprocess Communication",
+    "link": "https://www.bleepingcomputer.com/news/security/named-pipes-under-attack-securing-windows-interprocess-communication/",
+    "blurb": "**Problem:** Named pipes let Windows processes talk to each other locally, but a workstation runs code under many privilege levels at once — LocalSystem, admins, standard users, services — and any process that knows a pipe's name can try to connect to it.\n\n**Approach, in plain words:** The writeup catalogs how attackers plant pipes with predictable names, spoof their identity, or send malformed messages to hijack a listener — then lays out defenses: strict per-pipe access lists, verifying identity on connect, authorizing every command, and blocking remote clients.\n\n**Result:** A 15-point hardening checklist spanning access control, input validation, impersonation handling, and resource limits.\n\n**Why it matters:** A LocalSystem service exposed over a poorly secured pipe is a direct route to privilege escalation or denial of service — a well-known but commonly mishandled attack surface.\n\n**Jargon glossary:**\n- **Named pipe** — a Windows IPC channel two processes connect to by a shared name.\n- **DACL** — Discretionary Access Control List; the permissions attached to a pipe controlling who can connect.\n- **Impersonation** — a server temporarily acting with a connecting client's privileges to serve a request.\n- **Confused deputy** — a privileged process tricked into misusing its authority on an attacker's behalf."
   },
   {
-    "title": "'Huge Breakthrough' in the Math of Imbalance",
-    "link": "https://www.quantamagazine.org/huge-breakthrough-in-the-math-of-imbalance-20260821/",
-    "blurb": "**Problem:** Split any collection of things into two groups as evenly as possible across many attributes at once. How close to perfectly even can you always get?\n\n**Approach, in plain words:** In 1998, the best known guarantee scaled with the square root of the item count. Nikhil Bansal and Haotian Jiang found an algorithm that halves each item between groups, measures how nudging one attribute disturbs the others, then perturbs the split to avoid compounding those disturbances.\n\n**Result:** Their bound scales with the fourth root of the count instead of the square root — the first improvement since 1998. For a set the size of the number of atoms in the universe, the new bound is about 3.\n\n**Why it matters:** It's a big step toward an unproven 1980s conjecture that the imbalance is bounded by a constant regardless of scale, with knock-on relevance to optimization, physics, and machine learning problems that reduce to the same balancing question.\n\n**Jargon glossary:**\n- **Discrepancy** — how far from perfectly balanced a split can be forced to be.\n- **Komlós conjecture** — the unproven claim that this imbalance never grows, however large the problem.\n- **Unit vector** — here, an item represented as a set of numeric attributes."
+    "title": "Iron hydride enters an exotic state of matter under Earth's inner-core conditions",
+    "link": "https://phys.org/news/2026-08-iron-hydride-exotic-state-earth.html",
+    "blurb": "**Problem:** Simulations have long suggested iron hydride turns \"superionic\" — a solid metal lattice with hydrogen flowing through it like a liquid — under the pressure and heat of Earth's inner core, but nobody had confirmed it experimentally.\n\n**Approach, in plain words:** Researchers squeezed iron hydride to core-like pressures (50–110 GPa) and heated it past 2,000 Kelvin, watching the crystal with X-rays while running current through it to track hydrogen movement.\n\n**Result:** Near 1,590 Kelvin — below actual core temperatures — the material showed a telltale superionic transition, with hydrogen mobile enough to flow through the fixed lattice, yet slow enough to move only ~0.1 micrometers per 10,000 years.\n\n**Why it matters:** First direct evidence of superionic behavior in iron-hydrogen alloys, helping explain seismic-wave anomalies in the inner core and showing hydrogen from Earth's formation stays trapped there for eons.\n\n**Jargon glossary:**\n- **Superionic state** — a solid whose heavy atoms stay fixed while light atoms move through it like a liquid.\n- **Diamond-anvil cell** — a device that compresses tiny samples between diamond tips to extreme pressures.\n- **Gigapascal (GPa)** — a unit of pressure; 1 GPa is roughly 10,000 atmospheres.\n- **Synchrotron X-ray diffraction** — using intense X-rays to map a sample's crystal structure in real time."
   }
 ]
