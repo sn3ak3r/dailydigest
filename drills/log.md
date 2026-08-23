@@ -7,3 +7,4 @@
 2026-08-20 | crackme | xor mask combined with 32-bit rotate (ror), backward-solving via inverse rotate
 2026-08-21 | decode-instruction | movzx zero-extension, byte-operand ModRM decode, Windows x64 rcx-arg struct field access
 2026-08-22 | reverse-function | array min-finding loop with scaled-index addressing (r8*4), inc/jmp loop, branch-on-false if-compilation
+2026-08-23 | crackme | rolling checksum via rol/add accumulator, per-char loop with movzx and null-terminator test
