@@ -1,52 +1,52 @@
 [
   {
-    "title": "ToxicPanda Android malware uses VPN permissions to block Google Play",
-    "link": "https://www.bleepingcomputer.com/news/security/toxicpanda-android-malware-uses-vpn-permissions-to-block-google-play/",
-    "blurb": "A banking trojan abuses Android's VPN permission model to cut off Play Store access and block security updates on infected devices."
+    "title": "UAT-10147 Uses AI to Scale Server Attacks, Deploys SPECTRE With EDR Bypass and Linux Rootkit",
+    "link": "https://thehackernews.com/2026/08/uat-10147-uses-ai-to-scale-server.html",
+    "blurb": "A threat actor uses AI tooling to automate server compromise at scale, deploying an EDR-evading rootkit dubbed SPECTRE against Linux targets."
   },
   {
-    "title": "Hackers infect Android car head units with proxy botnet malware",
-    "link": "https://www.bleepingcomputer.com/news/security/hackers-infect-android-car-head-units-with-proxy-botnet-malware/",
-    "blurb": "Compromised Android-based car infotainment units are being recruited into a residential-proxy botnet, widening the attack surface past phones and TVs."
+    "title": "Critical Keycloak Password Reset Flaw Could Let Unauthenticated Attackers Take Over Any Account",
+    "link": "https://thehackernews.com/2026/08/critical-keycloak-password-reset-flaw.html",
+    "blurb": "A flaw in Keycloak's password-reset flow lets an unauthenticated attacker fully take over any account, no prior credentials needed."
   },
   {
-    "title": "TikTok Agrees to $400 Million Settlement in U.S. Child Privacy Lawsuit",
-    "link": "https://thehackernews.com/2026/08/tiktok-agrees-to-400-million-settlement.html",
-    "blurb": "TikTok settles a US child-privacy suit for $400M, the latest COPPA enforcement action against a social platform."
+    "title": "WordlistLoader Delivers Amatera via ClickFix, SynkLoader Phishes Windows Passwords",
+    "link": "https://thehackernews.com/2026/08/wordlistloader-delivers-amatera-via.html",
+    "blurb": "Two loader campaigns disguise malware as plain text and abuse fake CAPTCHA \"fixes\" to drop stealers and steal Windows credentials."
   },
   {
-    "title": "Double Fine confirms it owns all its games' IP and publishing rights after Xbox split",
-    "link": "https://www.rockpapershotgun.com/double-fine-confirms-it-owns-all-its-games-ip-and-publishing-rights-after-xbox-split",
-    "blurb": "Double Fine now fully owns its catalog post-Xbox split, a rare case of a studio regaining control after an acquisition."
+    "title": "How to Fish is Steam's latest cursed co-op sensation, now updated with private lobbies, eight player support, and anti-griefer measures",
+    "link": "https://www.rockpapershotgun.com/how-to-fish-is-steams-latest-cursed-co-op-sensation-now-updated-with-private-lobbies-eight-player-support-and-anti-griefer-measures",
+    "blurb": "The breakout indie co-op hit ships a fast follow-up update adding private lobbies, larger party sizes, and anti-griefer protections."
   },
   {
-    "title": "Compulsion Games' buyout is complete, so now Microsoft won't get a cut if you buy South of Midnight",
-    "link": "https://www.rockpapershotgun.com/compulsion-games-buyout-is-complete-so-now-microsoft-wont-get-a-cut-if-you-buy-south-of-midnight",
-    "blurb": "Compulsion Games completed its independence buyout from Microsoft, so Xbox no longer takes a cut of South of Midnight sales."
+    "title": "Nightdive's Thief remaster unearths a 'very very out of date version control repository' with 'the wildest things to say about the code'",
+    "link": "https://www.pcgamer.com/games/sim/nightdives-thief-remaster-unearths-a-very-very-out-of-date-version-control-repository-with-the-wildest-things-to-say-about-the-code/",
+    "blurb": "Restoring Thief's original codebase surfaces a decades-old, barely-functional version control history full of blunt developer commentary."
   },
   {
-    "title": "Oldest human brain cells grown in lab 'recorded passage of time'",
-    "link": "https://phys.org/news/2026-08-oldest-human-brain-cells-grown.html",
-    "blurb": "Lab-grown human brain cells retained a molecular record of elapsed time, hinting at how tissue age is tracked outside the body."
+    "title": "Vacuum-fluctuation-enhanced superconductivity demonstrated for the first time",
+    "link": "https://phys.org/news/2026-08-vacuum-fluctuation-superconductivity.html",
+    "blurb": "**Problem:** It was unclear whether the quantum vacuum's constant fluctuations \u2014 normally just background noise \u2014 could be harnessed to actually strengthen a material's superconductivity, rather than merely being measured.\n\n**Approach, in plain words:** Researchers placed a superconducting crystal (NbSe2) inside a specially built \"dark cavity\" that amplifies electromagnetic vacuum fluctuations at terahertz frequencies, then compared its behavior inside versus outside the cavity.\n\n**Result:** The temperature below which the material superconducts rose by up to 5.4% inside the cavity, peaking exactly at the cavity's resonant frequency \u2014 evidence the vacuum field itself was coupling to and reinforcing the superconducting state.\n\n**Why it matters:** It's the first experimental proof that engineered vacuum fluctuations can boost a macroscopic quantum state, opening a \"noncontact\" way to control quantum materials without any external driving field.\n\n**Jargon glossary:**\n- **Vacuum fluctuations** \u2014 brief appearances of virtual particles in otherwise empty space, predicted by quantum theory.\n- **Critical temperature** \u2014 the temperature below which a material becomes superconducting.\n- **Dark cavity** \u2014 a resonant structure engineered to amplify specific electromagnetic field modes without external driving.\n- **Split-ring resonator** \u2014 a small metallic loop structure that concentrates electromagnetic fields at a chosen frequency."
   },
   {
-    "title": "Amiga-Inspired AROS Goes Bare Metal on Raspberry Pi",
-    "link": "https://hackaday.com/2026/08/23/amiga-inspired-aros-goes-bare-metal-on-raspberry-pi/",
-    "blurb": "The Amiga-inspired AROS OS now boots directly on bare-metal Raspberry Pi, no Linux host layer required."
+    "title": "A New Framework for How the Brain Compresses Our Noisy World",
+    "link": "https://www.quantamagazine.org/a-new-framework-for-how-the-brain-compresses-our-noisy-world-20260824/",
+    "blurb": "**Problem:** The standard model treats the brain like a filing cabinet \u2014 matching sensory input to stored templates \u2014 but that can't explain why the same sound or sight gets categorized differently depending on a person's internal state.\n\n**Approach, in plain words:** Two neuroscientists combined two existing ideas \u2014 that the brain mainly predicts rather than passively receives, and that it constantly manages the body's energy needs \u2014 then checked the idea against known anatomy and brain-activity data.\n\n**Result:** Feedback signals from deep, survival-related brain structures vastly outnumber incoming sensory signals (roughly 9-to-1 in visual cortex), and they actively shape which category the brain assigns to a given input.\n\n**Why it matters:** Categorization isn't a neutral filing step \u2014 it's steered by what the body needs to survive, which reframes perception itself as a survival mechanism rather than pure information processing.\n\n**Jargon glossary:**\n- **Predictive coding** \u2014 the theory that the brain mainly generates predictions and corrects them against sensory input, rather than passively receiving data.\n- **Allostasis** \u2014 the body's process of anticipating and preparing for future physiological needs, rather than just reacting.\n- **Limbic core** \u2014 deep brain structures involved in regulating survival-related bodily states.\n- **Feedforward/feedback signals** \u2014 feedforward carries raw sensory data upward; feedback carries predictions and context back down."
   },
   {
-    "title": "Implementation of GPT-2 in pure CMake",
-    "link": "https://github.com/AlpinDale/gpt2.cmake",
-    "blurb": "A working GPT-2 inference implementation written entirely in CMake's own scripting language."
+    "title": "A 1990s Homebrew OS With GUI And Web Browser, In AM29000 Machine Code",
+    "link": "https://hackaday.com/2026/08/24/a-1990s-homebrew-os-with-gui-and-web-browser-in-am29000-machine-code/",
+    "blurb": "A hand-written 1990s operating system with its own GUI and browser, built entirely in raw AM29000 machine code, gets documented and preserved."
   },
   {
-    "title": "The superconducting gap of an ultrathin nickelate defies expectations",
-    "link": "https://phys.org/news/2026-08-superconducting-gap-ultrathin-nickelate-defies.html",
-    "blurb": "Problem: Bilayer nickelate superconductors were discovered recently, but it wasn't clear whether they pair electrons the same way cuprate superconductors do, or whether a specific electron band even crosses the energy level that matters for conduction.\n\nApproach, in plain words: Researchers grew strained thin films of a nickel-oxide compound and used a synchrotron light technique to directly image how electrons' energies are arranged in the material, then compared the results to theoretical predictions.\n\nResult: The superconducting gap stays open in every direction, unlike cuprates' gap, which vanishes along certain directions. A band some theories expected to conduct actually sits below the conducting threshold, held there by strain in the crystal.\n\nWhy it matters: Confirms nickelates use a different pairing mechanism than cuprates, narrowing which theories of high-temperature superconductivity can be right.\n\nJargon glossary:\n- Fermi level: the energy threshold below which electron states are filled; only electrons near it conduct.\n- ARPES: a technique that fires light at a material and measures ejected electrons to map their energies.\n- d-wave pairing: a way of pairing electrons where the resulting gap vanishes along diagonal directions.\n- Epitaxial strain: stretching or compressing a thin film's crystal lattice to match the material it's grown on."
+    "title": "SeL4 security proofs now complete on AArch64",
+    "link": "https://proofcraft.systems/news-2026/#2026-08-21",
+    "blurb": "The seL4 microkernel's formal security proofs are now fully complete on the AArch64 architecture, extending mathematically-verified guarantees to ARM64 hardware."
   },
   {
-    "title": "Making LEDs in the Home Fab",
-    "link": "https://hackaday.com/2026/08/23/making-leds-in-the-home-fab/",
-    "blurb": "Problem: Hobbyist chip fabrication has mostly stopped at proof-of-concept test structures; actually building and mounting a working, packaged LED chip is a harder wall.\n\nApproach, in plain words: Starting from a raw gallium-nitride wafer, a UV laser cut through layers to expose contacts and slice out individual chips. Metal contacts were sputtered on through a stencil mask, then each chip was bonded to a circuit board using melted indium bumps, with a phosphor coating added to convert blue light to white.\n\nResult: Functional blue and phosphor-converted white LEDs, soldered onto a real PCB rather than left as bare die on a bench.\n\nWhy it matters: Packaging and mounting a chip, not just fabricating it, has been the harder barrier for amateur semiconductor work — this build clears it.\n\nJargon glossary:\n- Epiwafer: a wafer with thin, precisely grown semiconductor layers on top.\n- Sputtering: depositing a thin metal film by knocking atoms off a target with ions.\n- Phosphor: a material that absorbs light at one color and re-emits it at another.\n- Bump bonding: connecting a chip to a board via small solder or metal bumps instead of wires."
+    "title": "Your executable is a SQLite database",
+    "link": "https://fzakaria.com/2026/08/23/your-executable-is-a-sqlite-database",
+    "blurb": "A build technique embeds a full SQLite database inside a compiled executable, making the binary itself queryable."
   }
 ]
