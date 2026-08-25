@@ -9,3 +9,4 @@
 2026-08-22 | reverse-function | array min-finding loop with scaled-index addressing (r8*4), inc/jmp loop, branch-on-false if-compilation
 2026-08-23 | crackme | rolling checksum via rol/add accumulator, per-char loop with movzx and null-terminator test
 2026-08-24 | decode-instruction | movsxd sign-extension (32->64), REX.W requirement, mod=01 disp8 ModRM addressing
+2026-08-25 | reverse-function | bitwise flag test via and/setne, movzx al->eax return zero-extension

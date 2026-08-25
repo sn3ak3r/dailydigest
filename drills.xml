@@ -1,1 +1,25 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Decode One Instruction: 48 63 41 08</title><link></link><description>Challenge: Decode this x86-64 instruction byte by byte and state what it does: 48 63 41 08 (Windows x64 target). Answer: movsxd rax, dword ptr [rcx+8]. 48 = REX.W prefix (64-bit operand size). 63 = MOVSXD opcode (32-to-64-bit sign-extending move). 41 = ModRM byte 01 000 001: mod=01 (reg+disp8 addressing), reg=000 (dest=rax), rm=001 (base=rcx). 08 = disp8 offset +8. It reads the signed 32-bit dword at [rcx+8], sign-extends it to 64 bits, and stores it in rax -- the classic pattern for loading a signed int field (e.g. an index or count) from a struct pointed to by rcx, the first-argument register in the Windows x64 calling convention, while widening it for pointer arithmetic.</description><guid isPermaLink='false'>2026-08-24</guid><pubDate>Mon, 24 Aug 2026 02:37:22 +0000</pubDate></item></channel></rss>
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse a Short Function to C: Bitwise Flag Test</title><link></link><description>Target: Windows x86-64 (fastcall: first int arg in ecx; return in eax).
+
+Reverse this disassembly to equivalent C:
+
+foo:
+    mov     eax, ecx
+    and     eax, 8
+    setne   al
+    movzx   eax, al
+    ret
+
+What does foo(int x) compute?
+
+---
+
+Answer:
+
+int foo(int x) {
+    return (x &amp; 8) != 0;
+}
+
+Explanation:
+1. `and eax, 8` clears every bit of x except bit 3, leaving either 0 or 8, and sets ZF from that result.
+2. `setne al` writes 1 into al if ZF is clear (the and was nonzero) or 0 if ZF is set, turning the flag test into a boolean without a branch.
+3. `movzx eax, al` zero-extends that byte up to the full 32-bit eax return register, so stray high bits never leak into the result.</description><guid isPermaLink='false'>2026-08-25</guid><pubDate>Tue, 25 Aug 2026 02:37:40 +0000</pubDate></item></channel></rss>
