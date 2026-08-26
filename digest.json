@@ -1,52 +1,52 @@
 [
   {
-    "title": "UAT-10147 Uses AI to Scale Server Attacks, Deploys SPECTRE With EDR Bypass and Linux Rootkit",
-    "link": "https://thehackernews.com/2026/08/uat-10147-uses-ai-to-scale-server.html",
-    "blurb": "A threat actor uses AI tooling to automate server compromise at scale, deploying an EDR-evading rootkit dubbed SPECTRE against Linux targets."
+    "title": "E4del and PINHOLE RATs Turn FTP Banners Into Dead Drops for Malware Commands",
+    "link": "https://thehackernews.com/2026/08/e4del-and-pinhole-rats-turn-ftp-banners.html",
+    "blurb": "Two RATs hide their C2 traffic inside ordinary FTP server banners, turning a boring protocol field into a covert dead drop."
   },
   {
-    "title": "Critical Keycloak Password Reset Flaw Could Let Unauthenticated Attackers Take Over Any Account",
-    "link": "https://thehackernews.com/2026/08/critical-keycloak-password-reset-flaw.html",
-    "blurb": "A flaw in Keycloak's password-reset flow lets an unauthenticated attacker fully take over any account, no prior credentials needed."
+    "title": "Marimo Notebook Flaw Could Run MCP Commands Before Cells Execute in Edit Mode",
+    "link": "https://thehackernews.com/2026/08/marimo-notebook-flaw-could-run-mcp.html",
+    "blurb": "Opening a malicious Marimo notebook in edit mode can trigger MCP tool commands before the user ever runs a cell."
   },
   {
-    "title": "WordlistLoader Delivers Amatera via ClickFix, SynkLoader Phishes Windows Passwords",
-    "link": "https://thehackernews.com/2026/08/wordlistloader-delivers-amatera-via.html",
-    "blurb": "Two loader campaigns disguise malware as plain text and abuse fake CAPTCHA \"fixes\" to drop stealers and steal Windows credentials."
+    "title": "Unpatched Calix flaw lets hackers bypass NAT to expose internal devices",
+    "link": "https://www.bleepingcomputer.com/news/security/unpatched-calix-flaw-lets-hackers-bypass-nat-to-expose-internal-devices/",
+    "blurb": "**Problem:** Calix GS7 XGS fiber gateways, deployed by ISPs like Cox and Brightspeed, expose a control service to the public internet with no login required.\n\n**Approach, in plain words:** The router's UPnP service, meant only for devices inside the home to request port forwards, sits on the public WAN side instead of the LAN. Anyone online can send it raw requests to add or list port-forwarding rules.\n\n**Result:** One unauthenticated request opens a permanent hole through the firewall to any device inside — cameras, NAS boxes, admin panels. The vendor never responded to disclosure, so CERT/CC published the flaw (CVE-2026-75501) unpatched.\n\n**Why it matters:** No exploit skill needed, just the right port — and the model is deployed widely at major US broadband providers.\n\n**Jargon glossary:**\n- **NAT** — hides home devices behind one public IP.\n- **UPnP** — lets home devices ask the router to open ports automatically.\n- **WAN interface** — the router's internet-facing side.\n- **CERT/CC** — Carnegie Mellon's vulnerability-disclosure coordination center."
   },
   {
-    "title": "How to Fish is Steam's latest cursed co-op sensation, now updated with private lobbies, eight player support, and anti-griefer measures",
-    "link": "https://www.rockpapershotgun.com/how-to-fish-is-steams-latest-cursed-co-op-sensation-now-updated-with-private-lobbies-eight-player-support-and-anti-griefer-measures",
-    "blurb": "The breakout indie co-op hit ships a fast follow-up update adding private lobbies, larger party sizes, and anti-griefer protections."
+    "title": "Nvidia DLSS 4.5 Ray Reconstruction, out now, ups shadow quality and more accurately illuminates trash bags",
+    "link": "https://www.rockpapershotgun.com/nvidia-dlss-45-ray-reconstruction-out-now-ups-shadow-quality-and-more-accurately-illuminates-trash-bags",
+    "blurb": "The latest ray reconstruction model ships sharper shadows and more accurate lighting on fine detail."
   },
   {
-    "title": "Nightdive's Thief remaster unearths a 'very very out of date version control repository' with 'the wildest things to say about the code'",
-    "link": "https://www.pcgamer.com/games/sim/nightdives-thief-remaster-unearths-a-very-very-out-of-date-version-control-repository-with-the-wildest-things-to-say-about-the-code/",
-    "blurb": "Restoring Thief's original codebase surfaces a decades-old, barely-functional version control history full of blunt developer commentary."
+    "title": "How to Fish is the latest Steam indie sensation, selling 1 million copies in just two days",
+    "link": "https://www.eurogamer.net/how-to-fish-one-million-sales-steam",
+    "blurb": "The breakout co-op fishing game crosses a million sales in 48 hours."
   },
   {
-    "title": "Vacuum-fluctuation-enhanced superconductivity demonstrated for the first time",
-    "link": "https://phys.org/news/2026-08-vacuum-fluctuation-superconductivity.html",
-    "blurb": "**Problem:** It was unclear whether the quantum vacuum's constant fluctuations \u2014 normally just background noise \u2014 could be harnessed to actually strengthen a material's superconductivity, rather than merely being measured.\n\n**Approach, in plain words:** Researchers placed a superconducting crystal (NbSe2) inside a specially built \"dark cavity\" that amplifies electromagnetic vacuum fluctuations at terahertz frequencies, then compared its behavior inside versus outside the cavity.\n\n**Result:** The temperature below which the material superconducts rose by up to 5.4% inside the cavity, peaking exactly at the cavity's resonant frequency \u2014 evidence the vacuum field itself was coupling to and reinforcing the superconducting state.\n\n**Why it matters:** It's the first experimental proof that engineered vacuum fluctuations can boost a macroscopic quantum state, opening a \"noncontact\" way to control quantum materials without any external driving field.\n\n**Jargon glossary:**\n- **Vacuum fluctuations** \u2014 brief appearances of virtual particles in otherwise empty space, predicted by quantum theory.\n- **Critical temperature** \u2014 the temperature below which a material becomes superconducting.\n- **Dark cavity** \u2014 a resonant structure engineered to amplify specific electromagnetic field modes without external driving.\n- **Split-ring resonator** \u2014 a small metallic loop structure that concentrates electromagnetic fields at a chosen frequency."
+    "title": "JWST reveals a race against time for forming planets",
+    "link": "https://phys.org/news/2026-08-jwst-reveals-planets.html",
+    "blurb": "New Webb observations show protoplanetary disks losing gas faster than expected, shrinking planets' formation window."
   },
   {
-    "title": "A New Framework for How the Brain Compresses Our Noisy World",
-    "link": "https://www.quantamagazine.org/a-new-framework-for-how-the-brain-compresses-our-noisy-world-20260824/",
-    "blurb": "**Problem:** The standard model treats the brain like a filing cabinet \u2014 matching sensory input to stored templates \u2014 but that can't explain why the same sound or sight gets categorized differently depending on a person's internal state.\n\n**Approach, in plain words:** Two neuroscientists combined two existing ideas \u2014 that the brain mainly predicts rather than passively receives, and that it constantly manages the body's energy needs \u2014 then checked the idea against known anatomy and brain-activity data.\n\n**Result:** Feedback signals from deep, survival-related brain structures vastly outnumber incoming sensory signals (roughly 9-to-1 in visual cortex), and they actively shape which category the brain assigns to a given input.\n\n**Why it matters:** Categorization isn't a neutral filing step \u2014 it's steered by what the body needs to survive, which reframes perception itself as a survival mechanism rather than pure information processing.\n\n**Jargon glossary:**\n- **Predictive coding** \u2014 the theory that the brain mainly generates predictions and corrects them against sensory input, rather than passively receiving data.\n- **Allostasis** \u2014 the body's process of anticipating and preparing for future physiological needs, rather than just reacting.\n- **Limbic core** \u2014 deep brain structures involved in regulating survival-related bodily states.\n- **Feedforward/feedback signals** \u2014 feedforward carries raw sensory data upward; feedback carries predictions and context back down."
+    "title": "Sound waves do double duty, carrying and protecting quantum information",
+    "link": "https://phys.org/news/2026-08-duty-quantum.html",
+    "blurb": "Researchers show phonons can both transport and shield fragile quantum states at once."
   },
   {
-    "title": "A 1990s Homebrew OS With GUI And Web Browser, In AM29000 Machine Code",
-    "link": "https://hackaday.com/2026/08/24/a-1990s-homebrew-os-with-gui-and-web-browser-in-am29000-machine-code/",
-    "blurb": "A hand-written 1990s operating system with its own GUI and browser, built entirely in raw AM29000 machine code, gets documented and preserved."
+    "title": "Native SMB3 Client Brings Modern NAS Access To 20-Year-Old PowerPC Macs",
+    "link": "https://hackaday.com/2026/08/25/native-smb3-client-brings-modern-nas-access-to-20-year-old-powerpc-macs/",
+    "blurb": "**Problem:** PowerPC Macs on OS X Tiger/Leopard predate SMB3, the protocol modern NAS boxes use, leaving them stuck on old, unencrypted SMB1/CIFS.\n\n**Approach, in plain words:** Developer [watermark_hd] built Aqualink, using the open-source libsmb2 library to speak SMB2/3 on the Mac's behalf, then exposes those files locally over WebDAV — a protocol old OS X already mounts natively.\n\n**Result:** These Macs can now mount modern SMB3 shares as ordinary network drives; source is on GitHub, though encrypted transport still isn't supported.\n\n**Why it matters:** Rather than writing a new filesystem driver for a dead OS, translating one supported protocol into another keeps orphaned systems usefully networked.\n\n**Jargon glossary:**\n- **SMB3** — current Windows/NAS file-sharing protocol.\n- **CIFS** — the older, insecure SMB1 predecessor.\n- **WebDAV** — remote file access over plain HTTP.\n- **libsmb2** — open-source SMB2/3 client/server library."
   },
   {
-    "title": "SeL4 security proofs now complete on AArch64",
-    "link": "https://proofcraft.systems/news-2026/#2026-08-21",
-    "blurb": "The seL4 microkernel's formal security proofs are now fully complete on the AArch64 architecture, extending mathematically-verified guarantees to ARM64 hardware."
+    "title": "Hunting Down a Go Runtime Bug on 32-bit Embedded Systems",
+    "link": "https://sigma-star.at/blog/2026/08/go-runtime-netpoll-bug/",
+    "blurb": "Tracing an intermittent network hang on 32-bit embedded Linux back to a Go runtime netpoll bug."
   },
   {
-    "title": "Your executable is a SQLite database",
-    "link": "https://fzakaria.com/2026/08/23/your-executable-is-a-sqlite-database",
-    "blurb": "A build technique embeds a full SQLite database inside a compiled executable, making the binary itself queryable."
+    "title": "Replacing a Rust Enum with a 64-bit Word Made My Interpreter 17% Faster",
+    "link": "https://pointersgonewild.com/2026-08-25-replacing-a-rust-enum-with-a-64-bit-word/",
+    "blurb": "Packing an interpreter's values into one 64-bit word instead of a tagged enum cuts overhead and speeds execution by 17%."
   }
 ]
