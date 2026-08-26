@@ -1,25 +1,25 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse a Short Function to C: Bitwise Flag Test</title><link></link><description>Target: Windows x86-64 (fastcall: first int arg in ecx; return in eax).
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Mini Crackme: Bitwise NOT Check</title><link></link><description>Target: Windows x86-64, fastcall (first int arg in ecx).
 
-Reverse this disassembly to equivalent C:
+A &quot;license check&quot; function takes one byte (a character) in cl and returns 1 (pass) or 0 (fail). Find the single-character input that makes it return 1.
 
-foo:
-    mov     eax, ecx
-    and     eax, 8
-    setne   al
-    movzx   eax, al
+check_char:
+    mov     eax, ecx        ; eax = input char
+    not     eax             ; bitwise complement (all 32 bits)
+    and     eax, 0FFh       ; keep only the low byte
+    cmp     eax, 0B4h       ; compare against target
+    jne     fail
+    mov     eax, 1
+    ret
+fail:
+    xor     eax, eax
     ret
 
-What does foo(int x) compute?
+What single ASCII character passed in cl makes check_char return 1?
 
 ---
 
-Answer:
+Answer: &#x27;K&#x27; (0x4B / decimal 75)
 
-int foo(int x) {
-    return (x &amp; 8) != 0;
-}
-
-Explanation:
-1. `and eax, 8` clears every bit of x except bit 3, leaving either 0 or 8, and sets ZF from that result.
-2. `setne al` writes 1 into al if ZF is clear (the and was nonzero) or 0 if ZF is set, turning the flag test into a boolean without a branch.
-3. `movzx eax, al` zero-extends that byte up to the full 32-bit eax return register, so stray high bits never leak into the result.</description><guid isPermaLink='false'>2026-08-25</guid><pubDate>Tue, 25 Aug 2026 02:37:40 +0000</pubDate></item></channel></rss>
+1. `not eax` flips every bit of the 32-bit register, so if ecx holds the input byte c, after not the low byte becomes (~c) &amp; 0xFF (upper bits get masked off next anyway).
+2. The check requires (~c) &amp; 0xFF == 0xB4. Solve backward: invert the target -- ~0xB4 &amp; 0xFF = 0x4B -- since NOT is its own inverse.
+3. 0x4B is ASCII &#x27;K&#x27;. Feeding &#x27;K&#x27; in cl makes eax land on 0xB4, the jne falls through, and the function returns 1.</description><guid isPermaLink='false'>2026-08-26</guid><pubDate>Wed, 26 Aug 2026 02:37:25 +0000</pubDate></item></channel></rss>
