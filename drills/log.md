@@ -11,3 +11,4 @@
 2026-08-24 | decode-instruction | movsxd sign-extension (32->64), REX.W requirement, mod=01 disp8 ModRM addressing
 2026-08-25 | reverse-function | bitwise flag test via and/setne, movzx al->eax return zero-extension
 2026-08-26 | crackme | bitwise NOT (complement) check, backward-solving via self-inverse not, byte-masked cmp
+2026-08-27 | decode-instruction | RIP-relative addressing (mod=00, rm=101 special case), LEA opcode, disp32 little-endian

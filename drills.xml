@@ -1,25 +1,15 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Mini Crackme: Bitwise NOT Check</title><link></link><description>Target: Windows x86-64, fastcall (first int arg in ecx).
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Decode: RIP-Relative LEA</title><link></link><description>Format: decode one instruction. Target: Windows x86-64.
 
-A &quot;license check&quot; function takes one byte (a character) in cl and returns 1 (pass) or 0 (fail). Find the single-character input that makes it return 1.
+Decode this byte sequence into its full assembly instruction (mnemonic + operands):
 
-check_char:
-    mov     eax, ecx        ; eax = input char
-    not     eax             ; bitwise complement (all 32 bits)
-    and     eax, 0FFh       ; keep only the low byte
-    cmp     eax, 0B4h       ; compare against target
-    jne     fail
-    mov     eax, 1
-    ret
-fail:
-    xor     eax, eax
-    ret
+48 8D 05 12 34 00 00
 
-What single ASCII character passed in cl makes check_char return 1?
+Break down each piece: the REX prefix, the opcode, and the ModRM byte (mod, reg, rm fields). Pay special attention to what rm=101 means when mod=00 -- it isn&#x27;t a normal register or [reg] memory form.
 
 ---
 
-Answer: &#x27;K&#x27; (0x4B / decimal 75)
+Answer: lea rax, [rip + 0x3412]
 
-1. `not eax` flips every bit of the 32-bit register, so if ecx holds the input byte c, after not the low byte becomes (~c) &amp; 0xFF (upper bits get masked off next anyway).
-2. The check requires (~c) &amp; 0xFF == 0xB4. Solve backward: invert the target -- ~0xB4 &amp; 0xFF = 0x4B -- since NOT is its own inverse.
-3. 0x4B is ASCII &#x27;K&#x27;. Feeding &#x27;K&#x27; in cl makes eax land on 0xB4, the jne falls through, and the function returns 1.</description><guid isPermaLink='false'>2026-08-26</guid><pubDate>Wed, 26 Aug 2026 02:37:25 +0000</pubDate></item></channel></rss>
+1. 48 is REX.W (W=1), so operands are 64-bit. 8D is the LEA opcode (load effective address, no memory access, just computes it).
+2. 05 is the ModRM byte: mod=00, reg=000 (destination = rax), rm=101.
+3. On x86-64, mod=00 with rm=101 is reserved for RIP-relative addressing (not a 32-bit-mode absolute [disp32]). The following 4 bytes (12 34 00 00, little-endian) are a signed disp32 added to the address of the next instruction, giving [rip + 0x3412].</description><guid isPermaLink='false'>2026-08-27</guid><pubDate>Thu, 27 Aug 2026 02:36:55 +0000</pubDate></item></channel></rss>
