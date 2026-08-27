@@ -1,52 +1,52 @@
 [
   {
-    "title": "E4del and PINHOLE RATs Turn FTP Banners Into Dead Drops for Malware Commands",
-    "link": "https://thehackernews.com/2026/08/e4del-and-pinhole-rats-turn-ftp-banners.html",
-    "blurb": "Two RATs hide their C2 traffic inside ordinary FTP server banners, turning a boring protocol field into a covert dead drop."
+    "title": "New GPUThor attack defeats NVIDIA ECC protection for root access",
+    "link": "https://www.bleepingcomputer.com/news/security/new-gputhor-attack-defeats-nvidia-ecc-protection-for-root-access/",
+    "blurb": "A new attack flips GPU memory bits to defeat NVIDIA's ECC protections entirely, escalating from a compromised process to root."
   },
   {
-    "title": "Marimo Notebook Flaw Could Run MCP Commands Before Cells Execute in Edit Mode",
-    "link": "https://thehackernews.com/2026/08/marimo-notebook-flaw-could-run-mcp.html",
-    "blurb": "Opening a malicious Marimo notebook in edit mode can trigger MCP tool commands before the user ever runs a cell."
+    "title": "New SLEEPWALKER Backdoor Waits for One Crafted Packet, Then Runs Its Own Bytecode",
+    "link": "https://thehackernews.com/2026/08/newly-sleepwalker-backdoor-waits-for.html",
+    "blurb": "The backdoor sits completely dormant and network-silent until a single specially crafted packet arrives and triggers its own bytecode interpreter."
   },
   {
-    "title": "Unpatched Calix flaw lets hackers bypass NAT to expose internal devices",
-    "link": "https://www.bleepingcomputer.com/news/security/unpatched-calix-flaw-lets-hackers-bypass-nat-to-expose-internal-devices/",
-    "blurb": "**Problem:** Calix GS7 XGS fiber gateways, deployed by ISPs like Cox and Brightspeed, expose a control service to the public internet with no login required.\n\n**Approach, in plain words:** The router's UPnP service, meant only for devices inside the home to request port forwards, sits on the public WAN side instead of the LAN. Anyone online can send it raw requests to add or list port-forwarding rules.\n\n**Result:** One unauthenticated request opens a permanent hole through the firewall to any device inside — cameras, NAS boxes, admin panels. The vendor never responded to disclosure, so CERT/CC published the flaw (CVE-2026-75501) unpatched.\n\n**Why it matters:** No exploit skill needed, just the right port — and the model is deployed widely at major US broadband providers.\n\n**Jargon glossary:**\n- **NAT** — hides home devices behind one public IP.\n- **UPnP** — lets home devices ask the router to open ports automatically.\n- **WAN interface** — the router's internet-facing side.\n- **CERT/CC** — Carnegie Mellon's vulnerability-disclosure coordination center."
+    "title": "ROBBIN: Rowhammer-Based Backdoor Injection during Inference",
+    "link": "https://arxiv.org/abs/2608.23774",
+    "blurb": "A backdoor can be planted straight into a neural network's weights by flipping DRAM bits with Rowhammer during inference, no code execution needed."
   },
   {
-    "title": "Nvidia DLSS 4.5 Ray Reconstruction, out now, ups shadow quality and more accurately illuminates trash bags",
-    "link": "https://www.rockpapershotgun.com/nvidia-dlss-45-ray-reconstruction-out-now-ups-shadow-quality-and-more-accurately-illuminates-trash-bags",
-    "blurb": "The latest ray reconstruction model ships sharper shadows and more accurate lighting on fine detail."
+    "title": "Blue Dragon has been stuck on the Xbox 360 for 20 years, but no longer: a fantastic unofficial PC port unlocks the FPS, goes 4K, and even adds mod support",
+    "link": "https://www.pcgamer.com/games/rpg/blue-dragon-has-been-stuck-on-the-xbox-360-for-20-years-but-no-longer-a-fantastic-unofficial-pc-port-unlocks-the-fps-goes-4k-and-even-adds-mod-support/",
+    "blurb": "A fan-made PC port frees the 20-year Xbox-exclusive RPG, unlocking uncapped framerate, 4K rendering, and mod support."
   },
   {
-    "title": "How to Fish is the latest Steam indie sensation, selling 1 million copies in just two days",
-    "link": "https://www.eurogamer.net/how-to-fish-one-million-sales-steam",
-    "blurb": "The breakout co-op fishing game crosses a million sales in 48 hours."
+    "title": "State of Decay 3 lives on after studio's separation from Xbox, with a closed beta promised for this year",
+    "link": "https://www.eurogamer.net/state-of-decay-3-lives-on-after-studios-separation-from-xbox-with-a-closed-beta-promised-for-this-year",
+    "blurb": "The zombie-survival sequel survives its studio's split from Xbox, with a closed beta still promised for later this year."
   },
   {
-    "title": "JWST reveals a race against time for forming planets",
-    "link": "https://phys.org/news/2026-08-jwst-reveals-planets.html",
-    "blurb": "New Webb observations show protoplanetary disks losing gas faster than expected, shrinking planets' formation window."
+    "title": "Researchers get two genetic codes to work at the same time",
+    "link": "https://arstechnica.com/science/2026/08/researchers-get-two-genetic-codes-to-work-at-the-same-time/",
+    "blurb": "Scientists engineered a cell to run two parallel, non-overlapping genetic codes at once, a step toward organisms immune to natural viruses."
   },
   {
-    "title": "Sound waves do double duty, carrying and protecting quantum information",
-    "link": "https://phys.org/news/2026-08-duty-quantum.html",
-    "blurb": "Researchers show phonons can both transport and shield fragile quantum states at once."
+    "title": "Ramped fields create more robust entanglement between trapped-ion qubits",
+    "link": "https://phys.org/news/2026-08-ramped-fields-robust-entanglement-ion.html",
+    "blurb": "**Problem:** Entangling trapped-ion qubits usually forces a trade-off — driving near the ion's motional resonance entangles fast but is highly sensitive to vibration noise; driving far from resonance is stable but slow.\n\n**Approach, in plain words:** LLNL and NIST researchers designed a \"ramped detuning\" gate: start the laser drive far from resonance, sweep in close during the middle of the pulse, then sweep back out, getting speed and stability from a single smooth operation instead of picking one.\n\n**Result:** The technique keeps qubits reliably entangled at higher operating temperatures and with looser calibration tolerances than fixed-detuning gates, published in *Physical Review Letters*.\n\n**Why it matters:** Loosening thermal and calibration requirements is exactly the engineering headroom trapped-ion computers need to scale past lab-sized rigs.\n\n**Jargon glossary:**\n- **Trapped ion qubit** — a single charged atom held by electric fields, used to store quantum information.\n- **Entanglement** — a quantum link between qubits that lets them share state.\n- **Detuning** — how far a laser's frequency sits from an atom's natural resonance.\n- **Calibration** — tuning laser and field parameters to the specific hardware in use."
   },
   {
-    "title": "Native SMB3 Client Brings Modern NAS Access To 20-Year-Old PowerPC Macs",
-    "link": "https://hackaday.com/2026/08/25/native-smb3-client-brings-modern-nas-access-to-20-year-old-powerpc-macs/",
-    "blurb": "**Problem:** PowerPC Macs on OS X Tiger/Leopard predate SMB3, the protocol modern NAS boxes use, leaving them stuck on old, unencrypted SMB1/CIFS.\n\n**Approach, in plain words:** Developer [watermark_hd] built Aqualink, using the open-source libsmb2 library to speak SMB2/3 on the Mac's behalf, then exposes those files locally over WebDAV — a protocol old OS X already mounts natively.\n\n**Result:** These Macs can now mount modern SMB3 shares as ordinary network drives; source is on GitHub, though encrypted transport still isn't supported.\n\n**Why it matters:** Rather than writing a new filesystem driver for a dead OS, translating one supported protocol into another keeps orphaned systems usefully networked.\n\n**Jargon glossary:**\n- **SMB3** — current Windows/NAS file-sharing protocol.\n- **CIFS** — the older, insecure SMB1 predecessor.\n- **WebDAV** — remote file access over plain HTTP.\n- **libsmb2** — open-source SMB2/3 client/server library."
+    "title": "Dissecting the Apple M1 GPU, the end",
+    "link": "https://alyssarosenzweig.ca/blog/asahi-gpu-part-n.html",
+    "blurb": "The final entry in a years-long project fully reverse-engineered Apple's M1 GPU architecture and driver stack without any vendor documentation."
   },
   {
-    "title": "Hunting Down a Go Runtime Bug on 32-bit Embedded Systems",
-    "link": "https://sigma-star.at/blog/2026/08/go-runtime-netpoll-bug/",
-    "blurb": "Tracing an intermittent network hang on 32-bit embedded Linux back to a Go runtime netpoll bug."
+    "title": "Emulating the iPod",
+    "link": "https://hackaday.com/2026/08/26/emulating-the-ipod/",
+    "blurb": "**Problem:** Every classic console and computer has open-source emulators by now — the iPod never did, because Apple never documented its hardware and the device is entirely closed-source.\n\n**Approach, in plain words:** Developer daniel5151 built \"clicky\" by drawing on alternative firmware projects like Rockbox and iPodLinux, which had already done years of hardware digging, instead of any official spec.\n\n**Result:** clicky boots the iPod's factory RetailOS and both alternative firmwares, and runs simple games like Brick Breaker — but audio and USB, arguably the device's whole point, aren't emulated yet.\n\n**Why it matters:** It closes one of the last major gaps in consumer-device emulation and shows how community reverse-engineering work compounds across projects over time.\n\n**Jargon glossary:**\n- **RetailOS** — the iPod's stock Apple firmware.\n- **Rockbox / iPodLinux** — open-source alternative firmware projects for iPods.\n- **Reverse engineering** — inferring how closed hardware or software works without official docs."
   },
   {
-    "title": "Replacing a Rust Enum with a 64-bit Word Made My Interpreter 17% Faster",
-    "link": "https://pointersgonewild.com/2026-08-25-replacing-a-rust-enum-with-a-64-bit-word/",
-    "blurb": "Packing an interpreter's values into one 64-bit word instead of a tagged enum cuts overhead and speeds execution by 17%."
+    "title": "Tailcat – Like netcat, but over Tailscale's data plane",
+    "link": "https://github.com/tailscale/tailcat",
+    "blurb": "A netcat-style CLI tool pipes data directly over Tailscale's WireGuard mesh, skipping manual port-forwarding setup."
   }
 ]
