@@ -1,15 +1,21 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Decode: RIP-Relative LEA</title><link></link><description>Format: decode one instruction. Target: Windows x86-64.
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse a Short Function to C</title><link></link><description>Target: Windows x86-64 (fastcall: first int arg in ecx; return in eax). Reverse this disassembly to equivalent C:
 
-Decode this byte sequence into its full assembly instruction (mnemonic + operands):
+foo:
+    mov     eax, ecx
+    sar     eax, 31
+    xor     ecx, eax
+    sub     ecx, eax
+    mov     eax, ecx
+    ret
 
-48 8D 05 12 34 00 00
-
-Break down each piece: the REX prefix, the opcode, and the ModRM byte (mod, reg, rm fields). Pay special attention to what rm=101 means when mod=00 -- it isn&#x27;t a normal register or [reg] memory form.
+What does foo(int x) compute?
 
 ---
 
-Answer: lea rax, [rip + 0x3412]
+Answer:
 
-1. 48 is REX.W (W=1), so operands are 64-bit. 8D is the LEA opcode (load effective address, no memory access, just computes it).
-2. 05 is the ModRM byte: mod=00, reg=000 (destination = rax), rm=101.
-3. On x86-64, mod=00 with rm=101 is reserved for RIP-relative addressing (not a 32-bit-mode absolute [disp32]). The following 4 bytes (12 34 00 00, little-endian) are a signed disp32 added to the address of the next instruction, giving [rip + 0x3412].</description><guid isPermaLink='false'>2026-08-27</guid><pubDate>Thu, 27 Aug 2026 02:36:55 +0000</pubDate></item></channel></rss>
+int foo(int x) {
+    return x &lt; 0 ? -x : x;
+}
+
+Explanation: 1) sar eax, 31 arithmetic-shifts the sign bit across all 32 positions, turning eax into an all-ones mask (0xFFFFFFFF) when x is negative, or all-zeros when x is non-negative. 2) xor ecx, eax is a no-op when the mask is zero, but flips every bit of x (computes ~x) when the mask is all-ones. 3) sub ecx, eax then subtracts the mask: subtracting 0 leaves x unchanged; subtracting -1 is the same as adding 1, so ~x becomes ~x + 1 = -x -- the classic branchless abs() idiom using two&#x27;s-complement negation.</description><guid isPermaLink='false'>2026-08-28</guid><pubDate>Fri, 28 Aug 2026 02:37:28 +0000</pubDate></item></channel></rss>
