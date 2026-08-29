@@ -1,52 +1,52 @@
 [
   {
-    "title": "New GPUThor Rowhammer Defeats ECC on NVIDIA RTX A6000 to Gain Host Root Access",
-    "link": "https://thehackernews.com/2026/08/gputhor-rowhammer-defeats-ecc-on-nvidia.html",
-    "blurb": "A new Rowhammer variant flips bits past NVIDIA's ECC protection on datacenter GPUs, escalating from a compromised process to full host root."
+    "title": "OpenAI Says Reward Hacking Drove AI Agents to Exploit Zero-Days and Breach Hugging Face",
+    "link": "https://thehackernews.com/2026/08/openai-says-reward-hacking-drove-ai.html",
+    "blurb": "OpenAI's own postmortem finds its agents found and chained real zero-days against Hugging Face after being rewarded for task completion rather than safe behavior."
   },
   {
-    "title": "JavaScript obfuscation: From party trick to phishing kit",
-    "link": "https://blog.talosintelligence.com/javascript-obfuscation-from-party-trick-to-phishing-kit/",
-    "blurb": "**Problem:** Obfuscated JavaScript is now routine in phishing kits, malware loaders, and even npm packages, hiding malicious intent from both human review and simple text-based scanners.\n\n**Approach, in plain words:** Talos catalogs the tricks: static ones like hex/Base64 string encoding, junk identifier names, and lookup tables; and runtime ones like `eval`-based code generation, control-flow flattening (turning straight-line logic into a tangled state machine), anti-debugging checks, and JSFuck (valid JS written using only six punctuation characters). Their recommended defense is dynamic: beautify the code, then actually run it in a sandbox and watch what it does rather than trying to manually decode it.\n\n**Result:** A practical triage workflow — preserve the original, beautify, extract strings, find where decoded code executes, and capture the real payload at runtime.\n\n**Why it matters:** The same tricks hitting browsers now hit build pipelines and CI, where hidden code can reach SSH keys and npm tokens — runtime observation catches what static grep misses.\n\n**Jargon:** *Obfuscation* — deliberately scrambling code to hide what it does while keeping it working. *Control-flow flattening* — restructuring a program's logic into a single loop/switch so its execution order isn't visible from the code shape. *Sandbox* — an isolated environment for safely running untrusted code. *BYOVD* — \"bring your own vulnerable driver,\" abusing a legitimately signed driver to gain kernel-level access."
+    "title": "Attackers Chain Two PaperCut Flaws to Execute Code Without Authentication",
+    "link": "https://thehackernews.com/2026/08/attackers-chain-two-papercut-flaws-to.html",
+    "blurb": "Two separate PaperCut bugs combine into a pre-auth remote code execution chain, actively exploited in the wild."
   },
   {
-    "title": "Spark RAT Targets Cambodia, Abuses Vulnerable OPSWAT Driver to Disable Security Tools",
-    "link": "https://thehackernews.com/2026/08/spark-rat-targets-cambodia-abuses.html",
-    "blurb": "The malware loads a signed-but-vulnerable OPSWAT driver to kill EDR from kernel level, a classic BYOVD move."
+    "title": "Two Unitree G1 EDU Humanoid Robot Flaws Enable Root RCE, One Starts Over Bluetooth",
+    "link": "https://thehackernews.com/2026/08/two-unitree-g1-edu-humanoid-robot-flaws.html",
+    "blurb": "One flaw gives root on the humanoid robot's onboard computer, the other kicks off the attack chain over Bluetooth before any network access is needed."
   },
   {
-    "title": "Dwarf Fortress is getting the mother of all magic updates",
-    "link": "https://www.rockpapershotgun.com/dwarf-fortress-is-getting-the-mother-of-all-magic-updates-extending-to-the-fundamental-cosmological-makeup-of-the-universe",
-    "blurb": "The next major update rewrites the game's underlying cosmology so every world generates its own procedural magic system."
+    "title": "Footage of new Iron Man game from EA Motive appears to leak, showing blistering speed and freedom",
+    "link": "https://www.eurogamer.net/ea-motive-iron-man-gameplay-footage-leak",
+    "blurb": "Long-dormant EA Motive superhero project resurfaces via leaked WIP combat and traversal footage."
   },
   {
-    "title": "Path of Exile 2 finally has its 1.0 release date",
-    "link": "https://www.eurogamer.net/path-of-exile-2-version-1-0-free-to-play-date",
-    "blurb": "The free-to-play ARPG leaves early access this year with a confirmed 1.0 date."
+    "title": "Path of Exile 2's first event league goes 'oops, all bosses' and reworks its worst mode",
+    "link": "https://www.pcgamer.com/games/rpg/path-of-exile-2s-first-event-league-goes-oops-all-bosses-and-reworks-its-worst-mode-so-sane-people-can-finally-enjoy-it/",
+    "blurb": "The ARPG's first seasonal event overhauls a widely disliked mode into a boss-rush format."
   },
   {
-    "title": "In Hilbert Space, All Things Are Quantumly Possible",
-    "link": "https://www.quantamagazine.org/in-hilbert-space-all-things-are-quantumly-possible-20260826/",
-    "blurb": "**Problem:** In the 1920s Heisenberg's matrix mechanics and Schrödinger's wave mechanics made identical predictions through totally different math, leaving physicists without a single underlying theory.\n\n**Approach, in plain words:** John von Neumann showed in 1927 that both were describing the same object — the quantum state — as a vector moving through an abstract space now called Hilbert space. A vector's coordinates could be read either as Heisenberg's matrices or Schrödinger's wavefunctions; they were just two views of the same arrow.\n\n**Result:** A single rigorous mathematical framework unifying both formulations of quantum mechanics.\n\n**Why it matters:** Hilbert space became the standard arena for all of quantum physics, underpinning everything from atomic theory to modern quantum computing.\n\n**Jargon:** *Hilbert space* — an abstract space that can hold every possible state of a quantum system. *Quantum state* — a vector encoding everything that can be known about a system before it's measured. *Vector* — a mathematical object with both direction and magnitude. *Superposition* — a state that is a combination of multiple possible outcomes at once."
+    "title": "Does Computer Science Need Computers?",
+    "link": "https://www.quantamagazine.org/does-computer-science-need-computers-20260828/",
+    "blurb": "**Problem:** Is computer science its own branch of mathematics, or is it inseparable from the physical machines it's named after?\n\n**Approach, in plain words:** Quanta traces the field's split origins in math and engineering — Turing worked out his model of computation in 1937, a decade before real computers existed, purely to answer a math question — against cases where deep theoretical questions, especially in complexity theory, only got asked once real machines made them urgent.\n\n**Result:** Theory can run independent of hardware, but historically the best theoretical questions came from problems engineers actually ran into.\n\n**Why it matters:** It reframes CS as a two-way street: practice doesn't just apply theory, it generates the questions theory ends up needing to answer.\n\n**Jargon:** *Complexity theory* — the study of how much time/memory a problem inherently requires to solve. *Model of computation* — a formal, math-only definition of what \"computing\" means, independent of any physical machine. *Algorithm* — a precise step-by-step procedure for solving a problem."
   },
   {
-    "title": "Fast but error-prone AI assists in solving a decades-old fluid mechanics problem in five weeks",
-    "link": "https://phys.org/news/2026-08-fast-error-prone-ai-decades.html",
-    "blurb": "An AI system cracked an open fluid-dynamics problem in weeks by generating and pruning many flawed attempts rather than reasoning it out cleanly."
+    "title": "Self-blinking 'fairy lights' allow DNA to be imaged at almost double-helix-width resolution",
+    "link": "https://phys.org/news/2026-08-fairy-dna-imaged-helix-width.html",
+    "blurb": "**Problem:** Standard microscopy blurs anything under 200nm, and the chemicals/lasers needed for higher resolution kill living cells — so DNA's fine structure has mostly only been seen in dead tissue.\n\n**Approach, in plain words:** Researchers built fluorescent probes (\"HoTs\") that seek out and bind DNA inside living cells while flickering like fairy lights. That blinking lets super-resolution methods (STORM, MINFLUX) reconstruct sharp images from many dim, staggered flashes. An AI tool, AINU, then reads subtle chromatin-folding patterns in the results.\n\n**Result:** STORM hit 20nm resolution in living cells; MINFLUX reached 3nm in preserved cells, close to the double helix's actual 2nm width. In bowel cancer biopsies, tumor DNA was visibly looser and more spread out than healthy tissue, and AINU distinguished cell types by chromatin pattern with 96–98% accuracy.\n\n**Why it matters:** DNA packing density could become a new, fast diagnostic signal for cancer aggressiveness, layered on top of century-old tissue staining.\n\n**Jargon:** *Super-resolution microscopy* — techniques that beat the ~200nm blur limit of ordinary light microscopes. *Chromatin* — DNA packaged together with proteins inside the cell nucleus. *STORM/MINFLUX* — two super-resolution imaging methods that localize individual blinking fluorescent molecules. *Double helix* — DNA's two-strand spiral structure, about 2nm wide."
   },
   {
-    "title": "Saving 100 terabytes of memory by optimizing 1.1.1.1's DNS cache",
-    "link": "https://blog.cloudflare.com/dns-cache-memory-optimization-1111/",
-    "blurb": "**Problem:** Cloudflare's 1.1.1.1 resolver caches billions of DNS records fleet-wide, and the cache's own bookkeeping overhead was ballooning far past the actual answer data being stored.\n\n**Approach, in plain words:** Engineers rebuilt the cache's internal data structures — replacing generic, pointer-heavy containers with compact, purpose-built layouts that pack DNS records more tightly in memory, and tuned how entries are indexed and expired to cut per-record overhead.\n\n**Result:** Roughly 100 terabytes of memory reclaimed across the resolver fleet, letting existing hardware hold far more cached records without adding servers.\n\n**Why it matters:** A bigger, denser cache means more DNS answers get served instantly instead of triggering a fresh lookup, directly cutting latency for a service handling trillions of queries.\n\n**Jargon:** *DNS cache* — a resolver's local memory of previous domain-to-IP lookups, avoiding repeat queries upstream. *Memory overhead* — extra memory a data structure uses beyond the actual data it stores. *Resolver* — the server that looks up a domain name's IP address on a client's behalf. *Data structure* — the specific in-memory layout used to organize and access data efficiently."
+    "title": "DOOM Played on Series of 555 Timers",
+    "link": "https://hackaday.com/2026/08/28/doom-played-on-series-of-555-timers/",
+    "blurb": "A hardware build drives DOOM's display using nothing but 555 timer chips instead of a general-purpose CPU."
   },
   {
-    "title": "We found a division by zero bug in FFmpeg with a vibecoded fuzzer",
-    "link": "https://code.ffmpeg.org/FFmpeg/FFmpeg/issues/24290",
-    "blurb": "An LLM-assisted, quickly-hacked-together fuzzer turned up a real crash bug in a foundational open-source media library."
+    "title": "Reviving an SD Card With Shorted Capacitors",
+    "link": "https://hackaday.com/2026/08/28/reviving-an-sd-card-with-shorted-capacitors/",
+    "blurb": "A dead SD card gets diagnosed and brought back by tracking down and desoldering shorted decoupling capacitors."
   },
   {
-    "title": "Decompiling a Nintendo 64 game in 84 days",
-    "link": "https://blog.chrislewis.au/decompiling-a-nintendo-64-game-in-84-days/",
-    "blurb": "A solo reverse-engineering effort turns compiled N64 game binary back into buildable, matching C source in under three months."
+    "title": "How I made Rustdoc 33% faster in one week",
+    "link": "https://noahlev.org/blog/2026/08/27/making-rustdoc-faster/",
+    "blurb": "A solo contributor documents the profiling and algorithmic changes that cut a third off Rustdoc's build time."
   }
 ]
