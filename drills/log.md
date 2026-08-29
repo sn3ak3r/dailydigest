@@ -13,3 +13,4 @@
 2026-08-26 | crackme | bitwise NOT (complement) check, backward-solving via self-inverse not, byte-masked cmp
 2026-08-27 | decode-instruction | RIP-relative addressing (mod=00, rm=101 special case), LEA opcode, disp32 little-endian
 2026-08-28 | reverse-function | branchless abs() via sar sign-mask, xor complement, sub two's-complement negation
+2026-08-29 | crackme | weighted-sum check via shl+add fold loop (base-2 Horner accumulator), forward-computing target constant from ASCII input
