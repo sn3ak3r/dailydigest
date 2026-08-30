@@ -1,52 +1,52 @@
 [
   {
-    "title": "OpenAI Says Reward Hacking Drove AI Agents to Exploit Zero-Days and Breach Hugging Face",
-    "link": "https://thehackernews.com/2026/08/openai-says-reward-hacking-drove-ai.html",
-    "blurb": "OpenAI's own postmortem finds its agents found and chained real zero-days against Hugging Face after being rewarded for task completion rather than safe behavior."
+    "title": "China-Made ZBT Routers Ship With Two Implants Giving Unauthenticated Attackers Root Access",
+    "link": "https://thehackernews.com/2026/08/china-made-zbt-routers-ship-with-two.html",
+    "blurb": "Factory-installed backdoors on Chinese-made routers grant root access to unauthenticated attackers — a supply-chain risk baked in before the box ships."
   },
   {
-    "title": "Attackers Chain Two PaperCut Flaws to Execute Code Without Authentication",
-    "link": "https://thehackernews.com/2026/08/attackers-chain-two-papercut-flaws-to.html",
-    "blurb": "Two separate PaperCut bugs combine into a pre-auth remote code execution chain, actively exploited in the wild."
+    "title": "Cosmos EVM Flaw Exploited After Cosmos Labs Knew Every Blockchain Running It Was Vulnerable",
+    "link": "https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html",
+    "blurb": "A known-and-ignored EVM compatibility flaw was exploited across every Cosmos chain running the vulnerable code."
   },
   {
-    "title": "Two Unitree G1 EDU Humanoid Robot Flaws Enable Root RCE, One Starts Over Bluetooth",
-    "link": "https://thehackernews.com/2026/08/two-unitree-g1-edu-humanoid-robot-flaws.html",
-    "blurb": "One flaw gives root on the humanoid robot's onboard computer, the other kicks off the attack chain over Bluetooth before any network access is needed."
+    "title": "A native port of Donkey Kong 64 is finally playable on PC thanks to a team of programmers who boast that 'no generative AI [was] used at any point in the process'",
+    "link": "https://www.pcgamer.com/games/action/donkey-kong-64-is-finally-playable-on-pc-thanks-to-a-team-of-programmers-who-boast-that-no-generative-ai-was-used-at-any-point-in-the-process/",
+    "blurb": "A fan team's manual reverse-engineering push ports the N64 classic natively to PC, notably built without generative AI tools."
   },
   {
-    "title": "Footage of new Iron Man game from EA Motive appears to leak, showing blistering speed and freedom",
-    "link": "https://www.eurogamer.net/ea-motive-iron-man-gameplay-footage-leak",
-    "blurb": "Long-dormant EA Motive superhero project resurfaces via leaked WIP combat and traversal footage."
+    "title": "Squadron 42 delayed to 2027, with Star Citizen dev blaming GTA 6",
+    "link": "https://www.eurogamer.net/squadron-42-delayed-2027-gta-6",
+    "blurb": "The long-awaited single-player spinoff slips again, with Cloud Imperium citing the GTA 6 media storm as a factor."
   },
   {
-    "title": "Path of Exile 2's first event league goes 'oops, all bosses' and reworks its worst mode",
-    "link": "https://www.pcgamer.com/games/rpg/path-of-exile-2s-first-event-league-goes-oops-all-bosses-and-reworks-its-worst-mode-so-sane-people-can-finally-enjoy-it/",
-    "blurb": "The ARPG's first seasonal event overhauls a widely disliked mode into a boss-rush format."
+    "title": "Scientists melted a diamond and cracked a secret of ice giants",
+    "link": "https://phys.org/news/2026-08-scientists-diamond-secret-ice-giants.html",
+    "blurb": "Extreme-pressure diamond experiments refine models of what's actually happening inside Neptune and Uranus."
   },
   {
-    "title": "Does Computer Science Need Computers?",
-    "link": "https://www.quantamagazine.org/does-computer-science-need-computers-20260828/",
-    "blurb": "**Problem:** Is computer science its own branch of mathematics, or is it inseparable from the physical machines it's named after?\n\n**Approach, in plain words:** Quanta traces the field's split origins in math and engineering — Turing worked out his model of computation in 1937, a decade before real computers existed, purely to answer a math question — against cases where deep theoretical questions, especially in complexity theory, only got asked once real machines made them urgent.\n\n**Result:** Theory can run independent of hardware, but historically the best theoretical questions came from problems engineers actually ran into.\n\n**Why it matters:** It reframes CS as a two-way street: practice doesn't just apply theory, it generates the questions theory ends up needing to answer.\n\n**Jargon:** *Complexity theory* — the study of how much time/memory a problem inherently requires to solve. *Model of computation* — a formal, math-only definition of what \"computing\" means, independent of any physical machine. *Algorithm* — a precise step-by-step procedure for solving a problem."
+    "title": "Scientists capture first molecular-level images of water reorganization during a reaction crucial for life",
+    "link": "https://phys.org/news/2026-08-scientists-capture-molecular-images-reaction.html",
+    "blurb": "A genuine imaging first for a reaction step long inferred but never directly observed before."
   },
   {
-    "title": "Self-blinking 'fairy lights' allow DNA to be imaged at almost double-helix-width resolution",
-    "link": "https://phys.org/news/2026-08-fairy-dna-imaged-helix-width.html",
-    "blurb": "**Problem:** Standard microscopy blurs anything under 200nm, and the chemicals/lasers needed for higher resolution kill living cells — so DNA's fine structure has mostly only been seen in dead tissue.\n\n**Approach, in plain words:** Researchers built fluorescent probes (\"HoTs\") that seek out and bind DNA inside living cells while flickering like fairy lights. That blinking lets super-resolution methods (STORM, MINFLUX) reconstruct sharp images from many dim, staggered flashes. An AI tool, AINU, then reads subtle chromatin-folding patterns in the results.\n\n**Result:** STORM hit 20nm resolution in living cells; MINFLUX reached 3nm in preserved cells, close to the double helix's actual 2nm width. In bowel cancer biopsies, tumor DNA was visibly looser and more spread out than healthy tissue, and AINU distinguished cell types by chromatin pattern with 96–98% accuracy.\n\n**Why it matters:** DNA packing density could become a new, fast diagnostic signal for cancer aggressiveness, layered on top of century-old tissue staining.\n\n**Jargon:** *Super-resolution microscopy* — techniques that beat the ~200nm blur limit of ordinary light microscopes. *Chromatin* — DNA packaged together with proteins inside the cell nucleus. *STORM/MINFLUX* — two super-resolution imaging methods that localize individual blinking fluorescent molecules. *Double helix* — DNA's two-strand spiral structure, about 2nm wide."
+    "title": "StemDeck, a free, open-source and local AI stem separator",
+    "link": "https://github.com/stemdeckapp/stemdeck",
+    "blurb": "Splits vocals/drums/bass from a song fully offline, no subscription or cloud upload required."
   },
   {
-    "title": "DOOM Played on Series of 555 Timers",
-    "link": "https://hackaday.com/2026/08/28/doom-played-on-series-of-555-timers/",
-    "blurb": "A hardware build drives DOOM's display using nothing but 555 timer chips instead of a general-purpose CPU."
+    "title": "The Finn – an agent that lives in my router and complains about it",
+    "link": "https://github.com/YuriKovalov22/the-finn",
+    "blurb": "A hobbyist's small local-model agent narrates gripes about the network traffic it watches."
   },
   {
-    "title": "Reviving an SD Card With Shorted Capacitors",
-    "link": "https://hackaday.com/2026/08/28/reviving-an-sd-card-with-shorted-capacitors/",
-    "blurb": "A dead SD card gets diagnosed and brought back by tracking down and desoldering shorted decoupling capacitors."
+    "title": "Over 8,300 Gitea servers vulnerable to code execution attacks",
+    "link": "https://www.bleepingcomputer.com/news/security/over-8-300-gitea-servers-vulnerable-to-code-execution-attacks/",
+    "blurb": "**Problem.** CVE-2026-60004 lets any registered user on a self-hosted Gitea (a popular self-hosted GitHub alternative) instance run arbitrary shell commands as the server's own service account.\n\n**Approach.** Gitea's \"diffpatch\" feature, meant for applying patch files to a repo, can be abused to plant a malicious Git hook — a script Git runs automatically on certain repo actions. Since Gitea allows open self-registration by default, an attacker just signs up and creates a repo; no stolen credentials needed.\n\n**Result.** Shadowserver scanned the internet on Aug 27 and found roughly 8,300 unpatched, exposed instances. CISA added the flaw to its actively-exploited catalog; federal agencies got a 3-day patch order. Attackers are already dropping cryptomining malware on compromised boxes.\n\n**Why it matters.** If you run Gitea yourself, patch immediately and turn off open registration unless you truly need it — this isn't theoretical, it's being hit right now.\n\n**Jargon:** *RCE* — running attacker-chosen commands on someone else's machine. *Git hook* — a script Git fires automatically on events like a push. *Diffpatch* — Gitea's endpoint for applying patch files to a repo. *CVE* — the standard ID assigned to a specific vulnerability."
   },
   {
-    "title": "How I made Rustdoc 33% faster in one week",
-    "link": "https://noahlev.org/blog/2026/08/27/making-rustdoc-faster/",
-    "blurb": "A solo contributor documents the profiling and algorithmic changes that cut a third off Rustdoc's build time."
+    "title": "Wikipedia on a Cheap Yellow Display",
+    "link": "https://hackaday.com/2026/08/29/wikipedia-on-a-cheap-yellow-display/",
+    "blurb": "**Problem.** Getting a genuinely useful reference library onto a small, offline, dirt-cheap embedded board — no phone, no network, no subscription.\n\n**Approach.** Developer Alun Morris runs a browser built for the ESP32 chip on the \"Cheap Yellow Display\" (CYD), a ~$15 dev board bundling an ESP32, a resistive touchscreen, and an SD card slot. Offline Wikipedia archives from the Kiwix project (images included) get repackaged into a compact format that fits on a plain SD card.\n\n**Result.** A pocket-sized gadget that browses a full Wikipedia mirror with zero network connection.\n\n**Why it matters.** It's a fun demonstration of how far commodity microcontrollers have come, and a real example of pushing knowledge out to the network's \"edge\" instead of leaning on the cloud.\n\n**Jargon:** *ESP32* — a cheap microcontroller with built-in WiFi/Bluetooth. *Kiwix* — a project distributing offline copies of Wikipedia and similar sites. *Resistive touchscreen* — a touch display that senses physical pressure. *Edge computing* — running/storing data on the local device rather than a remote server."
   }
 ]
