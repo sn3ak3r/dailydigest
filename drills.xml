@@ -1,22 +1,16 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Mini Crackme: shl+add accumulator check</title><link></link><description>Challenge: rcx holds a pointer to a null-terminated ASCII string (Windows x64 calling convention). Find a string that makes `check` return 1.
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Daily Drill — decode one instruction</title><link></link><description>Decode this byte sequence into its full assembly instruction (mnemonic + operands), Windows x86-64:
 
-check:
-    xor     eax, eax          ; eax = accumulator
-    xor     edx, edx          ; edx = index
-.loop:
-    movzx   r8d, byte [rcx+rdx]
-    test    r8d, r8d
-    jz      .done
-    add     eax, r8d          ; acc += current byte
-    shl     eax, 1            ; acc &lt;&lt;= 1
-    inc     edx
-    jmp     .loop
-.done:
-    cmp     eax, 0x188
-    sete    al
-    movzx   eax, al
-    ret
+8B 04 8D 00 10 00 00
 
-Answer: &quot;AB&quot;
+Break down the opcode, the ModRM byte, and the SIB byte. Pay special attention to what base=101 means in the SIB byte when mod=00 -- it isn&#x27;t a normal base register.
 
-Each loop iteration folds a byte into the accumulator with acc = (acc + c) &lt;&lt; 1, a base-2 Horner scheme, so later characters get shifted further left than earlier ones. Tracing &quot;AB&quot; (0x41, 0x42): acc=0, then (0+0x41)&lt;&lt;1=0x82, then (0x82+0x42)&lt;&lt;1=0x188, matching the target. Any two-byte string c0 c1 with (c0&lt;&lt;1 + c1)&lt;&lt;1 == 0x188 also passes, so &quot;AB&quot; is one of several valid solutions.</description><guid isPermaLink='false'>2026-08-29</guid><pubDate>Sat, 29 Aug 2026 02:37:20 +0000</pubDate></item></channel></rss>
+---
+
+Answer:
+
+mov eax, [rcx*4 + 0x1000]
+
+Explanation:
+1. 8B is MOV r32, r/m32. ModRM 04 = mod=00, reg=000 (eax), rm=100 -- rm=100 means &quot;no direct register, read a SIB byte next.&quot;
+2. SIB 8D = scale=10b (x4), index=001b (rcx), base=101b. With mod=00 and base=101, this is the special no-base-register case: instead of using a base register, the encoding switches to a bare disp32 (added to the scaled index), so there&#x27;s no [base + ...] term at all.
+3. The trailing 4 bytes 00 10 00 00 (little-endian) give disp32 = 0x1000. Effective address = rcx*4 + 0x1000, loaded into eax.</description><guid isPermaLink='false'>2026-08-30</guid><pubDate>Sun, 30 Aug 2026 02:37:22 +0000</pubDate></item></channel></rss>
