@@ -15,3 +15,4 @@
 2026-08-28 | reverse-function | branchless abs() via sar sign-mask, xor complement, sub two's-complement negation
 2026-08-29 | crackme | weighted-sum check via shl+add fold loop (base-2 Horner accumulator), forward-computing target constant from ASCII input
 2026-08-30 | decode-instruction | SIB byte no-base special case (mod=00, base=101), scaled index addressing with bare disp32
+2026-08-31 | reverse-function | multiply-by-constant via lea scaled-index trick (x*5), Windows x64 ecx-arg, eax return convention

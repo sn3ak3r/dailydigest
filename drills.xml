@@ -1,16 +1,21 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Daily Drill — decode one instruction</title><link></link><description>Decode this byte sequence into its full assembly instruction (mnemonic + operands), Windows x86-64:
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Daily Drill — reverse a short function to C</title><link></link><description>Reverse this disassembled function to equivalent C, Windows x86-64 (first int argument arrives in ecx):
 
-8B 04 8D 00 10 00 00
+scale_value:
+    mov     eax, ecx
+    lea     eax, [rax + rax*4]
+    ret
 
-Break down the opcode, the ModRM byte, and the SIB byte. Pay special attention to what base=101 means in the SIB byte when mod=00 -- it isn&#x27;t a normal base register.
+What C function does this compile to? Give the signature and body.
 
 ---
 
 Answer:
 
-mov eax, [rcx*4 + 0x1000]
+int scale_value(int x) {
+    return x * 5;
+}
 
 Explanation:
-1. 8B is MOV r32, r/m32. ModRM 04 = mod=00, reg=000 (eax), rm=100 -- rm=100 means &quot;no direct register, read a SIB byte next.&quot;
-2. SIB 8D = scale=10b (x4), index=001b (rcx), base=101b. With mod=00 and base=101, this is the special no-base-register case: instead of using a base register, the encoding switches to a bare disp32 (added to the scaled index), so there&#x27;s no [base + ...] term at all.
-3. The trailing 4 bytes 00 10 00 00 (little-endian) give disp32 = 0x1000. Effective address = rcx*4 + 0x1000, loaded into eax.</description><guid isPermaLink='false'>2026-08-30</guid><pubDate>Sun, 30 Aug 2026 02:37:22 +0000</pubDate></item></channel></rss>
+1. mov eax, ecx copies the incoming argument (x, passed in ecx per the Windows x64 calling convention) into eax, the register used to build and return the result.
+2. lea eax, [rax + rax*4] is not an address load here -- it&#x27;s a classic compiler trick that uses the LEA addressing-mode math (base + index*scale) to compute rax + rax*4 = rax*5 in one instruction, avoiding a slower imul.
+3. The result is already in eax when ret executes, matching the x64 convention of returning integers in eax/rax, so no extra move is needed before returning.</description><guid isPermaLink='false'>2026-08-31</guid><pubDate>Mon, 31 Aug 2026 02:37:10 +0000</pubDate></item></channel></rss>
