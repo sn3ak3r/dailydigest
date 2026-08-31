@@ -1,52 +1,52 @@
 [
   {
-    "title": "China-Made ZBT Routers Ship With Two Implants Giving Unauthenticated Attackers Root Access",
-    "link": "https://thehackernews.com/2026/08/china-made-zbt-routers-ship-with-two.html",
-    "blurb": "Factory-installed backdoors on Chinese-made routers grant root access to unauthenticated attackers — a supply-chain risk baked in before the box ships."
+    "title": "TerminalFix Uses Fake Cloudflare CAPTCHAs to Deploy Reverse-Tunnel Backdoor",
+    "link": "https://thehackernews.com/2026/08/terminalfix-uses-fake-cloudflare.html",
+    "blurb": "Fake \"verify you're human\" prompts trick victims into installing a backdoor that tunnels back to the attacker."
   },
   {
-    "title": "Cosmos EVM Flaw Exploited After Cosmos Labs Knew Every Blockchain Running It Was Vulnerable",
-    "link": "https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html",
-    "blurb": "A known-and-ignored EVM compatibility flaw was exploited across every Cosmos chain running the vulnerable code."
+    "title": "Chrome Web Store extensions caught stealing crypto, browser data",
+    "link": "https://www.bleepingcomputer.com/news/security/chrome-web-store-extensions-caught-stealing-crypto-browser-data/",
+    "blurb": "Malicious extensions slipped past Google's review to harvest wallets and browsing data."
   },
   {
-    "title": "A native port of Donkey Kong 64 is finally playable on PC thanks to a team of programmers who boast that 'no generative AI [was] used at any point in the process'",
-    "link": "https://www.pcgamer.com/games/action/donkey-kong-64-is-finally-playable-on-pc-thanks-to-a-team-of-programmers-who-boast-that-no-generative-ai-was-used-at-any-point-in-the-process/",
-    "blurb": "A fan team's manual reverse-engineering push ports the N64 classic natively to PC, notably built without generative AI tools."
+    "title": "Anthropic warns infostealer malware is hijacking Claude sessions to drain usage",
+    "link": "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-warns-infostealer-malware-is-hijacking-claude-sessions-to-drain-usage/",
+    "blurb": "Stolen credentials are being used to burn victims' Claude quota, not just their data."
   },
   {
-    "title": "Squadron 42 delayed to 2027, with Star Citizen dev blaming GTA 6",
-    "link": "https://www.eurogamer.net/squadron-42-delayed-2027-gta-6",
-    "blurb": "The long-awaited single-player spinoff slips again, with Cloud Imperium citing the GTA 6 media storm as a factor."
+    "title": "12TB Valve archive leak includes early Portal 2 builds and hints of Half-Life 2: Episode Three",
+    "link": "https://www.eurogamer.net/valve-steam2-leak-12tb-portal-2-half-life-episode-three",
+    "blurb": "A massive internal-data leak surfaces long-rumored unreleased builds."
   },
   {
-    "title": "Scientists melted a diamond and cracked a secret of ice giants",
-    "link": "https://phys.org/news/2026-08-scientists-diamond-secret-ice-giants.html",
-    "blurb": "Extreme-pressure diamond experiments refine models of what's actually happening inside Neptune and Uranus."
+    "title": "GTA 6 has over 10 times as many unique animations as GTA 5, thanks to a dedicated NPC art-direction team",
+    "link": "https://www.pcgamer.com/games/grand-theft-auto/thanks-to-a-dedicated-team-art-directing-every-single-npc-gta-6-has-over-10-times-as-many-unique-animations-as-gta-5/",
+    "blurb": "A rare look at the production-pipeline scale behind the game's NPCs."
   },
   {
-    "title": "Scientists capture first molecular-level images of water reorganization during a reaction crucial for life",
-    "link": "https://phys.org/news/2026-08-scientists-capture-molecular-images-reaction.html",
-    "blurb": "A genuine imaging first for a reaction step long inferred but never directly observed before."
+    "title": "'Cut-to-fuse' strategy: A new route for molecular skeletal editing",
+    "link": "https://phys.org/news/2026-08-fuse-strategy-route-molecular-skeletal.html",
+    "blurb": "**Problem.** Ester bonds resist selective cleavage under mild conditions, limiting how freely chemists can edit a molecule's core skeleton. **Approach.** Researchers treat hydroxycoumarins with a chlorinating agent (NCS), which \"cuts\" a bond via halogenation, generating an intermediate that \"fuses\" into a new ring \u2014 at room temperature, no metal catalyst. **Result.** Over 99% yield, tolerating a wide range of substituents. **Why it matters.** Catalyst-free, room-temperature editing is what medicinal chemists want for diverse drug-candidate structures. **Jargon:** *Ester* \u2014 bond linking a carbon chain to an oxygen-carbon group. *Halogenation* \u2014 adding a halogen atom to a molecule. *Skeletal editing* \u2014 reworking a molecule's core structure. *Catalyst* \u2014 an additive that speeds a reaction, avoided here."
   },
   {
-    "title": "StemDeck, a free, open-source and local AI stem separator",
-    "link": "https://github.com/stemdeckapp/stemdeck",
-    "blurb": "Splits vocals/drums/bass from a song fully offline, no subscription or cloud upload required."
+    "title": "New method tests magnet-powered braking for safer, more reusable spacecraft reentry",
+    "link": "https://phys.org/news/2026-08-method-magnet-powered-safer-reusable.html",
+    "blurb": "**Problem.** Reusable spacecraft need reentry heat protection, but current tiles and ablative materials are heavy and costly. **Approach.** Researchers tested MHD aerobraking: a magnetic field applied to reentry's ionized plasma, pushing the shock layer off the hull. A model was fired through a hypersonic tube at 7+ km/s with a 1.58-tesla electromagnet. **Result.** With the field on, the heated layer's thickness \u2014 a proxy for heat pushed off the hull \u2014 grew 15%+. **Why it matters.** An early proof-of-concept for magnetic, not physical, reentry shielding \u2014 less weight, less maintenance. **Jargon:** *MHD* \u2014 magnetic fields interacting with conductive fluids. *Plasma* \u2014 superheated ionized gas. *Shock layer* \u2014 compressed air ahead of a fast object. *Tesla* \u2014 unit of field strength."
   },
   {
-    "title": "The Finn – an agent that lives in my router and complains about it",
-    "link": "https://github.com/YuriKovalov22/the-finn",
-    "blurb": "A hobbyist's small local-model agent narrates gripes about the network traffic it watches."
+    "title": "Arbitrary code execution in QubesOS via copy-to-VM error reporting backchannel",
+    "link": "https://www.qubes-os.org/news/2026/08/29/qsb-118/",
+    "blurb": "A VM-isolation bypass through an error-reporting channel nobody expected to be trusted."
   },
   {
-    "title": "Over 8,300 Gitea servers vulnerable to code execution attacks",
-    "link": "https://www.bleepingcomputer.com/news/security/over-8-300-gitea-servers-vulnerable-to-code-execution-attacks/",
-    "blurb": "**Problem.** CVE-2026-60004 lets any registered user on a self-hosted Gitea (a popular self-hosted GitHub alternative) instance run arbitrary shell commands as the server's own service account.\n\n**Approach.** Gitea's \"diffpatch\" feature, meant for applying patch files to a repo, can be abused to plant a malicious Git hook — a script Git runs automatically on certain repo actions. Since Gitea allows open self-registration by default, an attacker just signs up and creates a repo; no stolen credentials needed.\n\n**Result.** Shadowserver scanned the internet on Aug 27 and found roughly 8,300 unpatched, exposed instances. CISA added the flaw to its actively-exploited catalog; federal agencies got a 3-day patch order. Attackers are already dropping cryptomining malware on compromised boxes.\n\n**Why it matters.** If you run Gitea yourself, patch immediately and turn off open registration unless you truly need it — this isn't theoretical, it's being hit right now.\n\n**Jargon:** *RCE* — running attacker-chosen commands on someone else's machine. *Git hook* — a script Git fires automatically on events like a push. *Diffpatch* — Gitea's endpoint for applying patch files to a repo. *CVE* — the standard ID assigned to a specific vulnerability."
+    "title": "Omarchy: Any User Process Can Escalate to Root",
+    "link": "https://0xcc.io/posts/omarchy-root-creds/",
+    "blurb": "A local privilege-escalation bug in the Arch-based Omarchy distro, any process to root."
   },
   {
-    "title": "Wikipedia on a Cheap Yellow Display",
-    "link": "https://hackaday.com/2026/08/29/wikipedia-on-a-cheap-yellow-display/",
-    "blurb": "**Problem.** Getting a genuinely useful reference library onto a small, offline, dirt-cheap embedded board — no phone, no network, no subscription.\n\n**Approach.** Developer Alun Morris runs a browser built for the ESP32 chip on the \"Cheap Yellow Display\" (CYD), a ~$15 dev board bundling an ESP32, a resistive touchscreen, and an SD card slot. Offline Wikipedia archives from the Kiwix project (images included) get repackaged into a compact format that fits on a plain SD card.\n\n**Result.** A pocket-sized gadget that browses a full Wikipedia mirror with zero network connection.\n\n**Why it matters.** It's a fun demonstration of how far commodity microcontrollers have come, and a real example of pushing knowledge out to the network's \"edge\" instead of leaning on the cloud.\n\n**Jargon:** *ESP32* — a cheap microcontroller with built-in WiFi/Bluetooth. *Kiwix* — a project distributing offline copies of Wikipedia and similar sites. *Resistive touchscreen* — a touch display that senses physical pressure. *Edge computing* — running/storing data on the local device rather than a remote server."
+    "title": "Low(er)-Cost Humanoid Robot Leverages DIY Actuators",
+    "link": "https://hackaday.com/2026/08/30/lower-cost-humanoid-robot-leverages-diy-actuators/",
+    "blurb": "A hobbyist build swaps expensive commercial actuators for a cheaper DIY design."
   }
 ]
