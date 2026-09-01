@@ -1,52 +1,52 @@
 [
   {
-    "title": "TerminalFix Uses Fake Cloudflare CAPTCHAs to Deploy Reverse-Tunnel Backdoor",
-    "link": "https://thehackernews.com/2026/08/terminalfix-uses-fake-cloudflare.html",
-    "blurb": "Fake \"verify you're human\" prompts trick victims into installing a backdoor that tunnels back to the attacker."
+    "title": "China-Linked Fire Ant Hijacks Cisco Routers to Steal Credentials and Blind Security Logs",
+    "link": "https://thehackernews.com/2026/08/china-linked-fire-ant-hijacks-cisco.html",
+    "blurb": "A state-linked group turns edge routers into persistent spy platforms while wiping the logs that would catch them."
   },
   {
-    "title": "Chrome Web Store extensions caught stealing crypto, browser data",
-    "link": "https://www.bleepingcomputer.com/news/security/chrome-web-store-extensions-caught-stealing-crypto-browser-data/",
-    "blurb": "Malicious extensions slipped past Google's review to harvest wallets and browsing data."
+    "title": "'TerminalFix' Campaign Weaponizes PowerShell for Enterprise Attacks",
+    "link": "https://www.darkreading.com/threat-intelligence/terminalfix-campaign-weaponizes-powershell-enterprise-attacks",
+    "blurb": "The same backdoor family from earlier this week adds a PowerShell-driven reverse-tunnel delivery technique."
   },
   {
-    "title": "Anthropic warns infostealer malware is hijacking Claude sessions to drain usage",
-    "link": "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-warns-infostealer-malware-is-hijacking-claude-sessions-to-drain-usage/",
-    "blurb": "Stolen credentials are being used to burn victims' Claude quota, not just their data."
+    "title": "ValleyRAT Backdoor Hides in Signed Adware That Users Add to Antivirus Exclusions",
+    "link": "https://thehackernews.com/2026/08/valleyrat-backdoor-hides-in-signed.html",
+    "blurb": "Victims are tricked into whitelisting the malware themselves, no exploit required."
   },
   {
-    "title": "12TB Valve archive leak includes early Portal 2 builds and hints of Half-Life 2: Episode Three",
-    "link": "https://www.eurogamer.net/valve-steam2-leak-12tb-portal-2-half-life-episode-three",
-    "blurb": "A massive internal-data leak surfaces long-rumored unreleased builds."
+    "title": "The Steam 'teraleak' extends far beyond Valve games, including prototypes of third-party titles like Mafia 2 and Grand Theft Auto 3",
+    "link": "https://www.pcgamer.com/games/the-steam-teraleak-extends-far-beyond-valve-games-including-prototypes-of-third-party-titles-like-mafia-2-and-grand-theft-auto-3-this-may-be-one-of-if-not-the-biggest-leaks-to-occur/",
+    "blurb": "One of the largest game-industry data leaks on record, spanning studios well beyond Valve."
   },
   {
-    "title": "GTA 6 has over 10 times as many unique animations as GTA 5, thanks to a dedicated NPC art-direction team",
-    "link": "https://www.pcgamer.com/games/grand-theft-auto/thanks-to-a-dedicated-team-art-directing-every-single-npc-gta-6-has-over-10-times-as-many-unique-animations-as-gta-5/",
-    "blurb": "A rare look at the production-pipeline scale behind the game's NPCs."
+    "title": "A 38-year-old NES platformer is getting a Steam remake by its original husband-and-wife team",
+    "link": "https://www.pcgamer.com/games/action/a-38-year-old-nes-platformer-is-getting-a-steam-remake-by-its-original-husband-and-wife-team-as-the-pairs-final-major-game-product/",
+    "blurb": "The same two developers return to close out the series they started in 1988."
   },
   {
-    "title": "'Cut-to-fuse' strategy: A new route for molecular skeletal editing",
-    "link": "https://phys.org/news/2026-08-fuse-strategy-route-molecular-skeletal.html",
-    "blurb": "**Problem.** Ester bonds resist selective cleavage under mild conditions, limiting how freely chemists can edit a molecule's core skeleton. **Approach.** Researchers treat hydroxycoumarins with a chlorinating agent (NCS), which \"cuts\" a bond via halogenation, generating an intermediate that \"fuses\" into a new ring \u2014 at room temperature, no metal catalyst. **Result.** Over 99% yield, tolerating a wide range of substituents. **Why it matters.** Catalyst-free, room-temperature editing is what medicinal chemists want for diverse drug-candidate structures. **Jargon:** *Ester* \u2014 bond linking a carbon chain to an oxygen-carbon group. *Halogenation* \u2014 adding a halogen atom to a molecule. *Skeletal editing* \u2014 reworking a molecule's core structure. *Catalyst* \u2014 an additive that speeds a reaction, avoided here."
+    "title": "'Stunning' Percolation Proof Solves Decades-Old Puzzle About Phase Transitions",
+    "link": "https://www.quantamagazine.org/stunning-percolation-proof-solves-decades-old-puzzle-about-phase-transitions-20260831/",
+    "blurb": "Problem. Past a critical threshold, isolated clusters must snap into one connected mass — proven for grid lattices, never for every infinite network. Approach. Five ETH Zurich mathematicians assumed a cluster survived past the threshold, then studied its boundary (\"shoreline\"). A boundary that long can't stay sealed off — it must connect outward. They ran a technique called sprinkling in reverse, simplifying the proof for any uniform network. Result. Supercritical sharpness now holds for all infinite transitive graphs — the first fully general proof. Why it matters. Percolation is the simplest model of phase transitions, which also govern epidemics and wildfires. Jargon: Percolation — connections spreading through a network. Phase transition — abrupt shift at a threshold. Critical probability — that threshold. Sprinkling — adding connections incrementally."
   },
   {
-    "title": "New method tests magnet-powered braking for safer, more reusable spacecraft reentry",
-    "link": "https://phys.org/news/2026-08-method-magnet-powered-safer-reusable.html",
-    "blurb": "**Problem.** Reusable spacecraft need reentry heat protection, but current tiles and ablative materials are heavy and costly. **Approach.** Researchers tested MHD aerobraking: a magnetic field applied to reentry's ionized plasma, pushing the shock layer off the hull. A model was fired through a hypersonic tube at 7+ km/s with a 1.58-tesla electromagnet. **Result.** With the field on, the heated layer's thickness \u2014 a proxy for heat pushed off the hull \u2014 grew 15%+. **Why it matters.** An early proof-of-concept for magnetic, not physical, reentry shielding \u2014 less weight, less maintenance. **Jargon:** *MHD* \u2014 magnetic fields interacting with conductive fluids. *Plasma* \u2014 superheated ionized gas. *Shock layer* \u2014 compressed air ahead of a fast object. *Tesla* \u2014 unit of field strength."
+    "title": "Faint far-infrared radiation drives a correlated insulator-to-metal transition in magic-angle graphene",
+    "link": "https://phys.org/news/2026-08-faint-infrared-insulator-metal-transition.html",
+    "blurb": "Problem. Far-infrared light is hard to detect efficiently — sensors are bulky, slow, or need extreme cooling, limiting medical imaging and astronomy. Approach. Researchers stacked two graphene sheets at a \"magic angle\" (~1 degree), squeezing electrons into bands where they interact and freeze into an insulating state. Faint far-infrared light heats only the electrons, not the lattice, since the two barely exchange heat. Result. Even weak exposure heated electrons enough to melt the insulating state into a metal — a sensitive, voltage-tunable switch. Why it matters. A new detector platform for a wavelength that's historically hard to sense. Jargon: Magic-angle graphene — twisted layers with unusual electronics. Correlated insulator — non-conduction from electron interactions. Bolometer — detects radiation via heating. Far-infrared — long-wavelength light near microwave."
   },
   {
-    "title": "Arbitrary code execution in QubesOS via copy-to-VM error reporting backchannel",
-    "link": "https://www.qubes-os.org/news/2026/08/29/qsb-118/",
-    "blurb": "A VM-isolation bypass through an error-reporting channel nobody expected to be trusted."
+    "title": "Privilege escalation from IIS AppPool to NT Authority/SYSTEM via AD CS RPC endpoint",
+    "link": "https://www.mannulinux.org/2026/08/Privilege-escalation-from-IIS-AppPool-to-NT-AuthoritySYSTEM-via-AD-CS-RPC-endpoint.html",
+    "blurb": "A documented exploit chain abusing a certificate-services RPC endpoint to jump from a web app pool to full SYSTEM."
   },
   {
-    "title": "Omarchy: Any User Process Can Escalate to Root",
-    "link": "https://0xcc.io/posts/omarchy-root-creds/",
-    "blurb": "A local privilege-escalation bug in the Arch-based Omarchy distro, any process to root."
+    "title": "Any user process can escalate to root",
+    "link": "https://www.vesto.me/2026/08/31/any-process-escalate-root.html",
+    "blurb": "A walkthrough of an unprivileged-to-root local escalation, no special access needed to start."
   },
   {
-    "title": "Low(er)-Cost Humanoid Robot Leverages DIY Actuators",
-    "link": "https://hackaday.com/2026/08/30/lower-cost-humanoid-robot-leverages-diy-actuators/",
-    "blurb": "A hobbyist build swaps expensive commercial actuators for a cheaper DIY design."
+    "title": "USB-C Adapted for Legacy Sprinkler Systems",
+    "link": "https://hackaday.com/2026/08/31/usb-c-adapted-for-legacy-sprinkler-systems/",
+    "blurb": "A hobbyist retrofits a decades-old sprinkler controller with a modern USB-C interface."
   }
 ]
