@@ -1,21 +1,34 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Daily Drill — reverse a short function to C</title><link></link><description>Reverse this disassembled function to equivalent C, Windows x86-64 (first int argument arrives in ecx):
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse to C: pointer-walk nonzero counter</title><link></link><description>Target: Windows x86-64 (MSVC calling convention: rcx, edx = arg1, arg2). Reverse this disassembly to equivalent C:
 
-scale_value:
-    mov     eax, ecx
-    lea     eax, [rax + rax*4]
+func:
+    xor     eax, eax        ; eax = 0
+    test    edx, edx
+    jle     done
+loop_top:
+    cmp     dword ptr [rcx], 0
+    je      skip
+    inc     eax
+skip:
+    add     rcx, 4
+    dec     edx
+    jnz     loop_top
+done:
     ret
 
-What C function does this compile to? Give the signature and body.
+What does func(int* arr, int n) compute, and what does it return?
 
 ---
 
 Answer:
 
-int scale_value(int x) {
-    return x * 5;
+int func(int* arr, int n) {
+    int count = 0;
+    for (int i = 0; i &lt; n; i++) {
+        if (arr[i] != 0) count++;
+    }
+    return count;
 }
 
-Explanation:
-1. mov eax, ecx copies the incoming argument (x, passed in ecx per the Windows x64 calling convention) into eax, the register used to build and return the result.
-2. lea eax, [rax + rax*4] is not an address load here -- it&#x27;s a classic compiler trick that uses the LEA addressing-mode math (base + index*scale) to compute rax + rax*4 = rax*5 in one instruction, avoiding a slower imul.
-3. The result is already in eax when ret executes, matching the x64 convention of returning integers in eax/rax, so no extra move is needed before returning.</description><guid isPermaLink='false'>2026-08-31</guid><pubDate>Mon, 31 Aug 2026 02:37:10 +0000</pubDate></item></channel></rss>
+- rcx is walked as a raw pointer (add rcx, 4 advances by one int, 4 bytes) rather than indexed with a scaled base+offset -- each iteration dereferences [rcx] directly instead of [base + idx*4].
+- dec edx / jnz loop_top counts n down to zero instead of comparing an incrementing index, so the loop runs exactly n times with no explicit index variable.
+- cmp/je skip skips the inc eax for zero elements, so eax ends up holding the count of nonzero elements -- the function&#x27;s return value per the Windows x64 convention.</description><guid isPermaLink='false'>2026-09-01</guid><pubDate>Tue, 01 Sep 2026 02:37:28 +0000</pubDate></item></channel></rss>

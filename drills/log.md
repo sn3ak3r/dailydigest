@@ -16,3 +16,4 @@
 2026-08-29 | crackme | weighted-sum check via shl+add fold loop (base-2 Horner accumulator), forward-computing target constant from ASCII input
 2026-08-30 | decode-instruction | SIB byte no-base special case (mod=00, base=101), scaled index addressing with bare disp32
 2026-08-31 | reverse-function | multiply-by-constant via lea scaled-index trick (x*5), Windows x64 ecx-arg, eax return convention
+2026-09-01 | reverse-function | pointer-walking loop (add rcx,4) counting nonzero elements, cmp/je skip-accumulate, dec/jnz down-counting loop
