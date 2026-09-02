@@ -1,52 +1,52 @@
 [
   {
-    "title": "China-Linked Fire Ant Hijacks Cisco Routers to Steal Credentials and Blind Security Logs",
-    "link": "https://thehackernews.com/2026/08/china-linked-fire-ant-hijacks-cisco.html",
-    "blurb": "A state-linked group turns edge routers into persistent spy platforms while wiping the logs that would catch them."
+    "title": "Chinese Fire Ant hackers turn Cisco routers into spying platforms",
+    "link": "https://www.bleepingcomputer.com/news/security/chinese-fire-ant-hackers-turn-cisco-routers-into-spying-platforms/",
+    "blurb": "Problem. Attackers want durable, undetected access to the network gear that sees everything passing through it, not just servers. Approach. Incident responders at Sygnia found a hidden GRE tunnel on a Cisco IOS XR router. Investigation revealed the Chinese group \"Fire Ant\" had planted a backdoor (dubbed BridgeAgent) disguised as a monitoring agent, running as a root-level service, suppressing logs, and capturing traffic to upload to their own servers. Result. The compromised routers became surveillance platforms, letting Fire Ant pivot into connected high-value networks while tampering with logs and timestamps to erase evidence. Why it matters. Trusted infrastructure, not endpoints, is the new espionage target — it has a privileged view of everything around it. Jargon: GRE tunnel — an encapsulated virtual link between two points. Root-level backdoor — malware running with full system privileges. IOC — indicator of compromise. Reverse shell — an attacker-controlled remote command session."
   },
   {
-    "title": "'TerminalFix' Campaign Weaponizes PowerShell for Enterprise Attacks",
-    "link": "https://www.darkreading.com/threat-intelligence/terminalfix-campaign-weaponizes-powershell-enterprise-attacks",
-    "blurb": "The same backdoor family from earlier this week adds a PowerShell-driven reverse-tunnel delivery technique."
+    "title": "Microsoft warns of TerminalFix attacks deploying reverse tunnels",
+    "link": "https://www.bleepingcomputer.com/news/security/microsoft-warns-of-terminalfix-attacks-deploying-reverse-tunnels/",
+    "blurb": "A post-exploitation technique abuses trusted tooling to punch reverse tunnels through firewalls for persistent remote access."
   },
   {
-    "title": "ValleyRAT Backdoor Hides in Signed Adware That Users Add to Antivirus Exclusions",
-    "link": "https://thehackernews.com/2026/08/valleyrat-backdoor-hides-in-signed.html",
-    "blurb": "Victims are tricked into whitelisting the malware themselves, no exploit required."
+    "title": "Nearly 22,000 Microsoft Exchange servers vulnerable to hijack attacks",
+    "link": "https://www.bleepingcomputer.com/news/security/nearly-22-000-microsoft-exchange-servers-vulnerable-to-hijack-attacks/",
+    "blurb": "Thousands of internet-facing mail servers remain exploitable for full takeover months after patches shipped."
   },
   {
-    "title": "The Steam 'teraleak' extends far beyond Valve games, including prototypes of third-party titles like Mafia 2 and Grand Theft Auto 3",
-    "link": "https://www.pcgamer.com/games/the-steam-teraleak-extends-far-beyond-valve-games-including-prototypes-of-third-party-titles-like-mafia-2-and-grand-theft-auto-3-this-may-be-one-of-if-not-the-biggest-leaks-to-occur/",
-    "blurb": "One of the largest game-industry data leaks on record, spanning studios well beyond Valve."
+    "title": "DLSS 5 comes with a massive 50-60% performance hit, so I hope you like lower frame rates with your dose of AI image enhancement",
+    "link": "https://www.pcgamer.com/hardware/graphics-cards/dlss-5-comes-with-a-massive-50-60-percent-performance-hit-so-i-hope-you-like-lower-frame-rates-with-your-dose-of-ai-image-enhancement/",
+    "blurb": "Nvidia's new frame-generation tech trades real rendering performance for AI-upscaled frames, and the tradeoff is steeper than advertised."
   },
   {
-    "title": "A 38-year-old NES platformer is getting a Steam remake by its original husband-and-wife team",
-    "link": "https://www.pcgamer.com/games/action/a-38-year-old-nes-platformer-is-getting-a-steam-remake-by-its-original-husband-and-wife-team-as-the-pairs-final-major-game-product/",
-    "blurb": "The same two developers return to close out the series they started in 1988."
+    "title": "Star Wars: Zero Company devs left without pay, report claims, with \"most\" staff furloughed prior to launch",
+    "link": "https://www.rockpapershotgun.com/star-wars-zero-company-devs-left-without-pay-report-claims-with-most-staff-furloughed-prior-to-launch",
+    "blurb": "A Steam-bestseller's dev team was reportedly gutted before the game even shipped."
   },
   {
-    "title": "'Stunning' Percolation Proof Solves Decades-Old Puzzle About Phase Transitions",
-    "link": "https://www.quantamagazine.org/stunning-percolation-proof-solves-decades-old-puzzle-about-phase-transitions-20260831/",
-    "blurb": "Problem. Past a critical threshold, isolated clusters must snap into one connected mass — proven for grid lattices, never for every infinite network. Approach. Five ETH Zurich mathematicians assumed a cluster survived past the threshold, then studied its boundary (\"shoreline\"). A boundary that long can't stay sealed off — it must connect outward. They ran a technique called sprinkling in reverse, simplifying the proof for any uniform network. Result. Supercritical sharpness now holds for all infinite transitive graphs — the first fully general proof. Why it matters. Percolation is the simplest model of phase transitions, which also govern epidemics and wildfires. Jargon: Percolation — connections spreading through a network. Phase transition — abrupt shift at a threshold. Critical probability — that threshold. Sprinkling — adding connections incrementally."
+    "title": "Giant impact could have formed an intact moon within five hours, simulations suggest",
+    "link": "https://phys.org/news/2026-09-giant-impact-intact-moon-hours.html",
+    "blurb": "Problem. Standard giant-impact simulations model the Moon-forming collision as happening between molten bodies, ignoring how the material's temperature and strength affect the outcome. Approach. Southwest Research Institute researchers reran the classic Theia-Earth impact simulation, this time adding temperature-dependent material strength for the colliding bodies. Result. When both bodies were modeled as cooler and structurally stronger, an intact Moon assembled directly within about five hours — instead of slowly clumping together from a debris disk over a much longer period. Why it matters. Since protoplanets cool as they age, the outcome ties the Moon's formation speed and composition to when the impact happened, and could help explain why Earth and the Moon share similar composition. Jargon: Giant impact hypothesis — the leading theory that the Moon formed from a planet-sized collision with early Earth. Theia — the hypothesized Mars-sized impactor. Debris disk — orbiting material that gradually reaccretes. Protoplanet — an early-stage forming planet."
   },
   {
-    "title": "Faint far-infrared radiation drives a correlated insulator-to-metal transition in magic-angle graphene",
-    "link": "https://phys.org/news/2026-08-faint-infrared-insulator-metal-transition.html",
-    "blurb": "Problem. Far-infrared light is hard to detect efficiently — sensors are bulky, slow, or need extreme cooling, limiting medical imaging and astronomy. Approach. Researchers stacked two graphene sheets at a \"magic angle\" (~1 degree), squeezing electrons into bands where they interact and freeze into an insulating state. Faint far-infrared light heats only the electrons, not the lattice, since the two barely exchange heat. Result. Even weak exposure heated electrons enough to melt the insulating state into a metal — a sensitive, voltage-tunable switch. Why it matters. A new detector platform for a wavelength that's historically hard to sense. Jargon: Magic-angle graphene — twisted layers with unusual electronics. Correlated insulator — non-conduction from electron interactions. Bolometer — detects radiation via heating. Far-infrared — long-wavelength light near microwave."
+    "title": "El Niño is now stronger than at any point in the last 1,000 years, study finds",
+    "link": "https://arstechnica.com/science/2026/08/el-nino-is-now-stronger-than-at-any-point-in-the-last-1000-years-study-finds/",
+    "blurb": "Reconstructed climate records show the current event outstrips a millennium of precedent."
   },
   {
-    "title": "Privilege escalation from IIS AppPool to NT Authority/SYSTEM via AD CS RPC endpoint",
-    "link": "https://www.mannulinux.org/2026/08/Privilege-escalation-from-IIS-AppPool-to-NT-AuthoritySYSTEM-via-AD-CS-RPC-endpoint.html",
-    "blurb": "A documented exploit chain abusing a certificate-services RPC endpoint to jump from a web app pool to full SYSTEM."
+    "title": "Building An Airsoft Claymore Mine",
+    "link": "https://hackaday.com/2026/09/01/building-an-airsoft-claymore-mine/",
+    "blurb": "A cardboard-and-mousetrap tripwire launcher shows how much you can fake with dollar-store parts."
   },
   {
-    "title": "Any user process can escalate to root",
-    "link": "https://www.vesto.me/2026/08/31/any-process-escalate-root.html",
-    "blurb": "A walkthrough of an unprivileged-to-root local escalation, no special access needed to start."
+    "title": "Refurbishing a Tektronix TDS7104 Oscilloscope",
+    "link": "https://tomverbeure.github.io/2026/08/23/Tektronix-TDS7104-Refurbishing.html",
+    "blurb": "A detailed teardown-and-repair log for reviving a high-end lab scope."
   },
   {
-    "title": "USB-C Adapted for Legacy Sprinkler Systems",
-    "link": "https://hackaday.com/2026/08/31/usb-c-adapted-for-legacy-sprinkler-systems/",
-    "blurb": "A hobbyist retrofits a decades-old sprinkler controller with a modern USB-C interface."
+    "title": "I trained a small transformer in 1.5hrs and it beats many LLMs",
+    "link": "https://mvakde.github.io/blog/44-on-arc-1/",
+    "blurb": "A from-scratch model reportedly hits 44% on ARC-AGI-1 for 67 cents of compute, beating some general-purpose LLMs on the task."
   }
 ]
