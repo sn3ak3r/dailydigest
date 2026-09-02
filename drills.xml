@@ -1,34 +1,25 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse to C: pointer-walk nonzero counter</title><link></link><description>Target: Windows x86-64 (MSVC calling convention: rcx, edx = arg1, arg2). Reverse this disassembly to equivalent C:
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Mini Crackme: sub/neg magnitude check</title><link></link><description>Target: Windows x86-64 (calling convention: ecx = arg1). ecx holds a 32-bit signed integer. Find the value of ecx that makes check return 1.
 
-func:
-    xor     eax, eax        ; eax = 0
-    test    edx, edx
-    jle     done
-loop_top:
-    cmp     dword ptr [rcx], 0
-    je      skip
-    inc     eax
-skip:
-    add     rcx, 4
-    dec     edx
-    jnz     loop_top
-done:
+check:
+    mov     eax, ecx
+    sub     eax, 777      ; eax = x - 777
+    neg     eax           ; eax = -(x - 777) = 777 - x
+    cmp     eax, 1000
+    jne     fail
+    mov     eax, 1
+    ret
+fail:
+    xor     eax, eax
     ret
 
-What does func(int* arr, int n) compute, and what does it return?
+What value of ecx makes check return 1?
 
 ---
 
-Answer:
+Answer: ecx = -223 (0xFFFFFF21)
 
-int func(int* arr, int n) {
-    int count = 0;
-    for (int i = 0; i &lt; n; i++) {
-        if (arr[i] != 0) count++;
-    }
-    return count;
-}
+neg computes the two&#x27;s-complement negation of its operand -- it&#x27;s equivalent to 0 - eax, so after sub eax, 777 (giving x - 777), the neg turns that into 777 - x.
 
-- rcx is walked as a raw pointer (add rcx, 4 advances by one int, 4 bytes) rather than indexed with a scaled base+offset -- each iteration dereferences [rcx] directly instead of [base + idx*4].
-- dec edx / jnz loop_top counts n down to zero instead of comparing an incrementing index, so the loop runs exactly n times with no explicit index variable.
-- cmp/je skip skips the inc eax for zero elements, so eax ends up holding the count of nonzero elements -- the function&#x27;s return value per the Windows x64 convention.</description><guid isPermaLink='false'>2026-09-01</guid><pubDate>Tue, 01 Sep 2026 02:37:28 +0000</pubDate></item></channel></rss>
+The cmp/jne pair requires 777 - x == 1000, so solving backward gives x = 777 - 1000 = -223.
+
+Passing ecx = -223 makes eax land on exactly 1000 after the sub/neg pair, so the jne falls through and check returns 1.</description><guid isPermaLink='false'>2026-09-02</guid><pubDate>Wed, 02 Sep 2026 02:37:44 +0000</pubDate></item></channel></rss>
