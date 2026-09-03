@@ -1,52 +1,52 @@
 [
   {
-    "title": "Chinese Fire Ant hackers turn Cisco routers into spying platforms",
-    "link": "https://www.bleepingcomputer.com/news/security/chinese-fire-ant-hackers-turn-cisco-routers-into-spying-platforms/",
-    "blurb": "Problem. Attackers want durable, undetected access to the network gear that sees everything passing through it, not just servers. Approach. Incident responders at Sygnia found a hidden GRE tunnel on a Cisco IOS XR router. Investigation revealed the Chinese group \"Fire Ant\" had planted a backdoor (dubbed BridgeAgent) disguised as a monitoring agent, running as a root-level service, suppressing logs, and capturing traffic to upload to their own servers. Result. The compromised routers became surveillance platforms, letting Fire Ant pivot into connected high-value networks while tampering with logs and timestamps to erase evidence. Why it matters. Trusted infrastructure, not endpoints, is the new espionage target — it has a privileged view of everything around it. Jargon: GRE tunnel — an encapsulated virtual link between two points. Root-level backdoor — malware running with full system privileges. IOC — indicator of compromise. Reverse shell — an attacker-controlled remote command session."
+    "title": "BGP Hijack Delivers Malicious Virtualizor Update That Establishes Persistent Root Access",
+    "link": "https://thehackernews.com/2026/09/bgp-hijack-delivers-malicious.html",
+    "blurb": "Attackers hijacked BGP routes to slip a trojanized Virtualizor update onto servers, planting persistent root-level backdoors — routing infrastructure is now part of the software supply chain attack surface."
   },
   {
-    "title": "Microsoft warns of TerminalFix attacks deploying reverse tunnels",
-    "link": "https://www.bleepingcomputer.com/news/security/microsoft-warns-of-terminalfix-attacks-deploying-reverse-tunnels/",
-    "blurb": "A post-exploitation technique abuses trusted tooling to punch reverse tunnels through firewalls for persistent remote access."
+    "title": "Attackers Exploit Two SonicWall SMA 1000 Zero-Days That May Form an Attack Chain",
+    "link": "https://thehackernews.com/2026/09/attackers-exploit-two-sonicwall-sma.html",
+    "blurb": "Two unauthenticated zero-days in SonicWall's SMA 1000 series can reportedly be chained for full remote code execution — patch or isolate these gateways now."
   },
   {
-    "title": "Nearly 22,000 Microsoft Exchange servers vulnerable to hijack attacks",
-    "link": "https://www.bleepingcomputer.com/news/security/nearly-22-000-microsoft-exchange-servers-vulnerable-to-hijack-attacks/",
-    "blurb": "Thousands of internet-facing mail servers remain exploitable for full takeover months after patches shipped."
+    "title": "Attackers Exploit Critical JFrog Artifactory Flaw to Mint Admin Tokens Days After Disclosure",
+    "link": "https://thehackernews.com/2026/09/attackers-exploit-critical-jfrog.html",
+    "blurb": "Attackers are forging admin tokens in Artifactory instances within days of disclosure, turning a build-artifact store into a full CI/CD compromise point."
   },
   {
-    "title": "DLSS 5 comes with a massive 50-60% performance hit, so I hope you like lower frame rates with your dose of AI image enhancement",
-    "link": "https://www.pcgamer.com/hardware/graphics-cards/dlss-5-comes-with-a-massive-50-60-percent-performance-hit-so-i-hope-you-like-lower-frame-rates-with-your-dose-of-ai-image-enhancement/",
-    "blurb": "Nvidia's new frame-generation tech trades real rendering performance for AI-upscaled frames, and the tradeoff is steeper than advertised."
+    "title": "'Can I cry?': Stalker 2 devs say its 2.0 update's engine overhaul was a nightmare—but worth the effort",
+    "link": "https://www.pcgamer.com/games/fps/can-i-cry-stalker-2-devs-say-its-2-0-updates-engine-overhaul-was-a-nightmare-but-worth-the-effort/",
+    "blurb": "Devs detail how GSC rebuilt core engine systems for the 2.0 update, trading months of pain for a more stable, moddable base going forward."
   },
   {
-    "title": "Star Wars: Zero Company devs left without pay, report claims, with \"most\" staff furloughed prior to launch",
-    "link": "https://www.rockpapershotgun.com/star-wars-zero-company-devs-left-without-pay-report-claims-with-most-staff-furloughed-prior-to-launch",
-    "blurb": "A Steam-bestseller's dev team was reportedly gutted before the game even shipped."
+    "title": "Nexus Mods releases open-source Unreal modding tools for The Blood of Dawnwalker",
+    "link": "https://www.rockpapershotgun.com/aiming-to-supercharge-the-blood-of-dawnwalkers-early-mods-nexus-mods-release-their-own-streamlined-open-source-unreal-modding-tools",
+    "blurb": "A free, open-source modding toolkit for Unreal Engine games lowers the barrier for Blood of Dawnwalker mods and could template modding for other UE5 titles."
   },
   {
-    "title": "Giant impact could have formed an intact moon within five hours, simulations suggest",
-    "link": "https://phys.org/news/2026-09-giant-impact-intact-moon-hours.html",
-    "blurb": "Problem. Standard giant-impact simulations model the Moon-forming collision as happening between molten bodies, ignoring how the material's temperature and strength affect the outcome. Approach. Southwest Research Institute researchers reran the classic Theia-Earth impact simulation, this time adding temperature-dependent material strength for the colliding bodies. Result. When both bodies were modeled as cooler and structurally stronger, an intact Moon assembled directly within about five hours — instead of slowly clumping together from a debris disk over a much longer period. Why it matters. Since protoplanets cool as they age, the outcome ties the Moon's formation speed and composition to when the impact happened, and could help explain why Earth and the Moon share similar composition. Jargon: Giant impact hypothesis — the leading theory that the Moon formed from a planet-sized collision with early Earth. Theia — the hypothesized Mars-sized impactor. Debris disk — orbiting material that gradually reaccretes. Protoplanet — an early-stage forming planet."
+    "title": "Genome Duplication Is a Radical Evolutionary Gamble",
+    "link": "https://www.quantamagazine.org/genome-duplication-is-a-radical-evolutionary-gamble-20260902/",
+    "blurb": "Problem: Why do organisms sometimes survive inheriting three or more full chromosome sets instead of two — an event usually lethal — and how does it drive evolution? Approach: Researchers sequenced genomes of species with known duplications — yeast, New Zealand mud snails, goatsbeard plants, snowflake yeast — to track what happens to the extra genes over time. Result: Mud snails lost 60% of duplicated genes within roughly a million years through rapid, non-random 'genetic triage' — some genes kept, others dropped or repurposed — and the pattern repeats across generations. Why it matters: Nearly all seed plants and many animal lineages trace major innovations, from spider silk glands to complex brains, back to ancient genome duplications. Glossary: Polyploidy (extra chromosome sets), rediploidization (shrinking back toward normal), diploid (the standard two-set state), bioinformatics (computational gene analysis)."
   },
   {
-    "title": "El Niño is now stronger than at any point in the last 1,000 years, study finds",
-    "link": "https://arstechnica.com/science/2026/08/el-nino-is-now-stronger-than-at-any-point-in-the-last-1000-years-study-finds/",
-    "blurb": "Reconstructed climate records show the current event outstrips a millennium of precedent."
+    "title": "PACMAN AI framework for controlling fusion systems safely makes key decisions in milliseconds",
+    "link": "https://phys.org/news/2026-09-pacman-ai-framework-fusion-safely.html",
+    "blurb": "A new AI control framework makes safety-critical shutdown decisions for fusion reactors in milliseconds, addressing one of the hardest real-time control problems in energy research."
   },
   {
-    "title": "Building An Airsoft Claymore Mine",
-    "link": "https://hackaday.com/2026/09/01/building-an-airsoft-claymore-mine/",
-    "blurb": "A cardboard-and-mousetrap tripwire launcher shows how much you can fake with dollar-store parts."
+    "title": "Doubling Thermal Printer Resolution by Wiggling",
+    "link": "https://hackaday.com/2026/09/02/doubling-thermal-printer-resolution-by-wiggling/",
+    "blurb": "Problem: 1970s calculator thermal printers needed one costly heating element per pixel column, so higher resolution meant more elements and higher cost. Approach: Sears 12 engineers made the print head physically wiggle side-to-side in sync with printing, letting one row of elements hit two dot positions per column. Result: Effective resolution doubled with no extra hardware, at the cost of slightly wavy lines when timing drifted on long print runs. Why it matters: A clean example of trading a small, tolerable defect for a big cost cut — a tradeoff still common in embedded hardware design. Glossary: Thermal printer (heat-based printing), print head (the heating-element assembly), dot matrix (image built from a dot grid)."
   },
   {
-    "title": "Refurbishing a Tektronix TDS7104 Oscilloscope",
-    "link": "https://tomverbeure.github.io/2026/08/23/Tektronix-TDS7104-Refurbishing.html",
-    "blurb": "A detailed teardown-and-repair log for reviving a high-end lab scope."
+    "title": "Harvesting Namib Desert Fog with High Voltage",
+    "link": "https://hackaday.com/2026/09/02/harvesting-namib-desert-fog-with-high-voltage/",
+    "blurb": "A DIY high-voltage electrostatic rig pulls water from desert fog more efficiently than passive mesh nets, inspired by beetles that harvest fog on their backs."
   },
   {
-    "title": "I trained a small transformer in 1.5hrs and it beats many LLMs",
-    "link": "https://mvakde.github.io/blog/44-on-arc-1/",
-    "blurb": "A from-scratch model reportedly hits 44% on ARC-AGI-1 for 67 cents of compute, beating some general-purpose LLMs on the task."
+    "title": "Let's build a compressor from scratch",
+    "link": "https://ochagavia.nl/blog/lets-build-a-compressor-from-scratch/",
+    "blurb": "A from-scratch walkthrough of building a real data compressor, covering the entropy-coding tricks that make general-purpose compression work."
   }
 ]
