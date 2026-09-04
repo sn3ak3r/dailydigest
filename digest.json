@@ -1,52 +1,52 @@
 [
   {
-    "title": "BGP Hijack Delivers Malicious Virtualizor Update That Establishes Persistent Root Access",
-    "link": "https://thehackernews.com/2026/09/bgp-hijack-delivers-malicious.html",
-    "blurb": "Attackers hijacked BGP routes to slip a trojanized Virtualizor update onto servers, planting persistent root-level backdoors — routing infrastructure is now part of the software supply chain attack surface."
+    "title": "SonicWall SMA 1000 Zero-Days Enable Unauthenticated RCE",
+    "link": "https://www.darkreading.com/vulnerabilities-threats/sonicwall-sma-1000-zero-days-unauthenticated-rce",
+    "blurb": "Two unpatched zero-days in SonicWall's SMA 1000 series allow full remote code execution with no login required."
   },
   {
-    "title": "Attackers Exploit Two SonicWall SMA 1000 Zero-Days That May Form an Attack Chain",
-    "link": "https://thehackernews.com/2026/09/attackers-exploit-two-sonicwall-sma.html",
-    "blurb": "Two unauthenticated zero-days in SonicWall's SMA 1000 series can reportedly be chained for full remote code execution — patch or isolate these gateways now."
+    "title": "Researcher Releases FalconFlank PoC Showing Privilege Escalation in CrowdStrike Falcon",
+    "link": "https://thehackernews.com/2026/09/researcher-releases-falconflank-poc.html",
+    "blurb": "Public proof-of-concept exploits a flaw in CrowdStrike's own EDR agent to escalate to SYSTEM."
   },
   {
-    "title": "Attackers Exploit Critical JFrog Artifactory Flaw to Mint Admin Tokens Days After Disclosure",
-    "link": "https://thehackernews.com/2026/09/attackers-exploit-critical-jfrog.html",
-    "blurb": "Attackers are forging admin tokens in Artifactory instances within days of disclosure, turning a build-artifact store into a full CI/CD compromise point."
+    "title": "PrimSynth: An Agentic Approach to Discover, Validate, and Synthesize Exploit Primitives for Linux Kernel Vulnerabilities",
+    "link": "https://arxiv.org/abs/2609.02647",
+    "blurb": "Research on using LLM agents to automatically build working exploit primitives for Linux kernel bugs."
   },
   {
-    "title": "'Can I cry?': Stalker 2 devs say its 2.0 update's engine overhaul was a nightmare—but worth the effort",
-    "link": "https://www.pcgamer.com/games/fps/can-i-cry-stalker-2-devs-say-its-2-0-updates-engine-overhaul-was-a-nightmare-but-worth-the-effort/",
-    "blurb": "Devs detail how GSC rebuilt core engine systems for the 2.0 update, trading months of pain for a more stable, moddable base going forward."
+    "title": "\"The internet we once loved is gone\": SteamDB acquired by Nexus Mods' owners",
+    "link": "https://www.rockpapershotgun.com/the-internet-we-once-loved-is-gone-steamdb-founders-announce-the-community-run-database-has-been-acquired-by-nexus-mods-owners",
+    "blurb": "The community-run Steam data tracker changes hands, worrying its userbase about independence."
   },
   {
-    "title": "Nexus Mods releases open-source Unreal modding tools for The Blood of Dawnwalker",
-    "link": "https://www.rockpapershotgun.com/aiming-to-supercharge-the-blood-of-dawnwalkers-early-mods-nexus-mods-release-their-own-streamlined-open-source-unreal-modding-tools",
-    "blurb": "A free, open-source modding toolkit for Unreal Engine games lowers the barrier for Blood of Dawnwalker mods and could template modding for other UE5 titles."
+    "title": "Uncanyon: a reality-bending puzzle game from the devs behind Maquette",
+    "link": "https://www.rockpapershotgun.com/constantly-reshape-the-world-beneath-your-feet-in-the-reality-bending-puzzle-first-uncanyon-the-next-game-from-the-devs-behind-the-trippy-maquette",
+    "blurb": "A new puzzle-first title lets players continuously reshape the terrain beneath them."
   },
   {
-    "title": "Genome Duplication Is a Radical Evolutionary Gamble",
-    "link": "https://www.quantamagazine.org/genome-duplication-is-a-radical-evolutionary-gamble-20260902/",
-    "blurb": "Problem: Why do organisms sometimes survive inheriting three or more full chromosome sets instead of two — an event usually lethal — and how does it drive evolution? Approach: Researchers sequenced genomes of species with known duplications — yeast, New Zealand mud snails, goatsbeard plants, snowflake yeast — to track what happens to the extra genes over time. Result: Mud snails lost 60% of duplicated genes within roughly a million years through rapid, non-random 'genetic triage' — some genes kept, others dropped or repurposed — and the pattern repeats across generations. Why it matters: Nearly all seed plants and many animal lineages trace major innovations, from spider silk glands to complex brains, back to ancient genome duplications. Glossary: Polyploidy (extra chromosome sets), rediploidization (shrinking back toward normal), diploid (the standard two-set state), bioinformatics (computational gene analysis)."
+    "title": "Soft nanoscale confinement prevents ice, exposing water's liquid-to-glass transition",
+    "link": "https://phys.org/news/2026-09-soft-nanoscale-confinement-ice-exposing.html",
+    "blurb": "Confining water at the nanoscale stops it from crystallizing, letting researchers observe a liquid-to-glass transition directly."
   },
   {
-    "title": "PACMAN AI framework for controlling fusion systems safely makes key decisions in milliseconds",
-    "link": "https://phys.org/news/2026-09-pacman-ai-framework-fusion-safely.html",
-    "blurb": "A new AI control framework makes safety-critical shutdown decisions for fusion reactors in milliseconds, addressing one of the hardest real-time control problems in energy research."
+    "title": "'Power of disorder' tames CF₄, a semiconductor greenhouse gas that can persist for 50,000 years",
+    "link": "https://phys.org/news/2026-09-power-disorder-cf-semiconductor-greenhouse.html",
+    "blurb": "Problem: CF4, used in chip fabrication, is over 6,000x more potent than CO2 and persists ~50,000 years. Catalysts meant to break it down corrode and clump under the heat, moisture, and fluorine involved, losing effectiveness fast. Approach: KAIST researchers mixed five metals (Al, Zn, Ga, Ni, Co) evenly into one aluminate crystal structure, using 'entropy stabilization' -- structural disorder that resists clumping -- to keep the catalyst intact under harsh conditions. Result: In an 800C, 150-hour accelerated test, conventional catalyst conversion fell from 93% to 48%; the new catalyst held at 98% to 92%, roughly 2.3x higher intrinsic activity overall. Why it matters: A catalyst that keeps working under real fab conditions turns a lab result into something semiconductor plants could actually deploy to cut a very potent, very persistent greenhouse gas. Jargon: Entropy stabilization -- using atomic disorder to keep a mixed-metal structure from separating into simpler phases. Aluminate -- a compound where metals bond around an aluminum-oxygen framework. Dry etching -- using reactive gas (not liquid) to carve circuit patterns into a wafer. Oxygen isotope tracing -- tagging oxygen atoms to track their path through a chemical reaction."
   },
   {
-    "title": "Doubling Thermal Printer Resolution by Wiggling",
-    "link": "https://hackaday.com/2026/09/02/doubling-thermal-printer-resolution-by-wiggling/",
-    "blurb": "Problem: 1970s calculator thermal printers needed one costly heating element per pixel column, so higher resolution meant more elements and higher cost. Approach: Sears 12 engineers made the print head physically wiggle side-to-side in sync with printing, letting one row of elements hit two dot positions per column. Result: Effective resolution doubled with no extra hardware, at the cost of slightly wavy lines when timing drifted on long print runs. Why it matters: A clean example of trading a small, tolerable defect for a big cost cut — a tradeoff still common in embedded hardware design. Glossary: Thermal printer (heat-based printing), print head (the heating-element assembly), dot matrix (image built from a dot grid)."
+    "title": "Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly",
+    "link": "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot/",
+    "blurb": "A developer uses an LLM to disassemble and reimplement a decades-old Amiga game in Godot."
   },
   {
-    "title": "Harvesting Namib Desert Fog with High Voltage",
-    "link": "https://hackaday.com/2026/09/02/harvesting-namib-desert-fog-with-high-voltage/",
-    "blurb": "A DIY high-voltage electrostatic rig pulls water from desert fog more efficiently than passive mesh nets, inspired by beetles that harvest fog on their backs."
+    "title": "A Split Keyboard Designed for Human Hands",
+    "link": "https://hackaday.com/2026/09/03/a-split-keyboard-designed-for-human-hands/",
+    "blurb": "Problem: Standard keyboards still copy the 19th-century typewriter layout -- flat rows, a shared spacebar hogging both thumbs -- which doesn't match how hands and fingers actually move. Approach: Paul iterated roughly 50 times on a split, columnar keyboard where each finger's column is angled and spaced for that finger specifically (ring finger keys raised, index columns angled inward), using low-profile switches to keep it compact and portable. Result: A 36-key layout where each thumb covers three keys -- space plus two 'layer' keys -- replacing dozens of rarely-reachable keys with layered combinations. Why it matters: It's a concrete example of ergonomics-first hardware design overturning a century-old default that most people never question. Jargon: Columnar layout -- keys stacked in straight columns instead of offset rows. Layer key -- a modifier that remaps other keys to a second function, like a hardware Shift. Low-profile switch -- a shorter mechanical key switch for slimmer builds."
   },
   {
-    "title": "Let's build a compressor from scratch",
-    "link": "https://ochagavia.nl/blog/lets-build-a-compressor-from-scratch/",
-    "blurb": "A from-scratch walkthrough of building a real data compressor, covering the entropy-coding tricks that make general-purpose compression work."
+    "title": "How I converted BBC Micro Elite into a two-player game",
+    "link": "https://elite.bbcelite.com/hacks/two-player_elite/technical_information.html",
+    "blurb": "A technical writeup of hacking split-screen two-player support into the 1984 BBC Micro classic."
   }
 ]
