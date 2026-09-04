@@ -19,3 +19,4 @@
 2026-09-01 | reverse-function | pointer-walking loop (add rcx,4) counting nonzero elements, cmp/je skip-accumulate, dec/jnz down-counting loop
 2026-09-02 | crackme | sub/neg magnitude check, two's-complement negation flipping x-777 into 777-x, backward-solving via reverse arithmetic
 2026-09-03 | decode-instruction | REX.B extending opcode-embedded register field, push/pop always-64-bit default operand size
+2026-09-04 | reverse-function | bit-population-count loop via and-mask/shr, test/jnz shift-until-zero termination
