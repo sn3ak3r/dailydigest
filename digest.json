@@ -1,52 +1,52 @@
 [
   {
-    "title": "SonicWall SMA 1000 Zero-Days Enable Unauthenticated RCE",
-    "link": "https://www.darkreading.com/vulnerabilities-threats/sonicwall-sma-1000-zero-days-unauthenticated-rce",
-    "blurb": "Two unpatched zero-days in SonicWall's SMA 1000 series allow full remote code execution with no login required."
+    "title": "PostgreSQL Fixes 12-Year-Old Logical Decoding Flaw Enabling Replication-Role Code Execution",
+    "link": "https://thehackernews.com/2026/09/postgresql-fixes-12-year-old-logical.html",
+    "blurb": "A bug that sat undetected in PostgreSQL's replication internals for 12 years let a replication-role account execute arbitrary code -- a reminder that trusted internal roles need the same scrutiny as external attack surface."
   },
   {
-    "title": "Researcher Releases FalconFlank PoC Showing Privilege Escalation in CrowdStrike Falcon",
-    "link": "https://thehackernews.com/2026/09/researcher-releases-falconflank-poc.html",
-    "blurb": "Public proof-of-concept exploits a flaw in CrowdStrike's own EDR agent to escalate to SYSTEM."
+    "title": "New Ted Backdoor Hides Inside Victims' Own HAProxy Builds to Intercept Web Traffic",
+    "link": "https://thehackernews.com/2026/09/new-ted-backdoor-hides-inside-victims.html",
+    "blurb": "Malware that patches itself into a victim's own compiled HAProxy binary blurs the line between \"infected\" and \"normal\" infrastructure, making traffic-interception backdoors far harder to spot."
   },
   {
-    "title": "PrimSynth: An Agentic Approach to Discover, Validate, and Synthesize Exploit Primitives for Linux Kernel Vulnerabilities",
-    "link": "https://arxiv.org/abs/2609.02647",
-    "blurb": "Research on using LLM agents to automatically build working exploit primitives for Linux kernel bugs."
+    "title": "\"Top-down Zelda meets Bloodborne\": action RPG Withering Realms is out now in early access, should you fancy riding the shoulders of a horrible doll",
+    "link": "https://www.rockpapershotgun.com/top-down-zelda-meets-bloodborne-action-rpg-withering-realms-is-out-now-in-early-access-should-you-fancy-riding-the-shoulders-of-a-horrible-doll",
+    "blurb": "A notable indie early-access launch mixing top-down Zelda structure with Bloodborne-style combat and body horror."
   },
   {
-    "title": "\"The internet we once loved is gone\": SteamDB acquired by Nexus Mods' owners",
-    "link": "https://www.rockpapershotgun.com/the-internet-we-once-loved-is-gone-steamdb-founders-announce-the-community-run-database-has-been-acquired-by-nexus-mods-owners",
-    "blurb": "The community-run Steam data tracker changes hands, worrying its userbase about independence."
+    "title": "I've found DLSS 5 can slash frame rates by up to 73% on an RTX 5080 gaming PC in NBA 2K27, and I'm wondering what kind of mega-rig would justify the performance hit",
+    "link": "https://www.pcgamer.com/hardware/graphics-cards/dlss-5-can-slash-performance-by-up-to-73-percent-on-an-rtx-5080-gaming-pc-in-nba-2k27-and-im-left-wondering-what-kind-of-mega-rig-youd-need-to-justify-the-hit/",
+    "blurb": "A concrete, measured regression showing Nvidia's newest neural-rendering feature can cost more performance than it saves on current high-end hardware."
   },
   {
-    "title": "Uncanyon: a reality-bending puzzle game from the devs behind Maquette",
-    "link": "https://www.rockpapershotgun.com/constantly-reshape-the-world-beneath-your-feet-in-the-reality-bending-puzzle-first-uncanyon-the-next-game-from-the-devs-behind-the-trippy-maquette",
-    "blurb": "A new puzzle-first title lets players continuously reshape the terrain beneath them."
+    "title": "Second complete map of a fruit fly brain completed",
+    "link": "https://arstechnica.com/science/2026/09/brain-of-a-male-fly-completely-mapped-joins-earlier-map-of-a-female-brain/",
+    "blurb": "A second full connectome -- every neuron and synapse mapped -- gives researchers their first same-species comparison of brain wiring between sexes."
   },
   {
-    "title": "Soft nanoscale confinement prevents ice, exposing water's liquid-to-glass transition",
-    "link": "https://phys.org/news/2026-09-soft-nanoscale-confinement-ice-exposing.html",
-    "blurb": "Confining water at the nanoscale stops it from crystallizing, letting researchers observe a liquid-to-glass transition directly."
+    "title": "Magic-angle graphene provides evidence for unconventional superconductivity",
+    "link": "https://phys.org/news/2026-09-magic-angle-graphene-evidence-unconventional.html",
+    "blurb": "New experimental evidence strengthens the case that twisted-bilayer graphene hosts a genuinely unconventional (non-BCS) superconducting mechanism, a long-sought condensed-matter result."
   },
   {
-    "title": "'Power of disorder' tames CF₄, a semiconductor greenhouse gas that can persist for 50,000 years",
-    "link": "https://phys.org/news/2026-09-power-disorder-cf-semiconductor-greenhouse.html",
-    "blurb": "Problem: CF4, used in chip fabrication, is over 6,000x more potent than CO2 and persists ~50,000 years. Catalysts meant to break it down corrode and clump under the heat, moisture, and fluorine involved, losing effectiveness fast. Approach: KAIST researchers mixed five metals (Al, Zn, Ga, Ni, Co) evenly into one aluminate crystal structure, using 'entropy stabilization' -- structural disorder that resists clumping -- to keep the catalyst intact under harsh conditions. Result: In an 800C, 150-hour accelerated test, conventional catalyst conversion fell from 93% to 48%; the new catalyst held at 98% to 92%, roughly 2.3x higher intrinsic activity overall. Why it matters: A catalyst that keeps working under real fab conditions turns a lab result into something semiconductor plants could actually deploy to cut a very potent, very persistent greenhouse gas. Jargon: Entropy stabilization -- using atomic disorder to keep a mixed-metal structure from separating into simpler phases. Aluminate -- a compound where metals bond around an aluminum-oxygen framework. Dry etching -- using reactive gas (not liquid) to carve circuit patterns into a wafer. Oxygen isotope tracing -- tagging oxygen atoms to track their path through a chemical reaction."
+    "title": "Reversing MikroTik's Silent Patch: The RouterOS 7.23.4 Fix They Wouldn't Explain",
+    "link": "https://npratley.net/reversing-mikrotiks-silent-patch-the-routeros-7-23-4-fix-they-wouldnt-explain/",
+    "blurb": "Independent reverse engineering of an undisclosed RouterOS patch, filling in details the vendor left out of its changelog."
   },
   {
-    "title": "Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly",
-    "link": "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot/",
-    "blurb": "A developer uses an LLM to disassemble and reimplement a decades-old Amiga game in Godot."
+    "title": "Show HN: Open-Source eInk Bike Computer",
+    "link": "https://opentrailpaper.com",
+    "blurb": "A fully open-source, low-power eInk bike computer -- hardware, firmware, and design files all published for others to build."
   },
   {
-    "title": "A Split Keyboard Designed for Human Hands",
-    "link": "https://hackaday.com/2026/09/03/a-split-keyboard-designed-for-human-hands/",
-    "blurb": "Problem: Standard keyboards still copy the 19th-century typewriter layout -- flat rows, a shared spacebar hogging both thumbs -- which doesn't match how hands and fingers actually move. Approach: Paul iterated roughly 50 times on a split, columnar keyboard where each finger's column is angled and spaced for that finger specifically (ring finger keys raised, index columns angled inward), using low-profile switches to keep it compact and portable. Result: A 36-key layout where each thumb covers three keys -- space plus two 'layer' keys -- replacing dozens of rarely-reachable keys with layered combinations. Why it matters: It's a concrete example of ergonomics-first hardware design overturning a century-old default that most people never question. Jargon: Columnar layout -- keys stacked in straight columns instead of offset rows. Layer key -- a modifier that remaps other keys to a second function, like a hardware Shift. Low-profile switch -- a shorter mechanical key switch for slimmer builds."
+    "title": "New CrowdStrike 'FalconFlank' zero-day grants SYSTEM privileges",
+    "link": "https://www.bleepingcomputer.com/news/security/new-crowdstrike-falconflank-zero-day-grants-system-privileges/",
+    "blurb": "Problem: CrowdStrike's Falcon endpoint-security agent -- meant to stop attackers -- has an unpatched Windows privilege-escalation bug. Approach: researcher \"Nightmare Eclipse\" found that Falcon's macro-remediation feature (auto-removes malicious Office macros) can be tricked into running attacker code with Falcon's own elevated permissions. Result: on fully updated Windows 11 / Server 2025, the exploit pops a SYSTEM command prompt. No CVE yet; CrowdStrike is investigating and offers only a workaround. The same researcher dropped similar zero-days this week against Kaspersky, Avast, and Nvidia. Why it matters: the tool trusted to catch privilege escalation is itself the escalation path, across several security vendors at once. Glossary: EDR (endpoint detection & response agent); SYSTEM (Windows' highest privilege level); 0day (unpatched, disclosed vulnerability); PoC (proof-of-concept exploit code)."
   },
   {
-    "title": "How I converted BBC Micro Elite into a two-player game",
-    "link": "https://elite.bbcelite.com/hacks/two-player_elite/technical_information.html",
-    "blurb": "A technical writeup of hacking split-screen two-player support into the 1984 BBC Micro classic."
+    "title": "Making a Pole Balance Itself With Propellers",
+    "link": "https://hackaday.com/2026/09/04/making-a-pole-balance-itself-with-propellers/",
+    "blurb": "Problem: balancing a pole on a fingertip is a classic trick; no hands makes it harder. Approach: builder Peter Ryseck mounted a small drone (flight controller, battery, three propellers) atop a free-standing pole, using thrust to keep it upright like a self-stabilizing quadcopter. Result: chasing perfect vertical balance caused wild oscillation, so Ryseck let the pole lean into the wind instead, a more stable configuration. Switching from 10-inch to 5-inch propellers cut inertia enough to react fast enough to stay up. Why it matters: drone stabilization generalizes to non-flying balance problems, and \"more stable\" needn't mean \"more upright.\" Glossary: flight controller (board running the stabilization algorithm); active stabilization (continuously correcting orientation); inertia (resistance to rotation change); oscillation (unstable overcorrection loop)."
   }
 ]
