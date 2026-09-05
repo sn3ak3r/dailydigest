@@ -1,36 +1,14 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse to C: Popcount Loop</title><link></link><description>Target: Windows x86-64 (MSVC calling convention: ecx = arg1).
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Mini Crackme — 2026-09-05 (Windows x86-64)</title><link></link><description>Challenge: `ecx` holds a 32-bit unsigned integer (Windows x64 calling convention, first arg in `ecx`). Find the value of `ecx` that makes `check` return 1.
 
-Reverse this disassembly to equivalent C:
-
-func:
-    xor     eax, eax        ; eax = 0
-    test    ecx, ecx
-    jz      done
-loop_top:
-    mov     edx, ecx
-    and     edx, 1
-    add     eax, edx
-    shr     ecx, 1
-    test    ecx, ecx
-    jnz     loop_top
-done:
+check:
+    imul    eax, ecx, 0x1F   ; eax = x * 31
+    and     eax, 0xFF        ; keep only the low byte of the product
+    cmp     eax, 0x51        ; compare to target byte
+    jne     fail
+    mov     eax, 1
+    ret
+fail:
+    xor     eax, eax
     ret
 
-What does func(unsigned int n) compute, and what does it return?
-
----
-
-Answer:
-
-int func(unsigned int n) {
-    int count = 0;
-    while (n != 0) {
-        count += n &amp; 1;
-        n &gt;&gt;= 1;
-    }
-    return count;
-}
-
-- and edx, 1 isolates the current low bit of ecx (a copy of n) and add eax, edx folds it into the running total -- this is a bit-population-count (popcount) accumulator, not a comparison or arithmetic check.
-- shr ecx, 1 shifts n right one bit per iteration, discarding the bit just tested, so successive passes examine each bit from least- to most-significant.
-- test ecx, ecx / jnz loop_top re-tests the shifted value each pass, terminating once all set bits have been consumed and ecx reaches zero -- the initial test ecx, ecx / jz done is the same check applied up front for n == 0.</description><guid isPermaLink='false'>2026-09-04</guid><pubDate>Fri, 04 Sep 2026 02:37:37 +0000</pubDate></item></channel></rss>
+Answer: ecx = 0x8F (143). `imul eax, ecx, 0x1F` multiplies x by 31, and `and eax, 0xFF` keeps only the low 8 bits, so the check depends only on x mod 256. Solving (31*x) mod 256 == 0x51 requires 31&#x27;s modular inverse mod 256, which is 223; multiplying both sides gives x = 0x51*223 mod 256 = 143. Passing ecx=143 gives 31*143=4433=0x1151, whose low byte is 0x51, so check returns 1.</description><guid isPermaLink='false'>2026-09-05</guid><pubDate>Sat, 05 Sep 2026 02:37:18 +0000</pubDate></item></channel></rss>

@@ -20,3 +20,4 @@
 2026-09-02 | crackme | sub/neg magnitude check, two's-complement negation flipping x-777 into 777-x, backward-solving via reverse arithmetic
 2026-09-03 | decode-instruction | REX.B extending opcode-embedded register field, push/pop always-64-bit default operand size
 2026-09-04 | reverse-function | bit-population-count loop via and-mask/shr, test/jnz shift-until-zero termination
+2026-09-05 | crackme | multiply-then-mask check via imul/and, modular-inverse backward-solving
