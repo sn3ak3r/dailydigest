@@ -1,52 +1,52 @@
 [
   {
-    "title": "PostgreSQL Fixes 12-Year-Old Logical Decoding Flaw Enabling Replication-Role Code Execution",
-    "link": "https://thehackernews.com/2026/09/postgresql-fixes-12-year-old-logical.html",
-    "blurb": "A bug that sat undetected in PostgreSQL's replication internals for 12 years let a replication-role account execute arbitrary code -- a reminder that trusted internal roles need the same scrutiny as external attack surface."
+    "title": "Critical Citrix NetScaler auth bypass now leveraged in attacks",
+    "link": "https://www.bleepingcomputer.com/news/security/hackers-target-critical-citrix-netscaler-auth-bypass-in-attacks/",
+    "blurb": "Actively exploited auth bypass in NetScaler ADC/Gateway lets attackers skip login entirely -- patch or take internet-facing appliances offline now."
   },
   {
-    "title": "New Ted Backdoor Hides Inside Victims' Own HAProxy Builds to Intercept Web Traffic",
-    "link": "https://thehackernews.com/2026/09/new-ted-backdoor-hides-inside-victims.html",
-    "blurb": "Malware that patches itself into a victim's own compiled HAProxy binary blurs the line between \"infected\" and \"normal\" infrastructure, making traffic-interception backdoors far harder to spot."
+    "title": "Critical VMware Workstation and Fusion Flaw Lets VM Admins Execute Host Code",
+    "link": "https://thehackernews.com/2026/09/critical-vmware-workstation-and-fusion.html",
+    "blurb": "A guest VM can break out and run code on the host, undermining the isolation VM admins rely on for untrusted workloads."
   },
   {
-    "title": "\"Top-down Zelda meets Bloodborne\": action RPG Withering Realms is out now in early access, should you fancy riding the shoulders of a horrible doll",
-    "link": "https://www.rockpapershotgun.com/top-down-zelda-meets-bloodborne-action-rpg-withering-realms-is-out-now-in-early-access-should-you-fancy-riding-the-shoulders-of-a-horrible-doll",
-    "blurb": "A notable indie early-access launch mixing top-down Zelda structure with Bloodborne-style combat and body horror."
+    "title": "Attackers Breached JetBrains Cadence via Unpatched TeamCity, Extracting AWS Credentials",
+    "link": "https://thehackernews.com/2026/09/attackers-breached-jetbrains-cadence.html",
+    "blurb": "An unpatched TeamCity server let attackers pivot into AWS credentials -- a reminder that CI/CD systems are high-value supply-chain targets."
   },
   {
-    "title": "I've found DLSS 5 can slash frame rates by up to 73% on an RTX 5080 gaming PC in NBA 2K27, and I'm wondering what kind of mega-rig would justify the performance hit",
-    "link": "https://www.pcgamer.com/hardware/graphics-cards/dlss-5-can-slash-performance-by-up-to-73-percent-on-an-rtx-5080-gaming-pc-in-nba-2k27-and-im-left-wondering-what-kind-of-mega-rig-youd-need-to-justify-the-hit/",
-    "blurb": "A concrete, measured regression showing Nvidia's newest neural-rendering feature can cost more performance than it saves on current high-end hardware."
+    "title": "Go grandmaster becomes first human to win series against advanced AI engine in 3-hour match",
+    "link": "https://www.pcgamer.com/software/ai/go-grandmaster-becomes-first-human-to-win-series-against-advanced-ai-engine-in-3-hour-match/",
+    "blurb": "A human beat a top AI engine at Go for the first time in years, pushing back on the narrative that AI has permanently surpassed humans at the game."
   },
   {
-    "title": "Second complete map of a fruit fly brain completed",
-    "link": "https://arstechnica.com/science/2026/09/brain-of-a-male-fly-completely-mapped-joins-earlier-map-of-a-female-brain/",
-    "blurb": "A second full connectome -- every neuron and synapse mapped -- gives researchers their first same-species comparison of brain wiring between sexes."
+    "title": "No Law was one of the most exciting games I saw at Gamescom: a cyberpunk immersive sim that solves one of Deus Ex's biggest problems",
+    "link": "https://www.eurogamer.net/no-law-hands-off-preview-gamescom-cyberpunk-deus-ex-biggest-problem",
+    "blurb": "A Gamescom preview standout that reportedly fixes one of the immersive-sim genre's long-standing design problems with a more systemic, player-driven approach."
   },
   {
-    "title": "Magic-angle graphene provides evidence for unconventional superconductivity",
-    "link": "https://phys.org/news/2026-09-magic-angle-graphene-evidence-unconventional.html",
-    "blurb": "New experimental evidence strengthens the case that twisted-bilayer graphene hosts a genuinely unconventional (non-BCS) superconducting mechanism, a long-sought condensed-matter result."
+    "title": "Breaking through AlphaFold's limits to predict how proteins change shape",
+    "link": "https://phys.org/news/2026-09-alphafold-limits-proteins.html",
+    "blurb": "**Problem:** AlphaFold3 normally predicts one static protein shape, but many proteins work by flipping between multiple shapes -- a blind spot for drug design. **Approach:** researchers added a \"repulsive force\" to AlphaFold3's diffusion model: each new prediction is penalized for landing too close to a shape it already generated, pushing it toward different ones. **Result:** the tweaked model (AF3-ReD) found open, closed, and intermediate shapes of an ATP synthase subunit; stock AlphaFold3 only ever found the open one. **Why it matters:** drugs often target one specific shape of a protein -- seeing all the shapes makes design far more precise. **Glossary:** diffusion model (AI that generates by refining noise into structure); conformation (a molecule's 3D shape); ATP synthase (enzyme that makes cellular energy); bias energy (a penalty term steering predictions)."
   },
   {
-    "title": "Reversing MikroTik's Silent Patch: The RouterOS 7.23.4 Fix They Wouldn't Explain",
-    "link": "https://npratley.net/reversing-mikrotiks-silent-patch-the-routeros-7-23-4-fix-they-wouldnt-explain/",
-    "blurb": "Independent reverse engineering of an undisclosed RouterOS patch, filling in details the vendor left out of its changelog."
+    "title": "Medieval manuscripts are \"biological time capsules\" for deadly sheeppox virus",
+    "link": "https://arstechnica.com/science/2026/09/medieval-manuscripts-are-biological-time-capsules-for-deadly-sheeppox-virus/",
+    "blurb": "Ancient parchment made from animal skin preserved viral DNA for centuries, giving researchers a genetic timeline of a livestock pathogen."
   },
   {
-    "title": "Show HN: Open-Source eInk Bike Computer",
-    "link": "https://opentrailpaper.com",
-    "blurb": "A fully open-source, low-power eInk bike computer -- hardware, firmware, and design files all published for others to build."
+    "title": "Running Generative AI on an RP2350",
+    "link": "https://hackaday.com/2026/09/05/running-generative-ai-on-an-rp2350/",
+    "blurb": "**Problem:** running image-generating AI usually needs a GPU and cloud servers -- the opposite of cheap, private, offline hardware. **Approach:** a hobbyist squeezed a diffusion transformer (the architecture family behind modern image generators) onto an RP2350, a sub-$1 microcontroller, by shrinking the model to 8-bit numbers so it fits in 4MB of flash. **Result:** the chip generates recognizable 128x128 human faces in about 20 seconds each, shown over USB or VGA. **Why it matters:** it shows current AI image techniques scale down to bare-metal hardware, opening the door to private, offline AI features in cheap embedded devices instead of cloud APIs. **Glossary:** microcontroller (a tiny low-power computer chip); diffusion transformer (a neural network that generates images by denoising); quantization (shrinking number precision to save memory); VAE (variational auto-encoder, compresses images into a compact code)."
   },
   {
-    "title": "New CrowdStrike 'FalconFlank' zero-day grants SYSTEM privileges",
-    "link": "https://www.bleepingcomputer.com/news/security/new-crowdstrike-falconflank-zero-day-grants-system-privileges/",
-    "blurb": "Problem: CrowdStrike's Falcon endpoint-security agent -- meant to stop attackers -- has an unpatched Windows privilege-escalation bug. Approach: researcher \"Nightmare Eclipse\" found that Falcon's macro-remediation feature (auto-removes malicious Office macros) can be tricked into running attacker code with Falcon's own elevated permissions. Result: on fully updated Windows 11 / Server 2025, the exploit pops a SYSTEM command prompt. No CVE yet; CrowdStrike is investigating and offers only a workaround. The same researcher dropped similar zero-days this week against Kaspersky, Avast, and Nvidia. Why it matters: the tool trusted to catch privilege escalation is itself the escalation path, across several security vendors at once. Glossary: EDR (endpoint detection & response agent); SYSTEM (Windows' highest privilege level); 0day (unpatched, disclosed vulnerability); PoC (proof-of-concept exploit code)."
+    "title": "Trusting-Trust Attack against an Entire Linux Distribution (via the strip utility)",
+    "link": "https://arxiv.org/abs/2607.24888",
+    "blurb": "A working reproduction of Ken Thompson's classic compiler-backdoor idea, scaled to compromise an entire Linux distro via the strip utility -- a stark reminder that toolchain trust is fragile."
   },
   {
-    "title": "Making a Pole Balance Itself With Propellers",
-    "link": "https://hackaday.com/2026/09/04/making-a-pole-balance-itself-with-propellers/",
-    "blurb": "Problem: balancing a pole on a fingertip is a classic trick; no hands makes it harder. Approach: builder Peter Ryseck mounted a small drone (flight controller, battery, three propellers) atop a free-standing pole, using thrust to keep it upright like a self-stabilizing quadcopter. Result: chasing perfect vertical balance caused wild oscillation, so Ryseck let the pole lean into the wind instead, a more stable configuration. Switching from 10-inch to 5-inch propellers cut inertia enough to react fast enough to stay up. Why it matters: drone stabilization generalizes to non-flying balance problems, and \"more stable\" needn't mean \"more upright.\" Glossary: flight controller (board running the stabilization algorithm); active stabilization (continuously correcting orientation); inertia (resistance to rotation change); oscillation (unstable overcorrection loop)."
+    "title": "M2: Episode 1 (or, Asahi Linux on M3)",
+    "link": "https://asahilinux.org/2026/09/m2-episode-1/",
+    "blurb": "Continued reverse-engineering progress bringing Linux support to Apple's M-series silicon, this time tackling the M3."
   }
 ]
