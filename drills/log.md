@@ -21,3 +21,4 @@
 2026-09-03 | decode-instruction | REX.B extending opcode-embedded register field, push/pop always-64-bit default operand size
 2026-09-04 | reverse-function | bit-population-count loop via and-mask/shr, test/jnz shift-until-zero termination
 2026-09-05 | crackme | multiply-then-mask check via imul/and, modular-inverse backward-solving
+2026-09-06 | decode-instruction | Group-1 opcode 0x83 sign-extended imm8, ModRM reg-field opcode extension (/7 = CMP), SIB scale-8 with base+index+disp8
