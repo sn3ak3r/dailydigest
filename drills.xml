@@ -1,7 +1,19 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Decode One Instruction — 2026-09-06 (Windows x86-64)</title><link></link><description>Challenge: Decode this instruction (Intel syntax), byte by byte:
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse a Short Function to C — 2026-09-07 (Windows x86-64)</title><link></link><description>Challenge: Reverse this Windows x64 function (int n in ecx, result in eax) to equivalent C:
 
-83 7C C8 10 05
+sum_digits:
+    xor   r9d, r9d
+.loop:
+    test  ecx, ecx
+    jz    .done
+    mov   eax, ecx
+    cdq
+    mov   r8d, 10
+    idiv  r8d
+    add   r9d, edx
+    mov   ecx, eax
+    jmp   .loop
+.done:
+    mov   eax, r9d
+    ret
 
-Give the mnemonic and full operands.
-
-Answer: cmp dword ptr [rax+rcx*8+0x10], 0x5. `83` is the Group-1 opcode for an r/m32 destination with a sign-extended imm8 source; the /digit in ModRM&#x27;s reg field picks the specific op (here /7 = CMP). ModRM 7C = 01 111 100: mod=01 (disp8 follows), reg=111 (CMP), rm=100 (read a SIB byte). SIB C8 = 11 001 000: scale=11b (x8), index=001 (RCX), base=000 (RAX) -&gt; address = rax + rcx*8, then disp8=0x10 and imm8=0x05 complete the instruction.</description><guid isPermaLink='false'>2026-09-06</guid><pubDate>Sun, 06 Sep 2026 02:37:44 +0000</pubDate></item></channel></rss>
+Answer: int sum_digits(int n) { int sum = 0; while (n != 0) { int q = n / 10; int r = n % 10; sum += r; n = q; } return sum; } -- cdq sign-extends ecx into edx:eax so idiv r8d does signed division by 10, leaving quotient in eax and remainder in edx; each pass adds the remainder (least-significant decimal digit) to r9d and feeds the quotient back into ecx; test/jz is the zero-test loop guard, so the loop sums one decimal digit of n per iteration.</description><guid isPermaLink='false'>2026-09-07</guid><pubDate>Mon, 07 Sep 2026 02:37:34 +0000</pubDate></item></channel></rss>
