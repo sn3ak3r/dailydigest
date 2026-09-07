@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Four REVSTEALER-Linked Modules Disable Windows Update and Defender to Run a Crypto Miner",
+    "link": "https://thehackernews.com/2026/09/four-revstealer-linked-modules-disable.html",
+    "blurb": "Malware modules disable Windows Defender and Windows Update outright to install a cryptominer unopposed \u2014 a reminder that endpoint security depends on components attackers can simply switch off."
+  },
+  {
+    "title": "Critical VMware Workstation and Fusion Flaw Lets VM Admins Execute Host Code",
+    "link": "https://thehackernews.com/2026/09/critical-vmware-workstation-and-fusion.html",
+    "blurb": "A guest-to-host escape in VMware Workstation and Fusion lets a VM admin run code on the host, undermining the isolation virtualization is supposed to guarantee."
+  },
+  {
+    "title": "Unpatched Magento and Adobe Commerce Zero-Day Exploited to Backdoor Online Stores",
+    "link": "https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html",
+    "blurb": "An unpatched Magento/Adobe Commerce zero-day is being actively exploited to backdoor online stores before a fix exists."
+  },
+  {
+    "title": "A hobby dev built a free, 3D galaxy map for Warhammer 40K that loads like lightning in your browser",
+    "link": "https://www.pcgamer.com/games/rpg/a-hobby-dev-built-a-free-3d-galaxy-map-for-warhammer-40k-that-loads-like-lightning-in-your-browser/",
+    "blurb": "A solo developer built a fast, browser-based 3D galaxy map for Warhammer 40K fans, showing what's possible with modern web graphics outside a big studio."
+  },
+  {
+    "title": "Xbox Cloud Gaming's new hourly cap is reportedly set exactly where Microsoft stops making money on it",
+    "link": "https://www.eurogamer.net/xbox-cloud-gaming-hourly-cap-break-even-point",
+    "blurb": "Microsoft's new Xbox Cloud Gaming hourly cap reportedly lines up with the point where cloud streaming stops being profitable, exposing the real economics behind 'unlimited' cloud gaming."
+  },
+  {
+    "title": "Breaking through AlphaFold's limits to predict how proteins change shape",
+    "link": "https://phys.org/news/2026-09-alphafold-limits-proteins.html",
+    "blurb": "**Problem:** AlphaFold3 predicts one static protein shape, but many proteins work by switching shapes \u2014 missing the biology that matters most.\n\n**Approach:** AF3-ReD reruns AlphaFold3 repeatedly, adding a penalty that pushes each new prediction away from shapes already seen, forcing exploration instead of one fixed answer.\n\n**Result:** It recovered open, closed, and intermediate shapes of ATP synthase's F1\u03b2 subunit \u2014 states plain AlphaFold3 never produced.\n\n**Why it matters:** Drugs bind specific shapes, not an average; modeling a protein's full range makes drug design more realistic.\n\n**Jargon:** Conformation \u2014 a protein's 3D shape. Bias energy term \u2014 penalty steering predictions away from repeats. ATP synthase \u2014 enzyme that makes cellular energy. Diffusion model \u2014 AI that builds structures via stepwise denoising."
+  },
+  {
+    "title": "Levitated magnet opens new frontier in search for ultraheavy dark matter",
+    "link": "https://phys.org/news/2026-09-levitated-magnet-frontier-ultraheavy-dark.html",
+    "blurb": "**Problem:** Dark matter could be far heavier than most detectors target, even cell-scale \u2014 too massive and rare for standard experiments to catch.\n\n**Approach:** Researchers levitated a milligram magnet above a supercooled superconductor, sensitive to motion a hundredth an atom's width, watching for the \"impulse\" a heavy particle would leave.\n\n**Result:** A month of data showed no hits, but the null result ruled out nine orders of magnitude of mass combinations, ~10 million times heavier than prior experiments.\n\n**Why it matters:** A null result still narrows where dark matter can hide, reaching a mass range no other experiment covers.\n\n**Jargon:** Superconductor \u2014 zero-resistance material near absolute zero. Levitation \u2014 suspending an object magnetically. Impulse \u2014 a brief force event."
+  },
+  {
+    "title": "Making a Python interpreter in 1024 bytes",
+    "link": "https://austinhenley.com/blog/python1024.html",
+    "blurb": "A from-scratch Python interpreter squeezed into 1024 bytes shows how much language semantics can survive extreme size constraints."
+  },
+  {
+    "title": "Radix_FW60: handheld CP/M 2.2 computer",
+    "link": "https://github.com/BrettHallen/Radix_FW60",
+    "blurb": "An open-source handheld computer running CP/M 2.2 shows retro-OS hobbyist hardware is alive and well, schematics and firmware included."
+  },
+  {
+    "title": "Debian Code Search: Fast TurboPFor with Go SIMD",
+    "link": "https://michael.stapelberg.ch/posts/2026-09-06-dcs-fast-turbopfor-go-simd/",
+    "blurb": "A from-scratch rewrite of Debian Code Search's index decoder using Go SIMD intrinsics delivers a major speedup, showing how much headroom manual vectorization still has over generic code."
+  }
+]
