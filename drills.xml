@@ -1,19 +1,18 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse a Short Function to C — 2026-09-07 (Windows x86-64)</title><link></link><description>Challenge: Reverse this Windows x64 function (int n in ecx, result in eax) to equivalent C:
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Mini Crackme — 2026-09-08 (Windows x86-64)</title><link></link><description>Challenge: cl holds a single input byte (Windows x64 calling convention, first arg in cl). Find the value of cl that makes check return 1.
 
-sum_digits:
-    xor   r9d, r9d
-.loop:
-    test  ecx, ecx
-    jz    .done
-    mov   eax, ecx
-    cdq
-    mov   r8d, 10
-    idiv  r8d
-    add   r9d, edx
-    mov   ecx, eax
-    jmp   .loop
-.done:
-    mov   eax, r9d
+check:
+    movzx   eax, cl         ; zero-extend the input byte
+    cmp     eax, 0x41       ; below &#x27;A&#x27;?
+    jl      fail
+    cmp     eax, 0x5A       ; above &#x27;Z&#x27;?
+    jg      fail
+    sub     eax, 0x14       ; shift the value down by 20
+    cmp     eax, 0x3D       ; compare to target
+    jne     fail
+    mov     eax, 1
+    ret
+fail:
+    xor     eax, eax
     ret
 
-Answer: int sum_digits(int n) { int sum = 0; while (n != 0) { int q = n / 10; int r = n % 10; sum += r; n = q; } return sum; } -- cdq sign-extends ecx into edx:eax so idiv r8d does signed division by 10, leaving quotient in eax and remainder in edx; each pass adds the remainder (least-significant decimal digit) to r9d and feeds the quotient back into ecx; test/jz is the zero-test loop guard, so the loop sums one decimal digit of n per iteration.</description><guid isPermaLink='false'>2026-09-07</guid><pubDate>Mon, 07 Sep 2026 02:37:34 +0000</pubDate></item></channel></rss>
+Answer: cl = &#x27;Q&#x27; (0x51) -- The two cmp/jl/jg pairs bound cl to the uppercase-letter range 0x41-0x5A before anything else runs; any byte outside &#x27;A&#x27;-&#x27;Z&#x27; takes the fail branch immediately. Working backward from the final check: eax - 0x14 == 0x3D means eax must be 0x3D + 0x14 = 0x51 right before the sub. 0x51 is &#x27;Q&#x27;, and it already sits inside the 0x41-0x5A range checked earlier, so both bounds checks fall through, the subtraction and comparison match, and check returns 1.</description><guid isPermaLink='false'>2026-09-08</guid><pubDate>Tue, 08 Sep 2026 02:37:53 +0000</pubDate></item></channel></rss>

@@ -23,3 +23,4 @@
 2026-09-05 | crackme | multiply-then-mask check via imul/and, modular-inverse backward-solving
 2026-09-06 | decode-instruction | Group-1 opcode 0x83 sign-extended imm8, ModRM reg-field opcode extension (/7 = CMP), SIB scale-8 with base+index+disp8
 2026-09-07 | reverse-function | signed idiv digit-extraction loop, cdq sign-extension for division, quotient/remainder accumulator pattern
+2026-09-08 | crackme | ASCII uppercase-letter bounds check via cmp/jl/jg, offset subtraction to target byte
