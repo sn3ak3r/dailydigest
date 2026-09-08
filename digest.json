@@ -1,52 +1,52 @@
 [
   {
-    "title": "Four REVSTEALER-Linked Modules Disable Windows Update and Defender to Run a Crypto Miner",
-    "link": "https://thehackernews.com/2026/09/four-revstealer-linked-modules-disable.html",
-    "blurb": "Malware modules disable Windows Defender and Windows Update outright to install a cryptominer unopposed \u2014 a reminder that endpoint security depends on components attackers can simply switch off."
+    "title": "Telerik UI Padding-Oracle Bug Chained to Unauthenticated RCE — Public Exploit Released",
+    "link": "https://thehackernews.com/2026/09/telerik-ui-padding-oracle-bug-chained.html",
+    "blurb": "A padding-oracle bug in Telerik UI's cryptographic handling is chained with a deserialization flaw for unauthenticated remote code execution, and a public exploit is already out — patch immediately if you run Telerik UI for ASP.NET AJAX."
   },
   {
-    "title": "Critical VMware Workstation and Fusion Flaw Lets VM Admins Execute Host Code",
-    "link": "https://thehackernews.com/2026/09/critical-vmware-workstation-and-fusion.html",
-    "blurb": "A guest-to-host escape in VMware Workstation and Fusion lets a VM admin run code on the host, undermining the isolation virtualization is supposed to guarantee."
+    "title": "PEEP Turns Chrome and Edge Into Post-Compromise Backdoors for Host Command Execution",
+    "link": "https://thehackernews.com/2026/09/peep-turns-chrome-and-edge-into-post.html",
+    "blurb": "A newly documented technique repurposes Chrome and Edge's own extension/native-messaging plumbing to give attackers a persistent, hard-to-detect command-execution backdoor after initial compromise."
   },
   {
-    "title": "Unpatched Magento and Adobe Commerce Zero-Day Exploited to Backdoor Online Stores",
-    "link": "https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html",
-    "blurb": "An unpatched Magento/Adobe Commerce zero-day is being actively exploited to backdoor online stores before a fix exists."
+    "title": "Rogue ScreenConnect Clients Spread Four-Stage VBScript Chain to Newly Connected Hosts",
+    "link": "https://thehackernews.com/2026/09/rogue-screenconnect-clients-spread-four.html",
+    "blurb": "Compromised ScreenConnect remote-access clients push a four-stage VBScript payload chain onto any new host that connects, turning legitimate RMM tooling into a self-spreading foothold."
   },
   {
-    "title": "A hobby dev built a free, 3D galaxy map for Warhammer 40K that loads like lightning in your browser",
-    "link": "https://www.pcgamer.com/games/rpg/a-hobby-dev-built-a-free-3d-galaxy-map-for-warhammer-40k-that-loads-like-lightning-in-your-browser/",
-    "blurb": "A solo developer built a fast, browser-based 3D galaxy map for Warhammer 40K fans, showing what's possible with modern web graphics outside a big studio."
+    "title": "New DLSS 5 mod offloads Neural Rendering to a second card massively cutting the AI filter's performance hit",
+    "link": "https://www.pcgamer.com/hardware/graphics-cards/new-dlss-5-mod-offloads-neural-rendering-to-a-second-card-massively-cutting-the-ai-filters-performance-hit/",
+    "blurb": "A community mod offloads Nvidia's DLSS 5 neural rendering pass to a second GPU, clawing back most of the frame-rate hit reviewers found in the stock implementation."
   },
   {
-    "title": "Xbox Cloud Gaming's new hourly cap is reportedly set exactly where Microsoft stops making money on it",
-    "link": "https://www.eurogamer.net/xbox-cloud-gaming-hourly-cap-break-even-point",
-    "blurb": "Microsoft's new Xbox Cloud Gaming hourly cap reportedly lines up with the point where cloud streaming stops being profitable, exposing the real economics behind 'unlimited' cloud gaming."
+    "title": "Blending Deus Ex with Escape from Butcher Bay, Deficit is one of the best-feeling indie immersive sims I've played",
+    "link": "https://www.pcgamer.com/games/fps/blending-deus-ex-with-escape-from-butcher-bay-deficit-is-one-of-the-best-feeling-indie-immersive-sims-ive-played-even-if-the-stealth-system-needs-serious-work/",
+    "blurb": "An indie immersive sim blending Deus Ex-style systemic design with Escape from Butcher Bay's grounded combat, rough stealth mechanics aside."
   },
   {
-    "title": "Breaking through AlphaFold's limits to predict how proteins change shape",
-    "link": "https://phys.org/news/2026-09-alphafold-limits-proteins.html",
-    "blurb": "**Problem:** AlphaFold3 predicts one static protein shape, but many proteins work by switching shapes \u2014 missing the biology that matters most.\n\n**Approach:** AF3-ReD reruns AlphaFold3 repeatedly, adding a penalty that pushes each new prediction away from shapes already seen, forcing exploration instead of one fixed answer.\n\n**Result:** It recovered open, closed, and intermediate shapes of ATP synthase's F1\u03b2 subunit \u2014 states plain AlphaFold3 never produced.\n\n**Why it matters:** Drugs bind specific shapes, not an average; modeling a protein's full range makes drug design more realistic.\n\n**Jargon:** Conformation \u2014 a protein's 3D shape. Bias energy term \u2014 penalty steering predictions away from repeats. ATP synthase \u2014 enzyme that makes cellular energy. Diffusion model \u2014 AI that builds structures via stepwise denoising."
+    "title": "Entangled particles revive a 35-year-old test of the Standard Model",
+    "link": "https://phys.org/news/2026-09-entangled-particles-revive-year-standard.html",
+    "blurb": "**Problem:** A key Standard Model number, VUS (the probability a strange quark converts to an up quark), has disagreed between measurement methods, and physicists needed an independent check.\n\n**Approach:** The BESIII Collaboration collided electrons and positrons to create quantum-entangled pairs of lambda hyperons, then used one particle's decay to reconstruct otherwise-invisible details of its partner — a technique unused for 35 years — across roughly 10 billion collision events.\n\n**Result:** The measured VUS value is consistent with a balanced CKM matrix, backing the Standard Model, but stays in mild tension with older kaon-based measurements.\n\n**Why it matters:** An independent cross-check keeps alive the possibility that the discrepancy signals physics beyond the Standard Model.\n\n**Glossary:** CKM matrix (quark-transformation probability table), quantum entanglement (linked particles sharing correlated states), hyperon (heavy unstable particle), Standard Model (particle physics' current theory)."
   },
   {
-    "title": "Levitated magnet opens new frontier in search for ultraheavy dark matter",
-    "link": "https://phys.org/news/2026-09-levitated-magnet-frontier-ultraheavy-dark.html",
-    "blurb": "**Problem:** Dark matter could be far heavier than most detectors target, even cell-scale \u2014 too massive and rare for standard experiments to catch.\n\n**Approach:** Researchers levitated a milligram magnet above a supercooled superconductor, sensitive to motion a hundredth an atom's width, watching for the \"impulse\" a heavy particle would leave.\n\n**Result:** A month of data showed no hits, but the null result ruled out nine orders of magnitude of mass combinations, ~10 million times heavier than prior experiments.\n\n**Why it matters:** A null result still narrows where dark matter can hide, reaching a mass range no other experiment covers.\n\n**Jargon:** Superconductor \u2014 zero-resistance material near absolute zero. Levitation \u2014 suspending an object magnetically. Impulse \u2014 a brief force event."
+    "title": "Early Earth's auroral belts may have formed a natural ion-beam reactor for prebiotic chemistry",
+    "link": "https://phys.org/news/2026-09-early-earth-auroral-belts-natural.html",
+    "blurb": "Early Earth's intense auroral activity may have acted like a giant ion-beam reactor, driving the kind of prebiotic chemistry that could help explain the origin of life's building blocks."
   },
   {
-    "title": "Making a Python interpreter in 1024 bytes",
-    "link": "https://austinhenley.com/blog/python1024.html",
-    "blurb": "A from-scratch Python interpreter squeezed into 1024 bytes shows how much language semantics can survive extreme size constraints."
+    "title": "A Vacuum Tube Computer For The Home",
+    "link": "https://hackaday.com/2026/09/07/a-vacuum-tube-computer-for-the-home/",
+    "blurb": "**Problem:** Historic vacuum-tube computers like ENIAC needed room-sized hardware and wartime budgets, making the technology look impractical for hobbyists.\n\n**Approach:** Builder Mike designed an 8-bit von Neumann machine with 16 instructions, using recycled Eastern Bloc double-triode tubes and a NOR-based logic scheme borrowed from NASA's Apollo-era computers, plus modern parts for I/O.\n\n**Result:** The finished machine is a compact, wall-mounted unit driving a flip-digit display and a simple airship simulator game.\n\n**Why it matters:** It shows vacuum-tube computing is achievable on a hobbyist budget, keeping a nearly extinct technology approachable for retrocomputing fans.\n\n**Glossary:** Von Neumann architecture (shared memory/processor design), double-triode (dual-amplifier vacuum tube), NOR-based design (logic built from NOR gates), retrocomputing (recreating vintage computer technology)."
   },
   {
-    "title": "Radix_FW60: handheld CP/M 2.2 computer",
-    "link": "https://github.com/BrettHallen/Radix_FW60",
-    "blurb": "An open-source handheld computer running CP/M 2.2 shows retro-OS hobbyist hardware is alive and well, schematics and firmware included."
+    "title": "It took a year to ship WebAssembly in Anubis",
+    "link": "https://anubis.techaro.lol/blog/2026/anubis-wasm/",
+    "blurb": "The Anubis anti-bot project spent a year porting its challenge logic to WebAssembly, trading a long migration for challenges that are harder to bypass and easier to run anywhere."
   },
   {
-    "title": "Debian Code Search: Fast TurboPFor with Go SIMD",
-    "link": "https://michael.stapelberg.ch/posts/2026-09-06-dcs-fast-turbopfor-go-simd/",
-    "blurb": "A from-scratch rewrite of Debian Code Search's index decoder using Go SIMD intrinsics delivers a major speedup, showing how much headroom manual vectorization still has over generic code."
+    "title": "How to bring up the Linux Kernel on a new platform",
+    "link": "https://werwolv.net/posts/linux_bringup/",
+    "blurb": "A practical field guide to porting the Linux kernel to a brand-new hardware platform, covering the bootloader, early console, and debugging tricks that separate a boot from a black screen."
   }
 ]
