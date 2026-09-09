@@ -1,52 +1,52 @@
 [
   {
-    "title": "Critical Citrix NetScaler auth bypass now leveraged in attacks",
-    "link": "https://www.bleepingcomputer.com/news/security/hackers-target-critical-citrix-netscaler-auth-bypass-in-attacks/",
-    "blurb": "Actively exploited auth bypass in NetScaler ADC/Gateway lets attackers skip login entirely -- patch or take internet-facing appliances offline now."
+    "title": "FreeIPA Flaw Chain Lets Anonymous Clients Create Reusable Administrator Credentials",
+    "link": "https://thehackernews.com/2026/09/freeipa-flaw-chain-lets-anonymous.html",
+    "blurb": "A chained set of FreeIPA flaws lets an unauthenticated client mint reusable admin credentials -- a serious blow to identity infrastructure relying on FreeIPA for directory trust."
   },
   {
-    "title": "Critical VMware Workstation and Fusion Flaw Lets VM Admins Execute Host Code",
-    "link": "https://thehackernews.com/2026/09/critical-vmware-workstation-and-fusion.html",
-    "blurb": "A guest VM can break out and run code on the host, undermining the isolation VM admins rely on for untrusted workloads."
+    "title": "Telerik UI Padding-Oracle Bug Chained to Unauthenticated RCE — Public Exploit Released",
+    "link": "https://thehackernews.com/2026/09/telerik-ui-padding-oracle-bug-chained.html",
+    "blurb": "A padding-oracle flaw in Telerik UI chains to unauthenticated remote code execution, and a public exploit is now circulating -- patch immediately if you run affected apps."
   },
   {
-    "title": "Attackers Breached JetBrains Cadence via Unpatched TeamCity, Extracting AWS Credentials",
-    "link": "https://thehackernews.com/2026/09/attackers-breached-jetbrains-cadence.html",
-    "blurb": "An unpatched TeamCity server let attackers pivot into AWS credentials -- a reminder that CI/CD systems are high-value supply-chain targets."
+    "title": "ClearFake WebDAV infection chain delivers Amatera stealer, ZigCryptoStealer, and NetSupport Manager",
+    "link": "https://blog.talosintelligence.com/clearfake-webdav-infection-chain/",
+    "blurb": "**Problem:** Cisco Talos traced a malware chain after spotting a DLL named \"verification.google\" launching from a WebDAV path at a Ukrainian government org. **Approach, in plain words:** Victims on a compromised site see a fake Google CAPTCHA (\"ClickFix\") tricking them into pasting and running a command. That opens a WebDAV path and runs a disguised DLL via `rundll32.exe`. The overlay JavaScript comes from BNB Smart Chain contracts (EtherHiding), letting the attacker update payloads without hosting them. **Result:** The chains deliver Amatera plus either a Zig-based crypto stealer with an EDR-killing driver, or a rogue NetSupport remote-access tool with Russian C2. **Why it matters:** Shows how attackers blend social engineering, legitimate protocols, and blockchain hosting for stealthy, takedown-resistant delivery. **Glossary:** WebDAV (protocol letting Windows mount and run files from a remote server like a local drive); ClickFix (social engineering that tricks a user into manually running a malicious command); EtherHiding (storing/serving malicious code via blockchain smart contracts instead of a normal web server); C2 (command-and-control, the attacker's server issuing instructions to installed malware)."
   },
   {
-    "title": "Go grandmaster becomes first human to win series against advanced AI engine in 3-hour match",
-    "link": "https://www.pcgamer.com/software/ai/go-grandmaster-becomes-first-human-to-win-series-against-advanced-ai-engine-in-3-hour-match/",
-    "blurb": "A human beat a top AI engine at Go for the first time in years, pushing back on the narrative that AI has permanently surpassed humans at the game."
+    "title": "New DLSS 5 mod offloads Neural Rendering to a second card massively cutting the AI filter's performance hit",
+    "link": "https://www.pcgamer.com/hardware/graphics-cards/new-dlss-5-mod-offloads-neural-rendering-to-a-second-card-massively-cutting-the-ai-filters-performance-hit/",
+    "blurb": "A community mod splits DLSS 5's neural rendering workload onto a dedicated second GPU, recovering much of the frame-rate DLSS 5 otherwise costs."
   },
   {
-    "title": "No Law was one of the most exciting games I saw at Gamescom: a cyberpunk immersive sim that solves one of Deus Ex's biggest problems",
-    "link": "https://www.eurogamer.net/no-law-hands-off-preview-gamescom-cyberpunk-deus-ex-biggest-problem",
-    "blurb": "A Gamescom preview standout that reportedly fixes one of the immersive-sim genre's long-standing design problems with a more systemic, player-driven approach."
+    "title": "As the western games industry struggles, China's games industry is booming, a new report shows",
+    "link": "https://www.eurogamer.net/china-games-market-50-billion-dollars-value",
+    "blurb": "A new market report puts China's games industry at roughly $50 billion, growing sharply while western studios face layoffs and cutbacks."
   },
   {
-    "title": "Breaking through AlphaFold's limits to predict how proteins change shape",
-    "link": "https://phys.org/news/2026-09-alphafold-limits-proteins.html",
-    "blurb": "**Problem:** AlphaFold3 normally predicts one static protein shape, but many proteins work by flipping between multiple shapes -- a blind spot for drug design. **Approach:** researchers added a \"repulsive force\" to AlphaFold3's diffusion model: each new prediction is penalized for landing too close to a shape it already generated, pushing it toward different ones. **Result:** the tweaked model (AF3-ReD) found open, closed, and intermediate shapes of an ATP synthase subunit; stock AlphaFold3 only ever found the open one. **Why it matters:** drugs often target one specific shape of a protein -- seeing all the shapes makes design far more precise. **Glossary:** diffusion model (AI that generates by refining noise into structure); conformation (a molecule's 3D shape); ATP synthase (enzyme that makes cellular energy); bias energy (a penalty term steering predictions)."
+    "title": "AI Has Solved One of Math's $1 Million Millennium Prize Problems",
+    "link": "https://www.quantamagazine.org/ai-has-solved-one-of-maths-1-million-millennium-prize-problems-20260908/",
+    "blurb": "**Problem:** Do the Navier-Stokes equations, describing fluid flow, ever \"blow up\" to infinite speed at a point? One of six unsolved Millennium Prize Problems. **Approach, in plain words:** Two efforts converged. OpenAI ran 10,000 AI agents attacking it directly. Separately, mathematicians Buckmaster and Alpöge extended prior techniques, stacking \"infinite layers\" of well-behaved solutions into cascades that force a blow-up. **Result:** A proof that singularities exist in the boundary-free 3D case, formally checked by the Lean proof assistant -- the biggest AI-assisted math proof yet. **Why it matters:** AI cracked a previously intractable open problem, and turbulence is confirmed stranger than assumed: flow can turn infinitely violent at a point. **Glossary:** Navier-Stokes equations (the standard equations for how fluids like water and air move, accounting for viscosity); singularity/blow-up (a point where a quantity, here fluid speed, becomes infinite); Euler equations (the frictionless simplification of Navier-Stokes); Lean (a programming language/proof assistant that mechanically checks a proof's logic)."
   },
   {
-    "title": "Medieval manuscripts are \"biological time capsules\" for deadly sheeppox virus",
-    "link": "https://arstechnica.com/science/2026/09/medieval-manuscripts-are-biological-time-capsules-for-deadly-sheeppox-virus/",
-    "blurb": "Ancient parchment made from animal skin preserved viral DNA for centuries, giving researchers a genetic timeline of a livestock pathogen."
+    "title": "Some black holes grow much faster than their galaxies",
+    "link": "https://phys.org/news/2026-09-black-holes-faster-galaxies.html",
+    "blurb": "New observations find supermassive black holes outpacing the growth of their host galaxies, challenging assumptions about how the two evolve together."
   },
   {
-    "title": "Running Generative AI on an RP2350",
-    "link": "https://hackaday.com/2026/09/05/running-generative-ai-on-an-rp2350/",
-    "blurb": "**Problem:** running image-generating AI usually needs a GPU and cloud servers -- the opposite of cheap, private, offline hardware. **Approach:** a hobbyist squeezed a diffusion transformer (the architecture family behind modern image generators) onto an RP2350, a sub-$1 microcontroller, by shrinking the model to 8-bit numbers so it fits in 4MB of flash. **Result:** the chip generates recognizable 128x128 human faces in about 20 seconds each, shown over USB or VGA. **Why it matters:** it shows current AI image techniques scale down to bare-metal hardware, opening the door to private, offline AI features in cheap embedded devices instead of cloud APIs. **Glossary:** microcontroller (a tiny low-power computer chip); diffusion transformer (a neural network that generates images by denoising); quantization (shrinking number precision to save memory); VAE (variational auto-encoder, compresses images into a compact code)."
+    "title": "I've factored the RSA keys of a Certificate Authority…from the 90s",
+    "link": "https://mcpherrin.ca/2026/09/07/rsa.html",
+    "blurb": "A researcher factored weak RSA keys from a 1990s Certificate Authority, a hands-on look at just how breakable early web-PKI cryptography really was."
   },
   {
-    "title": "Trusting-Trust Attack against an Entire Linux Distribution (via the strip utility)",
-    "link": "https://arxiv.org/abs/2607.24888",
-    "blurb": "A working reproduction of Ken Thompson's classic compiler-backdoor idea, scaled to compromise an entire Linux distro via the strip utility -- a stark reminder that toolchain trust is fragile."
+    "title": "Reverse engineering my e-scooter and rewriting the firmware in rust",
+    "link": "https://bensimms.moe/reverse-engineering-scooter/",
+    "blurb": "A documented teardown of an e-scooter's electronics and protocol, culminating in a full firmware rewrite in Rust."
   },
   {
-    "title": "M2: Episode 1 (or, Asahi Linux on M3)",
-    "link": "https://asahilinux.org/2026/09/m2-episode-1/",
-    "blurb": "Continued reverse-engineering progress bringing Linux support to Apple's M-series silicon, this time tackling the M3."
+    "title": "Kimi K3 (2.8T) at 1 token/s on a MacBook Pro, streamed from four SSDs",
+    "link": "https://github.com/argonautlabsai/deltafin",
+    "blurb": "A build log for running a 2.8-trillion-parameter model on consumer hardware by streaming weights off four SSDs instead of holding them in RAM."
   }
 ]
