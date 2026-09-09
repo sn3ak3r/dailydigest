@@ -1,18 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Mini Crackme — 2026-09-08 (Windows x86-64)</title><link></link><description>Challenge: cl holds a single input byte (Windows x64 calling convention, first arg in cl). Find the value of cl that makes check return 1.
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Decode One Instruction — 2026-09-09 (Windows x86-64)</title><link></link><description>Challenge: Decode this instruction (Intel syntax), byte by byte:
 
-check:
-    movzx   eax, cl         ; zero-extend the input byte
-    cmp     eax, 0x41       ; below &#x27;A&#x27;?
-    jl      fail
-    cmp     eax, 0x5A       ; above &#x27;Z&#x27;?
-    jg      fail
-    sub     eax, 0x14       ; shift the value down by 20
-    cmp     eax, 0x3D       ; compare to target
-    jne     fail
-    mov     eax, 1
-    ret
-fail:
-    xor     eax, eax
-    ret
+48 89 04 24
 
-Answer: cl = &#x27;Q&#x27; (0x51) -- The two cmp/jl/jg pairs bound cl to the uppercase-letter range 0x41-0x5A before anything else runs; any byte outside &#x27;A&#x27;-&#x27;Z&#x27; takes the fail branch immediately. Working backward from the final check: eax - 0x14 == 0x3D means eax must be 0x3D + 0x14 = 0x51 right before the sub. 0x51 is &#x27;Q&#x27;, and it already sits inside the 0x41-0x5A range checked earlier, so both bounds checks fall through, the subtraction and comparison match, and check returns 1.</description><guid isPermaLink='false'>2026-09-08</guid><pubDate>Tue, 08 Sep 2026 02:37:53 +0000</pubDate></item></channel></rss>
+Give the mnemonic and full operands.
+
+Answer: mov qword ptr [rsp], rax -- 48 is REX.W, forcing 64-bit operand size; 89 is MOV r/m64, r64, so a register goes into a memory operand or another register. ModRM 04 = 00 000 100: mod=00 (no displacement), reg=000 (RAX, the source), rm=100 -- this rm value doesn&#x27;t name RSP directly, it&#x27;s the escape code meaning &quot;a SIB byte follows.&quot; SIB 24 = 00 100 100: scale bits are unused, index=100 (the &quot;no index&quot; sentinel), base=100 (RSP). RSP can only appear as a memory base through this SIB detour, never via a bare ModRM rm field, so the final address is just [rsp] with rax stored into it.</description><guid isPermaLink='false'>2026-09-09</guid><pubDate>Wed, 09 Sep 2026 02:37:25 +0000</pubDate></item></channel></rss>
