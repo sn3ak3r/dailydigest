@@ -1,7 +1,31 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Decode One Instruction — 2026-09-09 (Windows x86-64)</title><link></link><description>Challenge: Decode this instruction (Intel syntax), byte by byte:
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse a Function — 2026-09-10 (Windows x86-64)</title><link></link><description>Challenge: What C function does this Windows x64 assembly implement (rcx = arg1, edx = arg2)?
 
-48 89 04 24
+reverse:
+    xor     eax, eax          ; i = 0
+    lea     r8d, [edx-1]      ; j = n-1
+.loop:
+    cmp     eax, r8d
+    jge     .done
+    mov     r9d,  [rcx+rax*4] ; tmp = arr[i]
+    mov     r10d, [rcx+r8*4]  ; arr[j]
+    mov     [rcx+rax*4], r10d ; arr[i] = arr[j]
+    mov     [rcx+r8*4], r9d   ; arr[j] = tmp
+    inc     eax
+    dec     r8d
+    jmp     .loop
+.done:
+    ret
 
-Give the mnemonic and full operands.
+Answer:
+void reverse(int *arr, int n) {
+    int i = 0, j = n - 1;
+    while (i &lt; j) {
+        int tmp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = tmp;
+        i++;
+        j--;
+    }
+}
 
-Answer: mov qword ptr [rsp], rax -- 48 is REX.W, forcing 64-bit operand size; 89 is MOV r/m64, r64, so a register goes into a memory operand or another register. ModRM 04 = 00 000 100: mod=00 (no displacement), reg=000 (RAX, the source), rm=100 -- this rm value doesn&#x27;t name RSP directly, it&#x27;s the escape code meaning &quot;a SIB byte follows.&quot; SIB 24 = 00 100 100: scale bits are unused, index=100 (the &quot;no index&quot; sentinel), base=100 (RSP). RSP can only appear as a memory base through this SIB detour, never via a bare ModRM rm field, so the final address is just [rsp] with rax stored into it.</description><guid isPermaLink='false'>2026-09-09</guid><pubDate>Wed, 09 Sep 2026 02:37:25 +0000</pubDate></item></channel></rss>
+1. rcx/edx are the Windows x64 integer args, so rcx is int *arr and edx is int n; eax/r8d are scratch locals i and j = n-1. 2. Each iteration swaps arr[i] and arr[j] through r9d/r10d as tmp, using rax*4/r8*4 scaled-index addressing for the two int slots. 3. cmp eax, r8d / jge .done is the loop guard while (i &lt; j), and inc eax / dec r8d converge the two pointers each pass -- a classic in-place array-reversal idiom.</description><guid isPermaLink='false'>2026-09-10</guid><pubDate>Thu, 10 Sep 2026 02:37:31 +0000</pubDate></item></channel></rss>

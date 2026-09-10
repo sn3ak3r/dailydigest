@@ -25,3 +25,4 @@
 2026-09-07 | reverse-function | signed idiv digit-extraction loop, cdq sign-extension for division, quotient/remainder accumulator pattern
 2026-09-08 | crackme | ASCII uppercase-letter bounds check via cmp/jl/jg, offset subtraction to target byte
 2026-09-09 | decode-instruction | RSP-as-base SIB detour (ModRM rm=100 escape), SIB base=100/index=100 no-index encoding, mov r/m64 with REX.W
+2026-09-10 | reverse-function | in-place array reversal via two-pointer swap, cmp/jge converging loop guard, scaled-index read/write pair
