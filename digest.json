@@ -1,52 +1,52 @@
 [
   {
-    "title": "Telerik UI Padding-Oracle Bug Chained to Unauthenticated RCE — Public Exploit Released",
-    "link": "https://thehackernews.com/2026/09/telerik-ui-padding-oracle-bug-chained.html",
-    "blurb": "A padding-oracle bug in Telerik UI's cryptographic handling is chained with a deserialization flaw for unauthenticated remote code execution, and a public exploit is already out — patch immediately if you run Telerik UI for ASP.NET AJAX."
+    "title": "New Microsoft Defender 'ShieldCrash' zero-day grants SYSTEM access",
+    "link": "https://www.bleepingcomputer.com/news/security/new-microsoft-defender-shieldcrash-zero-day-grants-system-access/",
+    "blurb": "A local privilege-escalation bug in Windows Defender lets any process reach SYSTEM, and it's already being exploited before a patch exists."
   },
   {
-    "title": "PEEP Turns Chrome and Edge Into Post-Compromise Backdoors for Host Command Execution",
-    "link": "https://thehackernews.com/2026/09/peep-turns-chrome-and-edge-into-post.html",
-    "blurb": "A newly documented technique repurposes Chrome and Edge's own extension/native-messaging plumbing to give attackers a persistent, hard-to-detect command-execution backdoor after initial compromise."
+    "title": "ClearFake WebDAV infection chain delivers Amatera stealer, ZigCryptoStealer, and NetSupport Manager",
+    "link": "https://blog.talosintelligence.com/clearfake-webdav-infection-chain/",
+    "blurb": "Problem: Attackers need to plant stealer malware while dodging disk-based antivirus and EDR. Approach: A fake CAPTCHA tricks the victim into running a command that loads a disguised DLL over WebDAV via rundll32, so nothing touches disk. One branch uses a blockchain contract as an unblockable dead-drop for its command server; the other uses a fixed server in Russia. Both abuse a vulnerable signed driver to kill security tools. Result: Talos mapped two chains delivering crypto-theft malware (Amatera, ZigCryptoStealer) or a remote-access tool (NetSupport Manager). Why it matters: disk-based AV misses memory-only execution; watch for WebDAV-triggered rundll32 and odd driver loads. Glossary: WebDAV, BYOVD (abusing a vulnerable driver for kernel access), dead-drop resolver, ClickFix (fake-verification social engineering)."
   },
   {
-    "title": "Rogue ScreenConnect Clients Spread Four-Stage VBScript Chain to Newly Connected Hosts",
-    "link": "https://thehackernews.com/2026/09/rogue-screenconnect-clients-spread-four.html",
-    "blurb": "Compromised ScreenConnect remote-access clients push a four-stage VBScript payload chain onto any new host that connects, turning legitimate RMM tooling into a self-spreading foothold."
+    "title": "F5 BIG-IP APM Malware Injects a PHP Web Shell Into Memory, Evading Disk Scans",
+    "link": "https://thehackernews.com/2026/09/f5-big-ip-apm-malware-injects-php-web.html",
+    "blurb": "Attackers are hiding a memory-resident PHP web shell inside BIG-IP APM devices specifically to dodge disk-based malware scans."
   },
   {
-    "title": "New DLSS 5 mod offloads Neural Rendering to a second card massively cutting the AI filter's performance hit",
-    "link": "https://www.pcgamer.com/hardware/graphics-cards/new-dlss-5-mod-offloads-neural-rendering-to-a-second-card-massively-cutting-the-ai-filters-performance-hit/",
-    "blurb": "A community mod offloads Nvidia's DLSS 5 neural rendering pass to a second GPU, clawing back most of the frame-rate hit reviewers found in the stock implementation."
+    "title": "Almost 1,900 Blizzard workers vote through a \"historic\" union contract securing protections against layoffs and gen-AI",
+    "link": "https://www.eurogamer.net/1900-blizzard-vote-historic-contract-union-layoffs-ai",
+    "blurb": "Blizzard's newly unionized workers won contract language giving them a voice on AI adoption and stronger layoff protections, a rare foothold for labor over generative-AI decisions in games."
   },
   {
-    "title": "Blending Deus Ex with Escape from Butcher Bay, Deficit is one of the best-feeling indie immersive sims I've played",
-    "link": "https://www.pcgamer.com/games/fps/blending-deus-ex-with-escape-from-butcher-bay-deficit-is-one-of-the-best-feeling-indie-immersive-sims-ive-played-even-if-the-stealth-system-needs-serious-work/",
-    "blurb": "An indie immersive sim blending Deus Ex-style systemic design with Escape from Butcher Bay's grounded combat, rough stealth mechanics aside."
+    "title": "No Man's Sky's 10th anniversary update will let you rule space stations, built floating orbital bases and go on holiday to the sun",
+    "link": "https://www.rockpapershotgun.com/no-mans-skys-10th-anniversary-update-will-let-you-rule-space-stations-built-floating-orbital-bases-and-go-on-holiday-to-the-sun",
+    "blurb": "Ten years on, No Man's Sky adds ownable space stations and orbital base-building, showing how far a disastrous launch can be walked back with sustained updates."
   },
   {
-    "title": "Entangled particles revive a 35-year-old test of the Standard Model",
-    "link": "https://phys.org/news/2026-09-entangled-particles-revive-year-standard.html",
-    "blurb": "**Problem:** A key Standard Model number, VUS (the probability a strange quark converts to an up quark), has disagreed between measurement methods, and physicists needed an independent check.\n\n**Approach:** The BESIII Collaboration collided electrons and positrons to create quantum-entangled pairs of lambda hyperons, then used one particle's decay to reconstruct otherwise-invisible details of its partner — a technique unused for 35 years — across roughly 10 billion collision events.\n\n**Result:** The measured VUS value is consistent with a balanced CKM matrix, backing the Standard Model, but stays in mild tension with older kaon-based measurements.\n\n**Why it matters:** An independent cross-check keeps alive the possibility that the discrepancy signals physics beyond the Standard Model.\n\n**Glossary:** CKM matrix (quark-transformation probability table), quantum entanglement (linked particles sharing correlated states), hyperon (heavy unstable particle), Standard Model (particle physics' current theory)."
+    "title": "AI Has Solved One of Math's $1 Million Millennium Prize Problems",
+    "link": "https://www.quantamagazine.org/ai-has-solved-one-of-maths-1-million-millennium-prize-problems-20260908/",
+    "blurb": "An AI system reportedly cracked one of math's seven Millennium Prize Problems, worth $1 million, a genuine result rather than a benchmark claim, if it holds up to verification."
   },
   {
-    "title": "Early Earth's auroral belts may have formed a natural ion-beam reactor for prebiotic chemistry",
-    "link": "https://phys.org/news/2026-09-early-earth-auroral-belts-natural.html",
-    "blurb": "Early Earth's intense auroral activity may have acted like a giant ion-beam reactor, driving the kind of prebiotic chemistry that could help explain the origin of life's building blocks."
+    "title": "Beryllium signal identifies stars that have swallowed rocky planets",
+    "link": "https://phys.org/news/2026-09-beryllium-stars-swallowed-rocky-planets.html",
+    "blurb": "Elevated beryllium in certain stars gives astronomers a chemical fingerprint for identifying ones that swallowed a rocky planet."
   },
   {
-    "title": "A Vacuum Tube Computer For The Home",
-    "link": "https://hackaday.com/2026/09/07/a-vacuum-tube-computer-for-the-home/",
-    "blurb": "**Problem:** Historic vacuum-tube computers like ENIAC needed room-sized hardware and wartime budgets, making the technology look impractical for hobbyists.\n\n**Approach:** Builder Mike designed an 8-bit von Neumann machine with 16 instructions, using recycled Eastern Bloc double-triode tubes and a NOR-based logic scheme borrowed from NASA's Apollo-era computers, plus modern parts for I/O.\n\n**Result:** The finished machine is a compact, wall-mounted unit driving a flip-digit display and a simple airship simulator game.\n\n**Why it matters:** It shows vacuum-tube computing is achievable on a hobbyist budget, keeping a nearly extinct technology approachable for retrocomputing fans.\n\n**Glossary:** Von Neumann architecture (shared memory/processor design), double-triode (dual-amplifier vacuum tube), NOR-based design (logic built from NOR gates), retrocomputing (recreating vintage computer technology)."
+    "title": "Reverse Engineering The Philips PM5139",
+    "link": "https://hackaday.com/2026/09/09/reverse-engineering-the-philips-pm5139/",
+    "blurb": "A hobbyist reverse-engineered a Philips PM5139 test instrument, documenting the teardown and reconstructed internals for others who own the hardware."
   },
   {
-    "title": "It took a year to ship WebAssembly in Anubis",
-    "link": "https://anubis.techaro.lol/blog/2026/anubis-wasm/",
-    "blurb": "The Anubis anti-bot project spent a year porting its challenge logic to WebAssembly, trading a long migration for challenges that are harder to bypass and easier to run anywhere."
+    "title": "Decoding the NEC V20 Microcode ROM",
+    "link": "https://hackaday.com/2026/09/09/decoding-the-nec-v20-microcode-rom/",
+    "blurb": "Problem: A cycle-accurate emulator of the 1980s NEC V20 chip needs its real microcode, which exists only as ~30,000 bits baked into the physical die. Approach: A hobbyist photographed the die and tried an existing bit-extraction tool, but low image contrast made it unreliable, so they trained a small neural network on about 1,000 hand-labeled bit images to classify each cell as 0 or 1, then manually checked the unclear ones. Result: A largely-automated, published decode of the ROM, letting the V20's exact internal behavior be matched instruction by instruction. Why it matters: Turns emulation from guesswork into a verified match to real silicon, and revisits the old NEC/Intel compatibility dispute. Glossary: Microcode ROM, die shot, cycle-accurate emulation, CNN."
   },
   {
-    "title": "How to bring up the Linux Kernel on a new platform",
-    "link": "https://werwolv.net/posts/linux_bringup/",
-    "blurb": "A practical field guide to porting the Linux kernel to a brand-new hardware platform, covering the bootloader, early console, and debugging tricks that separate a boot from a black screen."
+    "title": "Factoring RSA 260",
+    "link": "https://cognition.com/blog/factoring-rsa-260",
+    "blurb": "A writeup on factoring the 260-digit RSA challenge number, a marker of how far practical integer-factoring capability has advanced."
   }
 ]
