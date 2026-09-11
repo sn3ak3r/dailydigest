@@ -1,31 +1,22 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse a Function — 2026-09-10 (Windows x86-64)</title><link></link><description>Challenge: What C function does this Windows x64 assembly implement (rcx = arg1, edx = arg2)?
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Mini Crackme — 2026-09-11 (Windows x86-64)</title><link></link><description>Challenge: rcx points to a 4-byte ASCII buffer (Windows x64 convention). Find a 4-character string that makes check return 1.
 
-reverse:
-    xor     eax, eax          ; i = 0
-    lea     r8d, [edx-1]      ; j = n-1
+check:
+    xor     eax, eax           ; sum = 0
+    xor     edx, edx           ; i = 0
 .loop:
-    cmp     eax, r8d
-    jge     .done
-    mov     r9d,  [rcx+rax*4] ; tmp = arr[i]
-    mov     r10d, [rcx+r8*4]  ; arr[j]
-    mov     [rcx+rax*4], r10d ; arr[i] = arr[j]
-    mov     [rcx+r8*4], r9d   ; arr[j] = tmp
-    inc     eax
-    dec     r8d
-    jmp     .loop
-.done:
+    movzx   r8d, byte [rcx+rdx]
+    add     eax, r8d           ; sum += buf[i]
+    inc     edx
+    cmp     edx, 4
+    jl      .loop
+    cmp     eax, 394           ; compare to target sum
+    jne     fail
+    mov     eax, 1
+    ret
+fail:
+    xor     eax, eax
     ret
 
-Answer:
-void reverse(int *arr, int n) {
-    int i = 0, j = n - 1;
-    while (i &lt; j) {
-        int tmp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = tmp;
-        i++;
-        j--;
-    }
-}
+Answer: &quot;abcd&quot;
 
-1. rcx/edx are the Windows x64 integer args, so rcx is int *arr and edx is int n; eax/r8d are scratch locals i and j = n-1. 2. Each iteration swaps arr[i] and arr[j] through r9d/r10d as tmp, using rax*4/r8*4 scaled-index addressing for the two int slots. 3. cmp eax, r8d / jge .done is the loop guard while (i &lt; j), and inc eax / dec r8d converge the two pointers each pass -- a classic in-place array-reversal idiom.</description><guid isPermaLink='false'>2026-09-10</guid><pubDate>Thu, 10 Sep 2026 02:37:31 +0000</pubDate></item></channel></rss>
+The loop walks the 4 bytes at [rcx] with movzx/add, accumulating their raw ASCII values into eax -- no shifting or weighting, just a plain running total, repeated exactly four times via inc edx/cmp edx,4/jl. After the loop, cmp eax, 394 / jne fail demands the four bytes sum to exactly 394. &#x27;a&#x27;+&#x27;b&#x27;+&#x27;c&#x27;+&#x27;d&#x27; = 97+98+99+100 = 394, so &quot;abcd&quot; clears the check and check returns 1 (other 4-byte combinations summing to 394 also work).</description><guid isPermaLink='false'>2026-09-11</guid><pubDate>Fri, 11 Sep 2026 02:37:30 +0000</pubDate></item></channel></rss>
