@@ -1,22 +1,9 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Mini Crackme — 2026-09-11 (Windows x86-64)</title><link></link><description>Challenge: rcx points to a 4-byte ASCII buffer (Windows x64 convention). Find a 4-character string that makes check return 1.
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Decode One Instruction — 2026-09-12 (Windows x86-64)</title><link></link><description>Challenge: Decode this instruction (Intel syntax), byte by byte:
 
-check:
-    xor     eax, eax           ; sum = 0
-    xor     edx, edx           ; i = 0
-.loop:
-    movzx   r8d, byte [rcx+rdx]
-    add     eax, r8d           ; sum += buf[i]
-    inc     edx
-    cmp     edx, 4
-    jl      .loop
-    cmp     eax, 394           ; compare to target sum
-    jne     fail
-    mov     eax, 1
-    ret
-fail:
-    xor     eax, eax
-    ret
+4A 8B 04 63
 
-Answer: &quot;abcd&quot;
+Give the mnemonic and full operands.
 
-The loop walks the 4 bytes at [rcx] with movzx/add, accumulating their raw ASCII values into eax -- no shifting or weighting, just a plain running total, repeated exactly four times via inc edx/cmp edx,4/jl. After the loop, cmp eax, 394 / jne fail demands the four bytes sum to exactly 394. &#x27;a&#x27;+&#x27;b&#x27;+&#x27;c&#x27;+&#x27;d&#x27; = 97+98+99+100 = 394, so &quot;abcd&quot; clears the check and check returns 1 (other 4-byte combinations summing to 394 also work).</description><guid isPermaLink='false'>2026-09-11</guid><pubDate>Fri, 11 Sep 2026 02:37:30 +0000</pubDate></item></channel></rss>
+Answer: mov rax, qword ptr [rbx + r12*2]
+
+4A is REX 0100 1010 (W=1 for 64-bit operands, X=1, B=0); 8B is MOV r64, r/m64. ModRM 04 = 00 000 100: mod=00 (no displacement), reg=000 (RAX, destination), rm=100 (SIB-follows escape). SIB 63 = 01 100 011: scale=01 (x2), index=100, base=011 (RBX) -- an index of 100 would normally mean &#x27;no index,&#x27; but REX.X=1 extends that field to 1100 = R12, selecting it as a real scaled index register rather than the sentinel.</description><guid isPermaLink='false'>2026-09-12</guid><pubDate>Sat, 12 Sep 2026 02:37:26 +0000</pubDate></item></channel></rss>

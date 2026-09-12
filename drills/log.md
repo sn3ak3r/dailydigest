@@ -27,3 +27,4 @@
 2026-09-09 | decode-instruction | RSP-as-base SIB detour (ModRM rm=100 escape), SIB base=100/index=100 no-index encoding, mov r/m64 with REX.W
 2026-09-10 | reverse-function | in-place array reversal via two-pointer swap, cmp/jge converging loop guard, scaled-index read/write pair
 2026-09-11 | crackme | ASCII sum-accumulator check via movzx/add loop, forward-computing target sum from input bytes
+2026-09-12 | decode-instruction | REX.X extending SIB index field, no-index sentinel (100) reinterpreted as R12, scale-2 addressing
