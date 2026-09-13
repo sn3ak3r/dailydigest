@@ -1,9 +1,33 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Decode One Instruction — 2026-09-12 (Windows x86-64)</title><link></link><description>Challenge: Decode this instruction (Intel syntax), byte by byte:
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse a Short Function to C</title><link></link><description>Challenge: Target Windows x86-64. rcx = long long *arr, edx = int count (Microsoft x64 calling convention). Reverse this function to equivalent C.
 
-4A 8B 04 63
+func:
+    xor   eax, eax        ; sum = 0
+    test  edx, edx
+    jle   done
+loop_top:
+    mov   r8, [rcx]
+    test  r8, r8
+    js    skip
+    add   rax, r8
+skip:
+    add   rcx, 8
+    dec   edx
+    jnz   loop_top
+done:
+    ret
 
-Give the mnemonic and full operands.
+What does this function compute, and what does it return in rax?
 
-Answer: mov rax, qword ptr [rbx + r12*2]
+Answer:
 
-4A is REX 0100 1010 (W=1 for 64-bit operands, X=1, B=0); 8B is MOV r64, r/m64. ModRM 04 = 00 000 100: mod=00 (no displacement), reg=000 (RAX, destination), rm=100 (SIB-follows escape). SIB 63 = 01 100 011: scale=01 (x2), index=100, base=011 (RBX) -- an index of 100 would normally mean &#x27;no index,&#x27; but REX.X=1 extends that field to 1100 = R12, selecting it as a real scaled index register rather than the sentinel.</description><guid isPermaLink='false'>2026-09-12</guid><pubDate>Sat, 12 Sep 2026 02:37:26 +0000</pubDate></item></channel></rss>
+long long sum_positive(long long *arr, int count) {
+    long long sum = 0;
+    for (int i = 0; i &lt; count; i++) {
+        if (arr[i] &gt;= 0) {
+            sum += arr[i];
+        }
+    }
+    return sum;
+}
+
+Explanation: rax accumulates the sum, seeded to zero, with an early jle bailout when count &lt;= 0. Each iteration loads one 8-byte element through rcx (advanced by add rcx, 8, i.e. arr[i]), and test r8, r8 / js skip uses the sign flag to skip negative elements without a real comparison. dec edx / jnz counts count down to zero, so the loop runs exactly count times regardless of how many elements were skipped.</description><guid isPermaLink='false'>2026-09-13</guid><pubDate>Sun, 13 Sep 2026 02:37:23 +0000</pubDate></item></channel></rss>
