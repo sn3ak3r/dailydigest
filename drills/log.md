@@ -29,3 +29,4 @@
 2026-09-11 | crackme | ASCII sum-accumulator check via movzx/add loop, forward-computing target sum from input bytes
 2026-09-12 | decode-instruction | REX.X extending SIB index field, no-index sentinel (100) reinterpreted as R12, scale-2 addressing
 2026-09-13 | reverse-function | conditional-skip accumulator loop via test/js sign check, pointer increment by 8, dec/jnz countdown
+2026-09-14 | crackme | additive accumulator XORed against the loop index each iteration, backward-solving via XOR self-inverse, movzx/test-jz null-terminator loop
