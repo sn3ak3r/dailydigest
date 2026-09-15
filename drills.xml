@@ -1,23 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Mini Crackme: check()</title><link></link><description>Windows x64, rcx = pointer to a null-terminated ASCII string.
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Decode One Instruction: JE rel8</title><link></link><description>Windows x86-64.
 
-check:
-    xor eax, eax        ; acc = 0
-    xor edx, edx        ; i = 0
-.loop:
-    movzx r8d, byte [rcx+rdx]
-    test r8d, r8d
-    jz .done
-    add eax, r8d
-    xor eax, edx        ; mix in the loop index
-    inc edx
-    jmp .loop
-.done:
-    cmp eax, 119h
-    sete al
-    ret
+At address 0x00007FF6A1B2C050, the raw bytes are:
 
-Find an ASCII string that makes check return true (al = 1).
+74 F6
 
-Answer: CODE
+Decode this instruction fully: mnemonic, operand, how the operand is encoded, and the exact target address.
 
-Each iteration adds the byte at position i into eax, then XORs the running total with i itself (0, 1, 2, 3, ...) before advancing, so the accumulator is a sum interleaved with a position-dependent XOR mask, terminated by the usual test/jz on the null byte. Because XOR is its own inverse, you can solve backward from the target 0x119 (undo xor 3, subtract the last byte, undo xor 2, subtract, ...), or just verify forward: with &#x27;C&#x27;,&#x27;O&#x27;,&#x27;D&#x27;,&#x27;E&#x27; (67, 79, 68, 69): 67 -&gt;(+79=146)^1=147 -&gt;(+68=215)^2=213 -&gt;(+69=282)^3=281 = 0x119. Matches, so check(&quot;CODE&quot;) returns 1.</description><guid isPermaLink='false'>2026-09-14</guid><pubDate>Mon, 14 Sep 2026 02:38:17 +0000</pubDate></item></channel></rss>
+Answer: JE 0x00007FF6A1B2C048
+
+0x74 is the one-byte short-form opcode for JE/JZ (jump if ZF=1). 0xF6 is a signed 8-bit relative displacement: 0xF6 = -10. The target is computed from the address of the NEXT instruction (current address + instruction length, here 2 bytes): next_rip = 0x00007FF6A1B2C052, so target = 0x00007FF6A1B2C052 + (-10) = 0x00007FF6A1B2C048. Since the displacement is negative, this is a backward branch, i.e. a classic bottom-of-loop jump back to the top; short Jcc opcodes (0x70-0x7F) only reach +/-127 bytes, farther targets need the two-byte 0x0F 8x near-jump form with a 32-bit displacement.</description><guid isPermaLink='false'>2026-09-15</guid><pubDate>Tue, 15 Sep 2026 02:37:48 +0000</pubDate></item></channel></rss>
