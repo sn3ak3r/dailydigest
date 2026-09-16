@@ -31,3 +31,4 @@
 2026-09-13 | reverse-function | conditional-skip accumulator loop via test/js sign check, pointer increment by 8, dec/jnz countdown
 2026-09-14 | crackme | additive accumulator XORed against the loop index each iteration, backward-solving via XOR self-inverse, movzx/test-jz null-terminator loop
 2026-09-15 | decode-instruction | JE/JZ short conditional jump (0x74), signed rel8 displacement, backward branch loop pattern
+2026-09-16 | reverse-function | pointer-increment scan loop with byte-compare-to-zero termination, pointer-difference length computation (hand-rolled strlen)
