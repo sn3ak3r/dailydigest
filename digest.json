@@ -1,52 +1,52 @@
 [
   {
-    "title": "China-Linked Hackers Exploit Chrome-Windows Zero-Day Chain to Deploy GRIMWEDGE",
-    "link": "https://thehackernews.com/2026/09/china-linked-hackers-exploit-chrome.html",
-    "blurb": "A China-linked group chained a Chrome renderer bug with a Windows privilege-escalation zero-day to drop the GRIMWEDGE backdoor, showing browser and OS patches need to move in lockstep."
+    "title": "Attacker Hijacks AI Coding Assistant Session, Spreads Shai-Hulud Across About 100 Repositories",
+    "link": "https://thehackernews.com/2026/09/attacker-hijacks-ai-coding-assistant.html",
+    "blurb": "A compromised AI coding-assistant session let an attacker spread the Shai-Hulud worm across roughly 100 repositories, showing agentic dev tooling can become a supply-chain attack vector."
   },
   {
-    "title": "Human Attacker Exploits Marimo RCE, Reaches SSH Bastion in Eight Seconds",
-    "link": "https://thehackernews.com/2026/09/human-attacker-exploits-marimo-rce.html",
-    "blurb": "A single unauthenticated RCE in the Marimo notebook server let a real attacker pivot to an internal SSH bastion in under ten seconds, a stark example of how thin segmentation collapses under live exploitation."
+    "title": "Trusting-Trust Attack against an Entire Linux Distribution through Binary Manipulation",
+    "link": "https://arxiv.org/abs/2607.24888",
+    "blurb": "A modern take on Ken Thompson's classic \"trusting trust\" attack shows a compiler-level backdoor can silently propagate through an entire Linux distribution's binaries."
   },
   {
-    "title": "Talking to the Airgap: Exploiting Radio-Less Embedded Devices as Radio Receivers",
-    "link": "https://arxiv.org/abs/2512.15387",
-    "blurb": "New research shows embedded devices with no radio hardware can still be coerced into acting as ad-hoc radio receivers, undermining a common air-gap security assumption."
+    "title": "GPUThor: Amplifying Rowhammer Attacks via Non-Uniform Patterns to Exploit ECC-Protected GPUs",
+    "link": "https://arxiv.org/abs/2609.16546",
+    "blurb": "Researchers extend Rowhammer to GPUs, using non-uniform hammering patterns to defeat ECC protection and flip bits in GPU memory."
   },
   {
-    "title": "Valve considered making a new VR game for the Steam Frame, before tackling the \"ludicrous\" task of getting Half-Life: Alyx running standalone",
-    "link": "https://www.rockpapershotgun.com/valve-considered-making-a-new-vr-game-for-the-steam-frame-before-tackling-the-ludicrous-task-of-getting-half-life-alyx-running-standalone",
-    "blurb": "A rare look inside Valve's effort to strip a AAA VR game free of SteamVR to run natively on standalone hardware."
+    "title": "\"15 years ago, people understood it was an unfinished game\": As Endless Legend 2 hits 1.0, Amplitude reflect on how early access has changed",
+    "link": "https://www.rockpapershotgun.com/15-years-ago-people-understood-it-was-an-unfinished-game-as-endless-legend-2-hits-10-amplitude-reflect-on-how-early-access-has-changed",
+    "blurb": "Amplitude's founders reflect on how a decade and a half of early access has reshaped what players expect from an \"unfinished\" game."
   },
   {
-    "title": "Wardogs delivers what Battlefield 6 was too console-brained to pull off: A real server browser",
-    "link": "https://www.pcgamer.com/games/fps/wardogs-delivers-what-battlefield-6-was-too-console-brained-to-pull-off-a-real-server-browser/",
-    "blurb": "Wardogs shipped the filterable server browser Battlefield 6 skipped, and players are already crediting it with a healthier community."
+    "title": "Hyper Light studio Heart Machine lays off 'nearly everyone' after publishing deal for unannounced game falls through",
+    "link": "https://www.pcgamer.com/gaming-industry/hyper-light-studio-heart-machine-lays-off-nearly-everyone-after-publisher-deal-for-unannounced-game-falls-through/",
+    "blurb": "Hyper Light Drifter studio Heart Machine lays off nearly its whole team after a publishing deal for an unannounced project collapsed."
   },
   {
-    "title": "Mitotic chromosomes may assemble from pre-existing chromatin 'building blocks' during cell division",
-    "link": "https://phys.org/news/2026-09-mitotic-chromosomes-pre-chromatin-blocks.html",
-    "blurb": "Problem: How does a cell compress ~2m of DNA into a tidy mitotic chromosome each division? Approach: Researchers synthesized decades of chromosome-scaffold and condensin research, modeling chromatin as pre-built blocks, not a blank strand folded from scratch. Result: Mitotic chromosomes seem to assemble from condensed chromatin domains already present in interphase nuclei, which condensins gather and reorganize into the familiar rod shape. Why it matters: Treating interphase and mitotic chromatin as one continuous structure reframes how cells ensure accurate chromosome handoff, with implications for genetic instability and disease. Glossary: Chromatin - DNA packaged with proteins. Condensin - complex that compacts chromosomes. Interphase - part of the cycle between divisions. Mitotic chromosome - coiled structure seen during division."
+    "title": "Mobile trap transports 92 antiprotons by road and stores them for over a month in world first",
+    "link": "https://phys.org/news/2026-09-mobile-antiprotons-road-month-world.html",
+    "blurb": "Problem: Precisely comparing protons and antiprotons, to hunt for matter-antimatter asymmetry, is limited at CERN by magnetic-field noise from facility operations. Approach: The BASE collaboration loaded 92 antiprotons into BASE-STEP, a mobile Penning trap, then drove it about 8km around CERN by truck. Result: The antiprotons survived transport and were stored for over a month, with vacuum better than 2.2×10⁻¹⁸ mbar — the first road transport and longest open-trap antimatter storage on record. Why it matters: Portable antimatter storage lets physicists take precision measurements to quieter labs, chasing a matter-antimatter difference that could explain why the universe has any matter left at all. Glossary: Penning trap - electromagnetic device that confines charged particles. ppb - parts per billion, a precision unit. Matter-antimatter asymmetry - unexplained excess of matter over antimatter in the cosmos. mbar - millibar, a unit of vacuum pressure."
   },
   {
-    "title": "Disordered atoms steer shared light pulses by matching motion and timing",
-    "link": "https://phys.org/news/2026-09-disordered-atoms-pulses-motion.html",
-    "blurb": "Physicists found disordered atomic ensembles can synchronize to collectively steer a shared light pulse, a step toward using messy, uncooled atomic systems for photonic control."
+    "title": "What happens when neutrinos swap identities inside a supernova?",
+    "link": "https://arstechnica.com/science/2026/09/what-happens-when-neutrinos-swap-identities-inside-a-supernova/",
+    "blurb": "Simulations of a core-collapse supernova show neutrinos swapping flavor identities mid-explosion, a process that could reshape models of how heavy elements form."
   },
   {
-    "title": "We got admin access to Baseten's production GitHub in 25 minutes",
-    "link": "https://www.strix.ai/blog/baseten-harbor-github-pat-takeover",
-    "blurb": "A red-team writeup on how a leaked GitHub PAT plus an overly broad app-to-repo trust chain gave researchers admin on Baseten's production GitHub, a clean case study in credential blast radius."
+    "title": "A 3D Rasterizer For Embedded Devices",
+    "link": "https://hackaday.com/2026/09/16/a-3d-rasterizer-for-embedded-devices/",
+    "blurb": "Problem: Rendering real 3D graphics on a microcontroller is hard without dedicated GPU hardware or much memory. Approach: Jet is a dependency-free, integer-only C++17 software rasterizer built for chips like the ESP32 and STM32, targeting RGB565 SPI displays. Result: On an ESP32-S3 it renders about 650 post-culled triangles at 60fps (1300 at 30fps) on a 480×320 display — performance the developers place between the Sega 32X and Saturn. Why it matters: It brings real-time 3D to sub-$20 microcontrollers with no GPU, opening the door to retro-style 3D on badges and embedded builds. Glossary: Rasterizer - converts 3D triangles into pixels. RGB565 - 16-bit packed color format. SPI - serial bus used to drive small displays. Post-culling - triangles left after removing hidden/off-screen ones."
   },
   {
-    "title": "Building a Linux GPU Driver for the M4 Mac Mini in One Month",
-    "link": "https://codyho.dev/blog/gpu-driver/",
-    "blurb": "One engineer reverse-engineered enough of Apple's M4 GPU to write a from-scratch Linux driver in a month, documenting the process end to end."
+    "title": "Original Sony PlayStation 2 security chip 'broken wide open' after 26 years",
+    "link": "https://www.tomshardware.com/video-games/playstation/26-year-old-sony-ps2-security-chip-broken-wide-open-after-four-years-of-effort-reverse-engineering-enthusiast-successfully-unlocks-cxp102064-mechacon-chip",
+    "blurb": "A reverse-engineering enthusiast cracked Sony's PS2 security chip wide open after 26 years, exposing the console's copy-protection secrets for good."
   },
   {
-    "title": "Running Linux 6.11 on the ESP32-S3 with a Few Tweaks",
-    "link": "https://hackaday.com/2026/09/15/running-linux-6-11-on-the-esp32-s3-with-a-few-tweaks/",
-    "blurb": "Problem: The ESP32-S3 microcontroller has no memory management unit (MMU), hardware Linux normally needs for virtual memory and process isolation. Approach: Developer Paulneja built a NOMMU Linux config with a custom fork(), running Linux on one CPU core while the other handles WiFi/Bluetooth under FreeRTOS. Result: Version 0.8 boots reliably with 3.7MB usable RAM on a board with 16MB flash and 8MB octal PSRAM, up from the prior release. Why it matters: Minimal Linux on a cheap chip opens the door to embedded routers running BusyBox instead of a bespoke RTOS. Glossary: MMU - manages virtual memory/isolation. NOMMU - Linux variant for chips without one. PSRAM - pseudo-static RAM, denser but slower than SRAM. FreeRTOS - lightweight real-time OS."
+    "title": "Training a 4B model to produce 81% faster query plans than Postgres",
+    "link": "https://rohanbansal.com/qorl",
+    "blurb": "A 4B-parameter model trained specifically on query planning produces plans 81% faster than Postgres's own planner, hinting at learned components replacing hand-tuned database heuristics."
   }
 ]
