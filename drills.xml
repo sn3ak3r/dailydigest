@@ -1,26 +1,30 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse a Short Function to C: strlen scan</title><link></link><description>Windows x86-64. rcx = const char *s (Microsoft x64 calling convention). Reverse this function to equivalent C.
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Mini Crackme: Weighted-Sum Password Check (Windows x86-64)</title><link></link><description>check_password takes a 4-byte ASCII string in rcx (Windows x64 arg convention). Find an input that makes it return 1.
 
-func:
-    mov   rax, rcx
-scan:
-    cmp   byte ptr [rax], 0
-    je    done
-    inc   rax
-    jmp   scan
-done:
-    sub   rax, rcx
+check_password PROC
+    xor  eax, eax          ; eax = accumulator
+    xor  r8d, r8d          ; r8d = index i = 0
+.top:
+    cmp  r8d, 4
+    jge  .check
+    movzx edx, byte ptr [rcx+r8]  ; edx = input[i]
+    lea  r9d, [r8+1]              ; r9d = i+1 (weight)
+    imul edx, r9d                 ; edx = input[i] * (i+1)
+    add  eax, edx                 ; accumulate
+    inc  r8d
+    jmp  .top
+.check:
+    cmp  eax, 0x2E2        ; 738
+    sete al
+    movzx eax, al
     ret
+check_password ENDP
 
-What does this function compute, and what does it return in rax?
+What 4-character string passes the check?
 
-Answer:
+Answer: GOOD
 
-size_t my_strlen(const char *s) {
-    const char *p = s;
-    while (*p != 0) {
-        p++;
-    }
-    return p - s;
-}
+Bytes: G=71, O=79, O=79, D=68.
 
-rax is initialized to a copy of the string pointer and walks forward one byte at a time (inc rax), comparing each byte against zero until it hits the null terminator (je done). Once the loop exits, sub rax, rcx computes the distance traveled -- the scanning pointer minus the original pointer still held in rcx -- which is exactly the string&#x27;s length, so this is a straightforward hand-rolled strlen.</description><guid isPermaLink='false'>2026-09-16</guid><pubDate>Wed, 16 Sep 2026 02:37:35 +0000</pubDate></item></channel></rss>
+- The loop computes a positional-weighted sum: input[0]*1 + input[1]*2 + input[2]*3 + input[3]*4, unlike a plain accumulator each byte&#x27;s contribution scales with its index.
+- Plugging in GOOD: 71*1 + 79*2 + 79*3 + 68*4 = 71+158+237+272 = 738 = 0x2E2, matching the target, so sete al sets eax=1.
+- To solve backward, pick any four bytes whose weighted sum hits 738 - the weights (1,2,3,4) mean many ASCII combinations work, GOOD is just one convenient solution.</description><guid isPermaLink='false'>2026-09-17</guid><pubDate>Thu, 17 Sep 2026 02:38:05 +0000</pubDate></item></channel></rss>
