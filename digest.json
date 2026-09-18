@@ -1,52 +1,52 @@
 [
   {
-    "title": "Attacker Hijacks AI Coding Assistant Session, Spreads Shai-Hulud Across About 100 Repositories",
-    "link": "https://thehackernews.com/2026/09/attacker-hijacks-ai-coding-assistant.html",
-    "blurb": "A compromised AI coding-assistant session let an attacker spread the Shai-Hulud worm across roughly 100 repositories, showing agentic dev tooling can become a supply-chain attack vector."
+    "title": "Cisco Warns of New Zero-Day ISE Auth Bypass (CVSS 10.0) Exploited in Active Attacks",
+    "link": "https://thehackernews.com/2026/09/cisco-warns-of-new-zero-day-ise-auth.html",
+    "blurb": "A maximum-severity auth bypass in Cisco's Identity Services Engine is being actively exploited, letting attackers skip login on a system that gatekeeps network access."
   },
   {
-    "title": "Trusting-Trust Attack against an Entire Linux Distribution through Binary Manipulation",
-    "link": "https://arxiv.org/abs/2607.24888",
-    "blurb": "A modern take on Ken Thompson's classic \"trusting trust\" attack shows a compiler-level backdoor can silently propagate through an entire Linux distribution's binaries."
+    "title": "GPUHammer: Rowhammer Attacks on GPU Memories are Practical",
+    "link": "https://arxiv.org/abs/2507.08166",
+    "blurb": "Researchers show the Rowhammer bit-flip attack, long known on CPU memory, works practically against GPU memory too, threatening the integrity of GPU-accelerated computation."
   },
   {
-    "title": "GPUThor: Amplifying Rowhammer Attacks via Non-Uniform Patterns to Exploit ECC-Protected GPUs",
-    "link": "https://arxiv.org/abs/2609.16546",
-    "blurb": "Researchers extend Rowhammer to GPUs, using non-uniform hammering patterns to defeat ECC protection and flip bits in GPU memory."
+    "title": "Ransomware Incidents in Japan in the First Half of 2026",
+    "link": "https://blog.talosintelligence.com/ransomware-incidents-in-japan-in-the-first-half-of-2026/",
+    "blurb": "Problem: Japan saw 90 ransomware incidents in H1 2026, up 4.7%, with small and mid-sized firms making up most victims. Approach: Talos researchers picked apart open directories, leaked bash histories, and Python scripts left behind by two groups: The Gentlemen and Qilin. Result: The Gentlemen run a disciplined six-phase playbook: VPN access, Nmap/Masscan recon, a GLPI exploit, credential theft via Responder/Impacket, then AD lateral movement and cloud exfiltration, with Russian-language artifacts in their tools. Qilin's attack scripts show signs of being AI-generated: uniform doc-style headers and a stray \"llm_chatbot\" folder in its command history. Why it matters: Ransomware crews are professionalizing their tradecraft and now outsourcing script-writing to AI, shrinking the skill and time needed to build working attack tooling. Glossary: Lateral movement - moving between compromised systems inside a network. Exfiltration - stealing data out of a network. Active Directory - Windows' directory service for accounts and permissions. RaaS - ransomware sold as a subscription service to affiliates."
   },
   {
-    "title": "\"15 years ago, people understood it was an unfinished game\": As Endless Legend 2 hits 1.0, Amplitude reflect on how early access has changed",
-    "link": "https://www.rockpapershotgun.com/15-years-ago-people-understood-it-was-an-unfinished-game-as-endless-legend-2-hits-10-amplitude-reflect-on-how-early-access-has-changed",
-    "blurb": "Amplitude's founders reflect on how a decade and a half of early access has reshaped what players expect from an \"unfinished\" game."
+    "title": "AMD presents new method of handing indirect lighting off to an image generation model: 'frame-by-frame' solution could be part of AMD's answer to DLSS 5 someday",
+    "link": "https://www.pcgamer.com/hardware/graphics-cards/amd-presents-new-method-of-handing-indirect-lighting-off-to-an-image-generation-model-frame-by-frame-solution-could-be-part-of-amds-answer-to-dlss-5-someday/",
+    "blurb": "AMD is generating indirect lighting frame-by-frame with an image model instead of computing it directly, a technique that could feed a future DLSS-style upscaler."
   },
   {
-    "title": "Hyper Light studio Heart Machine lays off 'nearly everyone' after publishing deal for unannounced game falls through",
-    "link": "https://www.pcgamer.com/gaming-industry/hyper-light-studio-heart-machine-lays-off-nearly-everyone-after-publisher-deal-for-unannounced-game-falls-through/",
-    "blurb": "Hyper Light Drifter studio Heart Machine lays off nearly its whole team after a publishing deal for an unannounced project collapsed."
+    "title": "The lead developer of the PS5 Linux project has abandoned ship",
+    "link": "https://www.pcgamer.com/hardware/the-lead-developer-of-the-ps5-linux-project-has-abandoned-ship-it-is-just-a-bunch-of-noobs-using-llms-and-writing-hacks-they-dont-even-understand/",
+    "blurb": "The lead developer of the PS5 Linux homebrew project quit, criticizing contributors for leaning on LLM-generated code they don't understand, a friction point for AI-assisted reverse engineering."
   },
   {
-    "title": "Mobile trap transports 92 antiprotons by road and stores them for over a month in world first",
-    "link": "https://phys.org/news/2026-09-mobile-antiprotons-road-month-world.html",
-    "blurb": "Problem: Precisely comparing protons and antiprotons, to hunt for matter-antimatter asymmetry, is limited at CERN by magnetic-field noise from facility operations. Approach: The BASE collaboration loaded 92 antiprotons into BASE-STEP, a mobile Penning trap, then drove it about 8km around CERN by truck. Result: The antiprotons survived transport and were stored for over a month, with vacuum better than 2.2×10⁻¹⁸ mbar — the first road transport and longest open-trap antimatter storage on record. Why it matters: Portable antimatter storage lets physicists take precision measurements to quieter labs, chasing a matter-antimatter difference that could explain why the universe has any matter left at all. Glossary: Penning trap - electromagnetic device that confines charged particles. ppb - parts per billion, a precision unit. Matter-antimatter asymmetry - unexplained excess of matter over antimatter in the cosmos. mbar - millibar, a unit of vacuum pressure."
+    "title": "Close-up images show defects locking electrons into stable Wigner solids",
+    "link": "https://phys.org/news/2026-09-images-defects-electrons-stable-wigner.html",
+    "blurb": "Physicists captured close-up images of crystal defects locking electrons into place as stable \"Wigner solids,\" a rare ordered state driven purely by electron-electron repulsion."
   },
   {
-    "title": "What happens when neutrinos swap identities inside a supernova?",
-    "link": "https://arstechnica.com/science/2026/09/what-happens-when-neutrinos-swap-identities-inside-a-supernova/",
-    "blurb": "Simulations of a core-collapse supernova show neutrinos swapping flavor identities mid-explosion, a process that could reshape models of how heavy elements form."
+    "title": "Where Does the Quantum World End and Ours Begin?",
+    "link": "https://www.quantamagazine.org/where-does-the-quantum-world-end-and-ours-begin-20260917/",
+    "blurb": "Problem: Quantum objects behave like fuzzy waves that interfere with themselves, yet everyday objects have sharp, definite positions; physicists still lack a settled account of exactly where that switch happens. Approach: The piece surveys decoherence theory (environment scrambling quantum information), the \"decoherent histories\" reformulation that drops the need for an outside observer, and Leggett-Garg-style experiments testing whether a system had a definite property before measurement, pushed up to virus-sized molecules. Result: Every test so far still matches quantum mechanics exactly: interference survives even in large molecules, and it's the environment's bombardment, not a new law, that buries quantum effects at macroscopic scale. Why it matters: Pinning down this boundary experimentally shapes how far quantum computers can scale and what \"measurement\" really means. Glossary: Decoherence - environment destroying a quantum system's ability to interfere with itself. Superposition - existing in multiple states at once. Entanglement - distant particles staying correlated. Leggett-Garg test - experiment checking if a system had a definite state before measurement."
   },
   {
-    "title": "A 3D Rasterizer For Embedded Devices",
-    "link": "https://hackaday.com/2026/09/16/a-3d-rasterizer-for-embedded-devices/",
-    "blurb": "Problem: Rendering real 3D graphics on a microcontroller is hard without dedicated GPU hardware or much memory. Approach: Jet is a dependency-free, integer-only C++17 software rasterizer built for chips like the ESP32 and STM32, targeting RGB565 SPI displays. Result: On an ESP32-S3 it renders about 650 post-culled triangles at 60fps (1300 at 30fps) on a 480×320 display — performance the developers place between the Sega 32X and Saturn. Why it matters: It brings real-time 3D to sub-$20 microcontrollers with no GPU, opening the door to retro-style 3D on badges and embedded builds. Glossary: Rasterizer - converts 3D triangles into pixels. RGB565 - 16-bit packed color format. SPI - serial bus used to drive small displays. Post-culling - triangles left after removing hidden/off-screen ones."
+    "title": "Plugin4Shell – Zero Click RCE Vulnerability found in top four coding agents",
+    "link": "https://www.air.security/blog-posts/plugin4shell",
+    "blurb": "Researchers found a zero-click remote-code-execution chain affecting plugins in four popular AI coding agents, showing how agentic dev tools can be hijacked without any user action."
   },
   {
-    "title": "Original Sony PlayStation 2 security chip 'broken wide open' after 26 years",
-    "link": "https://www.tomshardware.com/video-games/playstation/26-year-old-sony-ps2-security-chip-broken-wide-open-after-four-years-of-effort-reverse-engineering-enthusiast-successfully-unlocks-cxp102064-mechacon-chip",
-    "blurb": "A reverse-engineering enthusiast cracked Sony's PS2 security chip wide open after 26 years, exposing the console's copy-protection secrets for good."
+    "title": "Flock cameras are riddled with security vulnerabilities and hard-coded credentials",
+    "link": "https://micahflee.com/flock-cameras-are-riddled-with-security-vulnerabilities-and-hard-coded-credentials/",
+    "blurb": "An investigation found Flock's surveillance cameras full of vulnerabilities and hard-coded credentials, undermining a system already controversial for police license-plate tracking."
   },
   {
-    "title": "Training a 4B model to produce 81% faster query plans than Postgres",
-    "link": "https://rohanbansal.com/qorl",
-    "blurb": "A 4B-parameter model trained specifically on query planning produces plans 81% faster than Postgres's own planner, hinting at learned components replacing hand-tuned database heuristics."
+    "title": "Goose: 1.16x faster than C++ and 1.12x than safe Rust, while memory safe",
+    "link": "https://github.com/aardappel/goose/tree/master",
+    "blurb": "A new systems language claims to beat both C++ and safe Rust on benchmarks while keeping full memory safety, aiming to unseat manual memory management as the price of speed."
   }
 ]
