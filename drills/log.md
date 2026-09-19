@@ -34,3 +34,4 @@
 2026-09-16 | reverse-function | pointer-increment scan loop with byte-compare-to-zero termination, pointer-difference length computation (hand-rolled strlen)
 2026-09-17 | crackme | positional-weighted accumulator check via imul with index-derived weight, forward-computing target from weighted ASCII sum
 2026-09-18 | decode-instruction | CALL rel32 near call opcode 0xE8, RIP-relative displacement computed from next-instruction address, implicit return-address push
+2026-09-19 | reverse-function | linked-list node-counting traversal via pointer dereference (mov rcx,[rcx]), null-check test/je loop guard, pointer-chasing struct field access

@@ -1,11 +1,29 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Decode One Instruction: CALL rel32 (Windows x86-64)</title><link></link><description>A disassembler shows raw bytes at address 0x140001005 inside a function:
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse a Short Function to C: Linked-List Node Count (Windows x86-64)</title><link></link><description>Target: Windows x86-64. rcx = Node *head (Microsoft x64 calling convention). Assume struct Node { Node *next; int val; }; so next sits at offset 0. Reverse this function to equivalent C.
 
-0x140001005: E8 D6 0F 00 00
+func:
+    xor   eax, eax
+loop:
+    test  rcx, rcx
+    je    done
+    inc   eax
+    mov   rcx, [rcx]
+    jmp   loop
+done:
+    ret
 
-Decode this single instruction: name the opcode, the addressing form of its operand, and compute the exact target address it transfers control to.
+What does this function compute, and what does it return in eax?
 
-Answer: call 0x140001FE0
+Answer:
 
-- E8 is the opcode for CALL rel32 (near, direct call) - a one-byte opcode followed by a 4-byte little-endian signed displacement, no ModRM byte at all since the target is instruction-pointer-relative rather than register/memory.
-- The displacement bytes D6 0F 00 00 read little-endian as 0x00000FD6 (4054); RIP-relative encodings are always computed from the address of the next instruction, not the CALL&#x27;s own start.
-- Next instruction address = 0x140001005 + 5 (opcode + 4 displacement bytes) = 0x14000100A; adding the displacement gives 0x14000100A + 0xFD6 = 0x140001FE0, and executing CALL also pushes the return address 0x14000100A onto the stack before jumping.</description><guid isPermaLink='false'>2026-09-18</guid><pubDate>Fri, 18 Sep 2026 02:37:37 +0000</pubDate></item></channel></rss>
+int count_nodes(Node *head) {
+    int count = 0;
+    while (head != NULL) {
+        count++;
+        head = head-&gt;next;
+    }
+    return count;
+}
+
+- eax starts at zero and the loop tests rcx (the current node pointer) against zero each iteration, exiting via je done once the list ends.
+- While the pointer is non-null, inc eax tallies one more node and mov rcx, [rcx] dereferences the pointer to load next (offset 0), advancing to the following node.
+- This is a pointer-chasing linked-list traversal that counts its nodes, returning the length in eax.</description><guid isPermaLink='false'>2026-09-19</guid><pubDate>Sat, 19 Sep 2026 02:37:36 +0000</pubDate></item></channel></rss>
