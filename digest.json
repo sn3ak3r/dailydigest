@@ -1,52 +1,52 @@
 [
   {
-    "title": "Critical Check Point Management Server Flaw Lets Unauthenticated Attackers Run Code as Root",
-    "link": "https://www.bleepingcomputer.com/news/security/check-point-warns-critical-flaw-lets-hackers-execute-code-as-root/",
-    "blurb": "Problem: Check Point Security Management Server, which administers firewalls, had a critical bug letting an attacker reach root without logging in.\nApproach: The flaw, CVE-2026-91843, is a stack-based buffer overflow in the login handler, reachable pre-authentication with no user interaction.\nResult: A low-complexity chain escalates from anonymous access straight to root. No patch yet; Check Point flagged \"Username too long\" login-failure logs as a detection signal and published hardening guidance.\nWhy it matters: The management server sits above the firewalls it controls, so compromising one unauthenticated hands an attacker an org's entire perimeter.\nGlossary: buffer overflow - overwriting memory to hijack execution. RCE - remote code execution. Pre-auth - exploitable before login. CVSS - severity score."
+    "title": "Claude Opus 5 Helped Researchers Take Over OpenAI Staff Accounts via Chained Flaws",
+    "link": "https://thehackernews.com/2026/09/claude-opus-5-helped-researchers-take.html",
+    "blurb": "Researchers used an AI agent to chain together several small misconfigurations into a full staff-account takeover, showing how AI can automate multi-step exploit discovery."
   },
   {
-    "title": "Transparent Tribe Deploys New Rust Backdoor Using Private GitHub Repositories for C2",
-    "link": "https://thehackernews.com/2026/09/transparent-tribe-deploys-new-rust.html",
-    "blurb": "The APT group's new Rust-based backdoor uses private GitHub repos as its command-and-control channel, blending malicious traffic into normal developer network noise."
+    "title": "Plugin4Shell Lets Repository Owners Swap Pinned Plugin Code Across Four AI Coding Agents",
+    "link": "https://thehackernews.com/2026/09/plugin4shell-lets-repository-owners.html",
+    "blurb": "A pinning-bypass technique lets a malicious repo owner swap out plugin code that four different AI coding agents treat as trusted and locked."
   },
   {
-    "title": "Critical Docker Sandboxes Flaw Lets Malicious Guest Code Read and Modify macOS Host Files",
-    "link": "https://thehackernews.com/2026/09/critical-docker-sandboxes-flaw-lets.html",
-    "blurb": "A sandbox escape lets code running inside a Docker container break out and touch files on the macOS host it's supposed to be isolated from."
+    "title": "Public Exploits Released for Four Linux Kernel Flaws That Enable Local Root",
+    "link": "https://thehackernews.com/2026/09/public-exploits-released-for-four-linux.html",
+    "blurb": "Working PoCs are now public for four separate kernel bugs that escalate an unprivileged local user straight to root."
   },
   {
-    "title": "Single player games might require age verification if they use Steam under EU Kids Act's current draft",
-    "link": "https://www.rockpapershotgun.com/single-player-games-might-require-age-verification-if-they-use-steam-under-eu-kids-acts-current-draft-according-to-meps-senior-policy-adviser",
-    "blurb": "A draft EU child-safety law could force age checks on offline single-player games simply for running on the Steam client, worrying developers and platform holders alike."
+    "title": "This unofficial engine patch for Thief: The Dark Project adds a huge new feature that won't be in Nightdive's upcoming remaster",
+    "link": "https://www.pcgamer.com/games/sim/this-unofficial-engine-patch-for-thief-the-dark-project-adds-a-huge-new-feature-that-wont-be-in-nightdives-upcoming-remaster/",
+    "blurb": "A community engine patch for the 1998 original adds functionality that the official remaster is skipping."
   },
   {
-    "title": "Denuvo is on the hunt for DRM cracker 'voices38'",
-    "link": "https://www.pcgamer.com/gaming-industry/denuvo-is-on-the-hunt-for-drm-cracker-voices38-as-the-company-attempts-to-take-one-of-its-biggest-foes-to-court/",
-    "blurb": "Denuvo is suing a prolific DRM cracker over bypasses on 26 games, despite not knowing the person's real identity, escalating the anti-piracy cat-and-mouse game into court."
+    "title": "CD Projekt says abandoning its in-house engine for The Witcher 4 had nothing to do with Cyberpunk 2077's technical woes",
+    "link": "https://www.pcgamer.com/games/the-witcher/cd-projekt-says-abandoning-its-in-house-engine-for-the-witcher-4-had-nothing-to-do-with-cyberpunk-2077s-technical-woes-the-dream-of-the-company-was-actually-never-to-make-technology/",
+    "blurb": "The studio explains the switch away from REDengine as a strategic choice rather than damage control."
   },
   {
-    "title": "Mathematicians Build Long-Awaited Graph Sandwich",
-    "link": "https://www.quantamagazine.org/mathematicians-build-long-awaited-graph-sandwich-20260918/",
-    "blurb": "Problem: Since 2004 the Kim-Vu conjecture asked whether a large regular graph (equal degree at every node) can be sandwiched between two random binomial graphs sharing its edges.\nApproach: Montgomery, Behague, and Iľkovič built both graphs edge by edge in tandem: one coin decides each binomial edge, a second adaptive coin decides if the regular graph keeps it, nesting one inside the other.\nResult: The construction always succeeds for large graphs, proving the conjecture true.\nWhy it matters: It's a \"meta-theorem\" - properties proven for binomial graphs now transfer to regular graphs, which better model real networks.\nGlossary: Regular graph - equal edges per node. Binomial graph - edges added independently. Degree - edges at a node. Meta-theorem - one proof unlocking many others."
+    "title": "Two-color light steers electrons through graphene's transient topological state",
+    "link": "https://phys.org/news/2026-09-electrons-graphene-transient-topological-state.html",
+    "blurb": "Problem: Researchers wanted to control electrons inside a light-induced topological state in graphene, not just create the state.\nApproach: They hit a graphene sheet with a strong 1,550nm circularly-polarized pulse to temporarily reshape its electronic structure (a Floquet state), then used a second, weaker 775nm pulse to steer electrons within that reshaped state, reading the result as current through gold electrodes.\nResult: They saw current direction flip with light polarization, sideways electron deflection with no magnetic field, and current dominated by one electronic \"valley\" — all controllable within a single light cycle.\nWhy it matters: It's a step toward using light alone to engineer material properties on ultrafast timescales, useful for future optical switches and sensors.\nGlossary: Floquet state - a temporary state induced by periodic driving light. Topological insulator - a material whose surface behavior is protected by its overall shape/symmetry. Valley - a distinct region of a material's electron-momentum map. Anomalous Hall effect - sideways electron deflection without a magnetic field."
   },
   {
-    "title": "Finding the cells that put our brain to sleep",
-    "link": "https://arstechnica.com/science/2026/09/finding-the-cells-that-put-our-brain-to-sleep/",
-    "blurb": "Researchers identify specific neurons responsible for triggering sleep onset, adding a concrete mechanism to how the brain switches states."
+    "title": "Loss of Y chromosome in men could be an early warning sign of cancer",
+    "link": "https://phys.org/news/2026-09-loss-chromosome-men-early-cancer.html",
+    "blurb": "A study links age-related loss of the Y chromosome in blood cells to elevated cancer risk, offering a possible early biomarker."
   },
   {
-    "title": "Saving another 100TB of RAM with math (and Rust)",
-    "link": "https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/",
-    "blurb": "Cloudflare documents a math-driven data-structure rewrite in Rust that shaved another 100TB off their fleet-wide memory footprint."
+    "title": "ZK-JPEG: Zero-Knowledge Image Editing and Compression",
+    "link": "https://eprint.iacr.org/2026/2039",
+    "blurb": "A cryptography paper builds zero-knowledge proofs that an edited/compressed JPEG derives from an original, without revealing the original."
   },
   {
-    "title": "Sony's First Computer",
-    "link": "https://hackaday.com/2026/09/18/sonys-first-computer/",
-    "blurb": "A look at Sony's 1982 SMC-70: a Z-80 CP/M machine with 16-color graphics, 3.5\" floppies, and an unusual stackable expansion-module design, well ahead of its time."
+    "title": "Faster JSON parsing with SVE2 on ARM processors",
+    "link": "https://lemire.me/blog/2026/09/18/faster-json-parsing-with-sve2-on-arm-processors/",
+    "blurb": "Using ARM's SVE2 SIMD instructions speeds up JSON parsing, a technique relevant to any server workload bottlenecked on text parsing."
   },
   {
-    "title": "Photon-Emission-Guided Laser Fault Injection Enables RP2350 Secure Debug",
-    "link": "https://donjon.ledger.com/blog/rp2350-secure-debug-laser-fault-injection/",
-    "blurb": "Ledger's hardware security lab documents using photon-emission analysis to precisely target laser fault injection against the RP2350's secure debug lockout."
+    "title": "Coreboot Hikes the Bay Trail to DRAM Initialization",
+    "link": "https://hackaday.com/2026/09/19/coreboot-hikes-the-bay-trail-to-dram-initialization/",
+    "blurb": "Problem: Coreboot needs to initialize DRAM before any RAM exists, which normally requires a manufacturer's closed-source binary blob — a dependency the project wants to remove.\nApproach: Developers used the SerialICE debugger to capture the bus traffic of Intel Bay Trail's proprietary init code, then replayed and analyzed that behavior in the Unicorn CPU emulator to reverse-engineer the sequence without vendor documentation.\nResult: Coreboot can now bring up DRAM on Bay Trail SoCs without that binary blob, on decade-old but still-used hardware.\nWhy it matters: It's a repeatable playbook for stripping proprietary blobs out of firmware, chipping away at vendor lock-in on aging but still-deployed silicon.\nGlossary: Binary blob - closed-source firmware code with no available source. Coreboot - open-source BIOS/UEFI replacement. DRAM - the system's main working memory. SoC - system-on-chip, a processor with its support hardware integrated."
   }
 ]
