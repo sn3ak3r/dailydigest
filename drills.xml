@@ -1,29 +1,34 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse a Short Function to C: Linked-List Node Count (Windows x86-64)</title><link></link><description>Target: Windows x86-64. rcx = Node *head (Microsoft x64 calling convention). Assume struct Node { Node *next; int val; }; so next sits at offset 0. Reverse this function to equivalent C.
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Mini Crackme: Caesar-Shift Password Check (Windows x86-64)</title><link></link><description>Target: Windows x86-64. check_password takes a 4-byte ASCII string in rcx (Windows x64: first arg in rcx). Find an input that makes it return 1.
 
-func:
-    xor   eax, eax
-loop:
-    test  rcx, rcx
-    je    done
-    inc   eax
-    mov   rcx, [rcx]
-    jmp   loop
-done:
+check_password PROC
+    lea  r9, target                ; r9 -&gt; expected cipher bytes
+    xor  r8d, r8d                  ; i = 0
+.top:
+    cmp  r8d, 4
+    jge  .pass
+    movzx edx, byte ptr [rcx+r8]   ; edx = input[i]
+    add  edx, 3                    ; Caesar shift +3
+    cmp  edx, &#x27;Z&#x27;
+    jle  .store
+    sub  edx, 26                   ; wrap past &#x27;Z&#x27; back toward &#x27;A&#x27;
+.store:
+    cmp  dl, byte ptr [r9+r8]
+    jne  .fail
+    inc  r8d
+    jmp  .top
+.pass:
+    mov  eax, 1
     ret
+.fail:
+    xor  eax, eax
+    ret
+target byte &quot;ZABC&quot;
+check_password ENDP
 
-What does this function compute, and what does it return in eax?
+What 4-character string passes the check?
 
-Answer:
+Answer: WXYZ
 
-int count_nodes(Node *head) {
-    int count = 0;
-    while (head != NULL) {
-        count++;
-        head = head-&gt;next;
-    }
-    return count;
-}
-
-- eax starts at zero and the loop tests rcx (the current node pointer) against zero each iteration, exiting via je done once the list ends.
-- While the pointer is non-null, inc eax tallies one more node and mov rcx, [rcx] dereferences the pointer to load next (offset 0), advancing to the following node.
-- This is a pointer-chasing linked-list traversal that counts its nodes, returning the length in eax.</description><guid isPermaLink='false'>2026-09-19</guid><pubDate>Sat, 19 Sep 2026 02:37:36 +0000</pubDate></item></channel></rss>
+- Each byte is Caesar-shifted +3; cmp edx,&#x27;Z&#x27; / jle decides whether the shifted value stays in range or wraps by subtracting 26 (mod-26 alphabet wraparound), then it&#x27;s compared against target = &quot;ZABC&quot; via indexed pointer [r9+r8].
+- To invert, subtract 3 from each target byte and add 26 back whenever the result underflows below &#x27;A&#x27;: Z-3=&#x27;W&#x27;, A-3 wraps to &#x27;X&#x27;, B-3 wraps to &#x27;Y&#x27;, C-3 wraps to &#x27;Z&#x27;.
+- That gives input WXYZ, which the forward shift turns into ZABC, matching the target and returning eax=1.</description><guid isPermaLink='false'>2026-09-20</guid><pubDate>Sun, 20 Sep 2026 02:31:20 +0000</pubDate></item></channel></rss>
