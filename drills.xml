@@ -1,34 +1,9 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Mini Crackme: Caesar-Shift Password Check (Windows x86-64)</title><link></link><description>Target: Windows x86-64. check_password takes a 4-byte ASCII string in rcx (Windows x64: first arg in rcx). Find an input that makes it return 1.
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Decode One Instruction: REX Prefix + SETNE (Windows x86-64)</title><link></link><description>Decode this 4-byte sequence into a full x86-64 instruction (name it, and state every operand):
 
-check_password PROC
-    lea  r9, target                ; r9 -&gt; expected cipher bytes
-    xor  r8d, r8d                  ; i = 0
-.top:
-    cmp  r8d, 4
-    jge  .pass
-    movzx edx, byte ptr [rcx+r8]   ; edx = input[i]
-    add  edx, 3                    ; Caesar shift +3
-    cmp  edx, &#x27;Z&#x27;
-    jle  .store
-    sub  edx, 26                   ; wrap past &#x27;Z&#x27; back toward &#x27;A&#x27;
-.store:
-    cmp  dl, byte ptr [r9+r8]
-    jne  .fail
-    inc  r8d
-    jmp  .top
-.pass:
-    mov  eax, 1
-    ret
-.fail:
-    xor  eax, eax
-    ret
-target byte &quot;ZABC&quot;
-check_password ENDP
+40 0F 95 C6
 
-What 4-character string passes the check?
+Answer: setne sil
 
-Answer: WXYZ
-
-- Each byte is Caesar-shifted +3; cmp edx,&#x27;Z&#x27; / jle decides whether the shifted value stays in range or wraps by subtracting 26 (mod-26 alphabet wraparound), then it&#x27;s compared against target = &quot;ZABC&quot; via indexed pointer [r9+r8].
-- To invert, subtract 3 from each target byte and add 26 back whenever the result underflows below &#x27;A&#x27;: Z-3=&#x27;W&#x27;, A-3 wraps to &#x27;X&#x27;, B-3 wraps to &#x27;Y&#x27;, C-3 wraps to &#x27;Z&#x27;.
-- That gives input WXYZ, which the forward shift turns into ZABC, matching the target and returning eax=1.</description><guid isPermaLink='false'>2026-09-20</guid><pubDate>Sun, 20 Sep 2026 02:31:20 +0000</pubDate></item></channel></rss>
+- 40 is a REX prefix with no W/R/X/B bits set. Alone it changes nothing about register width or extension, but for byte operands it does one thing: it makes the low-byte registers sil/dil/bpl/spl available instead of the legacy high-byte registers ah/ch/dh/bh.
+- 0F 95 is the opcode for SETNE r/m8 (set byte to 1 if ZF=0, else 0). The ModRM byte C6 = 11 000 110: mod=11 selects register-direct addressing, reg=000 is just an opcode-extension bit pattern (ignored for SETcc), and rm=110 picks register index 6.
+- Without the REX prefix, register index 6 in a byte operand means dh. Because a REX prefix is present, it instead means sil (low byte of rsi) -- so the full instruction is &quot;set sil to 1 if the last comparison&#x27;s zero flag is clear.&quot;</description><guid isPermaLink='false'>2026-09-21</guid><pubDate>Mon, 21 Sep 2026 02:31:15 +0000</pubDate></item></channel></rss>
