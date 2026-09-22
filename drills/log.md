@@ -37,3 +37,4 @@
 2026-09-19 | reverse-function | linked-list node-counting traversal via pointer dereference (mov rcx,[rcx]), null-check test/je loop guard, pointer-chasing struct field access
 2026-09-20 | crackme | Caesar-shift cipher check via add/sub with mod-26 alphabet wraparound, backward-solving by inverting the shift and undoing the wrap
 2026-09-21 | decode-instruction | REX prefix with no bits set enabling sil/dil/bpl/spl low-byte registers, SETNE opcode 0F 95, ModRM register-direct with ignored reg field
+2026-09-22 | reverse-function | stack-frame prologue/epilogue (push/mov/pop rbp) with no locals, movsxd sign-extending scaled-index array read, sum-of-squares accumulator loop
