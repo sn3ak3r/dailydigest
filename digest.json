@@ -1,52 +1,52 @@
 [
   {
-    "title": "Researchers escape OpenAI Codex sandbox to run commands on host",
-    "link": "https://www.bleepingcomputer.com/news/security/researchers-escape-openai-codex-sandbox-to-run-commands-on-host/",
-    "blurb": "Problem: OpenAI's Codex coding agent sandboxes untrusted code, but researchers found two ways out.\nApproach: \"Heapjack\" abused node_repl, which runs trusted and untrusted JS in one process sharing one memory heap \u2014 attackers used V8's getHeapSnapshot() to read a validation token out of memory and reuse it to message the unsandboxed parent. \"Overpatch\" abused the CLI's apply_patch tool: naming /tmp in a patch widened write permissions via symlinks.\nResult: Both worked even in Codex's most restrictive modes, achieving host code execution. OpenAI patched both within 8 days.\nWhy it matters: The enforcement logic lived inside the thing it was supposed to police \u2014 the same pattern turned up in Cursor and Gemini CLI.\nGlossary: Sandbox - a restricted execution environment for untrusted code. Heap - a program's shared pool of dynamic memory. Symlink - a file that points to another path. Validation token - a secret string proving a request is authorized."
+    "title": "Fake LastPass Authenticator Installer Abuses Microsoft-Signed Driver to Kill Antivirus and EDR",
+    "link": "https://thehackernews.com/2026/09/fake-lastpass-authenticator-installer.html",
+    "blurb": "A trojanized installer drops a legitimately signed driver to disable AV/EDR at the kernel level (BYOVD), then deploys its payload unguarded."
   },
   {
-    "title": "SolarWinds Patches ARM Hard-Coded Key Flaw Enabling Unauthenticated RCE",
-    "link": "https://thehackernews.com/2026/09/solarwinds-patches-arm-hard-coded-key.html",
-    "blurb": "A hard-coded cryptographic key in SolarWinds ARM let anyone forge requests for unauthenticated remote code execution; patch now, unpatched instances are trivially exploitable."
+    "title": "Et Tu, MacBook? Unprivileged Keystroke Inference and Context Profiling via the Built-in IMU Side Channel",
+    "link": "https://arxiv.org/abs/2609.21569",
+    "blurb": "Researchers show a MacBook's built-in accelerometer/gyroscope, readable without special privileges, leaks enough vibration data to infer keystrokes and user context."
   },
   {
-    "title": "Malicious npm packages evade install-script defenses at runtime",
-    "link": "https://www.bleepingcomputer.com/news/security/malicious-npm-packages-evade-install-script-defenses-at-runtime/",
-    "blurb": "Packages now trigger their payload after install completes instead of during it, dodging scanners that only watch install-time scripts."
+    "title": "CISA alerts of active exploitation of three Linux kernel flaws",
+    "link": "https://www.bleepingcomputer.com/news/security/cisa-alerts-of-active-exploitation-of-three-linux-kernel-flaws/",
+    "blurb": "Three Linux kernel vulnerabilities are under active attack; CISA's KEV listing sets a federal patch deadline and signals real-world exploitation, not just theoretical risk."
   },
   {
-    "title": "Elden Ring Nightreign is dead, but modders are dabbing on its corpse, with one porting an entire Dark Souls 2 DLC zone as a playable map",
-    "link": "https://www.pcgamer.com/games/action/elden-ring-nightreign-is-dead-but-modders-are-dabbing-on-its-corpse-with-one-porting-an-entire-dark-souls-2-dlc-zone-as-a-playable-map/",
-    "blurb": "With official support over, modders are extending Nightreign's life by porting whole DLC content from other FromSoftware games into it."
+    "title": "Touch grass? Not when AMD has whittled down ray tracing memory usage by 98% for these hardware-sapping bushes and trees",
+    "link": "https://www.pcgamer.com/hardware/graphics-cards/touch-grass-not-when-amd-has-whittled-down-ray-tracing-memory-usage-by-98-percent-for-these-hardware-sapping-bushes-and-trees/",
+    "blurb": "AMD's new foliage BVH compression cuts ray-traced vegetation's VRAM footprint by 98%, tackling one of ray tracing's worst memory hogs."
   },
   {
-    "title": "Hideo Kojima says he was 'shocked' after Sony cut ties with Physint over a Zoom call",
-    "link": "https://www.pcgamer.com/gaming-industry/hideo-kojima-says-he-was-shocked-after-sony-cut-ties-with-physint-over-a-zoom-call-nothing-couldve-prepared-me-for-their-decision-to-step-away-from-the-project/",
-    "blurb": "Kojima says Sony ended the Physint partnership abruptly over video call, the latest sign of Sony pulling back from original-IP bets."
+    "title": "Weeks before GTA 6, Rockstar Games imposes new guidelines that restrict mods for missions, maps, updated storylines, and third-party IP",
+    "link": "https://www.eurogamer.net/gta-6-rockstar-games-mod-guidelines-restrictions",
+    "blurb": "Rockstar's new modding policy bans mission/map mods, map combinations, and unauthorized ports right before GTA 6's launch window, tightening control over its ecosystem."
   },
   {
-    "title": "Cooling liquids reveal self-limiting particle clusters behind glass transition",
-    "link": "https://phys.org/news/2026-09-cooling-liquids-reveal-limiting-particle.html",
-    "blurb": "Simulations show particle clusters in supercooled liquids grow only to a self-limiting size before collapsing, helping explain why liquids resist crystallizing into glass."
+    "title": "How Virus-like 'Jumping Genes' Became Our Partners in Evolution",
+    "link": "https://www.quantamagazine.org/how-virus-like-jumping-genes-became-our-partners-in-evolution-20260921/",
+    "blurb": "Problem: Transposons (\"jumping genes\") make up nearly half the human genome, long dismissed as parasitic junk DNA.\nApproach: Researchers traced transposon insertions across species, from McClintock's corn work to peppered-moth genomes, mapping when these elements reshaped genomes.\nResult: One transposon in a peppered moth gene drove its 1819 shift to dark wings; transposons also built animal eyes, immune systems, and mammalian placentas, jumping between species nearly 1,000 times.\nWhy it matters: Transposons look less like invaders and more like coevolving partners hosts actively regulate, driving both rapid adaptation and genome regulation itself.\nGlossary: Transposon - a DNA sequence that can move within a genome. Epigenetic control - regulating gene activity without changing DNA. Horizontal transfer - genes moving between species."
   },
   {
-    "title": "T. rex teeth indicate it ran as warm as an elephant",
-    "link": "https://arstechnica.com/science/2026/09/t-rex-teeth-indicate-it-ran-as-warm-as-an-elephant/",
-    "blurb": "Oxygen-isotope analysis of T. rex tooth enamel points to body temperatures and metabolic rates comparable to a modern elephant."
+    "title": "Circular mRNA helps cell factories make up to six times as much protein",
+    "link": "https://phys.org/news/2026-09-circular-mrna-cell-factories-protein.html",
+    "blurb": "Problem: Bacterial mRNA lacks the caps and tails protecting it elsewhere, so it degrades in minutes, capping protein output.\nApproach: Seoul National University built CRESEnT: self-splicing intron fragments arranged in reverse order so an mRNA's own ends join into a closed ring, no external enzymes needed.\nResult: Circularized mRNA boosted protein output 5.95x and mRNA levels 3.95x versus linear controls, with 1.5-2.7x gains on compounds like lycopene, across three bacterial species.\nWhy it matters: Circular RNA resists degradation, having no open ends for RNases to grab — a drop-in yield boost for existing microbial drug and biofuel lines.\nGlossary: mRNA - carries a gene's instructions to a cell's protein-making machinery. Self-splicing intron - an RNA segment that cuts and rejoins itself. RNase - an enzyme that degrades RNA."
   },
   {
-    "title": "Resident Evil 4 (GameCube) \u2013 complete byte-identical decompilation to C/C++",
-    "link": "https://github.com/adonis-singh/re4",
-    "blurb": "A community project has finished a full, byte-identical decompilation of the GameCube original, opening the source to modding, ports, and preservation."
+    "title": "The RP2350 Does 1080p",
+    "link": "https://hackaday.com/2026/09/21/the-rp2350-does-1080p/",
+    "blurb": "A build pushes RP2350 video output to a full 1080p signal, documenting the timing tricks needed to hit that resolution on a microcontroller."
   },
   {
-    "title": "Reviving TEMPEST Attacks with an Injected Signal",
-    "link": "https://hackaday.com/2026/09/20/reviving-tempest-attacks-with-an-injected-signal/",
-    "blurb": "Problem: Classic TEMPEST eavesdropping reads a device's own stray radio emissions, but modern low-power electronics barely emit any.\nApproach: The InjectEave technique instead transmits an RF signal tuned to a target's internal antennas; nonlinear parts inside (amplifiers, ADCs, switching MOSFETs) mix that signal with the device's internal data, radiating sidebands an attacker can demodulate with an SDR.\nResult: With a USRP B210 SDR and spectrum analyzer, the team recovered headphone and VoIP audio and smart-device on/off states, up to 30m through walls with a power amp \u2014 enough audio, they note, to clone a voice.\nWhy it matters: It shows electromagnetic side-channel eavesdropping still works on \"quiet\" hardware, via an active attack that's harder to design against than passive TEMPEST.\nGlossary: TEMPEST - eavesdropping via a device's unintended electromagnetic emissions. SDR - software-defined radio. Sideband - a frequency band created when two signals mix. Nonlinear component - a circuit part whose output isn't proportional to its input."
+    "title": "DIY Router on x86 E-Waste: OpenWrt and OPNsense",
+    "link": "https://hackaday.com/2026/09/21/diy-router-on-x86-e-waste-openwrt-and-opnsense/",
+    "blurb": "A discarded x86 mini PC gets a second life as a router, with a documented comparison of OpenWrt and OPNsense on the same hardware."
   },
   {
-    "title": "No GPU, No Problem: Flagship LLMs on a GPU-less Teenaged Server",
-    "link": "https://hackaday.com/2026/09/20/no-gpu-no-problem-flagship-llms-on-a-gpu-less-teenaged-server/",
-    "blurb": "A hobbyist ran current flagship-scale LLMs entirely on CPU on an old rack server, documenting the RAM and throughput tradeoffs that make it viable."
+    "title": "Making a game for the GBA and PC from the same codebase",
+    "link": "https://mattgreer.dev/blog/making-a-game-for-gba-and-pc/",
+    "blurb": "A developer documents the engine constraints needed to target the GBA's tiny hardware and a modern PC from one shared codebase."
   }
 ]
