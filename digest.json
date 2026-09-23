@@ -1,52 +1,52 @@
 [
   {
-    "title": "Fake LastPass Authenticator Installer Abuses Microsoft-Signed Driver to Kill Antivirus and EDR",
-    "link": "https://thehackernews.com/2026/09/fake-lastpass-authenticator-installer.html",
-    "blurb": "A trojanized installer drops a legitimately signed driver to disable AV/EDR at the kernel level (BYOVD), then deploys its payload unguarded."
+    "title": "New Linux Kernel Flaw Gives ARM64 KVM Guests Read-Write Access to Host Memory",
+    "link": "https://thehackernews.com/2026/09/new-linux-kernel-flaw-gives-arm64-kvm.html",
+    "blurb": "A hypervisor bug lets an ARM64 guest VM read and write host memory, breaking the guest/host isolation cloud platforms depend on."
   },
   {
-    "title": "Et Tu, MacBook? Unprivileged Keystroke Inference and Context Profiling via the Built-in IMU Side Channel",
-    "link": "https://arxiv.org/abs/2609.21569",
-    "blurb": "Researchers show a MacBook's built-in accelerometer/gyroscope, readable without special privileges, leaks enough vibration data to infer keystrokes and user context."
+    "title": "SharePoint Flaw Initially Listed as Spoofing by Microsoft Enables Authenticated RCE",
+    "link": "https://thehackernews.com/2026/09/sharepoint-flaw-initially-listed-as.html",
+    "blurb": "A bug Microsoft first rated as low-severity spoofing turns out to allow authenticated remote code execution on SharePoint servers."
   },
   {
-    "title": "CISA alerts of active exploitation of three Linux kernel flaws",
-    "link": "https://www.bleepingcomputer.com/news/security/cisa-alerts-of-active-exploitation-of-three-linux-kernel-flaws/",
-    "blurb": "Three Linux kernel vulnerabilities are under active attack; CISA's KEV listing sets a federal patch deadline and signals real-world exploitation, not just theoretical risk."
+    "title": "Xbox confirms 268 more layoffs, further studio closures, and Obsidian's shift to Bethesda as major restructuring continues",
+    "link": "https://www.eurogamer.net/xbox-layoffs-activision-rare-halo-ninja-theory",
+    "blurb": "Xbox folds Halo into Activision, merges Obsidian into Bethesda, and combines Forza/Fable studios in a second major restructuring wave."
   },
   {
-    "title": "Touch grass? Not when AMD has whittled down ray tracing memory usage by 98% for these hardware-sapping bushes and trees",
-    "link": "https://www.pcgamer.com/hardware/graphics-cards/touch-grass-not-when-amd-has-whittled-down-ray-tracing-memory-usage-by-98-percent-for-these-hardware-sapping-bushes-and-trees/",
-    "blurb": "AMD's new foliage BVH compression cuts ray-traced vegetation's VRAM footprint by 98%, tackling one of ray tracing's worst memory hogs."
+    "title": "Gigabyte admits an oopsie with Gigabyte Control Center software leaving kernel exposed to attackers",
+    "link": "https://www.pcgamer.com/hardware/motherboards/gigabyte-admits-an-oopsie-with-gigabyte-control-center-software-leaving-kernel-exposed-to-attackers/",
+    "blurb": "Gigabyte's motherboard-control software shipped a kernel-level driver flaw that lets attackers escalate to kernel access."
   },
   {
-    "title": "Weeks before GTA 6, Rockstar Games imposes new guidelines that restrict mods for missions, maps, updated storylines, and third-party IP",
-    "link": "https://www.eurogamer.net/gta-6-rockstar-games-mod-guidelines-restrictions",
-    "blurb": "Rockstar's new modding policy bans mission/map mods, map combinations, and unauthorized ports right before GTA 6's launch window, tightening control over its ecosystem."
+    "title": "Light beam 'swims' upstream through a quantum fluid by violating Newton's third law",
+    "link": "https://phys.org/news/2026-09-upstream-quantum-fluid-violating-newton.html",
+    "blurb": "A light beam propels itself backward through a quantum fluid, an effect that looks like it violates Newton's third law."
   },
   {
-    "title": "How Virus-like 'Jumping Genes' Became Our Partners in Evolution",
-    "link": "https://www.quantamagazine.org/how-virus-like-jumping-genes-became-our-partners-in-evolution-20260921/",
-    "blurb": "Problem: Transposons (\"jumping genes\") make up nearly half the human genome, long dismissed as parasitic junk DNA.\nApproach: Researchers traced transposon insertions across species, from McClintock's corn work to peppered-moth genomes, mapping when these elements reshaped genomes.\nResult: One transposon in a peppered moth gene drove its 1819 shift to dark wings; transposons also built animal eyes, immune systems, and mammalian placentas, jumping between species nearly 1,000 times.\nWhy it matters: Transposons look less like invaders and more like coevolving partners hosts actively regulate, driving both rapid adaptation and genome regulation itself.\nGlossary: Transposon - a DNA sequence that can move within a genome. Epigenetic control - regulating gene activity without changing DNA. Horizontal transfer - genes moving between species."
+    "title": "Dumpster-dived Window A/C becomes Ground-Source Heat Pump",
+    "link": "https://hackaday.com/2026/09/22/dumpster-dived-window-a-c-becomes-ground-source-heat-pump/",
+    "blurb": "A hobbyist rerouted a discarded window A/C's refrigerant loop through buried PEX tubing, roughly tripling efficiency over air-source operation."
   },
   {
-    "title": "Circular mRNA helps cell factories make up to six times as much protein",
-    "link": "https://phys.org/news/2026-09-circular-mrna-cell-factories-protein.html",
-    "blurb": "Problem: Bacterial mRNA lacks the caps and tails protecting it elsewhere, so it degrades in minutes, capping protein output.\nApproach: Seoul National University built CRESEnT: self-splicing intron fragments arranged in reverse order so an mRNA's own ends join into a closed ring, no external enzymes needed.\nResult: Circularized mRNA boosted protein output 5.95x and mRNA levels 3.95x versus linear controls, with 1.5-2.7x gains on compounds like lycopene, across three bacterial species.\nWhy it matters: Circular RNA resists degradation, having no open ends for RNases to grab — a drop-in yield boost for existing microbial drug and biofuel lines.\nGlossary: mRNA - carries a gene's instructions to a cell's protein-making machinery. Self-splicing intron - an RNA segment that cuts and rejoins itself. RNase - an enzyme that degrades RNA."
+    "title": "rift - a tiling window manager for macos",
+    "link": "https://github.com/acsandmann/rift/",
+    "blurb": "A new open-source tiling window manager brings i3/sway-style keyboard-driven layouts to macOS."
   },
   {
-    "title": "The RP2350 Does 1080p",
-    "link": "https://hackaday.com/2026/09/21/the-rp2350-does-1080p/",
-    "blurb": "A build pushes RP2350 video output to a full 1080p signal, documenting the timing tricks needed to hit that resolution on a microcontroller."
+    "title": "Fearless SIMD v1.0 is here",
+    "link": "https://linebender.org/blog/fearless-simd-1-0/",
+    "blurb": "Linebender shipped a 1.0 Rust crate for writing portable SIMD code without unsafe, targeting cross-platform vector performance."
   },
   {
-    "title": "DIY Router on x86 E-Waste: OpenWrt and OPNsense",
-    "link": "https://hackaday.com/2026/09/21/diy-router-on-x86-e-waste-openwrt-and-opnsense/",
-    "blurb": "A discarded x86 mini PC gets a second life as a router, with a documented comparison of OpenWrt and OPNsense on the same hardware."
+    "title": "The Closed Quorum: Inside the First Reported Autonomous AI C2 Implant",
+    "link": "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/",
+    "blurb": "Problem: Talos found CLOSEDQUORUM, the first Windows implant running an intrusion with no human deciding what happens next.\nApproach: It asks four AI APIs (DeepSeek, Qwen, Mistral, Gemini) what to do, forces answers into a fixed menu, and acts on the plurality-vote winner; stolen credentials leave via encrypted Discord webhooks.\nResult: The sample had placeholder API keys and never ran live, but static analysis confirmed the full loop, plus a \"credentials-as-a-service\" kit for customizing copies.\nWhy it matters: Attackers can hand tactical decisions to off-the-shelf LLMs; watch for multi-provider AI calls alongside process injection and LSASS access.\nGlossary: LSASS - holds Windows login credentials. Process injection - running code in another program's memory. C2 - how malware is steered remotely."
   },
   {
-    "title": "Making a game for the GBA and PC from the same codebase",
-    "link": "https://mattgreer.dev/blog/making-a-game-for-gba-and-pc/",
-    "blurb": "A developer documents the engine constraints needed to target the GBA's tiny hardware and a modern PC from one shared codebase."
+    "title": "RHIC data reveal intriguing dip in momentum fluctuations in high-density nuclear matter",
+    "link": "https://phys.org/news/2026-09-rhic-reveal-intriguing-dip-momentum.html",
+    "blurb": "Problem: Physicists are hunting the nuclear \"critical point,\" where dense matter's phase diagram changes character, like water's own critical point.\nApproach: STAR, at Brookhaven's RHIC, collided gold ions across 3-200 GeV, measuring collision-by-collision spread in particle momentum as a stand-in for temperature fluctuations.\nResult: Fluctuations fell as energy rose, hit a minimum near 5.2-7.7 GeV, then rose again - a 5-sigma dip breaking the smooth trend expected off a critical point.\nWhy it matters: Suppressed fluctuations there match critical-point predictions, but non-critical explanations aren't ruled out - a hint, not a discovery.\nGlossary: Quark-gluon plasma - freed quarks/gluons from the early universe. Critical point - where transitions change character. Sigma - how unlikely a result is by chance."
   }
 ]
