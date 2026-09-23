@@ -1,33 +1,30 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse to C: sum_sq (2026-09-22)</title><link></link><description>Target: Windows x86-64 (MSVC calling convention: RCX = arg1, EDX = arg2). Reverse this function to equivalent C.
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Mini Crackme: length + sum check (2026-09-23)</title><link></link><description>Target: Windows x86-64 (MSVC calling convention: RCX = pointer to a null-terminated ASCII string). Find an input string that makes check return 1.
 
-sum_sq:
-        push    rbp
-        mov     rbp, rsp
-        xor     eax, eax          ; total = 0
-        xor     r8d, r8d          ; i = 0
+check:
+        xor     r8d, r8d        ; r8d = length counter
+        xor     r9d, r9d        ; r9d = sum accumulator
 .loop:
-        cmp     r8d, edx
-        jge     .done
-        movsxd  r9, dword ptr [rcx + r8*4]
-        imul    r9, r9
-        add     rax, r9
+        movzx   eax, byte ptr [rcx + r8]
+        test    eax, eax
+        jz      .end
+        add     r9d, eax
         inc     r8d
         jmp     .loop
-.done:
-        pop     rbp
+.end:
+        cmp     r8d, 5
+        jne     .fail
+        cmp     r9d, 500
+        jne     .fail
+        mov     eax, 1
+        ret
+.fail:
+        xor     eax, eax
         ret
 
-What does sum_sq compute, and what are its parameter types?
+What string(s) satisfy check?
 
 --- Answer ---
 
-long long sum_sq(int *arr, int count) {
-    long long total = 0;
-    for (int i = 0; i &lt; count; i++) {
-        long long v = arr[i];
-        total += v * v;
-    }
-    return total;
-}
+&quot;ddddd&quot; (five copies of the character &#x27;d&#x27;) passes.
 
-Explanation: push rbp / mov rbp, rsp / pop rbp is a standard stack-frame prologue and epilogue; this function has no locals or callees, so RBP is only saved and restored, never dereferenced. movsxd r9, [rcx + r8*4] reads a 32-bit int at scaled index i and sign-extends it into a 64-bit register before squaring, matching arr[i] widened to long long. cmp r8d, edx / jge .done is the loop guard (i &lt; count), and RAX (return register) accumulates the running sum of squares.</description><guid isPermaLink='false'>2026-09-22</guid><pubDate>Tue, 22 Sep 2026 02:31:08 +0000</pubDate></item></channel></rss>
+Explanation: The loop walks the string until the null terminator, counting bytes into r8d and summing their ASCII values into r9d, so check requires exactly two things: length == 5 and byte-sum == 500. &#x27;d&#x27; is ASCII 0x64 = 100 decimal, so five &#x27;d&#x27; characters give length 5 and sum 5*100=500, satisfying both comparisons. Any other 5-character string whose bytes sum to 500 also works, since the check only constrains the total, not individual characters.</description><guid isPermaLink='false'>2026-09-23</guid><pubDate>Wed, 23 Sep 2026 02:47:36 +0000</pubDate></item></channel></rss>
