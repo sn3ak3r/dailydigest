@@ -39,3 +39,4 @@
 2026-09-21 | decode-instruction | REX prefix with no bits set enabling sil/dil/bpl/spl low-byte registers, SETNE opcode 0F 95, ModRM register-direct with ignored reg field
 2026-09-22 | reverse-function | stack-frame prologue/epilogue (push/mov/pop rbp) with no locals, movsxd sign-extending scaled-index array read, sum-of-squares accumulator loop
 2026-09-23 | crackme | compound length-and-sum check via movzx/add accumulator loop, dual cmp/jne branches, non-unique backward-solving (any byte-sum-500 5-char string)
+2026-09-24 | decode-instruction | TEST r/m64,r64 opcode 0x85, REX.W with no extension bits, register-direct ModRM (mod=11) with reg/rm operand roles

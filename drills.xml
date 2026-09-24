@@ -1,30 +1,9 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Mini Crackme: length + sum check (2026-09-23)</title><link></link><description>Target: Windows x86-64 (MSVC calling convention: RCX = pointer to a null-terminated ASCII string). Find an input string that makes check return 1.
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Decode One Instruction: TEST r/m64, r64 (2026-09-24)</title><link></link><description>Decode this 3-byte sequence into a full x86-64 instruction (name it, and state every operand):
 
-check:
-        xor     r8d, r8d        ; r8d = length counter
-        xor     r9d, r9d        ; r9d = sum accumulator
-.loop:
-        movzx   eax, byte ptr [rcx + r8]
-        test    eax, eax
-        jz      .end
-        add     r9d, eax
-        inc     r8d
-        jmp     .loop
-.end:
-        cmp     r8d, 5
-        jne     .fail
-        cmp     r9d, 500
-        jne     .fail
-        mov     eax, 1
-        ret
-.fail:
-        xor     eax, eax
-        ret
-
-What string(s) satisfy check?
+48 85 D8
 
 --- Answer ---
 
-&quot;ddddd&quot; (five copies of the character &#x27;d&#x27;) passes.
+`test rax, rbx`
 
-Explanation: The loop walks the string until the null terminator, counting bytes into r8d and summing their ASCII values into r9d, so check requires exactly two things: length == 5 and byte-sum == 500. &#x27;d&#x27; is ASCII 0x64 = 100 decimal, so five &#x27;d&#x27; characters give length 5 and sum 5*100=500, satisfying both comparisons. Any other 5-character string whose bytes sum to 500 also works, since the check only constrains the total, not individual characters.</description><guid isPermaLink='false'>2026-09-23</guid><pubDate>Wed, 23 Sep 2026 02:47:36 +0000</pubDate></item></channel></rss>
+`48` is REX.W (W=1, no register-extension bits), setting 64-bit operand size. `85` is the opcode for TEST r/m64, r64: TEST computes a bitwise AND of its two operands purely to set flags (ZF, SF, PF), discarding the result. The ModRM byte D8 = 11 011 000: mod=11 selects register-direct addressing, reg=011 is rbx, rm=000 is rax, giving test rax, rbx. This idiom is almost always followed by jz/jnz to test whether the two registers are bitwise-disjoint, without needing a spare register for the result.</description><guid isPermaLink='false'>2026-09-24</guid><pubDate>Thu, 24 Sep 2026 02:47:42 +0000</pubDate></item></channel></rss>
