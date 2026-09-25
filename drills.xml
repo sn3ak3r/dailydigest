@@ -1,9 +1,26 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Decode One Instruction: TEST r/m64, r64 (2026-09-24)</title><link></link><description>Decode this 3-byte sequence into a full x86-64 instruction (name it, and state every operand):
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse a Function: bsf Bit-Scan (2026-09-25)</title><link></link><description>Reverse this short function to equivalent C (Windows x86-64, ecx arg, eax return):
 
-48 85 D8
+mystery:
+    bsf     eax, ecx
+    jnz     found
+    mov     eax, -1
+found:
+    ret
+
+What does mystery(unsigned int x) return?
 
 --- Answer ---
 
-`test rax, rbx`
+int mystery(unsigned int x) {
+    if (x == 0)
+        return -1;
+    for (int i = 0; i &lt; 32; i++) {
+        if (x &amp; (1u &lt;&lt; i))
+            return i;
+    }
+    return -1;
+}
 
-`48` is REX.W (W=1, no register-extension bits), setting 64-bit operand size. `85` is the opcode for TEST r/m64, r64: TEST computes a bitwise AND of its two operands purely to set flags (ZF, SF, PF), discarding the result. The ModRM byte D8 = 11 011 000: mod=11 selects register-direct addressing, reg=011 is rbx, rm=000 is rax, giving test rax, rbx. This idiom is almost always followed by jz/jnz to test whether the two registers are bitwise-disjoint, without needing a spare register for the result.</description><guid isPermaLink='false'>2026-09-24</guid><pubDate>Thu, 24 Sep 2026 02:47:42 +0000</pubDate></item></channel></rss>
+It returns the bit index of the lowest set bit in x (like ffs(x) - 1), or -1 if x is zero.
+
+Explanation: bsf eax, ecx (Bit Scan Forward) scans ecx from bit 0 upward and writes the index of the first 1 bit into eax; if the source is zero, the result is undefined and the zero flag (ZF) is set. jnz found skips the fallback only when ecx was nonzero (ZF clear), since bsf sets ZF when the input is all zeros. The mov eax, -1 path handles the zero-input edge case explicitly, matching the classic &quot;no bits set&quot; sentinel returned by functions like ffs.</description><guid isPermaLink='false'>2026-09-25</guid><pubDate>Fri, 25 Sep 2026 02:31:15 +0000</pubDate></item></channel></rss>
