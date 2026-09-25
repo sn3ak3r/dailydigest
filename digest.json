@@ -1,52 +1,52 @@
 [
   {
-    "title": "Chinese Hackers Exploit Chrome-Windows Zero-Day Chain to Deploy CLEANGULP Malware",
-    "link": "https://thehackernews.com/2026/09/chinese-hackers-exploit-chrome-windows.html",
-    "blurb": "A Chinese threat group chains a Chrome zero-day with a Windows zero-day to silently drop CLEANGULP malware with no user interaction beyond visiting a page."
+    "title": "EDR Evasion Stack Helps Process Injection Slip Past Defenses",
+    "link": "https://www.darkreading.com/endpoint-security/edr-evasion-stack-helps-process-injection-slip-past-defenses",
+    "blurb": "A modular evasion toolkit chains process-injection techniques to slip malicious code past modern EDR products undetected."
   },
   {
-    "title": "Exploit Released for Unpatched Ubuntu Linux Flaw Enabling Host-Root Container Escape",
-    "link": "https://thehackernews.com/2026/09/exploit-released-for-unpatched-ubuntu.html",
-    "blurb": "A public PoC exploits an unpatched Ubuntu kernel flaw to escape a container and get root on the host, with no official patch yet."
+    "title": "F5 Patches Critical BIG-IP APM Zero-Day Exploited for Unauthenticated RCE on OAuth Servers",
+    "link": "https://thehackernews.com/2026/09/f5-patches-critical-big-ip-apm-zero-day.html",
+    "blurb": "An unauthenticated RCE zero-day in BIG-IP APM's OAuth server component let attackers run code with no credentials before F5 shipped a fix."
   },
   {
-    "title": "MikroTrick Chain Let Attackers Take Over MikroTik Routers Without a Password or SSH Key",
-    "link": "https://thehackernews.com/2026/09/mikrotrick-chain-let-attackers-take.html",
-    "blurb": "A chained set of bugs gives attackers full takeover of MikroTik routers without ever needing a password or SSH key."
+    "title": "New Carbonato malware uses AI agents to hijack exposed Docker hosts",
+    "link": "https://www.bleepingcomputer.com/news/security/new-carbonato-malware-uses-ai-agents-to-hijack-exposed-docker-hosts/",
+    "blurb": "Carbonato uses AI agents to autonomously scan for and hijack exposed Docker hosts, automating exploitation that used to require a human operator."
   },
   {
-    "title": "Xbox lay off 268 people as Activision take over Halo and Rare, while Obsidian become part of Bethesda, plus Forza and Fable studios merge",
-    "link": "https://www.rockpapershotgun.com/xbox-lay-off-268-people-as-activision-take-over-halo-and-rare-while-obsidian-become-part-of-bethesda-plus-forza-and-fable-studios-merge",
-    "blurb": "Xbox cuts 268 more jobs in a second major restructuring wave, folding Halo into Activision and merging several studios."
+    "title": "Age of Empires studio World's Edge reportedly lose nearly half their staff and a new game project in mass Xbox layoffs",
+    "link": "https://www.rockpapershotgun.com/age-of-empires-studio-worlds-edge-reportedly-lose-nearly-half-their-staff-and-a-new-game-project-in-mass-xbox-layoffs",
+    "blurb": "Xbox's latest restructuring reportedly guts Age of Empires studio World's Edge by nearly half and kills an unannounced project."
   },
   {
-    "title": "Dark Souls 2 seamless co-op mod is out now in alpha form, paving the way for more boss battering with mates",
-    "link": "https://www.rockpapershotgun.com/dark-souls-2-seamless-co-op-mod-is-out-now-in-alpha-form-paving-the-way-for-more-boss-battering-with-mates",
-    "blurb": "A new alpha mod brings seamless co-op to Dark Souls 2, the latest FromSoftware title to get community multiplayer support."
+    "title": "After eighteen years of jaggedy bowling, a new mod bestows GTA 4 with DLSS and FSR support",
+    "link": "https://www.rockpapershotgun.com/after-eighteen-years-of-jaggedy-bowling-a-new-mod-bestows-gta-4-with-dlss-and-fsr-support",
+    "blurb": "A community mod finally brings DLSS and FSR upscaling to 18-year-old GTA 4, smoothing out its notoriously jagged rendering."
   },
   {
-    "title": "Central surface density of dark matter agrees with the prediction of a new theory of gravity",
-    "link": "https://phys.org/news/2026-09-central-surface-density-dark-theory.html",
-    "blurb": "Problem: Galaxies of wildly different brightness all show a puzzlingly similar \"central surface density\" of dark matter, a regularity plain dark-matter models don't explain.\nApproach: A researcher applied Erik Verlinde's \"emergent gravity,\" a dark-matter-free alternative, after fixing a math limitation in the 2016 original that broke when combining gravity from multiple masses.\nResult: The corrected calculation predicts about 170 solar masses per square parsec, landing right inside the 90-220 range measured across real galaxies.\nWhy it matters: It doesn't rule out dark matter, but shows a gravity-only theory can reproduce this puzzle, motivating harder tests of modified gravity in weak-gravity regimes.\nGlossary: Emergent gravity - gravity arising from a deeper thermodynamic process rather than being fundamental. Surface density - mass packed into a patch of sky. Solar mass - the Sun's mass. Parsec - about 3.26 light-years."
+    "title": "Higher-dimensional black holes hide an exact symmetry in their ringing, and string-inspired gravity breaks it",
+    "link": "https://phys.org/news/2026-09-higher-dimensional-black-holes-exact.html",
+    "blurb": "Problem: In gravity theories with more than four dimensions, do different kinds of black-hole vibrations ring at the same frequency, and does string theory change that? Approach: Two mathematicians numerically computed the ringing frequencies of non-rotating black holes in 5-26 dimensions to 300 digits of precision, using a Chebyshev spectral method instead of standard approximations that fail on complex barrier shapes. Result: In plain Einstein gravity, scalar-field vibrations and spacetime-twist vibrations ring at identical frequencies - a hidden symmetry. Adding a string-theory correction (a Gauss-Bonnet term) breaks that symmetry immediately. Why it matters: It reveals hidden structure in Einstein's equations and shows where standard approximations fail, constraining theoretical models even though it's undetectable in real astronomical black holes. Glossary: Quasinormal modes - a black hole's characteristic ringing frequencies. Gauss-Bonnet term - a string-theory curvature correction to Einstein's equations. Chebyshev spectral method - a high-precision numerical technique. Supersymmetric quantum mechanics - a framework where paired equations share identical spectra."
   },
   {
-    "title": "Bennu asteroid samples point to a surprising origin involving Jupiter",
-    "link": "https://phys.org/news/2026-09-bennu-asteroid-samples-involving-jupiter.html",
-    "blurb": "Isotope analysis of Bennu asteroid samples suggests its building blocks formed near Jupiter's orbit before migrating inward, reshaping models of solar system mixing."
+    "title": "AI-guided mutations help viruses infect bacteria up to 1 million times more effectively",
+    "link": "https://phys.org/news/2026-09-ai-mutations-viruses-infect-bacteria.html",
+    "blurb": "Problem: Antibiotic resistance is outpacing new drug development, reviving interest in phage therapy - using viruses to kill bacteria - but natural phages often infect weakly or too broadly. Approach: University of Wisconsin-Madison researchers trained an AI model on tens of thousands of lab-measured phage protein mutations to predict which changes improve infection efficiency and narrow host targeting. Result: The model found mutations boosting bacterial-infection efficiency by up to a million-fold, while also identifying mutations that narrow a phage's targets to spare beneficial bacteria. Why it matters: Computationally guided phage engineering could speed up alternatives to failing antibiotics, for infections like UTIs, while protecting the gut microbiome. Glossary: Bacteriophage - a virus that infects bacteria. Phage therapy - treating infections with engineered viruses instead of antibiotics. Host specificity - a phage's ability to target only certain bacteria. High-throughput screening - lab testing of many genetic variants at once."
   },
   {
-    "title": "A JavaScript OS for the ESP32",
-    "link": "https://hackaday.com/2026/09/23/a-javascript-os-for-the-esp32/",
-    "blurb": "Problem: Firmware for ESP32 microcontrollers is normally written in C/C++, a barrier for the much larger pool of developers who only know JavaScript.\nApproach: KryonOS packages a JavaScript interpreter, a simple GUI/graphics library, SD-card filesystem access, and full hardware APIs into a thin OS layer that boots on cheap ESP32 display boards, plus a built-in app store.\nResult: It already runs on widely available boards like the \"Cheap Yellow Display,\" letting users write working GUI apps in JavaScript instead of C.\nWhy it matters: It follows the path MicroPython carved for Python, lowering the barrier to hobbyist and prototype hardware projects.\nGlossary: ESP32 - a cheap Wi-Fi/Bluetooth microcontroller chip. Interpreter - software that runs code directly instead of compiling it. Firmware - software built into a hardware device. GUI - graphical user interface."
+    "title": "A 7-Segment Clock Built With No Digital Electronics",
+    "link": "https://hackaday.com/2026/09/24/a-7-segment-clock-built-with-no-digital-electronics/",
+    "blurb": "A 1970s-style clock displays digits using only a synchronous motor, gears, and sliding contacts - no digital logic at all."
   },
   {
-    "title": "Show HN: I built a post-mortem debugger for native Windows x64/x86 crashes",
-    "link": "https://www.forensicdbg.com",
-    "blurb": "A new open-source tool loads a memory dump from a crashed native Windows process and lets you debug it post-mortem like a live session."
+    "title": "Forging 1024-bit RSA signatures in nearly SNFS time",
+    "link": "https://eprint.iacr.org/2026/2131.pdf",
+    "blurb": "A new paper demonstrates forging 1024-bit RSA signatures in close to SNFS time, sharpening the case against short RSA moduli."
   },
   {
-    "title": "Making Tailscale Faster",
-    "link": "https://tailscale.com/blog/making-tailscale-faster",
-    "blurb": "Tailscale details the engineering behind cutting connection setup and throughput overhead in its mesh VPN, from relay tuning to kernel-level fast paths."
+    "title": "WaveDigger: Dig into wireless signals to discover their physical locations",
+    "link": "https://github.com/christianrowlands/wavedigger",
+    "blurb": "An open-source tool maps wireless signal fingerprints back to physical locations, useful for geolocating devices without GPS."
   }
 ]
