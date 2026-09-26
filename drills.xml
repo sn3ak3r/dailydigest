@@ -1,26 +1,36 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse a Function: bsf Bit-Scan (2026-09-25)</title><link></link><description>Reverse this short function to equivalent C (Windows x86-64, ecx arg, eax return):
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Mini Crackme: Find the Passing Input (2026-09-26)</title><link></link><description>Windows x86-64, rcx = pointer to a null-terminated C string. Find a string that makes check return 1:
 
-mystery:
-    bsf     eax, ecx
-    jnz     found
-    mov     eax, -1
-found:
+check:                        ; rcx = string pointer, returns eax (1=pass, 0=fail)
+    xor     eax, eax          ; eax = accumulator
+    xor     edx, edx          ; edx = index
+.loop:
+    movzx   r8d, byte [rcx+rdx]
+    test    r8d, r8d
+    jz      .done
+    movzx   r9d, byte [rcx+rdx+1]
+    test    r9d, r9d
+    jz      .done
+    sub     r8d, r9d
+    jns     .skip
+    neg     r8d
+.skip:
+    add     eax, r8d
+    inc     edx
+    jmp     .loop
+.done:
+    cmp     eax, 0
+    sete    al
     ret
-
-What does mystery(unsigned int x) return?
 
 --- Answer ---
 
-int mystery(unsigned int x) {
-    if (x == 0)
-        return -1;
-    for (int i = 0; i &lt; 32; i++) {
-        if (x &amp; (1u &lt;&lt; i))
-            return i;
-    }
-    return -1;
+Any string whose characters are all identical, e.g. &quot;aaaa&quot; (a single character, or even &quot;&quot;, also passes).
+
+int check(const char *s) {
+    int sum = 0;
+    for (int i = 0; s[i] &amp;&amp; s[i+1]; i++)
+        sum += abs((int)s[i] - (int)s[i+1]);
+    return sum == 0;
 }
 
-It returns the bit index of the lowest set bit in x (like ffs(x) - 1), or -1 if x is zero.
-
-Explanation: bsf eax, ecx (Bit Scan Forward) scans ecx from bit 0 upward and writes the index of the first 1 bit into eax; if the source is zero, the result is undefined and the zero flag (ZF) is set. jnz found skips the fallback only when ecx was nonzero (ZF clear), since bsf sets ZF when the input is all zeros. The mov eax, -1 path handles the zero-input edge case explicitly, matching the classic &quot;no bits set&quot; sentinel returned by functions like ffs.</description><guid isPermaLink='false'>2026-09-25</guid><pubDate>Fri, 25 Sep 2026 02:31:15 +0000</pubDate></item></channel></rss>
+Explanation: The loop walks adjacent character pairs s[i]/s[i+1], stopping via two null-checks (jz .done) as soon as either byte is the terminator -- a one-char lookahead, not a plain strlen scan. sub/jns/neg is a branching absolute-value idiom (contrast with the branchless sar/xor/sub trick): if the difference is negative, negate it. Since each term added to eax is non-negative, the total can equal zero only if every adjacent pair is equal -- i.e. every character in the string is the same.</description><guid isPermaLink='false'>2026-09-26</guid><pubDate>Sat, 26 Sep 2026 02:32:08 +0000</pubDate></item></channel></rss>

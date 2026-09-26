@@ -41,3 +41,4 @@
 2026-09-23 | crackme | compound length-and-sum check via movzx/add accumulator loop, dual cmp/jne branches, non-unique backward-solving (any byte-sum-500 5-char string)
 2026-09-24 | decode-instruction | TEST r/m64,r64 opcode 0x85, REX.W with no extension bits, register-direct ModRM (mod=11) with reg/rm operand roles
 2026-09-25 | reverse-function | bsf bit-scan-forward for lowest set bit index, ZF-set-on-zero-source edge case, ffs()-style -1 sentinel fallback
+2026-09-26 | crackme | adjacent-byte difference chain requiring uniform characters, branching abs via sub/jns/neg, dual null-terminator lookahead check
