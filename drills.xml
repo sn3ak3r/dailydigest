@@ -1,36 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Mini Crackme: Find the Passing Input (2026-09-26)</title><link></link><description>Windows x86-64, rcx = pointer to a null-terminated C string. Find a string that makes check return 1:
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Decode One Instruction: JE rel32</title><link></link><description>Challenge: At address 0x140001008 (Windows x86-64), the raw bytes are 0F 84 12 34 00 00. Decode this instruction: name it, state its operand encoding, and compute the branch target address it jumps to.
 
-check:                        ; rcx = string pointer, returns eax (1=pass, 0=fail)
-    xor     eax, eax          ; eax = accumulator
-    xor     edx, edx          ; edx = index
-.loop:
-    movzx   r8d, byte [rcx+rdx]
-    test    r8d, r8d
-    jz      .done
-    movzx   r9d, byte [rcx+rdx+1]
-    test    r9d, r9d
-    jz      .done
-    sub     r8d, r9d
-    jns     .skip
-    neg     r8d
-.skip:
-    add     eax, r8d
-    inc     edx
-    jmp     .loop
-.done:
-    cmp     eax, 0
-    sete    al
-    ret
-
---- Answer ---
-
-Any string whose characters are all identical, e.g. &quot;aaaa&quot; (a single character, or even &quot;&quot;, also passes).
-
-int check(const char *s) {
-    int sum = 0;
-    for (int i = 0; s[i] &amp;&amp; s[i+1]; i++)
-        sum += abs((int)s[i] - (int)s[i+1]);
-    return sum == 0;
-}
-
-Explanation: The loop walks adjacent character pairs s[i]/s[i+1], stopping via two null-checks (jz .done) as soon as either byte is the terminator -- a one-char lookahead, not a plain strlen scan. sub/jns/neg is a branching absolute-value idiom (contrast with the branchless sar/xor/sub trick): if the difference is negative, negate it. Since each term added to eax is non-negative, the total can equal zero only if every adjacent pair is equal -- i.e. every character in the string is the same.</description><guid isPermaLink='false'>2026-09-26</guid><pubDate>Sat, 26 Sep 2026 02:32:08 +0000</pubDate></item></channel></rss>
+Answer: je 0x140004420 (aka jz) - near conditional jump, rel32 form. 0F 84 is the two-byte opcode for JE/JZ rel32; the 0F escape distinguishes the near (32-bit displacement) conditional jumps from the short form (single-byte opcode 0x74, 8-bit displacement), needed when the target is too far for a signed 8-bit offset. The remaining bytes 12 34 00 00 are the little-endian signed displacement 0x00003412 = 13330. Displacements are relative to the next instruction: 0x140001008 + 6 (instruction length) = 0x14000100E, so target = 0x14000100E + 0x3412 = 0x140004420.</description><guid isPermaLink='false'>2026-09-27</guid><pubDate>Sun, 27 Sep 2026 02:31:07 +0000</pubDate></item></channel></rss>
