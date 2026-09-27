@@ -1,52 +1,52 @@
 [
   {
-    "title": "Compromised GitHub Actions Came Back Online and Resumed Executing Mini Shai-Hulud Malware",
-    "link": "https://thehackernews.com/2026/09/compromised-github-actions-came-back.html",
-    "blurb": "The npm supply-chain worm is still spreading via re-enabled compromised Actions; revoking a token isn't the same as remediating the account."
+    "title": "Lunex Stealer Abuses AMD Driver to Disable Security Monitoring and Steal Browser Credentials",
+    "link": "https://thehackernews.com/2026/09/lunex-stealer-abuses-amd-driver-to.html",
+    "blurb": "A commodity stealer now loads a legitimate signed AMD driver to kill EDR/AV before harvesting browser credentials, moving signed-driver abuse from APT toolkits into off-the-shelf malware."
   },
   {
-    "title": "PamStealer macOS Malware Adds Live C2 Payload Decryption and Multi-Layer Persistence",
-    "link": "https://thehackernews.com/2026/09/pamstealer-macos-malware-adds-live-c2.html",
-    "blurb": "The payload now decrypts only in memory and layers several persistence mechanisms, raising the detection bar on Apple endpoints."
+    "title": "Cloudflare Fixes Flaw That Let One Container Read Another Customer's Leftover Disk Data",
+    "link": "https://thehackernews.com/2026/09/cloudflare-fixes-flaw-that-let-one.html",
+    "blurb": "A container isolation bug let one tenant's workload read another's leftover disk blocks, a reminder that \"ephemeral\" storage in multi-tenant platforms needs its own guarantees."
   },
   {
-    "title": "GTA veteran's MindsEye studio Build a Rocket Boy has entered administration, following yet more reports of layoffs",
-    "link": "https://www.eurogamer.net/mindseye-build-a-rocket-boy-administration-insolvency",
-    "blurb": "Another high-profile AAA studio collapse after a rocky launch."
+    "title": "Colourful JRPG Armed Fantasia has been cancelled, four years after a successful Kickstarter campaign descended into delays and lawsuits",
+    "link": "https://www.rockpapershotgun.com/colourful-jrpg-armed-fantasia-has-been-cancelled-four-years-after-a-successful-kickstarter-campaign-descended-into-delays-and-lawsuits",
+    "blurb": "A cautionary tale for backers of studio-hopping crowdfunded projects."
   },
   {
-    "title": "It took roughly two years and \"one of the most expensive art assets ever\" to get Cyberpunk 2077: Phantom Liberty's Chimera tank fight right",
-    "link": "https://www.eurogamer.net/cyberpunk-2077-phantom-liberty-chimera-tank-two-years",
-    "blurb": "A rare look at the bespoke engineering effort hidden behind one boss fight."
+    "title": "As Marathon's player slump continues, Bungie announces plans to grow it \"beyond extraction\"",
+    "link": "https://www.eurogamer.net/marathon-bungie-future-roadmap-beyond-extraction",
+    "blurb": "Bungie is repositioning its struggling extraction shooter after a steep drop-off, the latest sign the extraction-shooter wave hasn't delivered lasting audiences."
   },
   {
-    "title": "Webb detects ammonia and unexpected chill on a distant giant planet",
-    "link": "https://phys.org/news/2026-09-webb-ammonia-unexpected-chill-distant.html",
-    "blurb": "New JWST atmospheric-chemistry data gives modelers a fresh test case for planet-formation theories."
+    "title": "With PRIMA, NASA will try to build a billion-dollar space telescope in record time",
+    "link": "https://arstechnica.com/space/2026/09/nasa-green-lights-billion-dollar-infrared-observatory-for-launch-in-early-2030s/",
+    "blurb": "A bet on compressed program management, not new instrument tech, to hit an early-2030s launch."
   },
   {
-    "title": "Reviving the PoE++ Feature on a Ubiquiti Switch",
-    "link": "https://hackaday.com/2026/09/25/reviving-the-poe-feature-on-a-ubiquiti-switch/",
-    "blurb": "A surge-damaged $800 switch diagnosed down to two shorted Trisil crowbar-protection devices and repaired at the component level."
+    "title": "Is solar's growth finally slowing in the US?",
+    "link": "https://arstechnica.com/science/2026/09/is-solars-growth-finally-slowing-in-the-us/",
+    "blurb": "A possible inflection point for the fastest-growing US power source of the last decade."
   },
   {
-    "title": "SourceHut account takeover via build logs (XSS in ansi2html.py)",
-    "link": "https://blog.arusekk.pl/posts/srht-account-takeover/",
-    "blurb": "A build-log rendering bug let crafted CI output hijack sr.ht accounts; log viewers are part of your attack surface."
+    "title": "Reverse-engineering the vintage Intel 8087's tangent algorithm: more than CORDIC",
+    "link": "http://www.righto.com/2026/09/8087-tangent-cordic.html",
+    "blurb": "Microcode analysis suggests the 8087 doesn't use the CORDIC algorithm long assumed for its tangent function."
   },
   {
-    "title": "weave: structural merging for different languages",
-    "link": "https://github.com/Ataraxy-Labs/weave",
-    "blurb": "A merge tool that understands source structure instead of diffing raw text, aimed at killing bogus merge conflicts."
+    "title": "mantle.nes breakdown blog part 1",
+    "link": "https://melon.zone/blog/blog/gamedev/tech/fun/2026-09-23-mantle-nes-breakdown-part-1/",
+    "blurb": "First part of a block-by-block technical breakdown of an NES ROM hack's internals."
   },
   {
-    "title": "Gravity Seems Holographic. What Does That Mean for Reality?",
-    "link": "https://www.quantamagazine.org/gravity-seems-holographic-what-does-that-mean-for-reality-20260925/",
-    "blurb": "**Problem:** Can everything happening inside a region of space be fully described by information living only on its surface, not its volume?\n**Approach:** Bekenstein and Hawking found black hole entropy scales with surface area, not volume, hinting the interior is redundant. Late-1990s AdS/CFT proofs then showed a gravity-filled interior space is mathematically identical to a gravity-free quantum theory on its boundary.\n**Result:** Gravity and quantum mechanics turn out to be two descriptions of the same system, one 3D-with-gravity, one 2D-without.\n**Why it matters:** If this holds generally, our 3D reality may be a projection of 2D quantum information -- a leading path to unifying gravity with quantum mechanics.\n**Jargon:** Holographic principle -- a volume's information fits on its boundary. AdS/CFT -- the gravity/boundary-theory equivalence. Anti-de Sitter space -- a curved space where infinite volume fits a finite boundary. Entanglement entropy -- quantum correlation between inside and outside."
+    "title": "ShinyHunters uses WAF bypass trick in Oracle PeopleSoft attacks",
+    "link": "https://www.bleepingcomputer.com/news/security/shinyhunters-uses-waf-bypass-trick-in-oracle-peoplesoft-attacks/",
+    "blurb": "**Problem:** Orgs mitigated a PeopleSoft RCE (CVE-2026-35273) by blocking `/PSEMHUB/` at the WAF instead of patching.\n**Approach:** Attackers request `/%50SEMHUB/` -- an encoded P. The WAF matches the undecoded path and passes it; WebLogic decodes it and routes to the real endpoint anyway. Serialized Java objects sent there trigger RCE, then web shells and a backdoor give persistence.\n**Result:** ShinyHunters compromised dozens of protected servers across education, healthcare, and government for extortion.\n**Why it matters:** A WAF rule matched on a literal path does not fix the app -- any decode mismatch reopens the hole.\n**Jargon:** WAF -- filters HTTP requests. URL-encoding -- chars as percent-codes. RCE -- remote code execution. Web shell -- backdoor script run via HTTP."
   },
   {
-    "title": "ShinyHunters hacked Clop leak site using Grav CMS path traversal flaw",
-    "link": "https://www.bleepingcomputer.com/news/security/shinyhunters-hacked-clop-leak-site-using-grav-cms-path-traversal-flaw/",
-    "blurb": "**Problem:** Grav CMS's 1.7 branch let unauthenticated users upload files outside the intended directory.\n**Approach:** Attackers put directory-traversal sequences like `../../../shhq` into the `__unique_form_id__` form parameter, so Grav wrote uploads outside the protected `tmp/forms` folder -- no login needed.\n**Result:** ShinyHunters breached Clop's own ransomware leak site, claimed to steal source, plugins, logs and private keys, then defaced it and demanded ransom; Clop relocated to a new Tor address.\n**Why it matters:** Grav 2.0 patched this in early 2026, but the still-common 1.7 branch didn't -- even ransomware crews run unpatched legacy software.\n**Jargon:** Path traversal -- using `../` sequences to escape an intended directory. CVE -- the public identifier for a disclosed flaw (CVE-2026-42608 here). Sanitization -- filtering input to strip dangerous sequences."
+    "title": "Abusing SQL to Play DOOM",
+    "link": "https://hackaday.com/2026/09/25/abusing-sql-to-play-doom/",
+    "blurb": "**Problem:** Can a real-time game engine run entirely as database queries, with no application code driving the logic?\n**Approach:** CedarDB engineers stored DOOM assets (textures, sprites, maps) as tables, then wrote ~1,300 lines of SQL across 89 chained common table expressions to render each frame, plus ~4,000 lines for game state. A thin Python shim reads the keyboard and shows the bitmap at 35 fps.\n**Result:** A playable port of 1993 DOOM whose renderer and game loop are pure SQL.\n**Why it matters:** It shows SQL set-based queries can do real-time, stateful computation, not just data retrieval.\n**Jargon:** WAD -- DOOM asset files. CTE -- a named result set inside a query. Bitmap -- a pixel array for one frame."
   }
 ]
