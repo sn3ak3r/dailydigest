@@ -43,3 +43,4 @@
 2026-09-25 | reverse-function | bsf bit-scan-forward for lowest set bit index, ZF-set-on-zero-source edge case, ffs()-style -1 sentinel fallback
 2026-09-26 | crackme | adjacent-byte difference chain requiring uniform characters, branching abs via sub/jns/neg, dual null-terminator lookahead check
 2026-09-27 | decode-instruction | JE/JZ near jump opcode 0F 84, rel32 displacement, contrast with short-form 0x74 8-bit displacement limit
+2026-09-28 | reverse-function | two-pointer strcmp loop with movzx byte comparison, early mismatch break, byte-difference return convention

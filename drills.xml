@@ -1,3 +1,38 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Decode One Instruction: JE rel32</title><link></link><description>Challenge: At address 0x140001008 (Windows x86-64), the raw bytes are 0F 84 12 34 00 00. Decode this instruction: name it, state its operand encoding, and compute the branch target address it jumps to.
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse a Function: hand-rolled strcmp</title><link></link><description>Challenge: Target Windows x86-64 (MSVC calling convention: first pointer arg in rcx, second in rdx, return in eax). Reverse this short function to equivalent C:
 
-Answer: je 0x140004420 (aka jz) - near conditional jump, rel32 form. 0F 84 is the two-byte opcode for JE/JZ rel32; the 0F escape distinguishes the near (32-bit displacement) conditional jumps from the short form (single-byte opcode 0x74, 8-bit displacement), needed when the target is too far for a signed 8-bit offset. The remaining bytes 12 34 00 00 are the little-endian signed displacement 0x00003412 = 13330. Displacements are relative to the next instruction: 0x140001008 + 6 (instruction length) = 0x14000100E, so target = 0x14000100E + 0x3412 = 0x140004420.</description><guid isPermaLink='false'>2026-09-27</guid><pubDate>Sun, 27 Sep 2026 02:31:07 +0000</pubDate></item></channel></rss>
+mystery:
+    xor     eax, eax
+loop_top:
+    movzx   r8d, byte ptr [rcx]
+    movzx   r9d, byte ptr [rdx]
+    cmp     r8d, r9d
+    jne     diff
+    test    r8d, r8d
+    je      done
+    inc     rcx
+    inc     rdx
+    jmp     loop_top
+diff:
+    mov     eax, r8d
+    sub     eax, r9d
+    ret
+done:
+    ret
+
+What does mystery(const char *a, const char *b) compute?
+
+Answer:
+
+int mystery(const char *a, const char *b) {
+    while (*a == *b) {
+        if (*a == 0)
+            return 0;
+        a++;
+        b++;
+    }
+    return (unsigned char)*a - (unsigned char)*b;
+}
+
+It&#x27;s a hand-rolled strcmp: byte-by-byte comparison that stops at the first mismatch or shared null terminator.
+
+Explanation: movzx r8d/r9d, byte ptr [...] zero-extends each byte read so the later sub produces the classic unsigned-byte-difference result strcmp returns. jne diff breaks out on the first mismatching byte; test r8d,r8d / je done catches equal bytes that are both the string&#x27;s null terminator, returning 0 (eax was zeroed up front). The inc rcx / inc rdx pair advances both pointers in lockstep, mirroring the C loop&#x27;s a++; b++;.</description><guid isPermaLink='false'>2026-09-28</guid><pubDate>Mon, 28 Sep 2026 02:31:26 +0000</pubDate></item></channel></rss>
