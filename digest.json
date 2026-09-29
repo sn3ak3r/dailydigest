@@ -1,52 +1,52 @@
 [
-  {
-    "title": "Citrix confirms two NetScaler RCE zero-days exploited in attacks",
-    "link": "https://www.bleepingcomputer.com/news/security/citrix-admins-warned-to-shut-down-netscalers-over-2-exploited-zero-days/",
-    "blurb": "Two unpatched NetScaler remote code execution flaws are already being exploited in the wild, and Citrix's own advice is to take affected gateways offline rather than wait for a patch."
-  },
-  {
-    "title": "GitHub Actions re-enabled with Mini Shai-Hulud payload still active",
-    "link": "https://www.bleepingcomputer.com/news/security/github-actions-re-enabled-with-mini-shai-hulud-payload-still-active/",
-    "blurb": "GitHub turned Actions back on for affected repos before the self-propagating supply-chain worm's payload was fully cleared, so infected pipelines can keep spreading it downstream."
-  },
-  {
-    "title": "Cloudflare fixes Containers cross-tenant flaw exposing customer data",
-    "link": "https://www.bleepingcomputer.com/news/security/cloudflare-fixes-containers-cross-tenant-flaw-exposing-customer-data/",
-    "blurb": "A container isolation bug let one customer's workload see another tenant's data on Cloudflare's platform, underscoring how thin the wall between tenants can be in multi-tenant compute."
-  },
-  {
-    "title": "Minecraft is getting its first new dimension in 14 years, and it's called The Sift",
-    "link": "https://www.eurogamer.net/minecraft-the-sift-new-dimension-2027",
-    "blurb": "The Sift is the first entirely new Minecraft dimension since The End, a rare structural addition to a 15-year-old world format rather than another biome pass."
-  },
-  {
-    "title": "After 12 years, Dark Souls 2 is finally playable in co-op without interruptions",
-    "link": "https://www.pcgamer.com/games/dark-souls/after-12-years-dark-souls-2-is-finally-playable-in-co-op-without-interruptions/",
-    "blurb": "A community mod finally delivers seamless co-op for a 2014 game whose original online design constantly booted party members apart."
-  },
-  {
-    "title": "Black hole jets reach far beyond galaxies' visible edges, potentially deciding their fate",
-    "link": "https://phys.org/news/2026-09-black-hole-jets-galaxies-visible.html",
-    "blurb": "New observations show supermassive black hole jets extending well past their host galaxy's visible boundary, suggesting they shape galactic evolution more than previously measured."
-  },
-  {
-    "title": "Molecular 'self-destruct' switch discovered: How stressed cells decide between survival and death",
-    "link": "https://phys.org/news/2026-09-molecular-destruct-stressed-cells-survival.html",
-    "blurb": "Researchers identified a molecular switch that governs whether a stressed cell repairs itself or triggers programmed death, a mechanism relevant to cancer and degenerative disease."
-  },
-  {
-    "title": "Defeating Satellite Spoofing with Galileo's Encryption",
-    "link": "https://hackaday.com/2026/09/27/defeating-satellite-spoofing-with-galileos-encryption/",
-    "blurb": "A breakdown of how Galileo's navigation message authentication cryptographically signs satellite signals so receivers can reject GPS-spoofing attacks."
-  },
-  {
-    "title": "Enormous Fluid Simulation on Flip Dots",
-    "link": "https://hackaday.com/2026/09/27/enormous-fluid-simulation-on-flip-dots-is-also-enormous-amount-of-work/",
-    "blurb": "Problem: Surplus flip-dot panels are painful to source and drive, but mitxela wanted a giant interactive \"water\" display for EMF 2026. Approach: Built custom driver boards for each dot, ran a real-time fluid simulation across the grid, and added a joystick plus an accelerometer so tilting or shaking the cabinet stirs the simulated liquid. Result: A wall of clacking dots that ripples and sloshes convincingly, looks almost 3D from an angle, and reacts physically when nudged. Why it matters: Shows how much custom electronics and software it takes to make old electromechanical hardware feel alive, not just nostalgic. Jargon: Flip-dot display - pixel flipped by a magnet; Fluid simulation - physics model of liquid motion; Accelerometer - motion/tilt sensor."
-  },
-  {
-    "title": "Reverse Engineering Apple's Mikey Chip",
-    "link": "https://hackaday.com/2026/09/27/reverse-engineering-apples-mikey-chip/",
-    "blurb": "Problem: iPod Classic headsets use an undocumented \"Mikey\" chip for mic power and buttons; nobody had cracked its protocol in 20 years. Approach: Hemant found one old archived blog post, traced the chip to an I2C bus, found each button is a resistive load causing a voltage drop, then built debug firmware into Rockbox to capture the handshake \"chirp.\" Result: Decoded button detection and the chirp handshake, then submitted the work to Rockbox for official support. Why it matters: Restores wired-headset controls on vintage iPods and shows patient signal analysis can crack silicon with no documentation. Jargon: I2C bus - two-wire chip protocol; Resistive load - button read as resistance; Rockbox - open-source iPod firmware; Chirp - the handshake signal."
-  }
+ {
+  "title": "Breaking the Black Box: Byte-Level Boundary Inference of Real-World Antivirus Systems",
+  "link": "https://arxiv.org/abs/2609.31012",
+  "blurb": "Paper on inferring how real AV engines decide at the byte level; RE-relevant (abstract not fetched — arXiv blocked)."
+ },
+ {
+  "title": "JADEPUFFER-Linked Attackers Used Compromised Service Principals to Delete Azure Resources",
+  "link": "https://thehackernews.com/2026/09/jadepuffer-linked-attackers-used.html",
+  "blurb": "Stolen Azure service principals were used to destroy cloud resources; audit SP permissions."
+ },
+ {
+  "title": "Warning: Two Unpatched Citrix NetScaler RCE Zero-Days Under Active Exploitation",
+  "link": "https://thehackernews.com/2026/09/warning-two-unpatched-citrix-netscaler.html",
+  "blurb": "Two unpatched NetScaler RCE zero-days are exploited now; CISA set a patch deadline."
+ },
+ {
+  "title": "Dark Souls 2 can now be played in its entirety with drop-in, drop-out co-op, thanks to its own seamless multiplayer mod",
+  "link": "https://www.eurogamer.net/dark-souls-2-seamless-co-op-mod",
+  "blurb": "A seamless co-op mod brings drop-in/out multiplayer to the whole of Dark Souls 2."
+ },
+ {
+  "title": "Double Fine's releasing its next game, Thank You Bus Driver, just months after splitting from Xbox",
+  "link": "https://www.eurogamer.net/double-fine-thank-you-bus-driver-xbox-release-date",
+  "blurb": "Double Fine's first release since leaving Xbox ships within weeks."
+ },
+ {
+  "title": "Mathematicians Harness Randomness To Crack a 55-Year-Old Conjecture",
+  "link": "https://www.quantamagazine.org/mathematicians-harness-randomness-to-crack-a-55-year-old-conjecture-20260928/",
+  "blurb": "Problem: Graham's 1971 conjecture asks whether any set of distinct nonzero residues mod a prime p can be ordered so all running (partial) sums differ. Approach: Start from a random ordering, set aside a few spare numbers, and patch any stretch summing to zero. Müyesser–Pokrovskiy handled near-full sets; Kravitz–Bedert handled tiny sets; a 2025 joint paper widened the large-set case. Result: Sauermann and Pham closed the medium-size gap in Feb 2026, completing the proof across four papers. Why it matters: it shows randomness plus small repairs can prove that ordered structures exist without constructing them. Glossary: partial sum (sum of the first k terms); residue mod p (clock-arithmetic number); probabilistic method (prove existence via random choice); combinatorics (math of arrangements)."
+ },
+ {
+  "title": "Scientists solve 1840s space weather mystery",
+  "link": "https://arstechnica.com/science/2026/09/scientists-solve-1840s-space-weather-mystery/",
+  "blurb": "Ars: an 1840s space-weather puzzle gets an explanation."
+ },
+ {
+  "title": "Using the SNES Super FX Chip to Run Super Mario 64",
+  "link": "https://hackaday.com/2026/09/28/using-the-snes-super-fx-chip-to-run-super-mario-64/",
+  "blurb": "Super Mario 64 running on the SNES Super FX coprocessor."
+ },
+ {
+  "title": "Hijacking the PS5's RTMP stream",
+  "link": "https://yashgarg.dev/posts/hijacking-ps5-rtmp-stream/",
+  "blurb": "Writeup of intercepting the PS5's RTMP streaming path."
+ },
+ {
+  "title": "Output-to-seed mappings for CPython's PRNG",
+  "link": "https://github.com/frazerpearce/TimeLord",
+  "blurb": "Tool mapping CPython PRNG outputs back to seeds."
+ }
 ]
