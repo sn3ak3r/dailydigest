@@ -1,16 +1,18 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Mini crackme: LEA multiply check</title><link></link><description>Windows x64: check(int x), x in ECX, returns 1 in AL if accepted.
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill: decode 48 83 EC 28 (sub rsp, 0x28)</title><link></link><description>Drill 2026-09-30 — Decode one instruction (Windows x64)
 
-check:
-  lea  eax, [rcx+rcx*2]
-  shl  eax, 2
-  sub  eax, 5
-  cmp  eax, 0x1F3
-  sete al
-  ret
+Decode these bytes, which open many Windows x64 functions:
 
-What x makes check return 1?
+48 83 EC 28
 
-Answer: x = 42.
-1. lea is plain arithmetic here: eax = 3x; shl 2 gives 12x; sub 5 gives 12x-5.
-2. 0x1F3 = 499, so 12x - 5 = 499.
-3. 12x = 504, so x = 42 (unique).</description><guid isPermaLink='false'>2026-09-29</guid><pubDate>Tue, 29 Sep 2026 02:31:02 +0000</pubDate></item></channel></rss>
+1. What is the instruction in Intel syntax?
+2. What does the ModRM byte EC encode?
+3. Why is the immediate 0x28 (not, say, 0x20)?
+
+---
+
+**Answer:** sub rsp, 0x28
+
+- 48 = REX.W (64-bit operand). 83 = group-1 opcode with sign-extended imm8; ModRM EC = 11 101 100: mod=11 (register direct), reg=5 selects SUB in the group, rm=4 is RSP. 28 is the imm8.
+- The Windows x64 ABI requires the caller to reserve 32 bytes of &quot;shadow space&quot; for the four register arguments (rcx, rdx, r8, r9) above the return address.
+- The extra 8 bytes realign the stack: on entry rsp is 8 mod 16 (return address pushed), so 0x20 + 8 = 0x28 restores 16-byte alignment before any call.
+</description><guid isPermaLink='false'>2026-09-30</guid><pubDate>Wed, 30 Sep 2026 02:30:59 +0000</pubDate></item></channel></rss>

@@ -1,1 +1,8 @@
-[{"title": "Mini crackme: LEA multiply check", "guid": "2026-09-29", "blurb": "Windows x64: check(int x), x in ECX, returns 1 in AL if accepted.\n\ncheck:\n  lea  eax, [rcx+rcx*2]\n  shl  eax, 2\n  sub  eax, 5\n  cmp  eax, 0x1F3\n  sete al\n  ret\n\nWhat x makes check return 1?\n\nAnswer: x = 42.\n1. lea is plain arithmetic here: eax = 3x; shl 2 gives 12x; sub 5 gives 12x-5.\n2. 0x1F3 = 499, so 12x - 5 = 499.\n3. 12x = 504, so x = 42 (unique).", "link": ""}]
+[
+  {
+    "title": "Drill: decode 48 83 EC 28 (sub rsp, 0x28)",
+    "guid": "2026-09-30",
+    "blurb": "Drill 2026-09-30 \u2014 Decode one instruction (Windows x64)\n\nDecode these bytes, which open many Windows x64 functions:\n\n48 83 EC 28\n\n1. What is the instruction in Intel syntax?\n2. What does the ModRM byte EC encode?\n3. Why is the immediate 0x28 (not, say, 0x20)?\n\n---\n\n**Answer:** sub rsp, 0x28\n\n- 48 = REX.W (64-bit operand). 83 = group-1 opcode with sign-extended imm8; ModRM EC = 11 101 100: mod=11 (register direct), reg=5 selects SUB in the group, rm=4 is RSP. 28 is the imm8.\n- The Windows x64 ABI requires the caller to reserve 32 bytes of \"shadow space\" for the four register arguments (rcx, rdx, r8, r9) above the return address.\n- The extra 8 bytes realign the stack: on entry rsp is 8 mod 16 (return address pushed), so 0x20 + 8 = 0x28 restores 16-byte alignment before any call.\n",
+    "link": ""
+  }
+]
