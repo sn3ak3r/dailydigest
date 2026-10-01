@@ -1,18 +1,35 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill: decode 48 83 EC 28 (sub rsp, 0x28)</title><link></link><description>Drill 2026-09-30 — Decode one instruction (Windows x64)
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill 2026-10-01: reverse a clamp function (cmov)</title><link></link><description>Target: Windows x86-64 (MSVC convention: args in `ecx`, `edx`, `r8d`; return in `eax`).
 
-Decode these bytes, which open many Windows x64 functions:
+Reverse this short function to equivalent C:
 
-48 83 EC 28
+```asm
+mystery:
+    mov     eax, ecx
+    cmp     eax, edx
+    cmovl   eax, edx
+    cmp     eax, r8d
+    cmovg   eax, r8d
+    ret
+```
 
-1. What is the instruction in Intel syntax?
-2. What does the ModRM byte EC encode?
-3. Why is the immediate 0x28 (not, say, 0x20)?
+What does `mystery(int x, int lo, int hi)` return?
 
 ---
 
-**Answer:** sub rsp, 0x28
+## Answer
 
-- 48 = REX.W (64-bit operand). 83 = group-1 opcode with sign-extended imm8; ModRM EC = 11 101 100: mod=11 (register direct), reg=5 selects SUB in the group, rm=4 is RSP. 28 is the imm8.
-- The Windows x64 ABI requires the caller to reserve 32 bytes of &quot;shadow space&quot; for the four register arguments (rcx, rdx, r8, r9) above the return address.
-- The extra 8 bytes realign the stack: on entry rsp is 8 mod 16 (return address pushed), so 0x20 + 8 = 0x28 restores 16-byte alignment before any call.
-</description><guid isPermaLink='false'>2026-09-30</guid><pubDate>Wed, 30 Sep 2026 02:30:59 +0000</pubDate></item></channel></rss>
+```c
+int mystery(int x, int lo, int hi) {
+    if (x &lt; lo) x = lo;
+    if (x &gt; hi) x = hi;
+    return x;
+}
+```
+
+It clamps `x` into the range `[lo, hi]` (if `lo &gt; hi`, it returns `hi`).
+
+## Explanation
+
+- `cmovl`/`cmovg` copy the source into `eax` only if the signed condition from the preceding `cmp` holds — a branchless `if`, with no jumps.
+- First pair: `cmp eax, edx` then `cmovl` raises `x` to `lo` when `x &lt; lo`.
+- Second pair: `cmp eax, r8d` then `cmovg` lowers the result to `hi` when it exceeds `hi`; `l`/`g` mean signed compares.</description><guid isPermaLink='false'>2026-10-01</guid><pubDate>Thu, 01 Oct 2026 02:30:37 +0000</pubDate></item></channel></rss>
