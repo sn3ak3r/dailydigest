@@ -1,52 +1,52 @@
 [
  {
-  "title": "Citrix NetScaler CVE-2026-88772 Exploit Details Show Pre-Auth Path to Shellcode Execution",
-  "link": "https://thehackernews.com/2026/09/citrix-netscaler-cve-2026-88772-exploit.html",
-  "blurb": "Pre-auth exploit path to shellcode execution in NetScaler; active exploitation makes this the patch-now item."
+  "title": "Citrix NetScaler Post-Exploitation Payload Creates Superuser, Maps Web Shell to CSS-Like URLs",
+  "link": "https://thehackernews.com/2026/10/citrix-netscaler-post-exploitation.html",
+  "blurb": "Post-exploitation payload on NetScaler creates a superuser and hides a web shell behind CSS-like URLs \u2014 concrete IOCs for hunters."
  },
  {
-  "title": "Harvest Season for SLUB: From io_uring vulnerability to Novel Sheaf-Based Exploitation Techniques",
-  "link": "https://arxiv.org/abs/2609.37608",
-  "blurb": "Problem: A Linux SLUB allocator bug reachable via io_uring needs a reliable exploit. Approach: Per the title, the paper builds a novel exploitation technique around SLUB's 'sheaf' per-CPU caching structure. Result: Not verified — the arXiv page could not be fetched (403), so no details or numbers are available. Why it matters: Kernel allocator changes can open new exploit paths past existing hardening. Glossary: SLUB (Linux kernel heap allocator); io_uring (async I/O kernel interface); sheaf (SLUB per-CPU object cache)."
+  "title": "SoK: A Large-Scale Empirical Study of Emulation-Based Dynamic Analysis Research for ARM Cortex-M Firmware (Extended Version)",
+  "link": "https://arxiv.org/abs/2609.38872",
+  "blurb": "Problem: Emulation-based dynamic analysis is the main way researchers test ARM Cortex-M firmware without hardware, but its research is fragmented. Approach: Per the title, a systematization of knowledge (SoK) surveying many emulation-based dynamic-analysis papers with a large-scale empirical study. Result: Not verified \u2014 arXiv returned 403, so no findings or numbers are available. Why it matters: Shows which firmware-analysis tools actually work, useful for reverse engineers and fuzzers. Glossary: Cortex-M (ARM microcontroller family); dynamic analysis (running code to observe behavior); emulation (software imitating hardware); SoK (survey paper)."
  },
  {
-  "title": "New Spectre-v2 BTR Attack Leaks Linux Memory Despite Existing Defenses",
-  "link": "https://thehackernews.com/2026/09/new-spectre-v2-btr-attack-leaks-linux.html",
-  "blurb": "Problem: Spectre-v2 defenses were meant to stop branch-prediction attacks on the Linux kernel. Approach: Per the headline, a new 'BTR' (Branch Target Reuse) variant leaks kernel memory despite current mitigations. Result: Not verified — the article could not be fetched (403); the headline reports Linux memory leakage. Why it matters: Mitigations may need rework, and patches matter on shared Linux hosts. Glossary: Spectre-v2 (branch target injection); speculative execution (CPU guessing ahead); BTR (branch target reuse)."
+  "title": "Agent-Warden: eBPF-Based Kernel-Native Process-File Provenance Tracking for LLM Agents",
+  "link": "https://arxiv.org/abs/2609.38245",
+  "blurb": "Problem: LLM agents run commands and touch files, making it hard to trace what actually caused a change. Approach: Per the title, uses eBPF to track process-to-file provenance inside the Linux kernel for agents. Result: Not verified \u2014 arXiv returned 403, so no measurements are available. Why it matters: Kernel-level tracking gives audit evidence agents can't easily bypass. Glossary: eBPF (sandboxed kernel programs); provenance (record of what touched what); kernel-native (runs inside the OS kernel)."
  },
  {
-  "title": "GTA 6 completely \"re-engineered\" Rockstar's weather systems to \"achieve a sense of scale we haven't felt before,\" adding hurricanes, rainbows and heavy rain",
-  "link": "https://www.eurogamer.net/gta6-rockstar-weather-systems-hurricanes-rainbows-rain",
-  "blurb": "Rockstar rebuilt its weather simulation (hurricanes, dynamic clouds) from scratch — engine-level detail."
+  "title": "\"We want people to try and outsmart the game\": No Law aims for Arkane-style reactivity within a dangerous walled city",
+  "link": "https://www.rockpapershotgun.com/we-want-people-to-try-and-outsmart-the-game-no-law-aims-for-arkane-style-reactivity-within-a-dangerous-walled-city",
+  "blurb": "No Law aims for Arkane-style systemic reactivity in an indie immersive sim \u2014 design and engine ambition worth tracking."
  },
  {
-  "title": "Monster Hunter Wilds on Switch 2 runs at a stable 30FPS, but it took Capcom a \"painstaking, seemingly endless process\" to get there",
-  "link": "https://www.eurogamer.net/monster-hunter-wilds-switch-2-performance-capcom",
-  "blurb": "Capcom's stable 30FPS on Switch 2 took major optimization work — port engineering detail."
+  "title": "You can now play Halo: Combat Evolved in a web browser, and it even has multiplayer",
+  "link": "https://www.pcgamer.com/hardware/you-can-now-play-halo-combat-evolved-in-a-web-browser-and-it-even-has-multiplayer/",
+  "blurb": "Halo: Combat Evolved now runs in a web browser with multiplayer \u2014 a notable port/engine feat."
  },
  {
-  "title": "Surprisingly Complex Waves Reveal the Brain’s Inner Workings",
-  "link": "https://www.quantamagazine.org/surprisingly-complex-waves-reveal-the-brains-inner-workings-20260930/",
-  "blurb": "Quanta on complex brain waves hinting at how neural circuits compute."
+  "title": "Venus' mysterious haze is actually cosmic dust",
+  "link": "https://arstechnica.com/science/2026/10/venus-mysterious-haze-is-actually-cosmic-dust/",
+  "blurb": "Webb/analysis suggests Venus' mysterious haze is cosmic dust \u2014 a result, not a press release."
  },
  {
-  "title": "Google figures out how to watermark AI-designed proteins",
-  "link": "https://arstechnica.com/science/2026/09/google-figures-out-how-to-watermark-ai-designed-proteins/",
-  "blurb": "Google's method to watermark AI-designed proteins, for provenance and biosecurity."
+  "title": "With most information hidden, the game Stratego had stumped AI\u2014until now",
+  "link": "https://arstechnica.com/science/2026/10/ai-finally-beat-the-best-stratego-player-in-history-and-did-it-on-a-budget/",
+  "blurb": "AI finally cracks Stratego, a huge hidden-information game, via a new method \u2014 a real research result."
  },
  {
-  "title": "Functional Ultrasound Imaging (fUSI) from scratch",
-  "link": "https://www.neuroai.science/p/functional-ultrasound-imaging-from",
-  "blurb": "Functional ultrasound brain imaging built up from first principles."
+  "title": "Bez: Generating a browser engine from specs and tests",
+  "link": "https://tangled.org/burrito.space/bez",
+  "blurb": "Bez generates a browser engine from specs and tests \u2014 a documented build of an unusual kind."
  },
  {
-  "title": "SDF vs. MSDF vs. Slug: GPU Text Rendering",
-  "link": "https://alphapixeldev.com/sdf-vs-msdf-vs-slug-vs-rive-gpu-text-rendering/",
-  "blurb": "Hands-on comparison of GPU text rendering techniques (SDF, MSDF, Slug)."
+  "title": "Various Projects Find Hidden SDR Capabilities in ESP32 Microcontrollers",
+  "link": "https://www.rtl-sdr.com/various-projects-independently-find-hidden-sdr-capabilities-in-esp32-microcontrollers/",
+  "blurb": "Several projects found hidden SDR capabilities in ESP32 chips \u2014 cheap hardware hack with documented builds."
  },
  {
-  "title": "Halfspace experimental IDE for solid modeling with distance fields",
-  "link": "https://www.mattkeeter.com/projects/halfspace/",
-  "blurb": "Experimental solid-modeling IDE built on distance fields."
+  "title": "Show HN: Janus \u2013 Go binary that runs GGUF models via Vulkan on AMD/Intel/Nvidia",
+  "link": "https://github.com/Vibra-Ingenn/Janus",
+  "blurb": "Janus: Go binary running GGUF models over Vulkan on AMD/Intel/Nvidia \u2014 portable local inference build."
  }
 ]
