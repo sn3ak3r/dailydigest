@@ -1,8 +1,8 @@
 [
   {
-    "title": "Drill 2026-10-01: reverse a clamp function (cmov)",
-    "guid": "2026-10-01",
-    "blurb": "Target: Windows x86-64 (MSVC convention: args in `ecx`, `edx`, `r8d`; return in `eax`).\n\nReverse this short function to equivalent C:\n\n```asm\nmystery:\n    mov     eax, ecx\n    cmp     eax, edx\n    cmovl   eax, edx\n    cmp     eax, r8d\n    cmovg   eax, r8d\n    ret\n```\n\nWhat does `mystery(int x, int lo, int hi)` return?\n\n---\n\n## Answer\n\n```c\nint mystery(int x, int lo, int hi) {\n    if (x < lo) x = lo;\n    if (x > hi) x = hi;\n    return x;\n}\n```\n\nIt clamps `x` into the range `[lo, hi]` (if `lo > hi`, it returns `hi`).\n\n## Explanation\n\n- `cmovl`/`cmovg` copy the source into `eax` only if the signed condition from the preceding `cmp` holds \u2014 a branchless `if`, with no jumps.\n- First pair: `cmp eax, edx` then `cmovl` raises `x` to `lo` when `x < lo`.\n- Second pair: `cmp eax, r8d` then `cmovg` lowers the result to `hi` when it exceeds `hi`; `l`/`g` mean signed compares.",
+    "title": "Drill 2026-10-02: mini crackme (byte-table lookup)",
+    "guid": "2026-10-02",
+    "blurb": "Windows x64 calling convention. `check(unsigned i)` receives `i` in ECX and returns 1 in AL if accepted. `table` is a read-only byte array in `.rdata`: `04 0B 09 0A 07`.\n\n```\ncheck:\n  cmp  ecx, 4\n  ja   fail\n  lea  rdx, [rip+table]\n  movzx eax, byte ptr [rdx+rcx]\n  add  eax, ecx\n  cmp  eax, 13\n  sete al\n  ret\nfail:\n  xor  eax, eax\n  ret\n```\n\nWhat value of `i` makes `check` return 1?\n\n---\n\n**Answer: i = 3**\n\n1. `ja` is an unsigned compare, so only i = 0..4 reach the table read (any negative int looks huge and fails). `lea rdx,[rip+table]` loads the table's address; `[rdx+rcx]` indexes it.\n2. The check is table[i] + i == 13, giving sums 4, 12, 11, 13, 11 for i = 0..4.\n3. Only i = 3 works (table[3] = 0x0A, 10 + 3 = 13).",
     "link": ""
   }
 ]

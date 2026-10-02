@@ -1,35 +1,26 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill 2026-10-01: reverse a clamp function (cmov)</title><link></link><description>Target: Windows x86-64 (MSVC convention: args in `ecx`, `edx`, `r8d`; return in `eax`).
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill 2026-10-02: mini crackme (byte-table lookup)</title><link></link><description>Windows x64 calling convention. `check(unsigned i)` receives `i` in ECX and returns 1 in AL if accepted. `table` is a read-only byte array in `.rdata`: `04 0B 09 0A 07`.
 
-Reverse this short function to equivalent C:
-
-```asm
-mystery:
-    mov     eax, ecx
-    cmp     eax, edx
-    cmovl   eax, edx
-    cmp     eax, r8d
-    cmovg   eax, r8d
-    ret
+```
+check:
+  cmp  ecx, 4
+  ja   fail
+  lea  rdx, [rip+table]
+  movzx eax, byte ptr [rdx+rcx]
+  add  eax, ecx
+  cmp  eax, 13
+  sete al
+  ret
+fail:
+  xor  eax, eax
+  ret
 ```
 
-What does `mystery(int x, int lo, int hi)` return?
+What value of `i` makes `check` return 1?
 
 ---
 
-## Answer
+**Answer: i = 3**
 
-```c
-int mystery(int x, int lo, int hi) {
-    if (x &lt; lo) x = lo;
-    if (x &gt; hi) x = hi;
-    return x;
-}
-```
-
-It clamps `x` into the range `[lo, hi]` (if `lo &gt; hi`, it returns `hi`).
-
-## Explanation
-
-- `cmovl`/`cmovg` copy the source into `eax` only if the signed condition from the preceding `cmp` holds — a branchless `if`, with no jumps.
-- First pair: `cmp eax, edx` then `cmovl` raises `x` to `lo` when `x &lt; lo`.
-- Second pair: `cmp eax, r8d` then `cmovg` lowers the result to `hi` when it exceeds `hi`; `l`/`g` mean signed compares.</description><guid isPermaLink='false'>2026-10-01</guid><pubDate>Thu, 01 Oct 2026 02:30:37 +0000</pubDate></item></channel></rss>
+1. `ja` is an unsigned compare, so only i = 0..4 reach the table read (any negative int looks huge and fails). `lea rdx,[rip+table]` loads the table&#x27;s address; `[rdx+rcx]` indexes it.
+2. The check is table[i] + i == 13, giving sums 4, 12, 11, 13, 11 for i = 0..4.
+3. Only i = 3 works (table[3] = 0x0A, 10 + 3 = 13).</description><guid isPermaLink='false'>2026-10-02</guid><pubDate>Fri, 02 Oct 2026 02:31:22 +0000</pubDate></item></channel></rss>
