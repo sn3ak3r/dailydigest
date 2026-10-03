@@ -1,52 +1,57 @@
 [
  {
-  "title": "Citrix NetScaler Post-Exploitation Payload Creates Superuser, Maps Web Shell to CSS-Like URLs",
-  "link": "https://thehackernews.com/2026/10/citrix-netscaler-post-exploitation.html",
-  "blurb": "Post-exploitation payload on NetScaler creates a superuser and hides a web shell behind CSS-like URLs \u2014 concrete IOCs for hunters."
+  "title": "Antino Backdoor Uses Outlook and OneDrive for C2 in China-Nexus Espionage Campaign",
+  "link": "https://thehackernews.com/2026/10/antino-backdoor-uses-outlook-and.html",
+  "blurb": "Backdoor using Outlook/OneDrive as C2 hides in normal cloud traffic; China-nexus espionage."
  },
  {
-  "title": "SoK: A Large-Scale Empirical Study of Emulation-Based Dynamic Analysis Research for ARM Cortex-M Firmware (Extended Version)",
-  "link": "https://arxiv.org/abs/2609.38872",
-  "blurb": "Problem: Emulation-based dynamic analysis is the main way researchers test ARM Cortex-M firmware without hardware, but its research is fragmented. Approach: Per the title, a systematization of knowledge (SoK) surveying many emulation-based dynamic-analysis papers with a large-scale empirical study. Result: Not verified \u2014 arXiv returned 403, so no findings or numbers are available. Why it matters: Shows which firmware-analysis tools actually work, useful for reverse engineers and fuzzers. Glossary: Cortex-M (ARM microcontroller family); dynamic analysis (running code to observe behavior); emulation (software imitating hardware); SoK (survey paper)."
+  "title": "Malicious Linux Implants Mimic Asian Mail Security Products",
+  "link": "https://www.darkreading.com/threat-intelligence/malicious-linux-implants-mimic-asian-mail-security",
+  "blurb": "Linux implants disguised as Asian mail-security products; a hiding-in-plain-sight technique worth hunting for."
  },
  {
-  "title": "Agent-Warden: eBPF-Based Kernel-Native Process-File Provenance Tracking for LLM Agents",
-  "link": "https://arxiv.org/abs/2609.38245",
-  "blurb": "Problem: LLM agents run commands and touch files, making it hard to trace what actually caused a change. Approach: Per the title, uses eBPF to track process-to-file provenance inside the Linux kernel for agents. Result: Not verified \u2014 arXiv returned 403, so no measurements are available. Why it matters: Kernel-level tracking gives audit evidence agents can't easily bypass. Glossary: eBPF (sandboxed kernel programs); provenance (record of what touched what); kernel-native (runs inside the OS kernel)."
+  "title": "Reigns and Card Shark developers Nerial are closing down, laying staff off while the founders go \"back to our roots\"",
+  "link": "https://www.rockpapershotgun.com/reigns-and-card-shark-developers-nerial-are-closing-down-laying-staff-off-while-the-founders-go-back-to-our-roots",
+  "blurb": "Reigns/Card Shark studio Nerial closes with layoffs; indie industry health signal."
  },
  {
-  "title": "\"We want people to try and outsmart the game\": No Law aims for Arkane-style reactivity within a dangerous walled city",
-  "link": "https://www.rockpapershotgun.com/we-want-people-to-try-and-outsmart-the-game-no-law-aims-for-arkane-style-reactivity-within-a-dangerous-walled-city",
-  "blurb": "No Law aims for Arkane-style systemic reactivity in an indie immersive sim \u2014 design and engine ambition worth tracking."
+  "title": "Metal desks nearly destroyed a Valorant tournament",
+  "link": "https://www.pcgamer.com/hardware/gaming-mice/metal-desks-nearly-destroyed-a-valorant-tournament/",
+  "blurb": "Metal desks disrupted a Valorant tournament; a hardware/physical-layer gotcha for esports ops."
  },
  {
-  "title": "You can now play Halo: Combat Evolved in a web browser, and it even has multiplayer",
-  "link": "https://www.pcgamer.com/hardware/you-can-now-play-halo-combat-evolved-in-a-web-browser-and-it-even-has-multiplayer/",
-  "blurb": "Halo: Combat Evolved now runs in a web browser with multiplayer \u2014 a notable port/engine feat."
+  "title": "Scientists discover first type I superconductor that breaks time-reversal symmetry",
+  "link": "https://phys.org/news/2026-10-scientists-superconductor-reversal-symmetry.html",
+  "blurb": "First type I superconductor found to break time-reversal symmetry, a result challenging a standard classification."
  },
  {
-  "title": "Venus' mysterious haze is actually cosmic dust",
-  "link": "https://arstechnica.com/science/2026/10/venus-mysterious-haze-is-actually-cosmic-dust/",
-  "blurb": "Webb/analysis suggests Venus' mysterious haze is cosmic dust \u2014 a result, not a press release."
+  "title": "Ultrafast X-rays reveal how the light-responsive molecular switch azobenzene changes shape",
+  "link": "https://phys.org/news/2026-10-ultrafast-rays-reveal-responsive-molecular.html",
+  "blurb": "Ultrafast X-rays resolve how the azobenzene molecular switch changes shape."
  },
  {
-  "title": "With most information hidden, the game Stratego had stumped AI\u2014until now",
-  "link": "https://arstechnica.com/science/2026/10/ai-finally-beat-the-best-stratego-player-in-history-and-did-it-on-a-budget/",
-  "blurb": "AI finally cracks Stratego, a huge hidden-information game, via a new method \u2014 a real research result."
+  "title": "2026 Retrocomputing Challenge: A Homebrew Computer In Only Three ICs",
+  "link": "https://hackaday.com/2026/10/02/2026-retrocomputing-challenge-a-homebrew-computer-in-only-three-ics2026-retrocomputing-challenge-a-homebrew-computer-in-only-3-ics/",
+  "blurb": "A homebrew computer built from just three ICs, a retrocomputing challenge entry."
  },
  {
-  "title": "Bez: Generating a browser engine from specs and tests",
-  "link": "https://tangled.org/burrito.space/bez",
-  "blurb": "Bez generates a browser engine from specs and tests \u2014 a documented build of an unusual kind."
+  "title": "The Forgetful CPU (Linux on M4)",
+  "link": "https://yuka.dev/blog-2026-10-02-linux-m4.html",
+  "blurb": "Linux bring-up on Apple M4, documented in detail."
  },
  {
-  "title": "Various Projects Find Hidden SDR Capabilities in ESP32 Microcontrollers",
-  "link": "https://www.rtl-sdr.com/various-projects-independently-find-hidden-sdr-capabilities-in-esp32-microcontrollers/",
-  "blurb": "Several projects found hidden SDR capabilities in ESP32 chips \u2014 cheap hardware hack with documented builds."
+  "title": "The Game Boy Test Lab Provides a Cartridge-Sized Diagnostic Lab",
+  "link": "https://hackaday.com/2026/10/02/the-game-boy-test-lab-provides-a-cartridge-sized-diagnostic-lab/",
+  "blurb": "Cartridge-sized Game Boy diagnostic lab, build documented."
  },
  {
-  "title": "Show HN: Janus \u2013 Go binary that runs GGUF models via Vulkan on AMD/Intel/Nvidia",
-  "link": "https://github.com/Vibra-Ingenn/Janus",
-  "blurb": "Janus: Go binary running GGUF models over Vulkan on AMD/Intel/Nvidia \u2014 portable local inference build."
+  "title": "Helol Tunnel: Covert Channel Exploitation of TLS Extensibility & Privacy Features",
+  "link": "https://arxiv.org/abs/2610.01009",
+  "blurb": "Deep digest not produced: arxiv.org was blocked by the network egress proxy (EGRESS_BLOCKED), so the paper could not be fetched. Title only: Helol Tunnel: Covert Channel Exploitation of TLS Extensibility & Privacy Features."
+ },
+ {
+  "title": "Characterizing and Codifying Malware Sophistication",
+  "link": "https://arxiv.org/abs/2610.00098",
+  "blurb": "Deep digest not produced: arxiv.org was blocked by the network egress proxy (EGRESS_BLOCKED), so the paper could not be fetched. Title only: Characterizing and Codifying Malware Sophistication."
  }
 ]
