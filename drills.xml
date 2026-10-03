@@ -1,26 +1,19 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill 2026-10-02: mini crackme (byte-table lookup)</title><link></link><description>Windows x64 calling convention. `check(unsigned i)` receives `i` in ECX and returns 1 in AL if accepted. `table` is a read-only byte array in `.rdata`: `04 0B 09 0A 07`.
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Decode one instruction: 31 C9</title><link></link><description>Target: Windows x86-64.
 
-```
-check:
-  cmp  ecx, 4
-  ja   fail
-  lea  rdx, [rip+table]
-  movzx eax, byte ptr [rdx+rcx]
-  add  eax, ecx
-  cmp  eax, 13
-  sete al
-  ret
-fail:
-  xor  eax, eax
-  ret
-```
+Decode this instruction (hex bytes):
 
-What value of `i` makes `check` return 1?
+
+31 C9
+
+
+What is the assembly, and why do compilers emit it? What happens to `rcx`?
 
 ---
 
-**Answer: i = 3**
+## Answer
 
-1. `ja` is an unsigned compare, so only i = 0..4 reach the table read (any negative int looks huge and fails). `lea rdx,[rip+table]` loads the table&#x27;s address; `[rdx+rcx]` indexes it.
-2. The check is table[i] + i == 13, giving sums 4, 12, 11, 13, 11 for i = 0..4.
-3. Only i = 3 works (table[3] = 0x0A, 10 + 3 = 13).</description><guid isPermaLink='false'>2026-10-02</guid><pubDate>Fri, 02 Oct 2026 02:31:22 +0000</pubDate></item></channel></rss>
+`xor ecx, ecx`
+
+- `31` = `XOR r/m32, r32`; ModRM `C9` = `11 001 001` → mod=11 (register-direct), reg=ecx, rm=ecx, so both operands are the same register.
+- x ^ x = 0, so it zeroes `ecx` in 2 bytes (vs 5 for `mov ecx, 0`), and CPUs treat it as a dependency-breaking zero idiom.
+- Writing a 32-bit register zero-extends into the upper half, so the whole of `rcx` becomes 0 — no REX.W needed.</description><guid isPermaLink='false'>2026-10-03</guid><pubDate>Sat, 03 Oct 2026 02:30:36 +0000</pubDate></item></channel></rss>

@@ -1,8 +1,8 @@
 [
   {
-    "title": "Drill 2026-10-02: mini crackme (byte-table lookup)",
-    "guid": "2026-10-02",
-    "blurb": "Windows x64 calling convention. `check(unsigned i)` receives `i` in ECX and returns 1 in AL if accepted. `table` is a read-only byte array in `.rdata`: `04 0B 09 0A 07`.\n\n```\ncheck:\n  cmp  ecx, 4\n  ja   fail\n  lea  rdx, [rip+table]\n  movzx eax, byte ptr [rdx+rcx]\n  add  eax, ecx\n  cmp  eax, 13\n  sete al\n  ret\nfail:\n  xor  eax, eax\n  ret\n```\n\nWhat value of `i` makes `check` return 1?\n\n---\n\n**Answer: i = 3**\n\n1. `ja` is an unsigned compare, so only i = 0..4 reach the table read (any negative int looks huge and fails). `lea rdx,[rip+table]` loads the table's address; `[rdx+rcx]` indexes it.\n2. The check is table[i] + i == 13, giving sums 4, 12, 11, 13, 11 for i = 0..4.\n3. Only i = 3 works (table[3] = 0x0A, 10 + 3 = 13).",
+    "title": "Decode one instruction: 31 C9",
+    "guid": "2026-10-03",
+    "blurb": "Target: Windows x86-64.\n\nDecode this instruction (hex bytes):\n\n\n31 C9\n\n\nWhat is the assembly, and why do compilers emit it? What happens to `rcx`?\n\n---\n\n## Answer\n\n`xor ecx, ecx`\n\n- `31` = `XOR r/m32, r32`; ModRM `C9` = `11 001 001` \u2192 mod=11 (register-direct), reg=ecx, rm=ecx, so both operands are the same register.\n- x ^ x = 0, so it zeroes `ecx` in 2 bytes (vs 5 for `mov ecx, 0`), and CPUs treat it as a dependency-breaking zero idiom.\n- Writing a 32-bit register zero-extends into the upper half, so the whole of `rcx` becomes 0 \u2014 no REX.W needed.",
     "link": ""
   }
 ]

@@ -48,3 +48,4 @@
 2026-09-30 | decode-instruction | SUB r/m64,imm8 via opcode 83 /5 (group-1 ModRM reg field as opcode extension), Windows x64 shadow space and 0x28 stack allocation for 16-byte alignment
 2026-10-01 | reverse-function | cmov conditional moves for branchless clamp, signed cmovl/cmovg condition codes, Windows x64 three-int-arg registers (ecx/edx/r8d)
 2026-10-02 | crackme | byte-table lookup via RIP-relative lea and movzx [base+index], unsigned bounds check with ja (negatives rejected), table[i]+i brute-force over small range
+2026-10-03 | decode-instruction | XOR r/m32,r32 opcode 0x31 self-xor zero idiom, ModRM C9 same reg both operands, 32-bit write zero-extending to rcx
