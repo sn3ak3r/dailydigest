@@ -1,19 +1,29 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Decode one instruction: 31 C9</title><link></link><description>Target: Windows x86-64.
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse a function: signed divide by 8</title><link></link><description>Target: Windows x86-64 (arg in `ecx`, return in `eax`).
 
-Decode this instruction (hex bytes):
+Reverse this short function to equivalent C:
 
+mystery:
+    mov     eax, ecx
+    cdq
+    and     edx, 7
+    add     eax, edx
+    sar     eax, 3
+    ret
 
-31 C9
-
-
-What is the assembly, and why do compilers emit it? What happens to `rcx`?
+What does `mystery(int x)` compute? Why not just `sar eax, 3`?
 
 ---
 
 ## Answer
 
-`xor ecx, ecx`
+int mystery(int x) {
+    return x / 8;
+}
 
-- `31` = `XOR r/m32, r32`; ModRM `C9` = `11 001 001` → mod=11 (register-direct), reg=ecx, rm=ecx, so both operands are the same register.
-- x ^ x = 0, so it zeroes `ecx` in 2 bytes (vs 5 for `mov ecx, 0`), and CPUs treat it as a dependency-breaking zero idiom.
-- Writing a 32-bit register zero-extends into the upper half, so the whole of `rcx` becomes 0 — no REX.W needed.</description><guid isPermaLink='false'>2026-10-03</guid><pubDate>Sat, 03 Oct 2026 02:30:36 +0000</pubDate></item></channel></rss>
+Signed division by 8, rounding toward zero.
+
+## Explanation
+
+- `cdq` sign-extends `eax` into `edx`: `edx` is all 1s if `x &lt; 0`, else 0. `and edx, 7` turns that into a bias of 7 (negative) or 0.
+- `sar` alone rounds toward negative infinity (`-1 &gt;&gt; 3` = -1), but C&#x27;s `/` truncates toward zero (`-1 / 8` = 0). Adding 7 first to negatives fixes this.
+- Unsigned division would be a plain `shr`; the bias exists only because of signedness.</description><guid isPermaLink='false'>2026-10-04</guid><pubDate>Sun, 04 Oct 2026 02:31:18 +0000</pubDate></item></channel></rss>
