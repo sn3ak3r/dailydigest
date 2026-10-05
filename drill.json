@@ -1,8 +1,8 @@
 [
   {
-    "title": "Reverse a function: signed divide by 8",
-    "guid": "2026-10-04",
-    "blurb": "Target: Windows x86-64 (arg in `ecx`, return in `eax`).\n\nReverse this short function to equivalent C:\n\nmystery:\n    mov     eax, ecx\n    cdq\n    and     edx, 7\n    add     eax, edx\n    sar     eax, 3\n    ret\n\nWhat does `mystery(int x)` compute? Why not just `sar eax, 3`?\n\n---\n\n## Answer\n\nint mystery(int x) {\n    return x / 8;\n}\n\nSigned division by 8, rounding toward zero.\n\n## Explanation\n\n- `cdq` sign-extends `eax` into `edx`: `edx` is all 1s if `x < 0`, else 0. `and edx, 7` turns that into a bias of 7 (negative) or 0.\n- `sar` alone rounds toward negative infinity (`-1 >> 3` = -1), but C's `/` truncates toward zero (`-1 / 8` = 0). Adding 7 first to negatives fixes this.\n- Unsigned division would be a plain `shr`; the bias exists only because of signedness.",
+    "title": "Mini crackme: bswap + xor",
+    "guid": "2026-10-05",
+    "blurb": "Target: Windows x86-64.\n\nWindows x64 calling convention. `check(unsigned x)` receives `x` in ECX and returns 1 in AL if accepted.\n\n```\ncheck:\n  bswap ecx\n  xor   ecx, 0x3C3C3C3C\n  cmp   ecx, 0x446A082E\n  sete  al\n  ret\n```\n\nWhat value of `x` makes `check` return 1?\n\n---\n\n**Answer: x = 0x12345678 (305419896)**\n\n1. `bswap` reverses the four bytes of ECX (little-endian <-> big-endian swap), so the check is bswap(x) ^ 0x3C3C3C3C == 0x446A082E.\n2. Undo in reverse order: 0x446A082E ^ 0x3C3C3C3C = 0x78563412 (XOR is self-inverse).\n3. `bswap` is also its own inverse, so swapping 0x78563412 gives x = 0x12345678.",
     "link": ""
   }
 ]

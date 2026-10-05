@@ -50,3 +50,4 @@
 2026-10-02 | crackme | byte-table lookup via RIP-relative lea and movzx [base+index], unsigned bounds check with ja (negatives rejected), table[i]+i brute-force over small range
 2026-10-03 | decode-instruction | XOR r/m32,r32 opcode 0x31 self-xor zero idiom, ModRM C9 same reg both operands, 32-bit write zero-extending to rcx
 2026-10-04 | reverse-function | signed divide by power of two via cdq/and/add/sar bias sequence, round-toward-zero vs sar floor rounding, unsigned shr contrast
+2026-10-05 | crackme | bswap byte-order reversal combined with xor mask, backward-solving via self-inverse bswap and xor, 32-bit cmp/sete
