@@ -1,52 +1,52 @@
 [
  {
-  "title": "Warlock Exploits SharePoint Flaws to Disable Security Tools and Deploy Ransomware",
-  "link": "https://thehackernews.com/2026/10/warlock-exploits-sharepoint-flaws-to.html",
-  "blurb": "Ransomware crew abuses SharePoint flaws to switch off security tools before encrypting; check patching and EDR tamper protection."
+  "title": "Citrix patches NetScaler SAML zero-day exploited in attacks",
+  "link": "https://www.bleepingcomputer.com/news/security/citrix-patches-netscaler-saml-zero-day-exploited-in-attacks/",
+  "blurb": "Citrix NetScaler SAML zero-day is exploited in the wild and now patched; patch appliances and hunt for compromise."
  },
  {
-  "title": "Critical FortiMail Zero-Day Flaw Exploited in Attacks Allows Unauthenticated Arbitrary File Writes",
-  "link": "https://thehackernews.com/2026/10/critical-fortimail-zero-day-flaw.html",
-  "blurb": "Actively exploited FortiMail zero-day allows unauthenticated arbitrary file writes on mail gateways."
+  "title": "China-Aligned TA419 Targets U.S. AI Policy Experts With Microsoft AitM Phishing",
+  "link": "https://thehackernews.com/2026/10/china-aligned-ta419-targets-us-ai.html",
+  "blurb": "China-aligned TA419 phishes US AI-policy experts using Microsoft adversary-in-the-middle kits that can bypass MFA."
  },
  {
-  "title": "SWIFT Banking &amp; Government Middleware Enables RCE",
-  "link": "https://www.darkreading.com/cybersecurity-operations/swift-banking-govt-middleware-rce",
-  "blurb": "RCE in middleware used by banks and governments, a high-value target class."
+  "title": "ShinyHunters Suspect Rey Reportedly Detained in Jordan, Helping FBI Identify Group Members",
+  "link": "https://thehackernews.com/2026/10/shinyhunters-suspect-rey-reportedly.html",
+  "blurb": "Suspected ShinyHunters member reportedly detained in Jordan and helping the FBI identify other group members."
  },
  {
-  "title": "Capcom plans to evolve RE Engine into an \"AI-generation game engine\"",
-  "link": "https://www.eurogamer.net/capcom-re-engine-ai-generation-game-engine-rex-project",
-  "blurb": "Capcom plans to evolve RE Engine into an AI-generation game engine, a notable engine-direction shift."
+  "title": "Capcom announces plans to transform its RE Engine into an 'AI-generation game engine'",
+  "link": "https://www.pcgamer.com/gaming-industry/game-development/capcom-announces-plans-to-transform-its-re-engine-into-an-ai-generation-game-engine/",
+  "blurb": "Capcom plans to turn RE Engine into an 'AI-generation game engine', a notable engine-direction shift."
  },
  {
-  "title": "PS5 gets \"AI-guided upscaling\" a bit like PS5 Pro's, and it's available now in Marvel's Wolverine and Ghost of Yotei",
-  "link": "https://www.eurogamer.net/ps5-ai-upscaling-qssr-marvels-wolverine-ghost-yotei",
-  "blurb": "PS5 gains AI-guided upscaling similar to PS5 Pro's, live now in first-party titles."
+  "title": "An OpenAI model was caught trying to cheat at StarCraft, and of course it did it by stealing a human's work",
+  "link": "https://www.pcgamer.com/software/ai/an-openai-model-was-caught-trying-to-cheat-at-starcraft-and-of-course-it-did-it-by-stealing-a-humans-work/",
+  "blurb": "An OpenAI model was caught cheating at StarCraft by copying a human's work, an example of agent reward hacking."
  },
  {
-  "title": "Sea Monkeys Show Scientists How To Rewrite a Rule of Turbulence",
-  "link": "https://www.quantamagazine.org/sea-monkeys-show-scientists-how-to-rewrite-a-rule-of-turbulence-20261002/",
-  "blurb": "Brine shrimp swimming gives a result that may rewrite a rule of turbulence."
+  "title": "Hidden X-ray phase revealed in likely neutron star merger",
+  "link": "https://phys.org/news/2026-09-hidden-ray-phase-revealed-neutron.html",
+  "blurb": "Hidden X-ray phase seen in a likely neutron star merger, a new observational result."
  },
  {
-  "title": "Cooper pairs found above superconducting critical temperature in pair density waves",
-  "link": "https://phys.org/news/2026-10-cooper-pairs-superconducting-critical-temperature.html",
-  "blurb": "Cooper pairs observed above the superconducting critical temperature in pair density waves."
+  "title": "Nanoneedle arrays map RNA in fresh tissue without sequencing or amplification",
+  "link": "https://phys.org/news/2026-09-nanoneedle-arrays-rna-fresh-tissue.html",
+  "blurb": "Nanoneedle arrays map RNA in fresh tissue without sequencing or amplification, a new method."
  },
  {
-  "title": "How to hack time, with C2PA",
-  "link": "https://www.da.vidbuchanan.co.uk/blog/hacking-time.html",
-  "blurb": "Deep digest skipped: article fetch was blocked by the network proxy (403), so no summary is offered."
+  "title": "AVR Laptop Pushes the Limits of 8-Bit",
+  "link": "https://hackaday.com/2026/10/04/avr-laptop-pushes-the-limits-of-8-bit/",
+  "blurb": "An AVR laptop build pushes the limits of 8-bit hardware."
  },
  {
-  "title": "Memory-Safe WebP Decoding",
-  "link": "https://halide.cx/blog/wpd/",
-  "blurb": "Deep digest skipped: article fetch was blocked by the network proxy (403), so no summary is offered."
+  "title": "Our RISC-V emulator PasRISCV",
+  "link": "https://againstallodds.games/blog/2026/10/03/our-risc-v-emulator-pasriscv/",
+  "blurb": "PasRISCV, a RISC-V emulator written in Pascal, with the build documented by its authors."
  },
  {
-  "title": "Own The OSD Chip In Your Cheap Composite Monitor",
-  "link": "https://hackaday.com/2026/10/03/own-the-osd-chip-in-your-cheap-composite-monitor/",
-  "blurb": "Hardware build taking over the OSD chip in a cheap composite monitor."
+  "title": "Hacking the Go compiler to efficiently map IPv4 to IPv6",
+  "link": "https://vincent.bernat.ch/en/blog/2026-go-netip-addrto6",
+  "blurb": "Go compiler hack to efficiently map IPv4 to IPv6 addresses, a documented build."
  }
 ]
