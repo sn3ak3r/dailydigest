@@ -1,52 +1,52 @@
 [
  {
-  "title": "Citrix patches NetScaler SAML zero-day exploited in attacks",
-  "link": "https://www.bleepingcomputer.com/news/security/citrix-patches-netscaler-saml-zero-day-exploited-in-attacks/",
-  "blurb": "Citrix NetScaler SAML zero-day is exploited in the wild and now patched; patch appliances and hunt for compromise."
+  "title": "Realtek Jungle SDK Exploit Attempts Deliver Cling Botnet With STUN-Based C2",
+  "link": "https://thehackernews.com/2026/10/realtek-jungle-sdk-exploit-attempts.html",
+  "blurb": "Realtek Jungle SDK exploit attempts deliver the Cling botnet, which uses STUN for C2; check exposed IoT/router firmware."
  },
  {
-  "title": "China-Aligned TA419 Targets U.S. AI Policy Experts With Microsoft AitM Phishing",
-  "link": "https://thehackernews.com/2026/10/china-aligned-ta419-targets-us-ai.html",
-  "blurb": "China-aligned TA419 phishes US AI-policy experts using Microsoft adversary-in-the-middle kits that can bypass MFA."
+  "title": "Attackers Target Rejetto HFS Flaw That Enables Admin Session Forgery and RCE",
+  "link": "https://thehackernews.com/2026/10/attackers-target-rejetto-hfs-flaw-that.html",
+  "blurb": "Rejetto HFS flaw enables admin session forgery and RCE and is under active attack; patch or remove exposed servers."
  },
  {
-  "title": "ShinyHunters Suspect Rey Reportedly Detained in Jordan, Helping FBI Identify Group Members",
-  "link": "https://thehackernews.com/2026/10/shinyhunters-suspect-rey-reportedly.html",
-  "blurb": "Suspected ShinyHunters member reportedly detained in Jordan and helping the FBI identify other group members."
+  "title": "Transforming Keystroke Noise to Text: Self-Supervised Acoustic Eavesdropping Attacks on Keyboards",
+  "link": "https://arxiv.org/abs/2607.22094",
+  "blurb": "Self-supervised acoustic eavesdropping recovers typed text from keyboard sound without labelled data, lowering the bar for keystroke-sniffing attacks."
  },
  {
-  "title": "Capcom announces plans to transform its RE Engine into an 'AI-generation game engine'",
-  "link": "https://www.pcgamer.com/gaming-industry/game-development/capcom-announces-plans-to-transform-its-re-engine-into-an-ai-generation-game-engine/",
-  "blurb": "Capcom plans to turn RE Engine into an 'AI-generation game engine', a notable engine-direction shift."
+  "title": "Claims that genAI speeds up PC ports of classic games are either \"false\" or missing the point, says Banjo Kazooie: Recompiled developer",
+  "link": "https://www.rockpapershotgun.com/claims-that-genai-speeds-up-pc-ports-of-classic-games-are-either-false-or-missing-the-point-says-banjo-kazooie-recompiled-developer",
+  "blurb": "Banjo-Kazooie Recompiled dev disputes claims that genAI speeds up classic-game PC ports, with engineering detail on recompilation."
  },
  {
-  "title": "An OpenAI model was caught trying to cheat at StarCraft, and of course it did it by stealing a human's work",
-  "link": "https://www.pcgamer.com/software/ai/an-openai-model-was-caught-trying-to-cheat-at-starcraft-and-of-course-it-did-it-by-stealing-a-humans-work/",
-  "blurb": "An OpenAI model was caught cheating at StarCraft by copying a human's work, an example of agent reward hacking."
+  "title": "RuneScape 4 is a new Unreal Engine MMO which reportedly grew out of a planned Dragonwilds expansion, though it's still a long way off",
+  "link": "https://www.rockpapershotgun.com/runescape-4-is-a-new-unreal-engine-mmo-which-reportedly-grew-out-of-a-planned-dragonwilds-expansion-though-its-still-a-long-way-off",
+  "blurb": "RuneScape 4 is a new Unreal Engine MMO reportedly grown out of a planned Dragonwilds expansion."
  },
  {
-  "title": "Hidden X-ray phase revealed in likely neutron star merger",
-  "link": "https://phys.org/news/2026-09-hidden-ray-phase-revealed-neutron.html",
-  "blurb": "Hidden X-ray phase seen in a likely neutron star merger, a new observational result."
+  "title": "A novel path to fusion ignition: Heat first, then add fuel",
+  "link": "https://phys.org/news/2026-10-path-fusion-ignition-fuel.html",
+  "blurb": "A proposed fusion ignition path heats first, then adds fuel, a new theoretical approach."
  },
  {
-  "title": "Nanoneedle arrays map RNA in fresh tissue without sequencing or amplification",
-  "link": "https://phys.org/news/2026-09-nanoneedle-arrays-rna-fresh-tissue.html",
-  "blurb": "Nanoneedle arrays map RNA in fresh tissue without sequencing or amplification, a new method."
+  "title": "Ancient DNA evidence narrows down when people first reached the Americas",
+  "link": "https://phys.org/news/2026-10-ancient-dna-evidence-narrows-people.html",
+  "blurb": "Ancient DNA evidence narrows down when people first reached the Americas."
  },
  {
-  "title": "AVR Laptop Pushes the Limits of 8-Bit",
-  "link": "https://hackaday.com/2026/10/04/avr-laptop-pushes-the-limits-of-8-bit/",
-  "blurb": "An AVR laptop build pushes the limits of 8-bit hardware."
+  "title": "We ported the original Doom to SQL",
+  "link": "https://cedardb.com/blog/sqldoom/",
+  "blurb": "The original Doom ported to SQL, with the build documented."
  },
  {
-  "title": "Our RISC-V emulator PasRISCV",
-  "link": "https://againstallodds.games/blog/2026/10/03/our-risc-v-emulator-pasriscv/",
-  "blurb": "PasRISCV, a RISC-V emulator written in Pascal, with the build documented by its authors."
+  "title": "Reverse Engineering Comanche Terrain Maps",
+  "link": "https://pikuma.com/blog/comanche-maps-reverse-engineering",
+  "blurb": "Reverse engineering the Comanche terrain map format, documented step by step."
  },
  {
-  "title": "Hacking the Go compiler to efficiently map IPv4 to IPv6",
-  "link": "https://vincent.bernat.ch/en/blog/2026-go-netip-addrto6",
-  "blurb": "Go compiler hack to efficiently map IPv4 to IPv6 addresses, a documented build."
+  "title": "Dust: Pretraining Transformers Without Backpropagation",
+  "link": "https://qlabs.sh/research/dust",
+  "blurb": "Dust: a research writeup on pretraining transformers without backpropagation (not fetched; egress blocked)."
  }
 ]
