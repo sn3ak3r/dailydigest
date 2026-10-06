@@ -1,8 +1,8 @@
 [
-  {
-    "title": "Mini crackme: bswap + xor",
-    "guid": "2026-10-05",
-    "blurb": "Target: Windows x86-64.\n\nWindows x64 calling convention. `check(unsigned x)` receives `x` in ECX and returns 1 in AL if accepted.\n\n```\ncheck:\n  bswap ecx\n  xor   ecx, 0x3C3C3C3C\n  cmp   ecx, 0x446A082E\n  sete  al\n  ret\n```\n\nWhat value of `x` makes `check` return 1?\n\n---\n\n**Answer: x = 0x12345678 (305419896)**\n\n1. `bswap` reverses the four bytes of ECX (little-endian <-> big-endian swap), so the check is bswap(x) ^ 0x3C3C3C3C == 0x446A082E.\n2. Undo in reverse order: 0x446A082E ^ 0x3C3C3C3C = 0x78563412 (XOR is self-inverse).\n3. `bswap` is also its own inverse, so swapping 0x78563412 gives x = 0x12345678.",
-    "link": ""
-  }
+ {
+  "title": "Decode drill 2026-10-06: 48 C7 C0 FF FF FF FF",
+  "guid": "2026-10-06",
+  "blurb": "Target: Windows x86-64.\n\nDecode this instruction (hex bytes):\n\n```\n48 C7 C0 FF FF FF FF\n```\n\nWhat is the assembly? What value ends up in `rax`, and why is the immediate only 4 bytes?\n\n## Answer\n\n`mov rax, -1` (rax = 0xFFFFFFFFFFFFFFFF)\n\n- `48` = REX.W (64-bit operand); `C7` = `MOV r/m, imm32` with ModRM `C0` = `11 000 000` \u2192 mod=11 register-direct, /0 opcode extension, rm=rax.\n- The 32-bit immediate `FFFFFFFF` is sign-extended to 64 bits, so -1 becomes all ones; this is 7 bytes versus the 10-byte `mov rax, imm64` (`48 B8`).\n- Contrast: `mov eax, -1` (`B8 FF FF FF FF`) also yields all-ones in rax? No \u2014 it gives 0x00000000FFFFFFFF, since the 32-bit write zero-extends.",
+  "link": ""
+ }
 ]

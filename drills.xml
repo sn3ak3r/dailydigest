@@ -1,22 +1,17 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Mini crackme: bswap + xor</title><link></link><description>Target: Windows x86-64.
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Decode drill 2026-10-06: 48 C7 C0 FF FF FF FF</title><link></link><description>Target: Windows x86-64.
 
-Windows x64 calling convention. `check(unsigned x)` receives `x` in ECX and returns 1 in AL if accepted.
+Decode this instruction (hex bytes):
 
 ```
-check:
-  bswap ecx
-  xor   ecx, 0x3C3C3C3C
-  cmp   ecx, 0x446A082E
-  sete  al
-  ret
+48 C7 C0 FF FF FF FF
 ```
 
-What value of `x` makes `check` return 1?
+What is the assembly? What value ends up in `rax`, and why is the immediate only 4 bytes?
 
----
+## Answer
 
-**Answer: x = 0x12345678 (305419896)**
+`mov rax, -1` (rax = 0xFFFFFFFFFFFFFFFF)
 
-1. `bswap` reverses the four bytes of ECX (little-endian &lt;-&gt; big-endian swap), so the check is bswap(x) ^ 0x3C3C3C3C == 0x446A082E.
-2. Undo in reverse order: 0x446A082E ^ 0x3C3C3C3C = 0x78563412 (XOR is self-inverse).
-3. `bswap` is also its own inverse, so swapping 0x78563412 gives x = 0x12345678.</description><guid isPermaLink='false'>2026-10-05</guid><pubDate>Mon, 05 Oct 2026 02:30:39 +0000</pubDate></item></channel></rss>
+- `48` = REX.W (64-bit operand); `C7` = `MOV r/m, imm32` with ModRM `C0` = `11 000 000` → mod=11 register-direct, /0 opcode extension, rm=rax.
+- The 32-bit immediate `FFFFFFFF` is sign-extended to 64 bits, so -1 becomes all ones; this is 7 bytes versus the 10-byte `mov rax, imm64` (`48 B8`).
+- Contrast: `mov eax, -1` (`B8 FF FF FF FF`) also yields all-ones in rax? No — it gives 0x00000000FFFFFFFF, since the 32-bit write zero-extends.</description><guid isPermaLink='false'>2026-10-06</guid><pubDate>Tue, 06 Oct 2026 02:30:45 +0000</pubDate></item></channel></rss>

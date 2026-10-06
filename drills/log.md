@@ -51,3 +51,4 @@
 2026-10-03 | decode-instruction | XOR r/m32,r32 opcode 0x31 self-xor zero idiom, ModRM C9 same reg both operands, 32-bit write zero-extending to rcx
 2026-10-04 | reverse-function | signed divide by power of two via cdq/and/add/sar bias sequence, round-toward-zero vs sar floor rounding, unsigned shr contrast
 2026-10-05 | crackme | bswap byte-order reversal combined with xor mask, backward-solving via self-inverse bswap and xor, 32-bit cmp/sete
+2026-10-06 | decode-instruction | MOV r/m64,imm32 opcode C7 /0 with REX.W, sign-extended imm32 (mov rax,-1), vs 10-byte imm64 form and 32-bit mov zero-extension
