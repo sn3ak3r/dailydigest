@@ -1,52 +1,52 @@
 [
  {
-  "title": "Realtek Jungle SDK Exploit Attempts Deliver Cling Botnet With STUN-Based C2",
-  "link": "https://thehackernews.com/2026/10/realtek-jungle-sdk-exploit-attempts.html",
-  "blurb": "Realtek Jungle SDK exploit attempts deliver the Cling botnet, which uses STUN for C2; check exposed IoT/router firmware."
+  "title": "'BigDiskBuster' Leaves Microsoft Defender Running While Blocking Updates",
+  "link": "https://www.darkreading.com/application-security/bigdiskbuster-microsoft-defender-running-blocking-updates",
+  "blurb": "BigDiskBuster keeps Defender running while blocking its updates, leaving Windows hosts silently unprotected."
  },
  {
-  "title": "Attackers Target Rejetto HFS Flaw That Enables Admin Session Forgery and RCE",
-  "link": "https://thehackernews.com/2026/10/attackers-target-rejetto-hfs-flaw-that.html",
-  "blurb": "Rejetto HFS flaw enables admin session forgery and RCE and is under active attack; patch or remove exposed servers."
+  "title": "Autonomous Active Directory Exploitation via Multi-Model Harness Orchestration: A Benchmark Study with NeuroSploit on GOAD",
+  "link": "https://arxiv.org/abs/2610.04243",
+  "blurb": "Benchmark of LLM-agent orchestration autonomously exploiting Active Directory on the GOAD lab (not fetched; egress blocked)."
  },
  {
-  "title": "Transforming Keystroke Noise to Text: Self-Supervised Acoustic Eavesdropping Attacks on Keyboards",
-  "link": "https://arxiv.org/abs/2607.22094",
-  "blurb": "Self-supervised acoustic eavesdropping recovers typed text from keyboard sound without labelled data, lowering the bar for keystroke-sniffing attacks."
+  "title": "Guess My Weight: Profiled Side-Channel Recovery of Floating-Point Neural-Network Weights",
+  "link": "https://arxiv.org/abs/2610.04436",
+  "blurb": "Profiled side-channel attack recovering floating-point neural-network weights, a model-theft risk (not fetched; egress blocked)."
  },
  {
-  "title": "Claims that genAI speeds up PC ports of classic games are either \"false\" or missing the point, says Banjo Kazooie: Recompiled developer",
-  "link": "https://www.rockpapershotgun.com/claims-that-genai-speeds-up-pc-ports-of-classic-games-are-either-false-or-missing-the-point-says-banjo-kazooie-recompiled-developer",
-  "blurb": "Banjo-Kazooie Recompiled dev disputes claims that genAI speeds up classic-game PC ports, with engineering detail on recompilation."
+  "title": "Someone's modded Diablo 2 for VR, and seeing the world through your character's eyes brings a whole new dimension to the series",
+  "link": "https://www.eurogamer.net/diablo-2-vr-mod",
+  "blurb": "Diablo 2 modded for VR, a hands-on engine/mod build."
  },
  {
-  "title": "RuneScape 4 is a new Unreal Engine MMO which reportedly grew out of a planned Dragonwilds expansion, though it's still a long way off",
-  "link": "https://www.rockpapershotgun.com/runescape-4-is-a-new-unreal-engine-mmo-which-reportedly-grew-out-of-a-planned-dragonwilds-expansion-though-its-still-a-long-way-off",
-  "blurb": "RuneScape 4 is a new Unreal Engine MMO reportedly grown out of a planned Dragonwilds expansion."
+  "title": "Gears of War: E-Day studio finds a way to get more performance from Xbox Series S - one that other Xbox games could probably use",
+  "link": "https://www.eurogamer.net/xbox-series-s-more-power-gears-of-war-e-day-ssd",
+  "blurb": "Gears of War: E-Day studio finds an SSD-based way to squeeze more performance from Xbox Series S."
  },
  {
-  "title": "A novel path to fusion ignition: Heat first, then add fuel",
-  "link": "https://phys.org/news/2026-10-path-fusion-ignition-fuel.html",
-  "blurb": "A proposed fusion ignition path heats first, then adds fuel, a new theoretical approach."
+  "title": "Nearly 10,000 mapped reactions reveal overlooked steps in CO₂-to-fuel conversion",
+  "link": "https://phys.org/news/2026-10-reactions-reveal-overlooked-fuel-conversion.html",
+  "blurb": "Nearly 10,000 mapped reactions expose overlooked steps in CO2-to-fuel conversion."
  },
  {
-  "title": "Ancient DNA evidence narrows down when people first reached the Americas",
-  "link": "https://phys.org/news/2026-10-ancient-dna-evidence-narrows-people.html",
-  "blurb": "Ancient DNA evidence narrows down when people first reached the Americas."
+  "title": "Chernobyl particles reveal unexpectedly stable nuclear fuel after 40 years",
+  "link": "https://phys.org/news/2026-10-chernobyl-particles-reveal-unexpectedly-stable.html",
+  "blurb": "Chernobyl fuel particles show unexpectedly stable nuclear fuel after 40 years."
  },
  {
-  "title": "We ported the original Doom to SQL",
-  "link": "https://cedardb.com/blog/sqldoom/",
-  "blurb": "The original Doom ported to SQL, with the build documented."
+  "title": "AnyPS5: Port PS5 binaries to PC without emulation (87% system libraries mapped)",
+  "link": "https://github.com/boykopovar/AnyPS5",
+  "blurb": "AnyPS5 ports PS5 binaries to PC without emulation, mapping 87% of system libraries."
  },
  {
-  "title": "Reverse Engineering Comanche Terrain Maps",
-  "link": "https://pikuma.com/blog/comanche-maps-reverse-engineering",
-  "blurb": "Reverse engineering the Comanche terrain map format, documented step by step."
+  "title": "Two arm64-specific miscompiles induce bugs in curl",
+  "link": "https://mastodon.social/@bagder/117392573268225646",
+  "blurb": "Two arm64 compiler miscompiles caused real bugs in curl; useful debugging detail."
  },
  {
-  "title": "Dust: Pretraining Transformers Without Backpropagation",
-  "link": "https://qlabs.sh/research/dust",
-  "blurb": "Dust: a research writeup on pretraining transformers without backpropagation (not fetched; egress blocked)."
+  "title": "Janet on x32: 32-bit Pointers, 64-bit Speed, 25% Less RAM",
+  "link": "https://alexalejandre.com/programming/lisp/janet-for-the-x32-abi/",
+  "blurb": "Janet on the x32 ABI: 32-bit pointers, 64-bit speed, 25% less RAM, with benchmarks."
  }
 ]
