@@ -1,8 +1,8 @@
 [
  {
-  "title": "Decode drill 2026-10-06: 48 C7 C0 FF FF FF FF",
-  "guid": "2026-10-06",
-  "blurb": "Target: Windows x86-64.\n\nDecode this instruction (hex bytes):\n\n```\n48 C7 C0 FF FF FF FF\n```\n\nWhat is the assembly? What value ends up in `rax`, and why is the immediate only 4 bytes?\n\n## Answer\n\n`mov rax, -1` (rax = 0xFFFFFFFFFFFFFFFF)\n\n- `48` = REX.W (64-bit operand); `C7` = `MOV r/m, imm32` with ModRM `C0` = `11 000 000` \u2192 mod=11 register-direct, /0 opcode extension, rm=rax.\n- The 32-bit immediate `FFFFFFFF` is sign-extended to 64 bits, so -1 becomes all ones; this is 7 bytes versus the 10-byte `mov rax, imm64` (`48 B8`).\n- Contrast: `mov eax, -1` (`B8 FF FF FF FF`) also yields all-ones in rax? No \u2014 it gives 0x00000000FFFFFFFF, since the 32-bit write zero-extends.",
+  "title": "Reverse drill 2026-10-07: Kernighan bit loop",
+  "guid": "2026-10-07",
+  "blurb": "Target: Windows x86-64.\n\nReverse this short function to equivalent C:\n\n```asm\nmystery:\n    xor     eax, eax\n    test    ecx, ecx\n    je      done\nagain:\n    lea     edx, [rcx-1]\n    inc     eax\n    and     ecx, edx\n    jne     again\ndone:\n    ret\n```\n\nWhat does `mystery(unsigned x)` compute? What does `and ecx, edx` do each pass?\n\n\n## Answer\n\n```c\nint mystery(unsigned x) {\n    int n = 0;\n    while (x) { x &= x - 1; n++; }\n    return n;\n}\n```\n\nPopulation count (number of set bits), Kernighan style.\n\n## Explanation\n\n- `lea edx,[rcx-1]` is just subtraction (no memory access); `x & (x-1)` clears the lowest set bit, so each loop pass removes exactly one 1-bit.\n- `and` sets ZF itself, so the `jne` needs no separate `test`; the loop ends when `x` hits 0, and the up-front `test/je` handles `x == 0` returning 0.\n- Iterations = number of set bits, so `mystery(0xF0F0)` = 8.",
   "link": ""
  }
 ]

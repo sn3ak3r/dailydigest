@@ -1,17 +1,38 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Decode drill 2026-10-06: 48 C7 C0 FF FF FF FF</title><link></link><description>Target: Windows x86-64.
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse drill 2026-10-07: Kernighan bit loop</title><link></link><description>Target: Windows x86-64.
 
-Decode this instruction (hex bytes):
+Reverse this short function to equivalent C:
 
+```asm
+mystery:
+    xor     eax, eax
+    test    ecx, ecx
+    je      done
+again:
+    lea     edx, [rcx-1]
+    inc     eax
+    and     ecx, edx
+    jne     again
+done:
+    ret
 ```
-48 C7 C0 FF FF FF FF
-```
 
-What is the assembly? What value ends up in `rax`, and why is the immediate only 4 bytes?
+What does `mystery(unsigned x)` compute? What does `and ecx, edx` do each pass?
+
 
 ## Answer
 
-`mov rax, -1` (rax = 0xFFFFFFFFFFFFFFFF)
+```c
+int mystery(unsigned x) {
+    int n = 0;
+    while (x) { x &amp;= x - 1; n++; }
+    return n;
+}
+```
 
-- `48` = REX.W (64-bit operand); `C7` = `MOV r/m, imm32` with ModRM `C0` = `11 000 000` → mod=11 register-direct, /0 opcode extension, rm=rax.
-- The 32-bit immediate `FFFFFFFF` is sign-extended to 64 bits, so -1 becomes all ones; this is 7 bytes versus the 10-byte `mov rax, imm64` (`48 B8`).
-- Contrast: `mov eax, -1` (`B8 FF FF FF FF`) also yields all-ones in rax? No — it gives 0x00000000FFFFFFFF, since the 32-bit write zero-extends.</description><guid isPermaLink='false'>2026-10-06</guid><pubDate>Tue, 06 Oct 2026 02:30:45 +0000</pubDate></item></channel></rss>
+Population count (number of set bits), Kernighan style.
+
+## Explanation
+
+- `lea edx,[rcx-1]` is just subtraction (no memory access); `x &amp; (x-1)` clears the lowest set bit, so each loop pass removes exactly one 1-bit.
+- `and` sets ZF itself, so the `jne` needs no separate `test`; the loop ends when `x` hits 0, and the up-front `test/je` handles `x == 0` returning 0.
+- Iterations = number of set bits, so `mystery(0xF0F0)` = 8.</description><guid isPermaLink='false'>2026-10-07</guid><pubDate>Wed, 07 Oct 2026 02:30:42 +0000</pubDate></item></channel></rss>
