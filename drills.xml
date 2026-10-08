@@ -1,38 +1,23 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse drill 2026-10-07: Kernighan bit loop</title><link></link><description>Target: Windows x86-64.
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill 2026-10-08: Mini crackme – rotate and add</title><link></link><description># Drill 2026-10-08: Mini crackme (Windows x64)
 
-Reverse this short function to equivalent C:
+check(unsigned int x) is called with x in ecx. It must return 1 to &quot;pass&quot;. Find the input.
 
-```asm
-mystery:
-    xor     eax, eax
-    test    ecx, ecx
-    je      done
-again:
-    lea     edx, [rcx-1]
-    inc     eax
-    and     ecx, edx
-    jne     again
-done:
+check:
+    mov  eax, ecx
+    ror  eax, 12
+    add  eax, 0x0BADF00D
+    cmp  eax, 0x1234ABCD
+    sete al
+    movzx eax, al
     ret
-```
 
-What does `mystery(unsigned x)` compute? What does `and ecx, edx` do each pass?
+What value of x (hex) returns 1?
 
+---
 
-## Answer
+**Answer:** x = 0x6BBC0068
 
-```c
-int mystery(unsigned x) {
-    int n = 0;
-    while (x) { x &amp;= x - 1; n++; }
-    return n;
-}
-```
-
-Population count (number of set bits), Kernighan style.
-
-## Explanation
-
-- `lea edx,[rcx-1]` is just subtraction (no memory access); `x &amp; (x-1)` clears the lowest set bit, so each loop pass removes exactly one 1-bit.
-- `and` sets ZF itself, so the `jne` needs no separate `test`; the loop ends when `x` hits 0, and the up-front `test/je` handles `x == 0` returning 0.
-- Iterations = number of set bits, so `mystery(0xF0F0)` = 8.</description><guid isPermaLink='false'>2026-10-07</guid><pubDate>Wed, 07 Oct 2026 02:30:42 +0000</pubDate></item></channel></rss>
+1. The check computes ror(x,12) + 0x0BADF00D == 0x1234ABCD, so ror(x,12) = 0x1234ABCD - 0x0BADF00D = 0x0686BBC0.
+2. ror is a rotate: bits falling off the low end re-enter at the top. Undo it with rol by the same count (12 bits = 3 hex digits).
+3. rol(0x0686BBC0, 12): move the leading digits 068 to the end, giving 0x6BBC0068.
+</description><guid isPermaLink='false'>2026-10-08</guid><pubDate>Thu, 08 Oct 2026 02:30:59 +0000</pubDate></item></channel></rss>
