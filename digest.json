@@ -1,52 +1,52 @@
 [
  {
-  "title": "'BigDiskBuster' Leaves Microsoft Defender Running While Blocking Updates",
-  "link": "https://www.darkreading.com/application-security/bigdiskbuster-microsoft-defender-running-blocking-updates",
-  "blurb": "BigDiskBuster keeps Defender running while blocking its updates, leaving Windows hosts silently unprotected."
+  "title": "ClickFix Smuggles Payloads Through Browser Cache to Bypass Windows Run Limits",
+  "link": "https://thehackernews.com/2026/10/clickfix-smuggles-payloads-through.html",
+  "blurb": "ClickFix lures now stage payloads via the browser cache to sidestep Windows Run-dialog limits."
  },
  {
-  "title": "Autonomous Active Directory Exploitation via Multi-Model Harness Orchestration: A Benchmark Study with NeuroSploit on GOAD",
-  "link": "https://arxiv.org/abs/2610.04243",
-  "blurb": "Benchmark of LLM-agent orchestration autonomously exploiting Active Directory on the GOAD lab (not fetched; egress blocked)."
+  "title": "ASAP: Assembly-Source Aligned Pseudocode Refinement For Binary Decompilation",
+  "link": "https://arxiv.org/abs/2610.06900",
+  "blurb": "ASAP aligns assembly with source to refine decompiler pseudocode \u2014 a new RE-tooling approach (arXiv abstract not fetched; egress blocked)."
  },
  {
-  "title": "Guess My Weight: Profiled Side-Channel Recovery of Floating-Point Neural-Network Weights",
-  "link": "https://arxiv.org/abs/2610.04436",
-  "blurb": "Profiled side-channel attack recovering floating-point neural-network weights, a model-theft risk (not fetched; egress blocked)."
+  "title": "Linux Backdoors Impersonate Email Security Tools to Evade Detection in Korea and Taiwan",
+  "link": "https://thehackernews.com/2026/10/linux-backdoors-impersonate-email.html",
+  "blurb": "Linux backdoors posing as email-security tools evade detection in Korean and other targets."
  },
  {
-  "title": "Someone's modded Diablo 2 for VR, and seeing the world through your character's eyes brings a whole new dimension to the series",
-  "link": "https://www.eurogamer.net/diablo-2-vr-mod",
-  "blurb": "Diablo 2 modded for VR, a hands-on engine/mod build."
+  "title": "2026 is a low-key revolutionary year for player movement in games",
+  "link": "https://www.pcgamer.com/games/2026-is-a-low-key-revolutionary-year-for-player-movement-in-games/",
+  "blurb": "Argues 2026 is a standout year for movement mechanics in games."
  },
  {
-  "title": "Gears of War: E-Day studio finds a way to get more performance from Xbox Series S - one that other Xbox games could probably use",
-  "link": "https://www.eurogamer.net/xbox-series-s-more-power-gears-of-war-e-day-ssd",
-  "blurb": "Gears of War: E-Day studio finds an SSD-based way to squeeze more performance from Xbox Series S."
+  "title": "Skate has been de-live serviced by ReSkate, a modding platform downloaded 350,000 times\u2014devs say they will comply if EA's lawyers come knocking",
+  "link": "https://www.pcgamer.com/games/sports/reskate-modding-platform-released/",
+  "blurb": "ReSkate modding platform (350k downloads) shows how modders keep a live-service game going."
  },
  {
-  "title": "Nearly 10,000 mapped reactions reveal overlooked steps in CO₂-to-fuel conversion",
-  "link": "https://phys.org/news/2026-10-reactions-reveal-overlooked-fuel-conversion.html",
-  "blurb": "Nearly 10,000 mapped reactions expose overlooked steps in CO2-to-fuel conversion."
+  "title": "As AI Closed In on \u2018Unique Games\u2019 Proof, Researchers Raced to Beat the Machines",
+  "link": "https://www.quantamagazine.org/as-ai-closed-in-on-unique-games-proof-researchers-raced-to-beat-the-machines-20261007/",
+  "blurb": "**Problem:** Does a long-standing computer-science conjecture (unique games) hold, i.e. is approximating certain constraint puzzles hard? Rumors said an AI had proven it.\n**Approach:** Minzer, Fei and Wang found a new error-correcting code and combined it with earlier pieces, racing the rumor to post a 95-page paper.\n**Result:** They proved a weaker 4-to-1 version, implying that for 3-colorable graphs no fixed number of extra colors makes coloring easy. OpenAI then announced a Lean-verified AI proof of the 2-to-1 case, not yet expert-reviewed.\n**Why it matters:** The conjecture ties together many hardness results; AI-vs-human scooping is now real.\n**Glossary:** Constraint satisfaction (meet as many rules as possible); Graph coloring (color nodes so edges obey rules); Error-correcting code (redundant encoding); Lean (formal proof checker)."
  },
  {
-  "title": "Chernobyl particles reveal unexpectedly stable nuclear fuel after 40 years",
-  "link": "https://phys.org/news/2026-10-chernobyl-particles-reveal-unexpectedly-stable.html",
-  "blurb": "Chernobyl fuel particles show unexpectedly stable nuclear fuel after 40 years."
+  "title": "Snowball Earth's iron deposits may have formed through microbes living without sunlight",
+  "link": "https://phys.org/news/2026-10-snowball-earth-iron-deposits-microbes.html",
+  "blurb": "Microbes living without sunlight may explain Snowball Earth iron deposits."
  },
  {
-  "title": "AnyPS5: Port PS5 binaries to PC without emulation (87% system libraries mapped)",
-  "link": "https://github.com/boykopovar/AnyPS5",
-  "blurb": "AnyPS5 ports PS5 binaries to PC without emulation, mapping 87% of system libraries."
+  "title": "A minimal kernel in Swift, running in QEMU",
+  "link": "https://carette.xyz/posts/minimal_swift_kernel_on_qemu/",
+  "blurb": "A minimal kernel written in Swift booting under QEMU \u2014 documented build."
  },
  {
-  "title": "Two arm64-specific miscompiles induce bugs in curl",
-  "link": "https://mastodon.social/@bagder/117392573268225646",
-  "blurb": "Two arm64 compiler miscompiles caused real bugs in curl; useful debugging detail."
+  "title": "An open-source, clean-room reimplementation of Adobe Photoshop in pure Rust",
+  "link": "https://github.com/storytold/photocraft",
+  "blurb": "Clean-room, open-source Photoshop reimplementation in pure Rust."
  },
  {
-  "title": "Janet on x32: 32-bit Pointers, 64-bit Speed, 25% Less RAM",
-  "link": "https://alexalejandre.com/programming/lisp/janet-for-the-x32-abi/",
-  "blurb": "Janet on the x32 ABI: 32-bit pointers, 64-bit speed, 25% less RAM, with benchmarks."
+  "title": "rat's minimal register allocator",
+  "link": "https://hexrat.cc/pages/blog/2026_10_07",
+  "blurb": "A minimal register allocator, with the design written up."
  }
 ]
