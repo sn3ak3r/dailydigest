@@ -1,8 +1,8 @@
 [
  {
-  "title": "Drill 2026-10-08: Mini crackme \u2013 rotate and add",
-  "guid": "2026-10-08",
-  "blurb": "# Drill 2026-10-08: Mini crackme (Windows x64)\n\ncheck(unsigned int x) is called with x in ecx. It must return 1 to \"pass\". Find the input.\n\ncheck:\n    mov  eax, ecx\n    ror  eax, 12\n    add  eax, 0x0BADF00D\n    cmp  eax, 0x1234ABCD\n    sete al\n    movzx eax, al\n    ret\n\nWhat value of x (hex) returns 1?\n\n---\n\n**Answer:** x = 0x6BBC0068\n\n1. The check computes ror(x,12) + 0x0BADF00D == 0x1234ABCD, so ror(x,12) = 0x1234ABCD - 0x0BADF00D = 0x0686BBC0.\n2. ror is a rotate: bits falling off the low end re-enter at the top. Undo it with rol by the same count (12 bits = 3 hex digits).\n3. rol(0x0686BBC0, 12): move the leading digits 068 to the end, giving 0x6BBC0068.\n",
+  "title": "Drill 2026-10-09: Decode CALL rel32",
+  "guid": "2026-10-09",
+  "blurb": "Decode-one-instruction drill \u2014 2026-10-09\n\nTarget: Windows x86-64.\n\nThis instruction sits at address `0x140001010`:\n\n```\nE8 EB FF FF FF\n```\n\nWhat is the assembly? What address does it call, and what does it push on the stack?\n\n---\n\n## Answer\n\n`call 0x140001000` (pushes return address `0x140001015`)\n\n- `E8` = `CALL rel32`; the operand `EBFFFFFF` is little-endian 0xFFFFFFEB = -0x15 (signed 32-bit).\n- Displacement is relative to the *next* instruction: 0x140001010 + 5 (length) = 0x140001015, then 0x140001015 \u2212 0x15 = 0x140001000. A negative displacement means a backward call.\n- CALL pushes that next-instruction address (rsp -= 8), which `ret` later pops; no REX or ModRM byte is needed.\n",
   "link": ""
  }
 ]
