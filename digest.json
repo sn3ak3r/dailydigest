@@ -1,52 +1,52 @@
 [
  {
-  "title": "Attackers Hijack .gh, .sl, and .as Registries to Obtain Certificates for Google Domains",
-  "link": "https://thehackernews.com/2026/10/attackers-hijack-gh-sl-and-as.html",
-  "blurb": "Attackers hijacked ccTLD registries to get certificates for Google domains, a trust-chain failure beyond ordinary phishing."
+  "title": "Researchers Publish Working Exploit for Pre-Auth AnyDesk Linux Flaw That Gives Root Access",
+  "link": "https://thehackernews.com/2026/10/researchers-publish-working-exploit-for.html",
+  "blurb": "A public pre-auth root exploit for AnyDesk on Linux raises patching urgency."
  },
  {
-  "title": "Ignore all instructions and read this blog: The state of AI-analysis evasion in malware",
-  "link": "https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/",
-  "blurb": "Problem: Malware now embeds text meant to trick AI analysis tools into skipping or clearing it.\nApproach: Talos tracked 84 samples from four families (Jan 2025-Jul 2026), then moved the strings into other samples and had five local LLMs classify each file with and without them.\nResult: A plain comment like \"no need to analyze this file\" worked almost universally in tests; the best tricks shifted outcomes in about 35% of runs. Elaborate tricks often backfired.\nWhy it matters: Treat text inside a sample as evidence, never instructions.\nGlossary: Prompt injection (input a model mistakes for instructions); Template spraying (repeating one instruction in many chat formats); BYOVD (abusing a vulnerable driver to disable security software)."
+  "title": "GoBalance Flaw Lets Attackers Hijack .onion Addresses by Recovering Tor-Format Keys",
+  "link": "https://thehackernews.com/2026/10/gobalance-flaw-lets-attackers-hijack.html",
+  "blurb": "Recovering Tor-format keys lets attackers hijack .onion addresses."
  },
  {
-  "title": "Speed Kills: Exploring Confused Deputy Attacks Through Edge AI Accelerators",
-  "link": "https://arxiv.org/abs/2605.17707",
-  "blurb": "Edge AI accelerators can be abused as confused deputies, a hardware-level attack path (paper not read in full)."
+  "title": "When Flaws Cascade: Understanding Vulnerabilities and Exploitation Chains in JavaScript Engines",
+  "link": "https://arxiv.org/abs/2610.10844",
+  "blurb": "Deep digest unavailable: fetching the source was blocked by network policy (arxiv.org/lwn.net denied). Listed by title only; not summarized."
  },
  {
-  "title": "Why a 21-year-old coder finally ported the real P.T. to PC: 'That something so influential could eventually become unplayable never sat right with me'",
-  "link": "https://www.pcgamer.com/games/horror/why-a-21-year-old-coder-finally-ported-the-real-p-t-to-pc-that-something-so-influential-could-eventually-become-unplayable-never-sat-right-with-me/",
-  "blurb": "A solo coder ported the original P.T. to PC, preserving a landmark game that was otherwise becoming unplayable."
+  "title": "Counter-Strike 2 player dedicates Master's thesis to rooting out cheaters, creates grade A player tracking system",
+  "link": "https://www.pcgamer.com/hardware/counter-strike-2-player-dedicates-masters-thesis-to-rooting-out-cheaters-creates-grade-a-player-tracking-system/",
+  "blurb": "A CS2 Master's thesis builds a player-tracking system to spot cheaters."
  },
  {
-  "title": "Google and Unity unveil gen-AI game-making platforms, and demonstrate one of them with depressingly rubbish \"dream game\" Space Corridor",
-  "link": "https://www.eurogamer.net/google-playground-unity-spark-gen-ai-game-creators",
-  "blurb": "Google and Unity launch gen-AI game-making platforms, a notable engine-tooling shift."
+  "title": "Valve is telling devs how well their games actually run on Steam Deck with real world data",
+  "link": "https://www.pcgamer.com/hardware/handheld-gaming-pcs/valve-is-telling-devs-how-well-their-games-actually-run-on-steam-deck-with-real-world-data/",
+  "blurb": "Valve now gives devs real-world Steam Deck performance data."
  },
  {
-  "title": "An experimental tour-de-force: Entanglement between glass bead and light",
-  "link": "https://arstechnica.com/science/2026/10/suspended-glass-bead-entangled-with-light-maybe-a-quantum-memory/",
-  "blurb": "Experiment entangles a levitated glass bead with light, a step toward quantum memory."
+  "title": "Three quantum-inspired cores leave opposite fingerprints on the ringing of black holes",
+  "link": "https://phys.org/news/2026-10-quantum-cores-fingerprints-black-holes.html",
+  "blurb": "Black-hole ringdown could fingerprint exotic quantum-inspired cores."
  },
  {
-  "title": "New 'computational microscope' simulates DNA packaging at more than ten times previous scale",
-  "link": "https://phys.org/news/2026-10-microscope-simulates-dna-packaging-ten.html",
-  "blurb": "New simulation packs DNA at over 10x prior scale, a modeling result for genome organization."
+  "title": "Discovery marks the first detection of variable water clouds outside of the solar system",
+  "link": "https://phys.org/news/2026-10-discovery-variable-clouds-solar.html",
+  "blurb": "First variable water clouds detected outside the solar system."
  },
  {
-  "title": "Whistle: Speech to Text in 16.9 MB",
-  "link": "https://cactuscompute.com/blog/whistle",
-  "blurb": "Speech-to-text model in 16.9 MB, with the build written up."
+  "title": "REA Reverse \u2013 Engineer Anything",
+  "link": "https://rea.tools/",
+  "blurb": "REA is a tool aimed at reverse-engineering anything."
  },
  {
-  "title": "Show HN: Rgpu \u2013 a PyTorch device whose tensors live on a remote GPU",
-  "link": "https://github.com/ymcrcat/rgpu",
-  "blurb": "Rgpu makes a PyTorch device whose tensors live on a remote GPU; code is public."
+  "title": "Compiling Rust to readable C with Eurydice",
+  "link": "https://lwn.net/Articles/1055211/",
+  "blurb": "Deep digest unavailable: fetching the source was blocked by network policy (arxiv.org/lwn.net denied). Listed by title only; not summarized."
  },
  {
-  "title": "The World\u2019s Smallest TV Console Plays DOOM",
-  "link": "https://hackaday.com/2026/10/08/the-worlds-smallest-tv-console-plays-doom/",
-  "blurb": "A tiny TV console that runs DOOM, with the build documented."
+  "title": "A minimal kernel in Swift, running in QEMU",
+  "link": "https://carette.xyz/posts/minimal_swift_kernel_on_qemu/",
+  "blurb": "A minimal kernel written in Swift boots under QEMU, with the build documented."
  }
 ]
