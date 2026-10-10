@@ -1,22 +1,33 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill 2026-10-09: Decode CALL rel32</title><link></link><description>Decode-one-instruction drill — 2026-10-09
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse-a-function drill — 2026-10-10</title><link></link><description># Reverse-a-function drill — 2026-10-10
 
-Target: Windows x86-64.
+Target: Windows x86-64 (arg in `ecx`, return in `al`/`eax`).
 
-This instruction sits at address `0x140001010`:
+Reverse this short function to equivalent C:
 
+```asm
+mystery:
+    sub     ecx, 48
+    xor     eax, eax
+    cmp     ecx, 9
+    setbe   al
+    ret
 ```
-E8 EB FF FF FF
-```
 
-What is the assembly? What address does it call, and what does it push on the stack?
+What does `mystery(int c)` compute? Why is there only one comparison, and why `setbe` rather than `setle`?
 
 ---
 
 ## Answer
 
-`call 0x140001000` (pushes return address `0x140001015`)
+```c
+int mystery(int c) {
+    return (unsigned)(c - &#x27;0&#x27;) &lt;= 9;   // isdigit-style range check
+}
+```
 
-- `E8` = `CALL rel32`; the operand `EBFFFFFF` is little-endian 0xFFFFFFEB = -0x15 (signed 32-bit).
-- Displacement is relative to the *next* instruction: 0x140001010 + 5 (length) = 0x140001015, then 0x140001015 − 0x15 = 0x140001000. A negative displacement means a backward call.
-- CALL pushes that next-instruction address (rsp -= 8), which `ret` later pops; no REX or ModRM byte is needed.
-</description><guid isPermaLink='false'>2026-10-09</guid><pubDate>Fri, 09 Oct 2026 02:30:48 +0000</pubDate></item></channel></rss>
+## Explanation
+
+- 48 is `&#x27;0&#x27;`; subtracting it maps `&#x27;0&#x27;..&#x27;9&#x27;` to `0..9`, and anything below `&#x27;0&#x27;` wraps to a huge unsigned value.
+- `setbe` (CF=1 or ZF=1) is an *unsigned* compare, so one `cmp` rejects both too-small and too-large inputs, replacing `c &gt;= &#x27;0&#x27; &amp;&amp; c &lt;= &#x27;9&#x27;`.
+- `xor eax,eax` comes before `cmp` because xor would clobber the flags; `setbe` writes only `al`, so the upper bits stay 0.
+</description><guid isPermaLink='false'>2026-10-10</guid><pubDate>Sat, 10 Oct 2026 02:30:40 +0000</pubDate></item></channel></rss>

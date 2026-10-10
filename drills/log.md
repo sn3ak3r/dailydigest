@@ -55,3 +55,4 @@
 2026-10-07 | reverse-function | Kernighan popcount loop: lea as subtract, x&(x-1) clears lowest set bit, and setting ZF for jne, test/je zero guard
 2026-10-08 | crackme | ror rotate-right by 12 combined with add of constant, backward-solving by subtracting then rol (rotate inverse), rotate as bit-wrap not shift
 2026-10-09 | decode-instruction | CALL rel32 opcode E8, signed little-endian displacement relative to next instruction, backward call target arithmetic, return-address push
+2026-10-10 | reverse-function | unsigned range check via sub-bias + single cmp/setbe (isdigit idiom), unsigned vs signed condition codes, xor-before-cmp to preserve flags

@@ -1,8 +1,8 @@
 [
- {
-  "title": "Drill 2026-10-09: Decode CALL rel32",
-  "guid": "2026-10-09",
-  "blurb": "Decode-one-instruction drill \u2014 2026-10-09\n\nTarget: Windows x86-64.\n\nThis instruction sits at address `0x140001010`:\n\n```\nE8 EB FF FF FF\n```\n\nWhat is the assembly? What address does it call, and what does it push on the stack?\n\n---\n\n## Answer\n\n`call 0x140001000` (pushes return address `0x140001015`)\n\n- `E8` = `CALL rel32`; the operand `EBFFFFFF` is little-endian 0xFFFFFFEB = -0x15 (signed 32-bit).\n- Displacement is relative to the *next* instruction: 0x140001010 + 5 (length) = 0x140001015, then 0x140001015 \u2212 0x15 = 0x140001000. A negative displacement means a backward call.\n- CALL pushes that next-instruction address (rsp -= 8), which `ret` later pops; no REX or ModRM byte is needed.\n",
-  "link": ""
- }
+  {
+    "title": "Reverse-a-function drill — 2026-10-10",
+    "guid": "2026-10-10",
+    "blurb": "# Reverse-a-function drill — 2026-10-10\n\nTarget: Windows x86-64 (arg in `ecx`, return in `al`/`eax`).\n\nReverse this short function to equivalent C:\n\n```asm\nmystery:\n    sub     ecx, 48\n    xor     eax, eax\n    cmp     ecx, 9\n    setbe   al\n    ret\n```\n\nWhat does `mystery(int c)` compute? Why is there only one comparison, and why `setbe` rather than `setle`?\n\n---\n\n## Answer\n\n```c\nint mystery(int c) {\n    return (unsigned)(c - '0') <= 9;   // isdigit-style range check\n}\n```\n\n## Explanation\n\n- 48 is `'0'`; subtracting it maps `'0'..'9'` to `0..9`, and anything below `'0'` wraps to a huge unsigned value.\n- `setbe` (CF=1 or ZF=1) is an *unsigned* compare, so one `cmp` rejects both too-small and too-large inputs, replacing `c >= '0' && c <= '9'`.\n- `xor eax,eax` comes before `cmp` because xor would clobber the flags; `setbe` writes only `al`, so the upper bits stay 0.\n",
+    "link": ""
+  }
 ]
