@@ -1,33 +1,22 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse-a-function drill — 2026-10-10</title><link></link><description># Reverse-a-function drill — 2026-10-10
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill 2026-10-11: crackme (imul + not)</title><link></link><description>Crackme drill: find the passing input
 
-Target: Windows x86-64 (arg in `ecx`, return in `al`/`eax`).
+Windows x64, `ecx` holds your 32-bit integer argument. The function returns 1 for the correct input:
 
-Reverse this short function to equivalent C:
 
-```asm
-mystery:
-    sub     ecx, 48
-    xor     eax, eax
-    cmp     ecx, 9
-    setbe   al
-    ret
-```
+imul eax, ecx, 7
+not  eax
+cmp  eax, 0FFFFFFA4h
+sete al
+ret
 
-What does `mystery(int c)` compute? Why is there only one comparison, and why `setbe` rather than `setle`?
+
+What value of `ecx` returns 1?
 
 ---
 
-## Answer
+Answer: 13
 
-```c
-int mystery(int c) {
-    return (unsigned)(c - &#x27;0&#x27;) &lt;= 9;   // isdigit-style range check
-}
-```
-
-## Explanation
-
-- 48 is `&#x27;0&#x27;`; subtracting it maps `&#x27;0&#x27;..&#x27;9&#x27;` to `0..9`, and anything below `&#x27;0&#x27;` wraps to a huge unsigned value.
-- `setbe` (CF=1 or ZF=1) is an *unsigned* compare, so one `cmp` rejects both too-small and too-large inputs, replacing `c &gt;= &#x27;0&#x27; &amp;&amp; c &lt;= &#x27;9&#x27;`.
-- `xor eax,eax` comes before `cmp` because xor would clobber the flags; `setbe` writes only `al`, so the upper bits stay 0.
-</description><guid isPermaLink='false'>2026-10-10</guid><pubDate>Sat, 10 Oct 2026 02:30:40 +0000</pubDate></item></channel></rss>
+1. `imul eax, ecx, 7` is the three-operand form: eax = ecx * 7 (destination, source, immediate), leaving ecx intact.
+2. `not` flips every bit, so ~y = -y - 1. The constant 0xFFFFFFA4 is -92 signed, so -y - 1 = -92 and y = 91.
+3. 7x = 91 gives x = 13. Check: 13*7 = 91 = 0x5B, and ~0x5B = 0xFFFFFFA4.
+</description><guid isPermaLink='false'>2026-10-11</guid><pubDate>Sun, 11 Oct 2026 02:31:20 +0000</pubDate></item></channel></rss>

@@ -1,8 +1,8 @@
 [
   {
-    "title": "Reverse-a-function drill — 2026-10-10",
-    "guid": "2026-10-10",
-    "blurb": "# Reverse-a-function drill — 2026-10-10\n\nTarget: Windows x86-64 (arg in `ecx`, return in `al`/`eax`).\n\nReverse this short function to equivalent C:\n\n```asm\nmystery:\n    sub     ecx, 48\n    xor     eax, eax\n    cmp     ecx, 9\n    setbe   al\n    ret\n```\n\nWhat does `mystery(int c)` compute? Why is there only one comparison, and why `setbe` rather than `setle`?\n\n---\n\n## Answer\n\n```c\nint mystery(int c) {\n    return (unsigned)(c - '0') <= 9;   // isdigit-style range check\n}\n```\n\n## Explanation\n\n- 48 is `'0'`; subtracting it maps `'0'..'9'` to `0..9`, and anything below `'0'` wraps to a huge unsigned value.\n- `setbe` (CF=1 or ZF=1) is an *unsigned* compare, so one `cmp` rejects both too-small and too-large inputs, replacing `c >= '0' && c <= '9'`.\n- `xor eax,eax` comes before `cmp` because xor would clobber the flags; `setbe` writes only `al`, so the upper bits stay 0.\n",
+    "title": "Drill 2026-10-11: crackme (imul + not)",
+    "guid": "2026-10-11",
+    "blurb": "Crackme drill: find the passing input\n\nWindows x64, `ecx` holds your 32-bit integer argument. The function returns 1 for the correct input:\n\n\nimul eax, ecx, 7\nnot  eax\ncmp  eax, 0FFFFFFA4h\nsete al\nret\n\n\nWhat value of `ecx` returns 1?\n\n---\n\nAnswer: 13\n\n1. `imul eax, ecx, 7` is the three-operand form: eax = ecx * 7 (destination, source, immediate), leaving ecx intact.\n2. `not` flips every bit, so ~y = -y - 1. The constant 0xFFFFFFA4 is -92 signed, so -y - 1 = -92 and y = 91.\n3. 7x = 91 gives x = 13. Check: 13*7 = 91 = 0x5B, and ~0x5B = 0xFFFFFFA4.\n",
     "link": ""
   }
 ]

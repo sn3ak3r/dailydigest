@@ -56,3 +56,4 @@
 2026-10-08 | crackme | ror rotate-right by 12 combined with add of constant, backward-solving by subtracting then rol (rotate inverse), rotate as bit-wrap not shift
 2026-10-09 | decode-instruction | CALL rel32 opcode E8, signed little-endian displacement relative to next instruction, backward call target arithmetic, return-address push
 2026-10-10 | reverse-function | unsigned range check via sub-bias + single cmp/setbe (isdigit idiom), unsigned vs signed condition codes, xor-before-cmp to preserve flags
+2026-10-11 | crackme | three-operand imul r32,r/m32,imm8, NOT one's complement identity ~y=-y-1, backward-solving multiply against negative-looking hex constant
