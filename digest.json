@@ -1,52 +1,52 @@
 [
  {
-  "title": "Researchers Publish Working Exploit for Pre-Auth AnyDesk Linux Flaw That Gives Root Access",
-  "link": "https://thehackernews.com/2026/10/researchers-publish-working-exploit-for.html",
-  "blurb": "A public pre-auth root exploit for AnyDesk on Linux raises patching urgency."
+  "title": "P7 DarkSword iOS Exploit Kit Adds Crypto Wallet Data Theft and Remote Commands",
+  "link": "https://thehackernews.com/2026/10/p7-darksword-ios-exploit-kit-adds.html",
+  "blurb": "iOS exploit kit now steals crypto wallet data and accepts remote commands."
  },
  {
-  "title": "GoBalance Flaw Lets Attackers Hijack .onion Addresses by Recovering Tor-Format Keys",
-  "link": "https://thehackernews.com/2026/10/gobalance-flaw-lets-attackers-hijack.html",
-  "blurb": "Recovering Tor-format keys lets attackers hijack .onion addresses."
+  "title": "Credential-Stealing GitHub Actions Workflows Planted in Tens of Thousands of Repositories",
+  "link": "https://thehackernews.com/2026/10/credential-stealing-github-actions.html",
+  "blurb": "Credential-stealing GitHub Actions workflows planted across tens of thousands of repos; audit your CI."
  },
  {
-  "title": "When Flaws Cascade: Understanding Vulnerabilities and Exploitation Chains in JavaScript Engines",
-  "link": "https://arxiv.org/abs/2610.10844",
-  "blurb": "Deep digest unavailable: fetching the source was blocked by network policy (arxiv.org/lwn.net denied). Listed by title only; not summarized."
+  "title": "Attackers Exploit AhsayCBS Flaws to Deploy XMRig Miners Disguised as Microsoft Edge",
+  "link": "https://thehackernews.com/2026/10/attackers-exploit-ahsaycbs-flaws-to.html",
+  "blurb": "Unpatched AhsayCBS flaws used to drop webshells and XMRig miners disguised as Edge."
  },
  {
-  "title": "Counter-Strike 2 player dedicates Master's thesis to rooting out cheaters, creates grade A player tracking system",
-  "link": "https://www.pcgamer.com/hardware/counter-strike-2-player-dedicates-masters-thesis-to-rooting-out-cheaters-creates-grade-a-player-tracking-system/",
-  "blurb": "A CS2 Master's thesis builds a player-tracking system to spot cheaters."
+  "title": "After modders removed Skate's live service bits, devs draw the line with tools that \"bypass our systems to unlock paid cosmetics\"",
+  "link": "https://www.eurogamer.net/skate-mods-live-service-ea-unlock-paid-cosmetics",
+  "blurb": "Skate devs draw a line on modding tools after modders stripped live-service features."
  },
  {
-  "title": "Valve is telling devs how well their games actually run on Steam Deck with real world data",
-  "link": "https://www.pcgamer.com/hardware/handheld-gaming-pcs/valve-is-telling-devs-how-well-their-games-actually-run-on-steam-deck-with-real-world-data/",
-  "blurb": "Valve now gives devs real-world Steam Deck performance data."
+  "title": "I might finally have gone too far with a GTA 5 mod that imports most of Doom 2",
+  "link": "https://www.pcgamer.com/games/grand-theft-auto/i-might-finally-have-gone-too-far-with-a-gta-5-mod-that-imports-most-of-doom-2/",
+  "blurb": "A GTA 5 mod that imports most of Doom 2 \u2014 modding-engine hackery."
  },
  {
-  "title": "Three quantum-inspired cores leave opposite fingerprints on the ringing of black holes",
-  "link": "https://phys.org/news/2026-10-quantum-cores-fingerprints-black-holes.html",
-  "blurb": "Black-hole ringdown could fingerprint exotic quantum-inspired cores."
+  "title": "New stability rules distinguish quantum phases of matter that an older method wrongly groups together",
+  "link": "https://phys.org/news/2026-10-stability-distinguish-quantum-phases-older.html",
+  "blurb": "Problem: Noisy quantum systems become mixed states with no Hamiltonian, so standard phase classification fails; the FDLC method wrongly lumps different phases together. Approach: Illinois researchers extended entanglement bootstrapping: three stability conditions pick fixed points, and phases are states approximately stable near them, labeled by topological invariants. Result: It separates a product state from the maximally dephased toric code, which FDLC conflates; deviations decay exponentially. Fracton phases aren't covered yet. Why it matters: Helps understand phases under noise, relevant to robust quantum hardware. Glossary: mixed state (noise-degraded state); fixed point (scale-invariant anchor); topological invariant (label unchanged by smooth deformation); FDLC (finite-depth local channel)."
  },
  {
-  "title": "Discovery marks the first detection of variable water clouds outside of the solar system",
-  "link": "https://phys.org/news/2026-10-discovery-variable-clouds-solar.html",
-  "blurb": "First variable water clouds detected outside the solar system."
+  "title": "Neanderthal wooden tools from Spain found preserved in stone",
+  "link": "https://arstechnica.com/science/2026/10/neanderthal-wooden-tools-from-spain-found-preserved-in-stone/",
+  "blurb": "Neanderthal wooden tools found preserved in stone in Spain."
  },
  {
-  "title": "REA Reverse \u2013 Engineer Anything",
-  "link": "https://rea.tools/",
-  "blurb": "REA is a tool aimed at reverse-engineering anything."
+  "title": "The 2D physics prototype behind GTA\u2019s vehicles",
+  "link": "https://patkerr.co.uk/2d-vehicles/",
+  "blurb": "Writeup of the 2D physics prototype behind GTA's vehicle handling."
  },
  {
-  "title": "Compiling Rust to readable C with Eurydice",
-  "link": "https://lwn.net/Articles/1055211/",
-  "blurb": "Deep digest unavailable: fetching the source was blocked by network policy (arxiv.org/lwn.net denied). Listed by title only; not summarized."
+  "title": "Making np.searchsorted up to 25\u00d7 Faster in NumPy 2.5",
+  "link": "https://blog.scientific-python.org/numpy/searchsorted/",
+  "blurb": "Deep digest unavailable: fetching the source failed (blog.scientific-python.org DNS/network blocked). Listed by title only; not summarized."
  },
  {
-  "title": "A minimal kernel in Swift, running in QEMU",
-  "link": "https://carette.xyz/posts/minimal_swift_kernel_on_qemu/",
-  "blurb": "A minimal kernel written in Swift boots under QEMU, with the build documented."
+  "title": "culpert - rust heap profiling with span awareness and regression tooling",
+  "link": "https://github.com/rupert648/culpert",
+  "blurb": "culpert: Rust heap profiler with span awareness and regression tooling."
  }
 ]
