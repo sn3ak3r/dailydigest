@@ -1,52 +1,52 @@
 [
  {
-  "title": "P7 DarkSword iOS Exploit Kit Adds Crypto Wallet Data Theft and Remote Commands",
-  "link": "https://thehackernews.com/2026/10/p7-darksword-ios-exploit-kit-adds.html",
-  "blurb": "iOS exploit kit now steals crypto wallet data and accepts remote commands."
+  "title": "ARTEX AI, Claude agents used in cyberattacks on South Korean banks",
+  "link": "https://www.bleepingcomputer.com/news/security/hacker-used-artex-ai-and-claude-agents-to-target-south-korean-banks/",
+  "blurb": "Agentic AI tooling used operationally against banks."
  },
  {
-  "title": "Credential-Stealing GitHub Actions Workflows Planted in Tens of Thousands of Repositories",
-  "link": "https://thehackernews.com/2026/10/credential-stealing-github-actions.html",
-  "blurb": "Credential-stealing GitHub Actions workflows planted across tens of thousands of repos; audit your CI."
+  "title": "Anthropic Cuts Live Internet Access for Internal AI Tests After Claude Exploits Injection",
+  "link": "https://thehackernews.com/2026/10/anthropic-cuts-live-internet-access-for.html",
+  "blurb": "A model exploited an injection flaw during testing; a sandboxing lesson."
  },
  {
-  "title": "Attackers Exploit AhsayCBS Flaws to Deploy XMRig Miners Disguised as Microsoft Edge",
-  "link": "https://thehackernews.com/2026/10/attackers-exploit-ahsaycbs-flaws-to.html",
-  "blurb": "Unpatched AhsayCBS flaws used to drop webshells and XMRig miners disguised as Edge."
+  "title": "Cyber exec arrested in case allegedly tied to ShinyHunters hackers",
+  "link": "https://www.bleepingcomputer.com/news/security/cyber-exec-arrested-in-case-allegedly-tied-to-shinyhunters-hackers/",
+  "blurb": "Law-enforcement action touching a prolific extortion group."
  },
  {
-  "title": "After modders removed Skate's live service bits, devs draw the line with tools that \"bypass our systems to unlock paid cosmetics\"",
-  "link": "https://www.eurogamer.net/skate-mods-live-service-ea-unlock-paid-cosmetics",
-  "blurb": "Skate devs draw a line on modding tools after modders stripped live-service features."
+  "title": "Seamless Landing mod looks set to bring Starfield another step closer to No Man's Sky",
+  "link": "https://www.pcgamer.com/games/rpg/seamless-landing-mod-looks-set-to-bring-starfield-another-step-closer-to-no-mans-sky/",
+  "blurb": "Engine-level modding aims to remove Starfield's landing transitions."
  },
  {
-  "title": "I might finally have gone too far with a GTA 5 mod that imports most of Doom 2",
-  "link": "https://www.pcgamer.com/games/grand-theft-auto/i-might-finally-have-gone-too-far-with-a-gta-5-mod-that-imports-most-of-doom-2/",
-  "blurb": "A GTA 5 mod that imports most of Doom 2 \u2014 modding-engine hackery."
+  "title": "Deadlock surpasses Team Fortress 2's all-time concurrent player count peak as it adds a chess wizard",
+  "link": "https://www.pcgamer.com/games/moba/deadlock-surpasses-team-fortress-2s-all-time-concurrent-player-count-peak-as-it-adds-a-chess-wizard/",
+  "blurb": "Valve's new MOBA passes TF2's peak: a notable industry milestone."
  },
  {
-  "title": "New stability rules distinguish quantum phases of matter that an older method wrongly groups together",
-  "link": "https://phys.org/news/2026-10-stability-distinguish-quantum-phases-older.html",
-  "blurb": "Problem: Noisy quantum systems become mixed states with no Hamiltonian, so standard phase classification fails; the FDLC method wrongly lumps different phases together. Approach: Illinois researchers extended entanglement bootstrapping: three stability conditions pick fixed points, and phases are states approximately stable near them, labeled by topological invariants. Result: It separates a product state from the maximally dephased toric code, which FDLC conflates; deviations decay exponentially. Fracton phases aren't covered yet. Why it matters: Helps understand phases under noise, relevant to robust quantum hardware. Glossary: mixed state (noise-degraded state); fixed point (scale-invariant anchor); topological invariant (label unchanged by smooth deformation); FDLC (finite-depth local channel)."
+  "title": "Quantum 'birthmarks' hold lasting traces of a system's past",
+  "link": "https://phys.org/news/2026-10-quantum-birthmarks.html",
+  "blurb": "Problem: Isolated quantum systems may not forget their starting state the way chaotic classical ones do. Approach: Harvard-led theorists (Graf et al., Physical Review X, 2026) split the memory into a symmetry-set universal factor and a revival factor from early recurrences, tested numerically on a particle in a stadium-shaped box. Result: Long-run probabilities keep patterns tied to the initial state and early motion; scars strengthen it. A state that hasn't explored phase space by the Thouless time never will. Why it matters: Limits quantum ergodicity, which underlies thermalization. Glossary: ergodicity (long-term behavior independent of start); quantum scars (states on repeating classical paths); phase space (all positions and momenta); Thouless time (time to explore it)."
  },
  {
-  "title": "Neanderthal wooden tools from Spain found preserved in stone",
-  "link": "https://arstechnica.com/science/2026/10/neanderthal-wooden-tools-from-spain-found-preserved-in-stone/",
-  "blurb": "Neanderthal wooden tools found preserved in stone in Spain."
+  "title": "'DNA Typewriter' records cells' history in developing mouse embryo",
+  "link": "https://phys.org/news/2026-10-dna-typewriter-cells-history-mouse.html",
+  "blurb": "Molecular recording lets researchers reconstruct cell lineage in an embryo."
  },
  {
-  "title": "The 2D physics prototype behind GTA\u2019s vehicles",
-  "link": "https://patkerr.co.uk/2d-vehicles/",
-  "blurb": "Writeup of the 2D physics prototype behind GTA's vehicle handling."
+  "title": "500B tokens later: Letting AI agents decompile a first-person shooter",
+  "link": "https://momo5502.com/posts/2026-10-09-game-decompilation/",
+  "blurb": "Deep digest unavailable: fetching the source failed (momo5502.com DNS/network blocked). Listed by title only; not summarized."
  },
  {
-  "title": "Making np.searchsorted up to 25\u00d7 Faster in NumPy 2.5",
-  "link": "https://blog.scientific-python.org/numpy/searchsorted/",
-  "blurb": "Deep digest unavailable: fetching the source failed (blog.scientific-python.org DNS/network blocked). Listed by title only; not summarized."
+  "title": "Improving an Autorouter with a Hexagonal Grid",
+  "link": "https://hackaday.com/2026/10/11/improving-an-autorouter-with-a-hexagonal-grid/",
+  "blurb": "Documented PCB autorouter improvement using a hex grid."
  },
  {
-  "title": "culpert - rust heap profiling with span awareness and regression tooling",
-  "link": "https://github.com/rupert648/culpert",
-  "blurb": "culpert: Rust heap profiler with span awareness and regression tooling."
+  "title": "Total Annihilation, rebuilt for modern computers",
+  "link": "https://nanolathe.gg",
+  "blurb": "A classic RTS reimplemented for modern hardware."
  }
 ]
