@@ -1,8 +1,8 @@
 [
   {
-    "title": "Drill 2026-10-11: crackme (imul + not)",
-    "guid": "2026-10-11",
-    "blurb": "Crackme drill: find the passing input\n\nWindows x64, `ecx` holds your 32-bit integer argument. The function returns 1 for the correct input:\n\n\nimul eax, ecx, 7\nnot  eax\ncmp  eax, 0FFFFFFA4h\nsete al\nret\n\n\nWhat value of `ecx` returns 1?\n\n---\n\nAnswer: 13\n\n1. `imul eax, ecx, 7` is the three-operand form: eax = ecx * 7 (destination, source, immediate), leaving ecx intact.\n2. `not` flips every bit, so ~y = -y - 1. The constant 0xFFFFFFA4 is -92 signed, so -y - 1 = -92 and y = 91.\n3. 7x = 91 gives x = 13. Check: 13*7 = 91 = 0x5B, and ~0x5B = 0xFFFFFFA4.\n",
+    "title": "Drill 2026-10-12: decode instruction (shl imm8)",
+    "guid": "2026-10-12",
+    "blurb": "Decode-one-instruction drill\n\nTarget: Windows x86-64.\n\nDecode this instruction:\n\nC1 E2 05\n\nWhat is the assembly? Which register is modified, and what is the arithmetic effect?\n\n---\n\nAnswer\n\nshl edx, 5 (edx = edx \u00d7 32)\n\n- C1 = shift/rotate group, r/m32, imm8; the ModRM byte E2 = 11 100 010: mod=11 (register-direct), reg=100 (/4 = SHL, an opcode extension, not a register), rm=010 (edx).\n- The last byte 05 is the imm8 shift count, so the shift is left by 5 bits, i.e. multiply by 2^5 = 32.\n- No REX prefix means 32-bit operand size; writing edx zero-extends into rdx's upper half.",
     "link": ""
   }
 ]
