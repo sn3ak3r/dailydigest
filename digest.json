@@ -1,52 +1,52 @@
 [
  {
-  "title": "ARTEX AI, Claude agents used in cyberattacks on South Korean banks",
-  "link": "https://www.bleepingcomputer.com/news/security/hacker-used-artex-ai-and-claude-agents-to-target-south-korean-banks/",
-  "blurb": "Agentic AI tooling used operationally against banks."
+  "title": "Inside AvisLoader: A Windows Malware Loader Built to Resist Disruption",
+  "link": "https://www.bleepingcomputer.com/news/security/inside-avisloader-a-windows-malware-loader-built-to-resist-disruption/",
+  "blurb": "Windows loader analysis; built to survive takedown attempts."
  },
  {
-  "title": "Anthropic Cuts Live Internet Access for Internal AI Tests After Claude Exploits Injection",
-  "link": "https://thehackernews.com/2026/10/anthropic-cuts-live-internet-access-for.html",
-  "blurb": "A model exploited an injection flaw during testing; a sandboxing lesson."
+  "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
+  "link": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
+  "blurb": "Confirmed hardware implant in a wallet supply chain; physical-tamper threat model."
  },
  {
-  "title": "Cyber exec arrested in case allegedly tied to ShinyHunters hackers",
-  "link": "https://www.bleepingcomputer.com/news/security/cyber-exec-arrested-in-case-allegedly-tied-to-shinyhunters-hackers/",
-  "blurb": "Law-enforcement action touching a prolific extortion group."
+  "title": "HOMARD: Hammering Off-chip Memory via Aggregate power Rail Disclosure",
+  "link": "https://arxiv.org/abs/2610.12621",
+  "blurb": "arXiv: attack on off-chip memory via shared power-rail leakage (title-only; fetch failed)."
  },
  {
-  "title": "Seamless Landing mod looks set to bring Starfield another step closer to No Man's Sky",
-  "link": "https://www.pcgamer.com/games/rpg/seamless-landing-mod-looks-set-to-bring-starfield-another-step-closer-to-no-mans-sky/",
-  "blurb": "Engine-level modding aims to remove Starfield's landing transitions."
+  "title": "No Man's Sky is somehow coming to mobile, and Hello Games says it's partly thanks to Light No Fire",
+  "link": "https://www.eurogamer.net/no-mans-sky-coming-mobile-hello-games-thanks-to-light-no-fire",
+  "blurb": "Hello Games' engine work reaches mobile."
  },
  {
-  "title": "Deadlock surpasses Team Fortress 2's all-time concurrent player count peak as it adds a chess wizard",
-  "link": "https://www.pcgamer.com/games/moba/deadlock-surpasses-team-fortress-2s-all-time-concurrent-player-count-peak-as-it-adds-a-chess-wizard/",
-  "blurb": "Valve's new MOBA passes TF2's peak: a notable industry milestone."
+  "title": "Starfield seamless planetary landings are finally nearly a thing, thanks to one modder's tireless work",
+  "link": "https://www.eurogamer.net/starfield-mod-seamless-planetary-landings",
+  "blurb": "Modder removes the loading seams from Starfield planetary landings."
  },
  {
-  "title": "Quantum 'birthmarks' hold lasting traces of a system's past",
-  "link": "https://phys.org/news/2026-10-quantum-birthmarks.html",
-  "blurb": "Problem: Isolated quantum systems may not forget their starting state the way chaotic classical ones do. Approach: Harvard-led theorists (Graf et al., Physical Review X, 2026) split the memory into a symmetry-set universal factor and a revival factor from early recurrences, tested numerically on a particle in a stadium-shaped box. Result: Long-run probabilities keep patterns tied to the initial state and early motion; scars strengthen it. A state that hasn't explored phase space by the Thouless time never will. Why it matters: Limits quantum ergodicity, which underlies thermalization. Glossary: ergodicity (long-term behavior independent of start); quantum scars (states on repeating classical paths); phase space (all positions and momenta); Thouless time (time to explore it)."
+  "title": "Gravity and quantum information linked through a derivation of Einstein's equations",
+  "link": "https://phys.org/news/2026-10-gravity-quantum-linked-derivation-einstein.html",
+  "blurb": "Links gravity to quantum information via a derivation of Einstein's equations."
  },
  {
-  "title": "'DNA Typewriter' records cells' history in developing mouse embryo",
-  "link": "https://phys.org/news/2026-10-dna-typewriter-cells-history-mouse.html",
-  "blurb": "Molecular recording lets researchers reconstruct cell lineage in an embryo."
+  "title": "Bacterial antiviral defense suggests ancient link to human chromosome protection",
+  "link": "https://phys.org/news/2026-10-bacterial-antiviral-defense-ancient-link.html",
+  "blurb": "Bacterial antiviral defense hints at an ancient link to human chromosome protection."
  },
  {
-  "title": "500B tokens later: Letting AI agents decompile a first-person shooter",
-  "link": "https://momo5502.com/posts/2026-10-09-game-decompilation/",
-  "blurb": "Deep digest unavailable: fetching the source failed (momo5502.com DNS/network blocked). Listed by title only; not summarized."
+  "title": "WiFi Router Does Software-Defined Radio",
+  "link": "https://hackaday.com/2026/10/12/wifi-router-does-software-defined-radio/",
+  "blurb": "A consumer WiFi router repurposed as a software-defined radio receiver."
  },
  {
-  "title": "Improving an Autorouter with a Hexagonal Grid",
-  "link": "https://hackaday.com/2026/10/11/improving-an-autorouter-with-a-hexagonal-grid/",
-  "blurb": "Documented PCB autorouter improvement using a hex grid."
+  "title": "Speeding up the Unreal editor by… not using unnecessarily secure hash methods",
+  "link": "https://larstofus.com/2026/10/11/speeding-up-the-unreal-editor-by-not-using-unnecessarily-secure-hash-methods/",
+  "blurb": "Editor speedup from swapping an overly strong hash for a fast one (title-only; fetch failed)."
  },
  {
-  "title": "Total Annihilation, rebuilt for modern computers",
-  "link": "https://nanolathe.gg",
-  "blurb": "A classic RTS reimplemented for modern hardware."
+  "title": "We Put Fighting Game Netcode in Brood War",
+  "link": "https://www.youtube.com/watch?v=vIt9xua9bLc",
+  "blurb": "Rollback-style fighting-game netcode added to Brood War."
  }
 ]
