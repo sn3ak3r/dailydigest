@@ -1,8 +1,8 @@
 [
   {
-    "title": "Drill 2026-10-12: decode instruction (shl imm8)",
-    "guid": "2026-10-12",
-    "blurb": "Decode-one-instruction drill\n\nTarget: Windows x86-64.\n\nDecode this instruction:\n\nC1 E2 05\n\nWhat is the assembly? Which register is modified, and what is the arithmetic effect?\n\n---\n\nAnswer\n\nshl edx, 5 (edx = edx \u00d7 32)\n\n- C1 = shift/rotate group, r/m32, imm8; the ModRM byte E2 = 11 100 010: mod=11 (register-direct), reg=100 (/4 = SHL, an opcode extension, not a register), rm=010 (edx).\n- The last byte 05 is the imm8 shift count, so the shift is left by 5 bits, i.e. multiply by 2^5 = 32.\n- No REX prefix means 32-bit operand size; writing edx zero-extends into rdx's upper half.",
+    "title": "Drill 2026-10-13: reverse function (neg/sbb boolean)",
+    "guid": "2026-10-13",
+    "blurb": "Reverse-a-function drill\n\nTarget: Windows x86-64 (arg in ecx, return in eax).\n\nReverse this short function to equivalent C:\n\n\nmystery:\n    neg     ecx\n    sbb     eax, eax\n    neg     eax\n    ret\n\n\nWhat does mystery(int x) compute? Where does the carry flag come from, and what does sbb eax, eax do?\n\n---\n\nAnswer\n\n\nint mystery(int x) {\n    return x != 0;   // branchless boolean normalize\n}\n\n\nExplanation\n\n- neg ecx computes 0 - ecx; it sets CF=1 for any nonzero input and CF=0 only when ecx is 0.\n- sbb eax, eax is eax - eax - CF, so eax = -CF: all ones (-1) if x was nonzero, else 0 \u2014 a full-width mask built from a single flag.\n- The final neg eax turns -1 into 1, giving 0 or 1 with no branch, no setne, and no xor zeroing needed.",
     "link": ""
   }
 ]

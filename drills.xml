@@ -1,19 +1,31 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill 2026-10-12: decode instruction (shl imm8)</title><link></link><description>Decode-one-instruction drill
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill 2026-10-13: reverse function (neg/sbb boolean)</title><link></link><description>Reverse-a-function drill
 
-Target: Windows x86-64.
+Target: Windows x86-64 (arg in ecx, return in eax).
 
-Decode this instruction:
+Reverse this short function to equivalent C:
 
-C1 E2 05
 
-What is the assembly? Which register is modified, and what is the arithmetic effect?
+mystery:
+    neg     ecx
+    sbb     eax, eax
+    neg     eax
+    ret
+
+
+What does mystery(int x) compute? Where does the carry flag come from, and what does sbb eax, eax do?
 
 ---
 
 Answer
 
-shl edx, 5 (edx = edx × 32)
 
-- C1 = shift/rotate group, r/m32, imm8; the ModRM byte E2 = 11 100 010: mod=11 (register-direct), reg=100 (/4 = SHL, an opcode extension, not a register), rm=010 (edx).
-- The last byte 05 is the imm8 shift count, so the shift is left by 5 bits, i.e. multiply by 2^5 = 32.
-- No REX prefix means 32-bit operand size; writing edx zero-extends into rdx&#x27;s upper half.</description><guid isPermaLink='false'>2026-10-12</guid><pubDate>Mon, 12 Oct 2026 02:30:43 +0000</pubDate></item></channel></rss>
+int mystery(int x) {
+    return x != 0;   // branchless boolean normalize
+}
+
+
+Explanation
+
+- neg ecx computes 0 - ecx; it sets CF=1 for any nonzero input and CF=0 only when ecx is 0.
+- sbb eax, eax is eax - eax - CF, so eax = -CF: all ones (-1) if x was nonzero, else 0 — a full-width mask built from a single flag.
+- The final neg eax turns -1 into 1, giving 0 or 1 with no branch, no setne, and no xor zeroing needed.</description><guid isPermaLink='false'>2026-10-13</guid><pubDate>Tue, 13 Oct 2026 02:31:04 +0000</pubDate></item></channel></rss>

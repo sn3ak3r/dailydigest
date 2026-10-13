@@ -58,3 +58,4 @@
 2026-10-10 | reverse-function | unsigned range check via sub-bias + single cmp/setbe (isdigit idiom), unsigned vs signed condition codes, xor-before-cmp to preserve flags
 2026-10-11 | crackme | three-operand imul r32,r/m32,imm8, NOT one's complement identity ~y=-y-1, backward-solving multiply against negative-looking hex constant
 2026-10-12 | decode-instruction | SHL r/m32,imm8 via opcode C1 /4 ib, ModRM reg-field extension /4 = SHL, shift left as multiply by 2^n
+2026-10-13 | reverse-function | neg/sbb carry-flag idiom: neg sets CF if nonzero, sbb eax,eax builds -CF mask, second neg yields branchless x!=0 boolean
