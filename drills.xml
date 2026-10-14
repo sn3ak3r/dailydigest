@@ -1,31 +1,19 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill 2026-10-13: reverse function (neg/sbb boolean)</title><link></link><description>Reverse-a-function drill
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill 2026-10-14: crackme (bts bit-set)</title><link></link><description>Crackme drill: find the passing input
 
-Target: Windows x86-64 (arg in ecx, return in eax).
+Windows x64, ecx holds your 32-bit integer argument. The function returns 1 for the correct input:
 
-Reverse this short function to equivalent C:
+xor  eax, eax
+bts  eax, ecx
+cmp  eax, 100000h
+sete al
+ret
 
-
-mystery:
-    neg     ecx
-    sbb     eax, eax
-    neg     eax
-    ret
-
-
-What does mystery(int x) compute? Where does the carry flag come from, and what does sbb eax, eax do?
-
----
-
-Answer
+What is the smallest non-negative ecx that returns 1?
 
 
-int mystery(int x) {
-    return x != 0;   // branchless boolean normalize
-}
+Answer: 20 (52, 84, ... also work)
 
-
-Explanation
-
-- neg ecx computes 0 - ecx; it sets CF=1 for any nonzero input and CF=0 only when ecx is 0.
-- sbb eax, eax is eax - eax - CF, so eax = -CF: all ones (-1) if x was nonzero, else 0 — a full-width mask built from a single flag.
-- The final neg eax turns -1 into 1, giving 0 or 1 with no branch, no setne, and no xor zeroing needed.</description><guid isPermaLink='false'>2026-10-13</guid><pubDate>Tue, 13 Oct 2026 02:31:04 +0000</pubDate></item></channel></rss>
+1. xor eax, eax zeroes eax; bts eax, ecx (&quot;bit test and set&quot;) sets bit number ecx in eax, so eax = 1 &lt;&lt; ecx.
+2. 0x100000 = 2^20, so only bit 20 may be set, giving ecx = 20.
+3. With a register operand the bit offset is taken mod 32, so any ecx congruent to 20 mod 32 also passes (52, 84, even -12).
+</description><guid isPermaLink='false'>2026-10-14</guid><pubDate>Wed, 14 Oct 2026 02:30:44 +0000</pubDate></item></channel></rss>
