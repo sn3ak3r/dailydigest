@@ -1,52 +1,52 @@
 [
  {
-  "title": "Inside AvisLoader: A Windows Malware Loader Built to Resist Disruption",
-  "link": "https://www.bleepingcomputer.com/news/security/inside-avisloader-a-windows-malware-loader-built-to-resist-disruption/",
-  "blurb": "Windows loader analysis; built to survive takedown attempts."
+  "title": "Attacker Chains Three Ivanti Connect Secure Zero-Days for Root Access, Only Two Patched So Far",
+  "link": "https://thehackernews.com/2026/10/attacker-chains-three-ivanti-connect.html",
+  "blurb": "Three chained Ivanti Connect Secure zero-days give root; only two are patched so far."
  },
  {
-  "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
-  "link": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
-  "blurb": "Confirmed hardware implant in a wallet supply chain; physical-tamper threat model."
+  "title": "LG Smart TVs Vulnerable to Pre-Auth Root Takeover From Local Network",
+  "link": "https://thehackernews.com/2026/10/lg-smart-tvs-vulnerable-to-pre-auth.html",
+  "blurb": "Pre-auth root takeover of LG smart TVs from the local network."
  },
  {
-  "title": "HOMARD: Hammering Off-chip Memory via Aggregate power Rail Disclosure",
-  "link": "https://arxiv.org/abs/2610.12621",
-  "blurb": "arXiv: attack on off-chip memory via shared power-rail leakage (title-only; fetch failed)."
+  "title": "Docker Hub flaw let attackers impersonate users, tamper with images",
+  "link": "https://www.bleepingcomputer.com/news/security/docker-hub-flaw-let-attackers-impersonate-users-tamper-with-images/",
+  "blurb": "Docker Hub flaw let one user push images as another, enabling image tampering."
  },
  {
-  "title": "No Man's Sky is somehow coming to mobile, and Hello Games says it's partly thanks to Light No Fire",
-  "link": "https://www.eurogamer.net/no-mans-sky-coming-mobile-hello-games-thanks-to-light-no-fire",
-  "blurb": "Hello Games' engine work reaches mobile."
+  "title": "RimWorld switches engine from Unity to the devs' own, faster Waylith Engine, all apparently without breaking mods somehow",
+  "link": "https://www.rockpapershotgun.com/rimworld-switches-engine-from-unity-to-the-devs-own-faster-waylith-engine-all-apparently-without-breaking-mods-somehow",
+  "blurb": "RimWorld moves from Unity to the in-house Waylith Engine, claiming saves and most mods still work."
  },
  {
-  "title": "Starfield seamless planetary landings are finally nearly a thing, thanks to one modder's tireless work",
-  "link": "https://www.eurogamer.net/starfield-mod-seamless-planetary-landings",
-  "blurb": "Modder removes the loading seams from Starfield planetary landings."
+  "title": "Valve have released the Steam Frame's CAD files, but there\u2019s already a cottage industry of DIY wrist straps and lifesize skull stands",
+  "link": "https://www.rockpapershotgun.com/valve-have-released-the-steam-frames-cad-files-but-theres-already-a-cottage-industry-of-diy-wrist-straps-and-lifesize-skull-stands",
+  "blurb": "Valve released Steam Frame CAD files, so DIY accessories are already appearing."
  },
  {
-  "title": "Gravity and quantum information linked through a derivation of Einstein's equations",
-  "link": "https://phys.org/news/2026-10-gravity-quantum-linked-derivation-einstein.html",
-  "blurb": "Links gravity to quantum information via a derivation of Einstein's equations."
+  "title": "Candida auris copies its entire genome to survive antifungal treatment, research reveals",
+  "link": "https://phys.org/news/2026-10-candida-auris-entire-genome-survive.html",
+  "blurb": "Candida auris duplicates its whole genome to survive antifungal treatment."
  },
  {
-  "title": "Bacterial antiviral defense suggests ancient link to human chromosome protection",
-  "link": "https://phys.org/news/2026-10-bacterial-antiviral-defense-ancient-link.html",
-  "blurb": "Bacterial antiviral defense hints at an ancient link to human chromosome protection."
+  "title": "Patterned X-rays map 3D chemical structures faster with fewer measurements",
+  "link": "https://phys.org/news/2026-10-patterned-rays-3d-chemical-faster.html",
+  "blurb": "Patterned X-rays map 3D chemical structure with fewer measurements."
  },
  {
-  "title": "WiFi Router Does Software-Defined Radio",
-  "link": "https://hackaday.com/2026/10/12/wifi-router-does-software-defined-radio/",
-  "blurb": "A consumer WiFi router repurposed as a software-defined radio receiver."
+  "title": "A Modern Browser for the PlayStation Portable",
+  "link": "https://hackaday.com/2026/10/13/a-modern-browser-for-the-playstation-portable/",
+  "blurb": "A modern web browser ported to the PlayStation Portable."
  },
  {
-  "title": "Speeding up the Unreal editor by… not using unnecessarily secure hash methods",
-  "link": "https://larstofus.com/2026/10/11/speeding-up-the-unreal-editor-by-not-using-unnecessarily-secure-hash-methods/",
-  "blurb": "Editor speedup from swapping an overly strong hash for a fast one (title-only; fetch failed)."
+  "title": "500+ Billion Tokens Later: Letting AI Agents Decompile A First-Person Shooter",
+  "link": "https://momo5502.com/posts/2026-10-09-game-decompilation/",
+  "blurb": "AI agents decompile a first-person shooter, 500B+ tokens of work. (title-only; fetch failed)"
  },
  {
-  "title": "We Put Fighting Game Netcode in Brood War",
-  "link": "https://www.youtube.com/watch?v=vIt9xua9bLc",
-  "blurb": "Rollback-style fighting-game netcode added to Brood War."
+  "title": "11 year old unsoundness bugs found in Rust borrow checker",
+  "link": "https://github.com/rust-lang/rust/issues/164250",
+  "blurb": "11-year-old unsoundness bugs found in the Rust borrow checker. (title-only; fetch failed)"
  }
 ]
