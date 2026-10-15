@@ -60,3 +60,4 @@
 2026-10-12 | decode-instruction | SHL r/m32,imm8 via opcode C1 /4 ib, ModRM reg-field extension /4 = SHL, shift left as multiply by 2^n
 2026-10-13 | reverse-function | neg/sbb carry-flag idiom: neg sets CF if nonzero, sbb eax,eax builds -CF mask, second neg yields branchless x!=0 boolean
 2026-10-14 | crackme | bts bit-test-and-set as 1<<n, register bit offset taken mod 32 (multiple valid inputs), xor-zero then cmp power-of-two constant
+2026-10-15 | decode-instruction | group-5 opcode FF /0 = INC r/m64 (vs /1 DEC), REX.W, mod=01 disp8 with rbp base (negative -8), in-place memory read-modify-write

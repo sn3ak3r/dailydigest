@@ -1,19 +1,14 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill 2026-10-14: crackme (bts bit-set)</title><link></link><description>Crackme drill: find the passing input
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill 2026-10-15: decode-instruction (inc via FF /0)</title><link></link><description>Decode-one-instruction drill
 
-Windows x64, ecx holds your 32-bit integer argument. The function returns 1 for the correct input:
+Windows x64. Decode this instruction:
 
-xor  eax, eax
-bts  eax, ecx
-cmp  eax, 100000h
-sete al
-ret
+48 FF 45 F8
 
-What is the smallest non-negative ecx that returns 1?
+What is the assembly? What does it do to memory, and where exactly?
 
 
-Answer: 20 (52, 84, ... also work)
+Answer: inc qword ptr [rbp-8]
 
-1. xor eax, eax zeroes eax; bts eax, ecx (&quot;bit test and set&quot;) sets bit number ecx in eax, so eax = 1 &lt;&lt; ecx.
-2. 0x100000 = 2^20, so only bit 20 may be set, giving ecx = 20.
-3. With a register operand the bit offset is taken mod 32, so any ecx congruent to 20 mod 32 also passes (52, 84, even -12).
-</description><guid isPermaLink='false'>2026-10-14</guid><pubDate>Wed, 14 Oct 2026 02:30:44 +0000</pubDate></item></channel></rss>
+- 48 = REX.W (64-bit operand size). FF is the &quot;group 5&quot; opcode; the ModRM reg field is an extension: /0 = INC, /1 = DEC (/2 = call, /4 = jmp, /6 = push).
+- ModRM 45 = 01 000 101: mod=01 (disp8 follows), reg=000 (/0 = INC), rm=101 (rbp as base).
+- F8 is the signed disp8 = -8, so the 8-byte value at rbp-8 is incremented in place (read-modify-write, no register loaded).</description><guid isPermaLink='false'>2026-10-15</guid><pubDate>Thu, 15 Oct 2026 02:31:20 +0000</pubDate></item></channel></rss>
