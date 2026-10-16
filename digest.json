@@ -1,52 +1,52 @@
 [
  {
-  "title": "Four-Byte Write and Timing Bug Let Researchers Run Code in Windows SmartScreen Enclave",
-  "link": "https://thehackernews.com/2026/10/four-byte-write-and-timing-bug-let.html",
-  "blurb": "Windows internals: a four-byte write plus a timing bug yields code execution in the SmartScreen enclave."
+  "title": "Critical PwnEscape Linux Kernel Vulnerability Lets Guest VMs Read Host Memory",
+  "link": "https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html",
+  "blurb": "Linux kernel 'PwnEscape' flaw lets a guest VM read host memory — a critical VM-escape class bug."
  },
  {
-  "title": "AI-Found Linux Kernel Flaw Gives Local Users Root, and Can Break a Guest Out to the Host",
-  "link": "https://thehackernews.com/2026/10/ai-found-linux-kernel-flaw-gives-local.html",
-  "blurb": "AI-found Linux kernel flaw gives local root and can break a guest out to the host."
+  "title": "What You Sign Is Not What You Run: The Verifiability Gap in Quantized LLM Supply Chains",
+  "link": "https://arxiv.org/abs/2610.19498",
+  "blurb": "arXiv: signing a quantized LLM doesn't prove what actually runs — a verifiability gap in model supply chains. (Deep digest unavailable: fetch of arxiv.org failed (DNS not resolved); not guessing content.)"
  },
  {
-  "title": "ZIMPAF & RedPhuzz: High-fidelity Web Application Fuzzing via Branch, Language Construct, and Function Call Monitoring",
-  "link": "https://arxiv.org/abs/2607.25012",
-  "blurb": "arXiv research on higher-fidelity web-app fuzzing via branch, language-construct and call monitoring (deep digest unavailable: fetch blocked)."
+  "title": "AI Models Can Provably Hide Arbitrary Capabilities",
+  "link": "https://arxiv.org/abs/2610.13928",
+  "blurb": "arXiv: proof that AI models can hide arbitrary capabilities, undermining capability audits. (Deep digest unavailable: fetch of arxiv.org failed (DNS not resolved); not guessing content.)"
  },
  {
-  "title": "RimWorld drops Unity for its own in-house engine, says your saves still work, so do most mods, and the whole thing runs twice as fast",
-  "link": "https://www.pcgamer.com/gaming-industry/game-development/rimworld-drops-unity-for-its-own-in-house-engine-says-your-saves-still-work-so-do-most-mods-and-the-whole-thing-runs-twice-as-fast/",
-  "blurb": "RimWorld drops Unity for an in-house engine; saves and most mods keep working."
+  "title": "Fortnite is finally coming to Linux thanks to Epic rebuilding Easy Anti-Cheat, though Steam Deck support is still in the wind",
+  "link": "https://www.rockpapershotgun.com/fortnite-is-finally-coming-to-linux-thanks-to-epic-rebuilding-easy-anti-cheat-though-steam-deck-support-is-still-in-the-wind",
+  "blurb": "Fortnite coming to Linux as Epic rebuilds Easy Anti-Cheat; Steam Deck support still undecided."
  },
  {
-  "title": "Doom can 'run' on a DNS database now, and one of the technology's pioneers says 'I can't decide whether this is deliciously horrible, or else horribly delicious'",
-  "link": "https://www.pcgamer.com/hardware/doom-can-run-on-a-dns-database-now-and-one-of-the-technologys-pioneers-says-i-cant-decide-whether-this-is-deliciously-horrible-or-else-horribly-delicious/",
-  "blurb": "Doom now 'runs' on a DNS database, a quirky engine-hack curiosity."
+  "title": "After almost three years of early access, Enshrouded has hit 1.0 with a complete story, bigger map, and way too much more to mention",
+  "link": "https://www.rockpapershotgun.com/after-almost-three-years-of-early-access-enshrouded-has-hit-10-with-a-complete-story-bigger-map-and-way-too-much-more-to-mention",
+  "blurb": "Enshrouded hits 1.0 after ~3 years early access with full story and bigger map."
  },
  {
-  "title": "Triplet of ‘Ghostly’ Galaxies Hints at What Dark Matter Is — and Isn’t",
-  "link": "https://www.quantamagazine.org/triplet-of-ghostly-galaxies-hints-at-what-dark-matter-is-and-isnt-20261014/",
-  "blurb": "Three 'ghostly' galaxies give new constraints on what dark matter is and isn't."
+  "title": "Silicon qubits surpass 99.99% gate fidelity while operating three at once",
+  "link": "https://phys.org/news/2026-10-silicon-qubits-surpass-gate-fidelity.html",
+  "blurb": "Silicon qubits exceed 99.99% gate fidelity while operating three at once — a concrete quantum result."
  },
  {
-  "title": "Researchers use AI to design proteins that cut up other proteins",
-  "link": "https://arstechnica.com/science/2026/10/researchers-use-ai-to-design-proteins-that-cut-up-other-proteins/",
-  "blurb": "AI-designed proteins that cut other proteins: a concrete protein-engineering result."
+  "title": "Rigorous analysis confirms NASA's Artemis II heat shield performance",
+  "link": "https://phys.org/news/2026-10-rigorous-analysis-nasa-artemis-ii.html",
+  "blurb": "Rigorous analysis confirms Artemis II heat shield performance."
  },
  {
-  "title": "Using an ESP32-C3’s RF Hardware for DVB-S2 Video Transmission",
-  "link": "https://hackaday.com/2026/10/14/using-an-esp32-c3s-rf-hardware-for-dvb-s2-video-transmission/",
-  "blurb": "ESP32-C3's RF hardware repurposed to transmit DVB-S2 video, a documented hardware build."
+  "title": "Using AI to reverse engineer hardware",
+  "link": "https://blogs.gnome.org/uraeus/2026/10/15/aiandreverseengineerhardware/",
+  "blurb": "Using AI to reverse engineer hardware — documented build/process writeup."
  },
  {
-  "title": "Virtual Oxide Labs: Emulating a Full Oxide Rack",
-  "link": "https://oxide.computer/blog/voxel-labs",
-  "blurb": "Oxide emulates a full rack virtually for development (deep digest unavailable: fetch blocked)."
+  "title": "45 Years Later, The Sinclair ULA Design Documents Surface",
+  "link": "https://hackaday.com/2026/10/15/45-years-later-the-sinclair-ula-design-documents-surface/",
+  "blurb": "Sinclair ULA design documents surface 45 years later, a retro-hardware archive find."
  },
  {
-  "title": "Better HTTP/1 connection reuse in Go 1.27",
-  "link": "https://go.dev/blog/http-connection-reuse",
-  "blurb": "Go 1.27 improves HTTP/1 connection reuse, with engineering detail."
+  "title": "Haxy.net is live! — HAXY (git forge) devlog",
+  "link": "https://youtu.be/89yAiqYEwKg",
+  "blurb": "HAXY git forge devlog: project build log of a new self-hostable forge."
  }
 ]
