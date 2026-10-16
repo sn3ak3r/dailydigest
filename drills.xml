@@ -1,14 +1,27 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill 2026-10-15: decode-instruction (inc via FF /0)</title><link></link><description>Decode-one-instruction drill
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse-a-function drill — 2026-10-16</title><link></link><description>Target: Windows x86-64 (args in `ecx`, `edx`; return in `eax`).
 
-Windows x64. Decode this instruction:
+Reverse this short function to equivalent C:
 
-48 FF 45 F8
+```asm
+mystery:
+    lea     eax, [rcx+rcx*2]
+    lea     eax, [rdx+rax*4+7]
+    ret
+```
 
-What is the assembly? What does it do to memory, and where exactly?
+What does `mystery(int a, int b)` compute? No `imul`, `add` or `shl` appears, so where is the arithmetic happening?
 
 
-Answer: inc qword ptr [rbp-8]
+## Answer
 
-- 48 = REX.W (64-bit operand size). FF is the &quot;group 5&quot; opcode; the ModRM reg field is an extension: /0 = INC, /1 = DEC (/2 = call, /4 = jmp, /6 = push).
-- ModRM 45 = 01 000 101: mod=01 (disp8 follows), reg=000 (/0 = INC), rm=101 (rbp as base).
-- F8 is the signed disp8 = -8, so the 8-byte value at rbp-8 is incremented in place (read-modify-write, no register loaded).</description><guid isPermaLink='false'>2026-10-15</guid><pubDate>Thu, 15 Oct 2026 02:31:20 +0000</pubDate></item></channel></rss>
+```c
+int mystery(int a, int b) {
+    return 12 * a + b + 7;
+}
+```
+
+## Explanation
+
+- `lea` runs the address-generation math `base + index*scale + disp` (scale 1/2/4/8) but never touches memory, so it works as a cheap multiply-add.
+- First `lea`: a + a*2 = 3a. Second: b + (3a)*4 + 7 = 12a + b + 7, three terms folded into one instruction.
+- Unlike `add`/`imul`, `lea` leaves the flags unchanged, which is why compilers love it; the 32-bit destination zero-extends into rax.</description><guid isPermaLink='false'>2026-10-16</guid><pubDate>Fri, 16 Oct 2026 02:30:45 +0000</pubDate></item></channel></rss>

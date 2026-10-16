@@ -1,8 +1,8 @@
 [
   {
-    "title": "Drill 2026-10-15: decode-instruction (inc via FF /0)",
-    "guid": "2026-10-15",
-    "blurb": "Decode-one-instruction drill\n\nWindows x64. Decode this instruction:\n\n48 FF 45 F8\n\nWhat is the assembly? What does it do to memory, and where exactly?\n\n\nAnswer: inc qword ptr [rbp-8]\n\n- 48 = REX.W (64-bit operand size). FF is the \"group 5\" opcode; the ModRM reg field is an extension: /0 = INC, /1 = DEC (/2 = call, /4 = jmp, /6 = push).\n- ModRM 45 = 01 000 101: mod=01 (disp8 follows), reg=000 (/0 = INC), rm=101 (rbp as base).\n- F8 is the signed disp8 = -8, so the 8-byte value at rbp-8 is incremented in place (read-modify-write, no register loaded).",
+    "title": "Reverse-a-function drill — 2026-10-16",
+    "guid": "2026-10-16",
+    "blurb": "Target: Windows x86-64 (args in `ecx`, `edx`; return in `eax`).\n\nReverse this short function to equivalent C:\n\n```asm\nmystery:\n    lea     eax, [rcx+rcx*2]\n    lea     eax, [rdx+rax*4+7]\n    ret\n```\n\nWhat does `mystery(int a, int b)` compute? No `imul`, `add` or `shl` appears, so where is the arithmetic happening?\n\n\n## Answer\n\n```c\nint mystery(int a, int b) {\n    return 12 * a + b + 7;\n}\n```\n\n## Explanation\n\n- `lea` runs the address-generation math `base + index*scale + disp` (scale 1/2/4/8) but never touches memory, so it works as a cheap multiply-add.\n- First `lea`: a + a*2 = 3a. Second: b + (3a)*4 + 7 = 12a + b + 7, three terms folded into one instruction.\n- Unlike `add`/`imul`, `lea` leaves the flags unchanged, which is why compilers love it; the 32-bit destination zero-extends into rax.",
     "link": ""
   }
 ]
