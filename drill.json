@@ -1,8 +1,8 @@
 [
-  {
-    "title": "Reverse-a-function drill — 2026-10-16",
-    "guid": "2026-10-16",
-    "blurb": "Target: Windows x86-64 (args in `ecx`, `edx`; return in `eax`).\n\nReverse this short function to equivalent C:\n\n```asm\nmystery:\n    lea     eax, [rcx+rcx*2]\n    lea     eax, [rdx+rax*4+7]\n    ret\n```\n\nWhat does `mystery(int a, int b)` compute? No `imul`, `add` or `shl` appears, so where is the arithmetic happening?\n\n\n## Answer\n\n```c\nint mystery(int a, int b) {\n    return 12 * a + b + 7;\n}\n```\n\n## Explanation\n\n- `lea` runs the address-generation math `base + index*scale + disp` (scale 1/2/4/8) but never touches memory, so it works as a cheap multiply-add.\n- First `lea`: a + a*2 = 3a. Second: b + (3a)*4 + 7 = 12a + b + 7, three terms folded into one instruction.\n- Unlike `add`/`imul`, `lea` leaves the flags unchanged, which is why compilers love it; the 32-bit destination zero-extends into rax.",
-    "link": ""
-  }
+ {
+  "title": "Drill 2026-10-17: crackme with sar",
+  "guid": "2026-10-17",
+  "blurb": "# Crackme: find the input (Windows x64, arg in ecx)\n\n\n89 C8          mov eax, ecx\nC1 F8 04       sar eax, 4\n83 F0 55       xor eax, 0x55\n83 F8 FD       cmp eax, -3\n0F 94 C0       sete al\nC3             ret\n\n\nWhich 32-bit value of ecx makes the function return 1? Give the smallest (most negative) one in hex.\n\n---\n\n**Answer:** 0xFFFFFA80 (-1408). Any value from -1408 to -1393 works.\n\n1. Work backward: eax ^ 0x55 == -3 (0xFFFFFFFD), so eax = 0xFFFFFFFD ^ 0x55 = 0xFFFFFFA8 (-88).\n2. sar is an arithmetic shift: it copies the sign bit and floors toward -infinity, so it discards the low 4 bits. ecx >> 4 == -88 means ecx is in [-88*16, -88*16+15].\n3. Opcode C1 /7 ib is SAR (/4 was SHL). shr would fill with zeros and give a different answer for negative inputs.\n",
+  "link": ""
+ }
 ]

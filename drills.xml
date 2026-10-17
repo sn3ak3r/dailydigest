@@ -1,27 +1,21 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse-a-function drill — 2026-10-16</title><link></link><description>Target: Windows x86-64 (args in `ecx`, `edx`; return in `eax`).
-
-Reverse this short function to equivalent C:
-
-```asm
-mystery:
-    lea     eax, [rcx+rcx*2]
-    lea     eax, [rdx+rax*4+7]
-    ret
-```
-
-What does `mystery(int a, int b)` compute? No `imul`, `add` or `shl` appears, so where is the arithmetic happening?
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill 2026-10-17: crackme with sar</title><link></link><description># Crackme: find the input (Windows x64, arg in ecx)
 
 
-## Answer
+89 C8          mov eax, ecx
+C1 F8 04       sar eax, 4
+83 F0 55       xor eax, 0x55
+83 F8 FD       cmp eax, -3
+0F 94 C0       sete al
+C3             ret
 
-```c
-int mystery(int a, int b) {
-    return 12 * a + b + 7;
-}
-```
 
-## Explanation
+Which 32-bit value of ecx makes the function return 1? Give the smallest (most negative) one in hex.
 
-- `lea` runs the address-generation math `base + index*scale + disp` (scale 1/2/4/8) but never touches memory, so it works as a cheap multiply-add.
-- First `lea`: a + a*2 = 3a. Second: b + (3a)*4 + 7 = 12a + b + 7, three terms folded into one instruction.
-- Unlike `add`/`imul`, `lea` leaves the flags unchanged, which is why compilers love it; the 32-bit destination zero-extends into rax.</description><guid isPermaLink='false'>2026-10-16</guid><pubDate>Fri, 16 Oct 2026 02:30:45 +0000</pubDate></item></channel></rss>
+---
+
+**Answer:** 0xFFFFFA80 (-1408). Any value from -1408 to -1393 works.
+
+1. Work backward: eax ^ 0x55 == -3 (0xFFFFFFFD), so eax = 0xFFFFFFFD ^ 0x55 = 0xFFFFFFA8 (-88).
+2. sar is an arithmetic shift: it copies the sign bit and floors toward -infinity, so it discards the low 4 bits. ecx &gt;&gt; 4 == -88 means ecx is in [-88*16, -88*16+15].
+3. Opcode C1 /7 ib is SAR (/4 was SHL). shr would fill with zeros and give a different answer for negative inputs.
+</description><guid isPermaLink='false'>2026-10-17</guid><pubDate>Sat, 17 Oct 2026 02:31:11 +0000</pubDate></item></channel></rss>
