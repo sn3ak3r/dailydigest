@@ -1,52 +1,52 @@
 [
  {
-  "title": "Critical PwnEscape Linux Kernel Vulnerability Lets Guest VMs Read Host Memory",
-  "link": "https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html",
-  "blurb": "Linux kernel 'PwnEscape' flaw lets a guest VM read host memory — a critical VM-escape class bug."
+  "title": "Citizen Lab Traces Zero-Click Candiru Spyware Infections at Al Jazeera to Targeted Online Ads",
+  "link": "https://thehackernews.com/2026/10/citizen-lab-traces-zero-click-candiru.html",
+  "blurb": "Citizen Lab ties zero-click Candiru spyware infections at Al Jazeera to targeted online ads \u2014 ad delivery as an infection vector."
  },
  {
-  "title": "What You Sign Is Not What You Run: The Verifiability Gap in Quantized LLM Supply Chains",
-  "link": "https://arxiv.org/abs/2610.19498",
-  "blurb": "arXiv: signing a quantized LLM doesn't prove what actually runs — a verifiability gap in model supply chains. (Deep digest unavailable: fetch of arxiv.org failed (DNS not resolved); not guessing content.)"
+  "title": "PAGE404: Breaking GPU Isolation Through Hardware-assisted Page Migration",
+  "link": "https://arxiv.org/abs/2610.20962",
+  "blurb": "PAGE404: breaking GPU isolation via hardware-assisted page migration (arXiv cs.CR). DEEP DIGEST UNAVAILABLE: the source page could not be fetched (egress proxy blocked the host), so no summary is given rather than guessing from the title."
  },
  {
-  "title": "AI Models Can Provably Hide Arbitrary Capabilities",
-  "link": "https://arxiv.org/abs/2610.13928",
-  "blurb": "arXiv: proof that AI models can hide arbitrary capabilities, undermining capability audits. (Deep digest unavailable: fetch of arxiv.org failed (DNS not resolved); not guessing content.)"
+  "title": "PEERSTITCH Malware Deployed via FortiOS Flaw Bypasses Checks on Tagged VPN Sessions",
+  "link": "https://thehackernews.com/2026/10/attackers-exploit-fortios-flaw-to.html",
+  "blurb": "PEERSTITCH malware rides a FortiOS flaw and slips past checks on tagged VPN sessions."
  },
  {
-  "title": "Fortnite is finally coming to Linux thanks to Epic rebuilding Easy Anti-Cheat, though Steam Deck support is still in the wind",
-  "link": "https://www.rockpapershotgun.com/fortnite-is-finally-coming-to-linux-thanks-to-epic-rebuilding-easy-anti-cheat-though-steam-deck-support-is-still-in-the-wind",
-  "blurb": "Fortnite coming to Linux as Epic rebuilds Easy Anti-Cheat; Steam Deck support still undecided."
+  "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
+  "link": "https://github.com/cobanov/PS5LM",
+  "blurb": "llama.cpp running GGUF models natively on a jailbroken PS5 \u2014 a console turned inference box."
  },
  {
-  "title": "After almost three years of early access, Enshrouded has hit 1.0 with a complete story, bigger map, and way too much more to mention",
-  "link": "https://www.rockpapershotgun.com/after-almost-three-years-of-early-access-enshrouded-has-hit-10-with-a-complete-story-bigger-map-and-way-too-much-more-to-mention",
-  "blurb": "Enshrouded hits 1.0 after ~3 years early access with full story and bigger map."
+  "title": "Big Fish: Exploiting a 37-Year-Old Kernel Bug in OpenBSD",
+  "link": "https://calif.io/research/big-fish",
+  "blurb": "Big Fish: exploiting a 37-year-old OpenBSD kernel bug (calif.io). DEEP DIGEST UNAVAILABLE: the source page could not be fetched (egress proxy blocked the host), so no summary is given rather than guessing from the title."
  },
  {
-  "title": "Silicon qubits surpass 99.99% gate fidelity while operating three at once",
-  "link": "https://phys.org/news/2026-10-silicon-qubits-surpass-gate-fidelity.html",
-  "blurb": "Silicon qubits exceed 99.99% gate fidelity while operating three at once — a concrete quantum result."
+  "title": "I Love Software Rendering",
+  "link": "https://www.jamesfmackenzie.com/2026/10/13/i-love-software-rendering/",
+  "blurb": "A love letter to software rendering: CPU-only graphics and what it still teaches."
  },
  {
-  "title": "Rigorous analysis confirms NASA's Artemis II heat shield performance",
-  "link": "https://phys.org/news/2026-10-rigorous-analysis-nasa-artemis-ii.html",
-  "blurb": "Rigorous analysis confirms Artemis II heat shield performance."
+  "title": "Steam achievements are getting a huge overhaul, with separate sets for DLC and season passes, and an easy way to compare with friends",
+  "link": "https://www.pcgamer.com/software/platforms/steam-achievements-are-getting-a-huge-overhaul-with-separate-sets-for-dlc-and-season-passes-and-an-easy-way-to-compare-with-friends/",
+  "blurb": "Steam splits achievements into separate sets for DLC and season passes, with friend comparison."
  },
  {
-  "title": "Using AI to reverse engineer hardware",
-  "link": "https://blogs.gnome.org/uraeus/2026/10/15/aiandreverseengineerhardware/",
-  "blurb": "Using AI to reverse engineer hardware — documented build/process writeup."
+  "title": "Monumentally expansive roguelike Caves of Qud is getting even bigger in December with an early access expansion that lets you play as messed up dogs and trees",
+  "link": "https://www.rockpapershotgun.com/monumentally-expansive-roguelike-caves-of-qud-is-getting-even-bigger-in-december-with-an-early-access-expansion-that-lets-you-play-as-messed-up-dogs-and-trees",
+  "blurb": "Caves of Qud gets a December early-access expansion adding playable dogs and trees."
  },
  {
-  "title": "45 Years Later, The Sinclair ULA Design Documents Surface",
-  "link": "https://hackaday.com/2026/10/15/45-years-later-the-sinclair-ula-design-documents-surface/",
-  "blurb": "Sinclair ULA design documents surface 45 years later, a retro-hardware archive find."
+  "title": "Scientists uncover mystery of how snail shells coil to the right or to the left",
+  "link": "https://phys.org/news/2026-10-scientists-uncover-mystery-snail-shells.html",
+  "blurb": "Researchers explain what determines whether snail shells coil right or left."
  },
  {
-  "title": "Haxy.net is live! — HAXY (git forge) devlog",
-  "link": "https://youtu.be/89yAiqYEwKg",
-  "blurb": "HAXY git forge devlog: project build log of a new self-hostable forge."
+  "title": "Maxwell's demon learns to turn concealed information into usable energy for microscopic systems",
+  "link": "https://phys.org/news/2026-10-maxwell-demon-concealed-usable-energy.html",
+  "blurb": "A Maxwell's-demon setup converts concealed information into usable energy in microscopic systems."
  }
 ]
