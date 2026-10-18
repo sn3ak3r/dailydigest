@@ -63,3 +63,4 @@
 2026-10-15 | decode-instruction | group-5 opcode FF /0 = INC r/m64 (vs /1 DEC), REX.W, mod=01 disp8 with rbp base (negative -8), in-place memory read-modify-write
 2026-10-16 | reverse-function | lea as multiply-add: base+index*scale+disp (3a, 12a+b+7), lea does not touch memory or flags, scale limited to 1/2/4/8
 2026-10-17 | crackme | sar arithmetic right shift (sign-fill, floor) vs shr, xor mask then cmp -3, backward-solving to a range of valid inputs, C1 /7 = SAR
+2026-10-18 | decode-instruction | 0F two-byte escape, MOVZX r32,r/m8 (0F B6) byte load zero-extended, ModRM+SIB [rcx+rdx], no REX needed for 64-bit addressing
