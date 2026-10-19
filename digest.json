@@ -1,52 +1,52 @@
 [
  {
-  "title": "MALFEX npm Package 'imgdecode' Hides Shellcode Loader in Windows Native Addon",
-  "link": "https://thehackernews.com/2026/10/malfex-npm-package-imgdecode-hides.html",
-  "blurb": "Windows native addon hiding a shellcode loader in an npm package is a fresh supply-chain delivery trick."
+  "title": "Hackers exploit SiteGuard WAF flaw to run commands as admins",
+  "link": "https://www.bleepingcomputer.com/news/security/hackers-exploit-siteguard-waf-flaw-to-run-commands-as-system-root/",
+  "blurb": "Actively exploited WAF flaw gives attackers admin-level command execution on the very device meant to protect sites."
  },
  {
-  "title": "Attackers Tampered with AOMEI Backupper's Update Servers for Minutes to Deliver a Backdoor",
-  "link": "https://thehackernews.com/2026/10/attackers-tampered-with-aomei.html",
-  "blurb": "Update-server tampering for just minutes was enough to push a backdoor through trusted backup software."
+  "title": "Hackers breach Microsoft 365 tenants via ConnectWise supply-chain attack",
+  "link": "https://www.bleepingcomputer.com/news/security/hackers-breach-microsoft-365-tenants-via-connectwise-supply-chain-attack/",
+  "blurb": "Compromised ConnectWise credential used to sign into Microsoft 365 tenants: a supply-chain path into many customers at once."
  },
  {
-  "title": "Valve roll out Steam Achievement Sets in beta, splitting up games’ perpetually growing trophy masses into DLC and season buckets",
-  "link": "https://www.rockpapershotgun.com/valve-roll-out-steam-achievement-sets-in-beta-splitting-up-games-perpetually-growing-trophy-masses-into-dlc-and-season-buckets",
-  "blurb": "Steam splits ever-growing achievement lists into DLC/season sets so new content stops breaking 100% completions."
+  "title": "Drupal patches critical RCE flaws, warns exploits may emerge soon",
+  "link": "https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaws-warns-exploits-may-emerge-soon/",
+  "blurb": "Critical Drupal RCE flaws patched; Drupal warns exploits may appear soon, so patch now."
  },
  {
-  "title": "Fortnite is coming to Linux so we may soon be able to play it and other games like Apex Legends on Steam Deck and Steam Machine",
-  "link": "https://www.eurogamer.net/fortnite-linux-easy-anti-cheat-big-development",
-  "blurb": "Easy Anti-Cheat progress could finally bring Fortnite and other anti-cheat-gated games to Linux."
+  "title": "In the age of AI, one man spent years squeezing an entire museum onto a Game Boy - Why? For the most human of reasons",
+  "link": "https://www.eurogamer.net/game-boy-musuem-cartridge-marcel-pflug",
+  "blurb": "A years-long labour of love fitting a whole museum onto a Game Boy cartridge."
  },
  {
-  "title": "Plants shift gene activity within minutes of entering spaceflight, experiment reveals",
-  "link": "https://phys.org/news/2026-10-shift-gene-minutes-spaceflight-reveals.html",
-  "blurb": "Plants change gene activity within minutes of reaching spaceflight, informing space-agriculture work."
+  "title": "Dark Souls 2 dataminer shows off massive prototype coliseum level from early development",
+  "link": "https://www.pcgamer.com/games/dark-souls/dark-souls-2-dataminer-shows-off-massive-prototype-coliseum-level-from-early-development/",
+  "blurb": "Datamined prototype coliseum level shows how Dark Souls 2 looked early in development."
  },
  {
-  "title": "Show HN: Esp32sim – Run ESP32 firmware in the browser",
-  "link": "https://github.com/mikroverk/esp32sim",
-  "blurb": "Runs ESP32 firmware in the browser, enabling embedded development and testing without hardware."
+  "title": "New monolithic ion trap opens quantum simulations to more researchers",
+  "link": "https://phys.org/news/2026-10-monolithic-ion-quantum-simulations.html",
+  "blurb": "A monolithic ion trap could make quantum simulation accessible to more labs."
  },
  {
-  "title": "Show HN: Parin – A 2D game engine between raylib and Godot, written in Dlang",
-  "link": "https://github.com/Kapendev/parin",
-  "blurb": "A 2D game engine positioned between raylib and Godot, written in D."
+  "title": "Turning a Wi-Fi Adapter into an SDR",
+  "link": "https://hackaday.com/2026/10/18/turning-a-wi-fi-adapter-into-an-sdr/",
+  "blurb": "Repurposing cheap Wi-Fi hardware as a software-defined radio."
  },
  {
-  "title": "Rendering pretty sky in Around The World game",
-  "link": "https://frozenfractal.com/blog/2026/10/12/around-the-world-34-a-pretty-sky/",
-  "blurb": "Devlog on rendering a convincing procedural sky for a game."
+  "title": "Open MicroManipulator \u2013 A sub-micrometer 3D motion control plattform",
+  "link": "https://github.com/0x23/MicroManipulatorStepper",
+  "blurb": "Open hardware sub-micrometer 3D motion platform, with build files on GitHub."
  },
  {
-  "title": "Quantum magic state cleanup cuts errors 40-fold in first successful hardware test",
-  "link": "https://phys.org/news/2026-10-quantum-magic-state-cleanup-errors.html",
-  "blurb": "**Problem:** Universal quantum computing needs \"magic states\", but making them clean via distillation costs huge amounts of hardware.\n\n**Approach:** Google Quantum AI ran the first hardware test of \"magic state cultivation\" on its Willow chip. A deliberately noisy state is spread over a small qubit grid; helper qubits check for errors without reading the data, and any run failing a check is discarded and restarted. A new \"kickback tomography\" verifies the tiny leftover error with far fewer measurements.\n\n**Result:** Error fell 40-fold, to fidelity of about 99.99% or better; roughly 8% of attempts survived all checks. States were then moved into a surface-code-compatible layout as a proof of principle.\n\n**Why it matters:** Magic states are a main resource bottleneck for fault-tolerant machines; cultivating them in place could cut the hardware needed.\n\n**Glossary:** Magic state: special resource state enabling non-trivial gates. Distillation: filtering many noisy states into one clean one. Fidelity: closeness to the ideal state. Surface code: grid-based error-correcting code."
+  "title": "Physicists prove a long-suspected quantum speed limit for thermalization",
+  "link": "https://phys.org/news/2026-10-physicists-quantum-limit-thermalization.html",
+  "blurb": "**Problem:** Physicists saw hints of a universal speed limit on how fast quantum systems reach thermal equilibrium, but had no general proof.\n**Approach:** Paolo Abiuso and colleagues treated thermalization as a process and used quantum information theory to compute the fastest it can happen, testing on a model of interacting particles.\n**Result:** The minimum time is bounded by temperature and fundamental constants, independent of how hard the system is driven. Hotter means shorter allowed times; at very low temperature the gap between the two lowest energy states sets the limit. It ties to the Heisenberg limit.\n**Why it matters:** A fundamental constraint for designing quantum technologies, including quantum computers.\n**Glossary:** Thermal equilibrium (settled, uniform temperature); Qubit (quantum bit); Heisenberg limit (bound on measurement precision); Boltzmann constant (links temperature to energy)."
  },
  {
-  "title": "Researchers Demonstrate OpenBSD Root Exploit Chaining 37-Year-Old Shared-Memory Bug",
-  "link": "https://thehackernews.com/2026/10/researchers-demonstrate-openbsd-root.html",
-  "blurb": "Deep digest unavailable: fetching the source article failed (DNS error on thehackernews.com, retried once). Headline only: researchers demonstrated an OpenBSD root exploit chaining a 37-year-old shared-memory bug. See the link for details."
+  "title": "Ghidra + CBMC = Assembly Model Checker",
+  "link": "https://www.philipzucker.com/asmc_cpp/",
+  "blurb": "**Fetch failed** (DNS error on philipzucker.com, retried once), so no digest was written from the article. Title only: combining Ghidra (a reverse-engineering tool) with CBMC (a bounded model checker) to model-check assembly code.\n**Glossary:** Ghidra (NSA disassembler/decompiler); CBMC (bounded model checker for C)."
  }
 ]
