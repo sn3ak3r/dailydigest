@@ -64,3 +64,4 @@
 2026-10-16 | reverse-function | lea as multiply-add: base+index*scale+disp (3a, 12a+b+7), lea does not touch memory or flags, scale limited to 1/2/4/8
 2026-10-17 | crackme | sar arithmetic right shift (sign-fill, floor) vs shr, xor mask then cmp -3, backward-solving to a range of valid inputs, C1 /7 = SAR
 2026-10-18 | decode-instruction | 0F two-byte escape, MOVZX r32,r/m8 (0F B6) byte load zero-extended, ModRM+SIB [rcx+rdx], no REX needed for 64-bit addressing
+2026-10-19 | reverse-function | struct field access via [rcx+offset], word ptr + movzx for unsigned short fields, imul then add with memory operand, unread field/padding offsets

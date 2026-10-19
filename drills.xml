@@ -1,6 +1,35 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Decode: 0F B6 04 11</title><link></link><description>Target: Windows x86-64. Decode this instruction: 0F B6 04 11. What is the assembly? Why is there no REX prefix, and what size is the memory read versus the register written?
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse-a-function drill: struct field access</title><link></link><description># Reverse-a-function drill — 2026-10-19
 
-Answer: movzx eax, byte ptr [rcx+rdx]
-- 0F is the two-byte opcode escape; 0F B6 = MOVZX r32, r/m8. ModRM 04 = 00 000 100: mod=00 (no disp), reg=000 (eax, destination), rm=100 (SIB follows).
-- SIB 11 = 00 010 001: scale=1, index=rdx, base=rcx. Addresses are 64-bit by default, so no REX is needed.
-- Only 1 byte is read from memory; it is zero-extended into eax, and the 32-bit write also clears the upper half of rax.</description><guid isPermaLink='false'>2026-10-18</guid><pubDate>Sun, 18 Oct 2026 02:30:57 +0000</pubDate></item></channel></rss>
+Target: Windows x86-64 (first arg in `rcx`; return in `eax`).
+
+Reverse this short function to equivalent C:
+
+```asm
+mystery:
+    movzx   eax, word ptr [rcx+4]
+    movzx   edx, word ptr [rcx+6]
+    imul    eax, edx
+    add     eax, dword ptr [rcx+8]
+    ret
+```
+
+`rcx` holds a pointer. What struct layout does the code imply, and what does `mystery` return?
+
+---
+
+## Answer
+
+```c
+struct S { int id; unsigned short w, h; int bias; };
+
+int mystery(struct S *p) {
+    return p-&gt;w * p-&gt;h + p-&gt;bias;
+}
+```
+
+## Explanation
+
+- `[rcx+off]` with a constant offset is a struct field access: offsets 0, 4, 6, 8 give an int at 0 (never read), two 16-bit fields at 4 and 6, and an int at 8.
+- `word ptr` plus `movzx` means the fields are `unsigned short`, loaded and zero-extended to 32 bits before the multiply (a signed short would use `movsx`).
+- `imul` multiplies w*h, then `add` takes `bias` straight from memory; the unread field at offset 0 is why offsets alone don&#x27;t reveal the full struct.
+</description><guid isPermaLink='false'>2026-10-19</guid><pubDate>Mon, 19 Oct 2026 02:31:35 +0000</pubDate></item></channel></rss>
