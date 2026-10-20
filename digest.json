@@ -1,52 +1,52 @@
 [
  {
-  "title": "Hackers exploit SiteGuard WAF flaw to run commands as admins",
-  "link": "https://www.bleepingcomputer.com/news/security/hackers-exploit-siteguard-waf-flaw-to-run-commands-as-system-root/",
-  "blurb": "Actively exploited WAF flaw gives attackers admin-level command execution on the very device meant to protect sites."
+  "title": "Popular WordPress SEO Plugin Rank Math PRO Hijacked to Deliver Self-Restoring Backdoor",
+  "link": "https://thehackernews.com/2026/10/popular-wordpress-seo-plugin-rank-math.html",
+  "blurb": "Supply-chain hijack of a popular WordPress plugin installs a backdoor that restores itself after removal."
  },
  {
-  "title": "Hackers breach Microsoft 365 tenants via ConnectWise supply-chain attack",
-  "link": "https://www.bleepingcomputer.com/news/security/hackers-breach-microsoft-365-tenants-via-connectwise-supply-chain-attack/",
-  "blurb": "Compromised ConnectWise credential used to sign into Microsoft 365 tenants: a supply-chain path into many customers at once."
+  "title": "Unpatched Broadcom Wi-Fi Flaw Lets Attackers in Range Run Code as Root on Routers",
+  "link": "https://thehackernews.com/2026/10/unpatched-broadcom-wi-fi-flaw-lets.html",
+  "blurb": "Unpatched Wi-Fi driver flaw gives in-range attackers root code execution on routers."
  },
  {
-  "title": "Drupal patches critical RCE flaws, warns exploits may emerge soon",
-  "link": "https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaws-warns-exploits-may-emerge-soon/",
-  "blurb": "Critical Drupal RCE flaws patched; Drupal warns exploits may appear soon, so patch now."
+  "title": "Model-as-a-Trojan: Self-Activating Covert DNS Exfiltration Baked Into the Weights of an LLM Agent",
+  "link": "https://arxiv.org/abs/2610.22578",
+  "blurb": "Deep digest unavailable: the fetch of this URL failed (network proxy returned 403), so no summary was produced. Headline only: a paper on a self-activating covert DNS exfiltration channel baked into the weights of an LLM agent."
  },
  {
-  "title": "In the age of AI, one man spent years squeezing an entire museum onto a Game Boy - Why? For the most human of reasons",
-  "link": "https://www.eurogamer.net/game-boy-musuem-cartridge-marcel-pflug",
-  "blurb": "A years-long labour of love fitting a whole museum onto a Game Boy cartridge."
+  "title": "Moonlighter studio won't host a public playtest of its next game due to rampant AI-led cloning: 'We know we're not the only developers feeling this way'",
+  "link": "https://www.pcgamer.com/gaming-industry/moonlighter-studio-wont-host-a-public-playtest-of-its-next-game-due-to-rampant-ai-led-cloning-we-know-were-not-the-only-developers-feeling-this-way/",
+  "blurb": "Indie studio cancels a public playtest over AI-driven game cloning, a sign of a wider industry worry."
  },
  {
-  "title": "Dark Souls 2 dataminer shows off massive prototype coliseum level from early development",
-  "link": "https://www.pcgamer.com/games/dark-souls/dark-souls-2-dataminer-shows-off-massive-prototype-coliseum-level-from-early-development/",
-  "blurb": "Datamined prototype coliseum level shows how Dark Souls 2 looked early in development."
+  "title": "PS5-exclusive Demon's Souls Remake not only runs on PC now, it's running at twice the fps cap on an RTX 5070 with frame gen",
+  "link": "https://www.pcgamer.com/hardware/ps5-exclusive-demons-souls-remake-not-only-runs-on-pc-now-its-running-at-twice-the-fps-cap-on-an-rtx-5070-with-frame-gen/",
+  "blurb": "Demon's Souls Remake running on PC past its fps cap with frame generation."
  },
  {
-  "title": "New monolithic ion trap opens quantum simulations to more researchers",
-  "link": "https://phys.org/news/2026-10-monolithic-ion-quantum-simulations.html",
-  "blurb": "A monolithic ion trap could make quantum simulation accessible to more labs."
+  "title": "AI Proved the Quasi-Riemann Hypothesis. What Happens Now?",
+  "link": "https://www.quantamagazine.org/ai-proved-the-quasi-riemann-hypothesis-what-happens-now-20261019/",
+  "blurb": "Quanta on an AI-produced proof of the quasi-Riemann hypothesis and what it means for mathematics."
  },
  {
-  "title": "Turning a Wi-Fi Adapter into an SDR",
-  "link": "https://hackaday.com/2026/10/18/turning-a-wi-fi-adapter-into-an-sdr/",
-  "blurb": "Repurposing cheap Wi-Fi hardware as a software-defined radio."
+  "title": "Webb reveals metal-rich gas around Milky Way's central black hole",
+  "link": "https://phys.org/news/2026-10-webb-reveals-metal-rich-gas.html",
+  "blurb": "Webb finds metal-rich gas around the Milky Way's central black hole."
  },
  {
-  "title": "Open MicroManipulator \u2013 A sub-micrometer 3D motion control plattform",
-  "link": "https://github.com/0x23/MicroManipulatorStepper",
-  "blurb": "Open hardware sub-micrometer 3D motion platform, with build files on GitHub."
+  "title": "\u201cbonsoir, Elliot\u201d: How abliterated models can get you pwned",
+  "link": "https://projectdiscovery.io/research/how-abliterated-models-can-get-you-pwned",
+  "blurb": "ProjectDiscovery research on how abliterated (safety-stripped) models can be abused to compromise users."
  },
  {
-  "title": "Physicists prove a long-suspected quantum speed limit for thermalization",
-  "link": "https://phys.org/news/2026-10-physicists-quantum-limit-thermalization.html",
-  "blurb": "**Problem:** Physicists saw hints of a universal speed limit on how fast quantum systems reach thermal equilibrium, but had no general proof.\n**Approach:** Paolo Abiuso and colleagues treated thermalization as a process and used quantum information theory to compute the fastest it can happen, testing on a model of interacting particles.\n**Result:** The minimum time is bounded by temperature and fundamental constants, independent of how hard the system is driven. Hotter means shorter allowed times; at very low temperature the gap between the two lowest energy states sets the limit. It ties to the Heisenberg limit.\n**Why it matters:** A fundamental constraint for designing quantum technologies, including quantum computers.\n**Glossary:** Thermal equilibrium (settled, uniform temperature); Qubit (quantum bit); Heisenberg limit (bound on measurement precision); Boltzmann constant (links temperature to energy)."
+  "title": "Making dns_erlang Fast: Binary Tricks for the BEAM",
+  "link": "https://blog.dnsimple.com/2026/10/making-dns-erlang-fast/",
+  "blurb": "DNSimple's write-up of binary-handling tricks that speed up an Erlang DNS library."
  },
  {
-  "title": "Ghidra + CBMC = Assembly Model Checker",
-  "link": "https://www.philipzucker.com/asmc_cpp/",
-  "blurb": "**Fetch failed** (DNS error on philipzucker.com, retried once), so no digest was written from the article. Title only: combining Ghidra (a reverse-engineering tool) with CBMC (a bounded model checker) to model-check assembly code.\n**Glossary:** Ghidra (NSA disassembler/decompiler); CBMC (bounded model checker for C)."
+  "title": "Superoptimizing an FPU emulator",
+  "link": "https://purplesyringa.moe/blog/superoptimizing-an-fpu-emulator/",
+  "blurb": "Deep digest unavailable: the fetch of this URL failed (network proxy returned 403), so no summary was produced. Headline only: a blog post on superoptimizing an FPU emulator."
  }
 ]
