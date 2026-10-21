@@ -1,52 +1,52 @@
 [
  {
-  "title": "Popular WordPress SEO Plugin Rank Math PRO Hijacked to Deliver Self-Restoring Backdoor",
-  "link": "https://thehackernews.com/2026/10/popular-wordpress-seo-plugin-rank-math.html",
-  "blurb": "Supply-chain hijack of a popular WordPress plugin installs a backdoor that restores itself after removal."
+  "title": "Russian APT28 Breaches NATO Naval Shipbuilder in NATO Country, Deploys New Reflective Loader",
+  "link": "https://thehackernews.com/2026/10/russian-apt28-breaches-nato-naval.html",
+  "blurb": "APT28 breached a NATO shipbuilder using a new reflective loader."
  },
  {
-  "title": "Unpatched Broadcom Wi-Fi Flaw Lets Attackers in Range Run Code as Root on Routers",
-  "link": "https://thehackernews.com/2026/10/unpatched-broadcom-wi-fi-flaw-lets.html",
-  "blurb": "Unpatched Wi-Fi driver flaw gives in-range attackers root code execution on routers."
+  "title": "Locate, Then Reason: End-to-End Patch Presence Testing in Stripped Binaries",
+  "link": "https://arxiv.org/abs/2610.25071",
+  "blurb": "Deep digest unavailable: the fetch of this URL failed (arxiv.org unreachable from this environment: proxy 403 / DNS failure), so no summary was produced. Headline only: Locate, Then Reason - Arxiv paper on testing whether a security patch is present in stripped binaries."
  },
  {
-  "title": "Model-as-a-Trojan: Self-Activating Covert DNS Exfiltration Baked Into the Weights of an LLM Agent",
-  "link": "https://arxiv.org/abs/2610.22578",
-  "blurb": "Deep digest unavailable: the fetch of this URL failed (network proxy returned 403), so no summary was produced. Headline only: a paper on a self-activating covert DNS exfiltration channel baked into the weights of an LLM agent."
+  "title": "PAGE404: Breaking GPU Isolation Through Hardware-assisted Page Migration",
+  "link": "https://arxiv.org/abs/2610.20962",
+  "blurb": "Deep digest unavailable: the fetch of this URL failed (arxiv.org unreachable from this environment: proxy 403 / DNS failure), so no summary was produced. Headline only: PAGE404 - Arxiv paper on breaking GPU isolation via hardware-assisted page migration."
  },
  {
-  "title": "Moonlighter studio won't host a public playtest of its next game due to rampant AI-led cloning: 'We know we're not the only developers feeling this way'",
-  "link": "https://www.pcgamer.com/gaming-industry/moonlighter-studio-wont-host-a-public-playtest-of-its-next-game-due-to-rampant-ai-led-cloning-we-know-were-not-the-only-developers-feeling-this-way/",
-  "blurb": "Indie studio cancels a public playtest over AI-driven game cloning, a sign of a wider industry worry."
+  "title": "Helldivers 2 swaps over to Easy anti-cheat, with developers admitting Gameguard \"wasn't as effective as it could have been\"",
+  "link": "https://www.eurogamer.net/helldivers-2-easy-anti-cheat-switch-game-guard",
+  "blurb": "Helldivers 2 moves from GameGuard to Easy Anti-Cheat; devs admit GameGuard fell short."
  },
  {
-  "title": "PS5-exclusive Demon's Souls Remake not only runs on PC now, it's running at twice the fps cap on an RTX 5070 with frame gen",
-  "link": "https://www.pcgamer.com/hardware/ps5-exclusive-demons-souls-remake-not-only-runs-on-pc-now-its-running-at-twice-the-fps-cap-on-an-rtx-5070-with-frame-gen/",
-  "blurb": "Demon's Souls Remake running on PC past its fps cap with frame generation."
+  "title": "Microsoft won't like this open source project to get Game Pass working on SteamOS and Linux, but I think it's pretty neat",
+  "link": "https://www.pcgamer.com/software/microsoft-wont-like-this-open-source-project-to-get-game-pass-working-on-steamos-and-linux-but-i-think-its-pretty-neat/",
+  "blurb": "Open source project aims to run Game Pass games on SteamOS and Linux."
  },
  {
-  "title": "AI Proved the Quasi-Riemann Hypothesis. What Happens Now?",
-  "link": "https://www.quantamagazine.org/ai-proved-the-quasi-riemann-hypothesis-what-happens-now-20261019/",
-  "blurb": "Quanta on an AI-produced proof of the quasi-Riemann hypothesis and what it means for mathematics."
+  "title": "Quantum error correction goes well beyond breakeven",
+  "link": "https://arstechnica.com/science/2026/10/quantum-error-correction-goes-well-beyond-breakeven/",
+  "blurb": "Quantum error correction now performs well beyond the breakeven point."
  },
  {
-  "title": "Webb reveals metal-rich gas around Milky Way's central black hole",
-  "link": "https://phys.org/news/2026-10-webb-reveals-metal-rich-gas.html",
-  "blurb": "Webb finds metal-rich gas around the Milky Way's central black hole."
+  "title": "Oxygen collisions show evidence of jet quenching, a signature of early-universe matter",
+  "link": "https://phys.org/news/2026-10-oxygen-collisions-evidence-jet-quenching.html",
+  "blurb": "Oxygen-ion collisions show jet quenching, a hallmark of early-universe matter."
  },
  {
-  "title": "\u201cbonsoir, Elliot\u201d: How abliterated models can get you pwned",
-  "link": "https://projectdiscovery.io/research/how-abliterated-models-can-get-you-pwned",
-  "blurb": "ProjectDiscovery research on how abliterated (safety-stripped) models can be abused to compromise users."
+  "title": "Super Mario Galaxy Now Runs on the GBA",
+  "link": "https://hackaday.com/2026/10/20/super-mario-galaxy-now-runs-on-the-gba/",
+  "blurb": "Super Mario Galaxy ported to run on the Game Boy Advance."
  },
  {
-  "title": "Making dns_erlang Fast: Binary Tricks for the BEAM",
-  "link": "https://blog.dnsimple.com/2026/10/making-dns-erlang-fast/",
-  "blurb": "DNSimple's write-up of binary-handling tricks that speed up an Erlang DNS library."
+  "title": "Tsrs: A Port of TypeScript to Rust",
+  "link": "https://blog.cloudflare.com/typescript-rust-port/",
+  "blurb": "Cloudflare's write-up on tsrs, a port of TypeScript to Rust."
  },
  {
-  "title": "Superoptimizing an FPU emulator",
-  "link": "https://purplesyringa.moe/blog/superoptimizing-an-fpu-emulator/",
-  "blurb": "Deep digest unavailable: the fetch of this URL failed (network proxy returned 403), so no summary was produced. Headline only: a blog post on superoptimizing an FPU emulator."
+  "title": "Making a VGA Driver in SystemVerilog",
+  "link": "https://lukaswerner.com/post/2026-10-20@bottom-up-vga",
+  "blurb": "Bottom-up build of a VGA driver in SystemVerilog."
  }
 ]
