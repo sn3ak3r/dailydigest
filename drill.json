@@ -1,8 +1,8 @@
 [
  {
-  "title": "Drill 2026-10-20: crackme (movsxd)",
-  "guid": "2026-10-20",
-  "blurb": "Crackme: find the input (Windows x64, arg in ecx)\n\n```\n48 63 C1       movsxd rax, ecx\n48 83 C0 05    add rax, 5\n48 C1 E8 20    shr rax, 32\n83 F8 FF       cmp eax, -1\n0F 94 C0       sete al\nC3             ret\n```\n\nWhich 32-bit value of `ecx` makes the function return 1? Give the largest one in hex.\n\nANSWER:\n**Answer:** `0xFFFFFFFA` (-6). Any `ecx` <= -6 works.\n\n1. `movsxd` sign-extends ecx to 64 bits, so the `add` happens in 64 bits and cannot wrap at 32 bits.\n2. `shr rax, 32` keeps only the upper half, which is 0xFFFFFFFF exactly when the 64-bit sum is negative, otherwise 0.\n3. So the check is `ecx + 5 < 0`, i.e. ecx <= -6. Opcode `48 63` is MOVSXD (REX.W + 63), not the 32-bit `mov`.",
+  "title": "Drill 2026-10-21: decode (GS-relative PEB load)",
+  "guid": "2026-10-21",
+  "blurb": "Decode one instruction (Windows x64)\n\nDecode this instruction:\n\n```\n65 48 8B 04 25 60 00 00 00\n```\n\nWhat is the assembly? What does the `65` byte do, and why is there a SIB byte when no register is used for the address?\n\nANSWER:\n`mov rax, qword ptr gs:[0x60]`\n\n- `65` is the GS segment-override prefix; `48` is REX.W (64-bit operand); `8B` = MOV r64, r/m64. ModRM `04` = `00 000 100`: mod=00, reg=rax, rm=100 (SIB follows).\n- SIB `25` = `00 100 101`: index=100 means \"no index\", base=101 with mod=00 means \"no base, disp32 only\". That is the only way to encode an absolute address in 64-bit mode (plain mod=00 rm=101 is RIP-relative). disp32 = `60 00 00 00` = 0x60.\n- On Windows x64, GS points at the TEB, and TEB+0x60 holds the PEB pointer, so this loads the PEB address into rax (shellcode and malware use it to walk loaded modules).",
   "link": ""
  }
 ]

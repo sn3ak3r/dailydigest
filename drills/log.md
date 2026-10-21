@@ -66,3 +66,4 @@
 2026-10-18 | decode-instruction | 0F two-byte escape, MOVZX r32,r/m8 (0F B6) byte load zero-extended, ModRM+SIB [rcx+rdx], no REX needed for 64-bit addressing
 2026-10-19 | reverse-function | struct field access via [rcx+offset], word ptr + movzx for unsigned short fields, imul then add with memory operand, unread field/padding offsets
 2026-10-20 | crackme | movsxd sign-extension ecx->rax (48 63), 64-bit add cannot wrap at 32 bits, shr rax,32 extracting the high half as a sign test, cmp eax,-1 (83 F8 FF)
+2026-10-21 | decode-instruction | GS segment-override prefix 65, mov rax,gs:[0x60] reads PEB from TEB, SIB with no base/no index = absolute disp32 in 64-bit mode

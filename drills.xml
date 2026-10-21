@@ -1,19 +1,16 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill 2026-10-20: crackme (movsxd)</title><link></link><description>Crackme: find the input (Windows x64, arg in ecx)
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill 2026-10-21: decode (GS-relative PEB load)</title><link></link><description>Decode one instruction (Windows x64)
+
+Decode this instruction:
 
 ```
-48 63 C1       movsxd rax, ecx
-48 83 C0 05    add rax, 5
-48 C1 E8 20    shr rax, 32
-83 F8 FF       cmp eax, -1
-0F 94 C0       sete al
-C3             ret
+65 48 8B 04 25 60 00 00 00
 ```
 
-Which 32-bit value of `ecx` makes the function return 1? Give the largest one in hex.
+What is the assembly? What does the `65` byte do, and why is there a SIB byte when no register is used for the address?
 
 ANSWER:
-**Answer:** `0xFFFFFFFA` (-6). Any `ecx` &lt;= -6 works.
+`mov rax, qword ptr gs:[0x60]`
 
-1. `movsxd` sign-extends ecx to 64 bits, so the `add` happens in 64 bits and cannot wrap at 32 bits.
-2. `shr rax, 32` keeps only the upper half, which is 0xFFFFFFFF exactly when the 64-bit sum is negative, otherwise 0.
-3. So the check is `ecx + 5 &lt; 0`, i.e. ecx &lt;= -6. Opcode `48 63` is MOVSXD (REX.W + 63), not the 32-bit `mov`.</description><guid isPermaLink='false'>2026-10-20</guid><pubDate>Tue, 20 Oct 2026 02:31:09 +0000</pubDate></item></channel></rss>
+- `65` is the GS segment-override prefix; `48` is REX.W (64-bit operand); `8B` = MOV r64, r/m64. ModRM `04` = `00 000 100`: mod=00, reg=rax, rm=100 (SIB follows).
+- SIB `25` = `00 100 101`: index=100 means &quot;no index&quot;, base=101 with mod=00 means &quot;no base, disp32 only&quot;. That is the only way to encode an absolute address in 64-bit mode (plain mod=00 rm=101 is RIP-relative). disp32 = `60 00 00 00` = 0x60.
+- On Windows x64, GS points at the TEB, and TEB+0x60 holds the PEB pointer, so this loads the PEB address into rax (shellcode and malware use it to walk loaded modules).</description><guid isPermaLink='false'>2026-10-21</guid><pubDate>Wed, 21 Oct 2026 02:31:29 +0000</pubDate></item></channel></rss>
