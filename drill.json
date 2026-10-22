@@ -1,8 +1,8 @@
 [
  {
-  "title": "Drill 2026-10-21: decode (GS-relative PEB load)",
-  "guid": "2026-10-21",
-  "blurb": "Decode one instruction (Windows x64)\n\nDecode this instruction:\n\n```\n65 48 8B 04 25 60 00 00 00\n```\n\nWhat is the assembly? What does the `65` byte do, and why is there a SIB byte when no register is used for the address?\n\nANSWER:\n`mov rax, qword ptr gs:[0x60]`\n\n- `65` is the GS segment-override prefix; `48` is REX.W (64-bit operand); `8B` = MOV r64, r/m64. ModRM `04` = `00 000 100`: mod=00, reg=rax, rm=100 (SIB follows).\n- SIB `25` = `00 100 101`: index=100 means \"no index\", base=101 with mod=00 means \"no base, disp32 only\". That is the only way to encode an absolute address in 64-bit mode (plain mod=00 rm=101 is RIP-relative). disp32 = `60 00 00 00` = 0x60.\n- On Windows x64, GS points at the TEB, and TEB+0x60 holds the PEB pointer, so this loads the PEB address into rax (shellcode and malware use it to walk loaded modules).",
+  "title": "Drill 2026-10-22: reverse (signed divide by 8)",
+  "guid": "2026-10-22",
+  "blurb": "Reverse a short function (Windows x64)\n\nTarget: Windows x86-64 (first arg in `ecx`; return in `eax`).\n\nReverse this short function to equivalent C:\n\n```asm\nmystery:\n    mov     eax, ecx\n    cdq\n    and     edx, 7\n    add     eax, edx\n    sar     eax, 3\n    ret\n```\n\nWhat does `mystery(-9)` return, and why not just a bare `sar eax, 3`?\n\n\nANSWER:\n\n```c\nint mystery(int x) {\n    return x / 8;\n}\n```\n\n`mystery(-9)` returns `-1` (a bare `sar` would give `-2`).\n\n- `cdq` copies the sign bit of `eax` into all of `edx` (0 or -1); `and edx, 7` turns that into a bias of 0 (x >= 0) or 7 (x < 0).\n- `sar` alone rounds toward negative infinity (floor), but C division truncates toward zero; adding 2^n - 1 to negatives first fixes this: (-9 + 7) >> 3 = -1.\n- Signed divide by a power of two compiles to this bias + `sar` instead of a slow `idiv`; an unsigned divide would just be `shr`.",
   "link": ""
  }
 ]

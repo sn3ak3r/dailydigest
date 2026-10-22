@@ -1,16 +1,32 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill 2026-10-21: decode (GS-relative PEB load)</title><link></link><description>Decode one instruction (Windows x64)
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill 2026-10-22: reverse (signed divide by 8)</title><link></link><description>Reverse a short function (Windows x64)
 
-Decode this instruction:
+Target: Windows x86-64 (first arg in `ecx`; return in `eax`).
 
+Reverse this short function to equivalent C:
+
+```asm
+mystery:
+    mov     eax, ecx
+    cdq
+    and     edx, 7
+    add     eax, edx
+    sar     eax, 3
+    ret
 ```
-65 48 8B 04 25 60 00 00 00
-```
 
-What is the assembly? What does the `65` byte do, and why is there a SIB byte when no register is used for the address?
+What does `mystery(-9)` return, and why not just a bare `sar eax, 3`?
+
 
 ANSWER:
-`mov rax, qword ptr gs:[0x60]`
 
-- `65` is the GS segment-override prefix; `48` is REX.W (64-bit operand); `8B` = MOV r64, r/m64. ModRM `04` = `00 000 100`: mod=00, reg=rax, rm=100 (SIB follows).
-- SIB `25` = `00 100 101`: index=100 means &quot;no index&quot;, base=101 with mod=00 means &quot;no base, disp32 only&quot;. That is the only way to encode an absolute address in 64-bit mode (plain mod=00 rm=101 is RIP-relative). disp32 = `60 00 00 00` = 0x60.
-- On Windows x64, GS points at the TEB, and TEB+0x60 holds the PEB pointer, so this loads the PEB address into rax (shellcode and malware use it to walk loaded modules).</description><guid isPermaLink='false'>2026-10-21</guid><pubDate>Wed, 21 Oct 2026 02:31:29 +0000</pubDate></item></channel></rss>
+```c
+int mystery(int x) {
+    return x / 8;
+}
+```
+
+`mystery(-9)` returns `-1` (a bare `sar` would give `-2`).
+
+- `cdq` copies the sign bit of `eax` into all of `edx` (0 or -1); `and edx, 7` turns that into a bias of 0 (x &gt;= 0) or 7 (x &lt; 0).
+- `sar` alone rounds toward negative infinity (floor), but C division truncates toward zero; adding 2^n - 1 to negatives first fixes this: (-9 + 7) &gt;&gt; 3 = -1.
+- Signed divide by a power of two compiles to this bias + `sar` instead of a slow `idiv`; an unsigned divide would just be `shr`.</description><guid isPermaLink='false'>2026-10-22</guid><pubDate>Thu, 22 Oct 2026 02:31:01 +0000</pubDate></item></channel></rss>
