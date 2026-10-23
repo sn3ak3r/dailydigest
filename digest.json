@@ -1,52 +1,52 @@
 [
  {
-  "title": "China-Aligned Bronze Sandcastle Abuses Sandboxie DLL Sideloading to Deploy Backdoors",
-  "link": "https://thehackernews.com/2026/10/china-aligned-bronze-sandcastle-abuses.html",
-  "blurb": "Windows DLL sideloading via Sandboxie components to drop backdoors; fits the Windows-internals focus."
+  "title": "VMSpec: A Decompiler-based Approach against Virtual Machine Obfuscation",
+  "link": "https://arxiv.org/abs/2610.29566",
+  "blurb": "Decompiler-based approach against virtual-machine obfuscation, directly relevant to RE tooling. Deep digest not produced: fetching the source URL failed (proxy 403 / DNS) in this run. Headline only."
  },
  {
-  "title": "Decades-Old Windows Utility Powers Modern ClickFix Attack",
-  "link": "https://www.darkreading.com/cyberattacks-data-breaches/decades-old-windows-utility-modern-clickfix-attack",
-  "blurb": "A decades-old built-in Windows utility is being abused as a living-off-the-land step in ClickFix chains."
+  "title": "Eight Bits of Trust; eMudhra's CA keys cracked in milliseconds",
+  "link": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
+  "blurb": "Research writeup on eMudhra CA keys found guessable and cracked in milliseconds; trust-chain fallout. Deep digest not produced: fetching the source URL failed (proxy 403 / DNS) in this run. Headline only."
  },
  {
-  "title": "SPECTER: Covert Data Exfiltration from Air-Gapped Systems via USB Power Modulation",
-  "link": "https://arxiv.org/abs/2610.28401",
-  "blurb": "SPECTER: covert data exfiltration from air-gapped systems via USB power modulation.\n\nProblem: air-gapped machines are meant to be unreachable. Approach / Result / Why it matters / Glossary: NOT AVAILABLE. Fetch of the paper failed (DNS error for arxiv.org), so no details beyond the title are stated here. Title suggests a covert channel that encodes data in USB power draw."
+  "title": "Attackers Hijacked Over 300 Tor Exit Relays to Intercept SSH Connections",
+  "link": "https://thehackernews.com/2026/10/attackers-hijacked-over-300-tor-exit.html",
+  "blurb": "300+ hijacked Tor exit relays used to intercept SSH connections."
  },
  {
-  "title": "Helldivers 2 studio warns mods may break as it switches to new anti-cheat, and the negative reviews are dropping on Steam like Hellbombs",
-  "link": "https://www.pcgamer.com/games/third-person-shooter/helldivers-2-studio-warns-mods-may-break-as-it-switches-to-new-anti-cheat-and-the-negative-reviews-are-dropping-on-steam-like-hellbombs/",
-  "blurb": "Helldivers 2 moves to a new anti-cheat; mods may break, a real engine/ecosystem tradeoff."
+  "title": "BioWare is closing down and Mass Effect 5 is cancelled, months after Saudi Arabia's $55bn EA buyout",
+  "link": "https://www.eurogamer.net/bioware-closing-down-mass-effect-5-cancelled",
+  "blurb": "EA closes BioWare and cancels Mass Effect 5; major studio-news event."
  },
  {
-  "title": "RIP BioWare: EA has shut down the legendary RPG developer",
-  "link": "https://www.pcgamer.com/gaming-industry/rip-bioware-ea-has-shut-down-the-legendary-rpg-developer/",
-  "blurb": "EA shuts down BioWare: major studio-closure news."
+  "title": "Future Capcom games will have Onimusha to thank for RE Engine's gnarly dismemberments",
+  "link": "https://www.pcgamer.com/games/action/future-capcom-games-will-have-onimusha-to-thank-for-re-engines-gnarly-dismemberments/",
+  "blurb": "Capcom's RE Engine dismemberment tech traces back to Onimusha work; engine-level detail."
  },
  {
-  "title": "Laser-made lattice reveals discrete light solitons in tunable atomic vapor",
-  "link": "https://phys.org/news/2026-10-laser-lattice-reveals-discrete-solitons.html",
-  "blurb": "Laser-written lattice in atomic vapor shows discrete light solitons, a tunable-optics result."
+  "title": "Ultrafast light pulses track molecular motion with three-femtosecond resolution",
+  "link": "https://phys.org/news/2026-10-ultrafast-pulses-track-molecular-motion.html",
+  "blurb": "Ultrafast light pulses track molecular motion at 3-femtosecond resolution."
  },
  {
-  "title": "AI designs functional enzyme components that could help expand drug discovery",
-  "link": "https://phys.org/news/2026-10-ai-functional-enzyme-components-drug.html",
-  "blurb": "AI-designed enzyme components shown functional, a possible route to wider drug discovery."
+  "title": "Ants break a basic rule of biology to help them adapt to new environments",
+  "link": "https://phys.org/news/2026-10-ants-basic-biology-environments.html",
+  "blurb": "Ants appear to break a basic biological rule when adapting to new environments."
  },
  {
-  "title": "A Stereo Vision Board For Hardware Hackers",
-  "link": "https://hackaday.com/2026/10/21/a-stereo-vision-board-for-hardware-hackers/",
-  "blurb": "A stereo-vision board aimed at hardware hackers, with the build documented."
+  "title": "Floating-Point Addition and Subtraction on Intel’s 8087",
+  "link": "https://hackaday.com/2026/10/22/floating-point-addition-and-subtraction-on-intels-8087/",
+  "blurb": "Walkthrough of how Intel's 8087 does floating-point add/subtract in hardware."
  },
  {
-  "title": "Don't throw it all away: Caching an immediate-mode UI",
-  "link": "https://blickeditor.com/blog/caching-an-immediate-mode-ui",
-  "blurb": "Caching an immediate-mode UI (blickeditor.com).\n\nProblem / Approach / Result / Why it matters / Glossary: NOT AVAILABLE. Fetch failed (DNS error for blickeditor.com), so only the title is known: it concerns caching in immediate-mode UIs, which redraw every frame."
+  "title": "Faster than earcut: triangulating 3.7M map polygons in 489 ms",
+  "link": "https://globus.software/blog/2026/10/16/cutting-map-polygons/",
+  "blurb": "Build writeup: triangulating 3.7M map polygons in 489 ms, faster than earcut."
  },
  {
-  "title": "Unikernels in OCaml",
-  "link": "https://uniker.nl/",
-  "blurb": "Unikernels in OCaml: minimal single-purpose OS images built from a language runtime."
+  "title": "Show HN: Uberblok – an interactive museum of ZFS internals",
+  "link": "https://uberblok.storagebits.workers.dev/",
+  "blurb": "Interactive museum of ZFS internals."
  }
 ]
