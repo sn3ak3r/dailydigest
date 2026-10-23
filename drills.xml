@@ -1,32 +1,28 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill 2026-10-22: reverse (signed divide by 8)</title><link></link><description>Reverse a short function (Windows x64)
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill 2026-10-23: crackme (unsigned div quotient/remainder)</title><link></link><description># Crackme: find the input (Windows x64, arg in ecx)
 
-Target: Windows x86-64 (first arg in `ecx`; return in `eax`).
-
-Reverse this short function to equivalent C:
-
-```asm
-mystery:
-    mov     eax, ecx
-    cdq
-    and     edx, 7
-    add     eax, edx
-    sar     eax, 3
+```
+    mov    eax, ecx
+    xor    edx, edx
+    mov    r8d, 13
+    div    r8d
+    cmp    edx, 5
+    jne    fail
+    cmp    eax, 1000
+    sete   al
+    movzx  eax, al
+    ret
+fail:
+    xor    eax, eax
     ret
 ```
 
-What does `mystery(-9)` return, and why not just a bare `sar eax, 3`?
+Which value of `ecx` makes the function return 1? Give it in decimal.
 
+--- ANSWER ---
 
-ANSWER:
+**Answer:** `13005`
 
-```c
-int mystery(int x) {
-    return x / 8;
-}
-```
-
-`mystery(-9)` returns `-1` (a bare `sar` would give `-2`).
-
-- `cdq` copies the sign bit of `eax` into all of `edx` (0 or -1); `and edx, 7` turns that into a bias of 0 (x &gt;= 0) or 7 (x &lt; 0).
-- `sar` alone rounds toward negative infinity (floor), but C division truncates toward zero; adding 2^n - 1 to negatives first fixes this: (-9 + 7) &gt;&gt; 3 = -1.
-- Signed divide by a power of two compiles to this bias + `sar` instead of a slow `idiv`; an unsigned divide would just be `shr`.</description><guid isPermaLink='false'>2026-10-22</guid><pubDate>Thu, 22 Oct 2026 02:31:01 +0000</pubDate></item></channel></rss>
+1. `div r8d` is unsigned: it divides `edx:eax` by r8d, so `edx` must be zeroed first (`xor edx, edx`). The quotient lands in `eax`, the remainder in `edx`.
+2. The checks demand remainder 5 (`cmp edx, 5`) and quotient 1000 (`cmp eax, 1000`).
+3. Invert the division: `ecx = quotient * 13 + remainder = 1000*13 + 5 = 13005`. It is the only solution, since quotient and remainder fix the dividend uniquely.
+</description><guid isPermaLink='false'>2026-10-23</guid><pubDate>Fri, 23 Oct 2026 02:30:51 +0000</pubDate></item></channel></rss>

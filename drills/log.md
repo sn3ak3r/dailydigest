@@ -68,3 +68,4 @@
 2026-10-20 | crackme | movsxd sign-extension ecx->rax (48 63), 64-bit add cannot wrap at 32 bits, shr rax,32 extracting the high half as a sign test, cmp eax,-1 (83 F8 FF)
 2026-10-21 | decode-instruction | GS segment-override prefix 65, mov rax,gs:[0x60] reads PEB from TEB, SIB with no base/no index = absolute disp32 in 64-bit mode
 2026-10-22 | reverse-function | signed divide by power of two: cdq sign mask, and edx,7 bias, add then sar (round toward zero vs sar's floor), no idiv
+2026-10-23 | crackme | unsigned div r32: xor edx,edx setup, quotient in eax / remainder in edx, backward-solving dividend = q*d + r
