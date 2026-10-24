@@ -1,28 +1,19 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill 2026-10-23: crackme (unsigned div quotient/remainder)</title><link></link><description># Crackme: find the input (Windows x64, arg in ecx)
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill 2026-10-24: decode one instruction</title><link></link><description>Target: Windows x86-64.
+
+Decode this instruction, located at address `0x140001000`:
 
 ```
-    mov    eax, ecx
-    xor    edx, edx
-    mov    r8d, 13
-    div    r8d
-    cmp    edx, 5
-    jne    fail
-    cmp    eax, 1000
-    sete   al
-    movzx  eax, al
-    ret
-fail:
-    xor    eax, eax
-    ret
+0F 8C 2A 01 00 00
 ```
 
-Which value of `ecx` makes the function return 1? Give it in decimal.
+What is the assembly (give the absolute target address)? Why is this two opcode bytes, and when would a compiler use a 2-byte form instead?
 
---- ANSWER ---
+---
 
-**Answer:** `13005`
+## Answer
 
-1. `div r8d` is unsigned: it divides `edx:eax` by r8d, so `edx` must be zeroed first (`xor edx, edx`). The quotient lands in `eax`, the remainder in `edx`.
-2. The checks demand remainder 5 (`cmp edx, 5`) and quotient 1000 (`cmp eax, 1000`).
-3. Invert the division: `ecx = quotient * 13 + remainder = 1000*13 + 5 = 13005`. It is the only solution, since quotient and remainder fix the dividend uniquely.
-</description><guid isPermaLink='false'>2026-10-23</guid><pubDate>Fri, 23 Oct 2026 02:30:51 +0000</pubDate></item></channel></rss>
+`jl 0x140001130` (jump if less, signed).
+
+- `0F` is the two-byte opcode escape; `0F 8C` = JL rel32 (near conditional jump; 0F 8x mirrors the short `7x` forms, so `7C` = JL rel8). Condition is SF != OF, i.e. signed less-than after a cmp.
+- Displacement `2A 01 00 00` little-endian = 0x0000012A, signed, relative to the NEXT instruction: 0x140001000 + 6 = 0x140001006; + 0x12A = 0x140001130.
+- Compilers emit the 2-byte `7C rel8` when the target is within -128..+127 bytes; otherwise they need this 6-byte rel32 form.</description><guid isPermaLink='false'>2026-10-24</guid><pubDate>Sat, 24 Oct 2026 02:30:56 +0000</pubDate></item></channel></rss>

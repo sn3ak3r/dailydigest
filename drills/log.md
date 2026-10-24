@@ -69,3 +69,4 @@
 2026-10-21 | decode-instruction | GS segment-override prefix 65, mov rax,gs:[0x60] reads PEB from TEB, SIB with no base/no index = absolute disp32 in 64-bit mode
 2026-10-22 | reverse-function | signed divide by power of two: cdq sign mask, and edx,7 bias, add then sar (round toward zero vs sar's floor), no idiv
 2026-10-23 | crackme | unsigned div r32: xor edx,edx setup, quotient in eax / remainder in edx, backward-solving dividend = q*d + r
+2026-10-24 | decode-instruction | 0F 8C JL rel32 near conditional jump, two-byte 0F 8x vs short 7x rel8, signed displacement relative to next instruction, SF!=OF

@@ -1,8 +1,8 @@
 [
- {
-  "title": "Drill 2026-10-23: crackme (unsigned div quotient/remainder)",
-  "guid": "2026-10-23",
-  "blurb": "# Crackme: find the input (Windows x64, arg in ecx)\n\n```\n    mov    eax, ecx\n    xor    edx, edx\n    mov    r8d, 13\n    div    r8d\n    cmp    edx, 5\n    jne    fail\n    cmp    eax, 1000\n    sete   al\n    movzx  eax, al\n    ret\nfail:\n    xor    eax, eax\n    ret\n```\n\nWhich value of `ecx` makes the function return 1? Give it in decimal.\n\n--- ANSWER ---\n\n**Answer:** `13005`\n\n1. `div r8d` is unsigned: it divides `edx:eax` by r8d, so `edx` must be zeroed first (`xor edx, edx`). The quotient lands in `eax`, the remainder in `edx`.\n2. The checks demand remainder 5 (`cmp edx, 5`) and quotient 1000 (`cmp eax, 1000`).\n3. Invert the division: `ecx = quotient * 13 + remainder = 1000*13 + 5 = 13005`. It is the only solution, since quotient and remainder fix the dividend uniquely.\n",
-  "link": ""
- }
+  {
+    "title": "Drill 2026-10-24: decode one instruction",
+    "guid": "2026-10-24",
+    "blurb": "Target: Windows x86-64.\n\nDecode this instruction, located at address `0x140001000`:\n\n```\n0F 8C 2A 01 00 00\n```\n\nWhat is the assembly (give the absolute target address)? Why is this two opcode bytes, and when would a compiler use a 2-byte form instead?\n\n---\n\n## Answer\n\n`jl 0x140001130` (jump if less, signed).\n\n- `0F` is the two-byte opcode escape; `0F 8C` = JL rel32 (near conditional jump; 0F 8x mirrors the short `7x` forms, so `7C` = JL rel8). Condition is SF != OF, i.e. signed less-than after a cmp.\n- Displacement `2A 01 00 00` little-endian = 0x0000012A, signed, relative to the NEXT instruction: 0x140001000 + 6 = 0x140001006; + 0x12A = 0x140001130.\n- Compilers emit the 2-byte `7C rel8` when the target is within -128..+127 bytes; otherwise they need this 6-byte rel32 form.",
+    "link": ""
+  }
 ]
