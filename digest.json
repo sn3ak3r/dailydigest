@@ -1,52 +1,52 @@
 [
  {
-  "title": "VMSpec: A Decompiler-based Approach against Virtual Machine Obfuscation",
-  "link": "https://arxiv.org/abs/2610.29566",
-  "blurb": "Decompiler-based approach against virtual-machine obfuscation, directly relevant to RE tooling. Deep digest not produced: fetching the source URL failed (proxy 403 / DNS) in this run. Headline only."
+  "title": "PAGE404: Breaking GPU Isolation Through Hardware-assisted Page Migration",
+  "link": "https://arxiv.org/abs/2610.20962",
+  "blurb": "Problem: GPU memory isolation between tenants may be breakable. Approach: per the title, PAGE404 abuses hardware-assisted page migration to break that isolation. Result: not verified. Why it matters: shared GPUs underpin cloud AI. Jargon: page migration (moving memory pages between memory tiers/devices). NOTE: full text could not be fetched (arxiv.org blocked by proxy); this summary is inferred from the title only."
  },
  {
-  "title": "Eight Bits of Trust; eMudhra's CA keys cracked in milliseconds",
-  "link": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
-  "blurb": "Research writeup on eMudhra CA keys found guessable and cracked in milliseconds; trust-chain fallout. Deep digest not produced: fetching the source URL failed (proxy 403 / DNS) in this run. Headline only."
+  "title": "Amplifying Latency and Cost of LLM Inference via Rowhammer Attack",
+  "link": "https://arxiv.org/abs/2610.30798",
+  "blurb": "Problem: LLM inference cost and latency could be inflated by an attacker. Approach: per the title, Rowhammer bit-flips are used to amplify inference latency and cost. Result: not verified. Why it matters: it would make hardware faults a resource-exhaustion vector against hosted models. Jargon: Rowhammer (repeated DRAM row access that flips neighbouring bits). NOTE: full text could not be fetched (arxiv.org blocked by proxy); inferred from the title only."
  },
  {
-  "title": "Attackers Hijacked Over 300 Tor Exit Relays to Intercept SSH Connections",
-  "link": "https://thehackernews.com/2026/10/attackers-hijacked-over-300-tor-exit.html",
-  "blurb": "300+ hijacked Tor exit relays used to intercept SSH connections."
+  "title": "BlackX UEFI Bootkit Bypasses Secure Boot on Patched Windows Systems Missing Revocations",
+  "link": "https://thehackernews.com/2026/10/blackx-uefi-bootkit-bypasses-secure.html",
+  "blurb": "Bootkit that evades Secure Boot on Windows machines missing revocation updates; Windows boot-chain internals."
  },
  {
-  "title": "BioWare is closing down and Mass Effect 5 is cancelled, months after Saudi Arabia's $55bn EA buyout",
-  "link": "https://www.eurogamer.net/bioware-closing-down-mass-effect-5-cancelled",
-  "blurb": "EA closes BioWare and cancels Mass Effect 5; major studio-news event."
+  "title": "Factorio's final major update has rolled off the assembly line, adding \"the things we wanted to do for 2.0 but didn't have time for\"",
+  "link": "https://www.rockpapershotgun.com/factorios-final-major-update-has-rolled-off-the-assembly-line-adding-the-things-we-wanted-to-do-for-20-but-didnt-have-time-for",
+  "blurb": "Factorio's last major update ships features cut from 2.0 for lack of time."
  },
  {
-  "title": "Future Capcom games will have Onimusha to thank for RE Engine's gnarly dismemberments",
-  "link": "https://www.pcgamer.com/games/action/future-capcom-games-will-have-onimusha-to-thank-for-re-engines-gnarly-dismemberments/",
-  "blurb": "Capcom's RE Engine dismemberment tech traces back to Onimusha work; engine-level detail."
+  "title": "Woim is the earth-guzzling, self-bisecting sokoban pick-me-up I needed after a week of games industry disasters",
+  "link": "https://www.rockpapershotgun.com/woim-is-the-earth-guzzling-self-bisecting-sokoban-pick-me-up-i-needed-after-a-week-of-games-industry-disasters",
+  "blurb": "Indie sokoban where the puzzle block bisects itself; a small, inventive release."
  },
  {
-  "title": "Ultrafast light pulses track molecular motion with three-femtosecond resolution",
-  "link": "https://phys.org/news/2026-10-ultrafast-pulses-track-molecular-motion.html",
-  "blurb": "Ultrafast light pulses track molecular motion at 3-femtosecond resolution."
+  "title": "Malaria Parasite Caught in the Act of Breaking and Entering",
+  "link": "https://www.quantamagazine.org/malaria-parasite-caught-in-the-act-of-breaking-and-entering-20261023/",
+  "blurb": "Quanta on imaging the malaria parasite as it invades a cell; a result, not hype."
  },
  {
-  "title": "Ants break a basic rule of biology to help them adapt to new environments",
-  "link": "https://phys.org/news/2026-10-ants-basic-biology-environments.html",
-  "blurb": "Ants appear to break a basic biological rule when adapting to new environments."
+  "title": "Crows can evaluate visual info twice as fast as mammals",
+  "link": "https://arstechnica.com/science/2026/10/crows-can-evaluate-visual-info-twice-as-fast-as-mammals/",
+  "blurb": "Crows process visual information about twice as fast as mammals, per a new study."
  },
  {
-  "title": "Floating-Point Addition and Subtraction on Intel’s 8087",
-  "link": "https://hackaday.com/2026/10/22/floating-point-addition-and-subtraction-on-intels-8087/",
-  "blurb": "Walkthrough of how Intel's 8087 does floating-point add/subtract in hardware."
+  "title": "Running a Philips CD-i Off USB-C",
+  "link": "https://hackaday.com/2026/10/23/running-a-philips-cd-i-off-usb-c/",
+  "blurb": "A CD-i console powered over USB-C: a documented power-supply retrofit."
  },
  {
-  "title": "Faster than earcut: triangulating 3.7M map polygons in 489 ms",
-  "link": "https://globus.software/blog/2026/10/16/cutting-map-polygons/",
-  "blurb": "Build writeup: triangulating 3.7M map polygons in 489 ms, faster than earcut."
+  "title": "The MSX Gets A New Sound Expansion Cartridge",
+  "link": "https://hackaday.com/2026/10/23/the-msx-gets-a-new-sound-expansion-cartridge/",
+  "blurb": "New sound expansion cartridge for the MSX, built and documented."
  },
  {
-  "title": "Show HN: Uberblok – an interactive museum of ZFS internals",
-  "link": "https://uberblok.storagebits.workers.dev/",
-  "blurb": "Interactive museum of ZFS internals."
+  "title": "Automatic Coil Winder Takes the Tedium out of Actuators",
+  "link": "https://hackaday.com/2026/10/23/automatic-coil-winder-takes-the-tedium-out-of-actuators/",
+  "blurb": "Automatic coil winder to automate actuator coil winding; build documented."
  }
 ]
