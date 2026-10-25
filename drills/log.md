@@ -70,3 +70,4 @@
 2026-10-22 | reverse-function | signed divide by power of two: cdq sign mask, and edx,7 bias, add then sar (round toward zero vs sar's floor), no idiv
 2026-10-23 | crackme | unsigned div r32: xor edx,edx setup, quotient in eax / remainder in edx, backward-solving dividend = q*d + r
 2026-10-24 | decode-instruction | 0F 8C JL rel32 near conditional jump, two-byte 0F 8x vs short 7x rel8, signed displacement relative to next instruction, SF!=OF
+2026-10-25 | reverse-function | rep stosd fill: implicit rdi/eax/ecx operands, rdi callee-saved on Windows x64 (push/pop), direction flag clear, count 0 is a no-op

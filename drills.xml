@@ -1,19 +1,38 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill 2026-10-24: decode one instruction</title><link></link><description>Target: Windows x86-64.
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill 2026-10-25: reverse a function (rep stosd)</title><link></link><description># Reverse-a-function drill — 2026-10-25
 
-Decode this instruction, located at address `0x140001000`:
+Target: Windows x86-64 (args in `rcx`, `edx`, `r8d`).
 
+Reverse this short function to equivalent C:
+
+```asm
+mystery:
+    push    rdi
+    mov     rdi, rcx
+    mov     eax, edx
+    mov     ecx, r8d
+    rep stosd
+    pop     rdi
+    ret
 ```
-0F 8C 2A 01 00 00
-```
 
-What is the assembly (give the absolute target address)? Why is this two opcode bytes, and when would a compiler use a 2-byte form instead?
+What does it do, and why does it save `rdi` and shuffle `rcx` around?
 
 ---
 
 ## Answer
 
-`jl 0x140001130` (jump if less, signed).
+```c
+void mystery(int *p, int v, int n) {
+    for (int i = 0; i &lt; n; i++)
+        p[i] = v;
+}
+```
 
-- `0F` is the two-byte opcode escape; `0F 8C` = JL rel32 (near conditional jump; 0F 8x mirrors the short `7x` forms, so `7C` = JL rel8). Condition is SF != OF, i.e. signed less-than after a cmp.
-- Displacement `2A 01 00 00` little-endian = 0x0000012A, signed, relative to the NEXT instruction: 0x140001000 + 6 = 0x140001006; + 0x12A = 0x140001130.
-- Compilers emit the 2-byte `7C rel8` when the target is within -128..+127 bytes; otherwise they need this 6-byte rel32 form.</description><guid isPermaLink='false'>2026-10-24</guid><pubDate>Sat, 24 Oct 2026 02:30:56 +0000</pubDate></item></channel></rss>
+An inlined `memset`-style fill of `n` dwords with `v`.
+
+## Explanation
+
+- `rep stosd` hard-wires its operands: store `eax` to `[rdi]`, add 4 to `rdi`, decrement `rcx`, repeat while `rcx != 0`. So the pointer must go to `rdi`, the value to `eax`, the count to `ecx` (the `mov rdi, rcx` must come before `rcx` is overwritten).
+- On Windows x64 `rdi` is callee-saved (non-volatile), so the function pushes/pops it; `rax`, `rcx`, `rdx` are volatile and free to clobber.
+- If `n` is 0, the `rep` does nothing; the direction flag is assumed clear (Windows ABI guarantees this on entry).
+</description><guid isPermaLink='false'>2026-10-25</guid><pubDate>Sun, 25 Oct 2026 02:31:26 +0000</pubDate></item></channel></rss>

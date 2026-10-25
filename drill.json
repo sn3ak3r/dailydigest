@@ -1,8 +1,8 @@
 [
   {
-    "title": "Drill 2026-10-24: decode one instruction",
-    "guid": "2026-10-24",
-    "blurb": "Target: Windows x86-64.\n\nDecode this instruction, located at address `0x140001000`:\n\n```\n0F 8C 2A 01 00 00\n```\n\nWhat is the assembly (give the absolute target address)? Why is this two opcode bytes, and when would a compiler use a 2-byte form instead?\n\n---\n\n## Answer\n\n`jl 0x140001130` (jump if less, signed).\n\n- `0F` is the two-byte opcode escape; `0F 8C` = JL rel32 (near conditional jump; 0F 8x mirrors the short `7x` forms, so `7C` = JL rel8). Condition is SF != OF, i.e. signed less-than after a cmp.\n- Displacement `2A 01 00 00` little-endian = 0x0000012A, signed, relative to the NEXT instruction: 0x140001000 + 6 = 0x140001006; + 0x12A = 0x140001130.\n- Compilers emit the 2-byte `7C rel8` when the target is within -128..+127 bytes; otherwise they need this 6-byte rel32 form.",
+    "title": "Drill 2026-10-25: reverse a function (rep stosd)",
+    "guid": "2026-10-25",
+    "blurb": "# Reverse-a-function drill \u2014 2026-10-25\n\nTarget: Windows x86-64 (args in `rcx`, `edx`, `r8d`).\n\nReverse this short function to equivalent C:\n\n```asm\nmystery:\n    push    rdi\n    mov     rdi, rcx\n    mov     eax, edx\n    mov     ecx, r8d\n    rep stosd\n    pop     rdi\n    ret\n```\n\nWhat does it do, and why does it save `rdi` and shuffle `rcx` around?\n\n---\n\n## Answer\n\n```c\nvoid mystery(int *p, int v, int n) {\n    for (int i = 0; i < n; i++)\n        p[i] = v;\n}\n```\n\nAn inlined `memset`-style fill of `n` dwords with `v`.\n\n## Explanation\n\n- `rep stosd` hard-wires its operands: store `eax` to `[rdi]`, add 4 to `rdi`, decrement `rcx`, repeat while `rcx != 0`. So the pointer must go to `rdi`, the value to `eax`, the count to `ecx` (the `mov rdi, rcx` must come before `rcx` is overwritten).\n- On Windows x64 `rdi` is callee-saved (non-volatile), so the function pushes/pops it; `rax`, `rcx`, `rdx` are volatile and free to clobber.\n- If `n` is 0, the `rep` does nothing; the direction flag is assumed clear (Windows ABI guarantees this on entry).\n",
     "link": ""
   }
 ]
