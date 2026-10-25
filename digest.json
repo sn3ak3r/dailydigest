@@ -40,11 +40,6 @@
   "blurb": "Apple Find My reverse engineered, with code published."
  },
  {
-  "title": "Wild version 0.11.0 released",
-  "link": "https://github.com/wild-linker/wild/releases/tag/0.11.0",
-  "blurb": "Wild linker 0.11.0 released; a fast Rust linker, new version."
- },
- {
   "title": "GPU-unlock: FP/BF16 instruction issue rate on Nvidia 3000's cards",
   "link": "https://github.com/Zagitta/gpu-unlock",
   "blurb": "Problem: Nvidia 3000-series (Ampere) cards' FP/BF16 instruction issue rate may be artificially limited versus what the silicon can do. Approach: per the title, GPU-unlock measures the instruction issue rate of FP/BF16 operations on RTX 3000 cards with microbenchmarks. Result: not verified. Why it matters: it shows what throughput consumer GPUs really deliver for ML math. Jargon: issue rate (instructions a GPU can start per cycle); BF16 (16-bit brain floating point). NOTE: page could not be fetched (network blocked); inferred from title only."
