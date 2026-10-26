@@ -1,52 +1,52 @@
 [
  {
-  "title": "Ruby Fixes Three Regex Engine Bugs Responsible for Four Critical GitLab RCE Flaws",
-  "link": "https://thehackernews.com/2026/10/ruby-fixes-three-regex-engine-bugs.html",
-  "blurb": "Three Ruby regex-engine bugs underlie four critical GitLab RCEs; a language-runtime flaw hitting a major platform."
+  "title": "BlackX UEFI bootkit exploits Baton Drop flaw to bypass Secure Boot",
+  "link": "https://www.bleepingcomputer.com/news/security/blackx-uefi-bootkit-exploits-baton-drop-flaw-to-bypass-secure-boot/",
+  "blurb": "**Problem:** Secure Boot is meant to stop unsigned code running before Windows, yet BlackX bootkit compromised fully patched Windows machines at Central Asian diplomatic agencies (likely APT41, per Kaspersky).\n**Approach:** It reuses BlackLotus's exploit of Baton Drop (CVE-2022-21894) to enroll its own trusted keys and load arbitrary EFI files, then loads a kernel driver signed with a revoked certificate that blinds security tools, tampers with ETW logging, and hides its files.\n**Result:** Persistent RAT with cloud-storage C2 plus a Rust plugin loader.\n**Why it matters:** The patch doesn't revoke the vulnerable \"Windows Production PCA 2011\" certificate automatically; admins must do it manually.\n**Glossary:** *Bootkit* – malware running before the OS. *ETW* – Windows event tracing used by defenders. *MOK* – Machine Owner Key, user-trusted boot key. *C2* – attacker command channel."
  },
  {
-  "title": "Brotli Decoder Flaw Behind Node.js RCE Also Affects Bun, Python and Other Widely Used Software",
-  "link": "https://thehackernews.com/2026/10/brotli-decoder-flaw-behind-nodejs-rce.html",
-  "blurb": "The Brotli decoder bug behind the Node.js RCE also affects Bun, Python and other software; shared-library blast radius."
+  "title": "AI coding agents hijacked using AGENTS.md file in Downloads folder",
+  "link": "https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/",
+  "blurb": "Poisoned AGENTS.md in a Downloads folder steers AI coding agents into running attacker instructions — a new agent-hijack vector."
  },
  {
-  "title": "Russia-Linked Hackers Used New Mesh Network Backdoor in Destructive Ukraine Attack",
-  "link": "https://thehackernews.com/2026/10/russian-linked-hackers-used-new-mesh.html",
-  "blurb": "New mesh-network backdoor used in a destructive attack on Ukraine; malware with real technical detail."
+  "title": "Unpatched Tailscale SSH Flaws Could Let a Hacked Device Reach Root on Other Servers",
+  "link": "https://thehackernews.com/2026/10/unpatched-tailscale-ssh-flaws-could-let.html",
+  "blurb": "Unpatched Tailscale SSH flaws let a compromised node escalate to root on other servers in the tailnet."
  },
  {
-  "title": "After 14 years of development, Factorio's final major update is out now",
-  "link": "https://www.pcgamer.com/games/survival-crafting/after-14-years-of-development-factorios-final-major-update-is-out-now/",
-  "blurb": "Factorio's final major update after 14 years of development."
+  "title": "Mass Effect 5 would have let players generate alternate timelines based on their choices in previous games, according to the series' technical director",
+  "link": "https://www.pcgamer.com/games/mass-effect/mass-effect-5-would-have-let-players-generate-alternate-timelines-based-on-their-choices-in-previous-games-according-to-the-series-technical-director/",
+  "blurb": "Cut Mass Effect 5 design: player choices would have generated alternate timelines — rare look at ambitious RPG systems design."
  },
  {
-  "title": "Star Wars Galaxies' Restoration project just received another massive update, including a huge visual upgrade and an overhaul to the Wookiees' home planet",
-  "link": "https://www.pcgamer.com/games/mmo/star-wars-galaxies-just-got-another-massive-update-thanks-to-its-community-restoration-project-including-a-huge-visual-upgrade-and-a-refurb-to-the-wookiees-home-planet/",
-  "blurb": "Community Restoration project for Star Wars Galaxies ships a big visual upgrade and a Kashyyyk overhaul."
+  "title": "New Blood CEO confirms it: the worst way to sell immersive sims like Gloomwood and Fallen Aces is to call them immersive sims",
+  "link": "https://www.pcgamer.com/games/sim/new-blood-ceo-confirms-it-the-worst-way-to-sell-immersive-sims-like-gloomwood-and-fallen-aces-is-to-call-them-immersive-sims/",
+  "blurb": "New Blood's CEO on why the immersive-sim niche (Gloomwood, Fallen Aces) sells badly under common launch models — useful indie market data."
  },
  {
-  "title": "A 1,000-mile cloud on Mars may reveal physics never seen in nature",
-  "link": "https://arstechnica.com/science/2026/10/a-1000-mile-cloud-on-mars-may-reveal-physics-never-seen-in-nature/",
-  "blurb": "A 1,000-mile Martian cloud may reveal physics never seen in nature."
+  "title": "Supercurrent enables the reading of quantum information without destroying it",
+  "link": "https://phys.org/news/2026-10-supercurrent-enables-quantum-destroying.html",
+  "blurb": "**Problem:** Reading a qubit directly collapses it; workarounds copy state to extra ancilla qubits, adding hardware and reset overhead.\n**Approach:** Place an Andreev qubit (quantum dot in an InAs nanowire between superconductors) in a loop; its evolution drives an oscillating supercurrent, which a weakly coupled SQUID senses magnetically — no ancillas, no resets.\n**Result:** Theory only (Phys. Rev. B): simulated accuracies of 99.52–99.85%, meeting error-correction thresholds; device not yet built.\n**Why it matters:** Simpler readout could ease scaling quantum processors.\n**Glossary:** *Ancilla* – helper qubit. *SQUID* – ultra-sensitive magnetometer. *Supercurrent* – resistance-free current. *Andreev state* – bound state at a superconductor interface."
  },
  {
-  "title": "'One-positron cyclotron' could test a key prediction of the Standard Model",
-  "link": "https://phys.org/news/2026-10-positron-cyclotron-key-standard.html",
-  "blurb": "A one-positron cyclotron could test a key Standard Model prediction."
+  "title": "Milky Way's disk grew 'upside down,' with younger stars forming in ever-thinner layers",
+  "link": "https://phys.org/news/2026-10-milky-disk-grew-upside-younger.html",
+  "blurb": "Milky Way disk grew 'upside down', with younger stars forming in ever-thinner layers — a galactic-formation result that revises the growth picture."
  },
  {
-  "title": "FindMyWeb: Apple Find My, reverse enginiered",
-  "link": "https://codeberg.org/Misom/FindMyWeb",
-  "blurb": "Apple Find My reverse engineered, with code published."
+  "title": "SIMD-accelerated computer vision on a $2 microcontroller",
+  "link": "https://shraiwi.com/blog/simd-fast-esp32s3/",
+  "blurb": "Computer vision with SIMD on a ~$2 microcontroller — a documented build showing how far cheap silicon stretches."
  },
  {
-  "title": "GPU-unlock: FP/BF16 instruction issue rate on Nvidia 3000's cards",
-  "link": "https://github.com/Zagitta/gpu-unlock",
-  "blurb": "Problem: Nvidia 3000-series (Ampere) cards' FP/BF16 instruction issue rate may be artificially limited versus what the silicon can do. Approach: per the title, GPU-unlock measures the instruction issue rate of FP/BF16 operations on RTX 3000 cards with microbenchmarks. Result: not verified. Why it matters: it shows what throughput consumer GPUs really deliver for ML math. Jargon: issue rate (instructions a GPU can start per cycle); BF16 (16-bit brain floating point). NOTE: page could not be fetched (network blocked); inferred from title only."
+  "title": "How to run a city builder on 16 MHz",
+  "link": "https://larstofus.com/2025/11/16/how-to-run-a-city-builder-on-12-5-mhz/",
+  "blurb": "A city builder running on a 16 MHz machine — constrained-hardware game engineering with the build documented."
  },
  {
-  "title": "Bbtree: Fastest Ordered Map",
-  "link": "https://bbtree.xiangpeng.systems/post/",
-  "blurb": "Problem: ordered maps (sorted key-value structures) are a core performance bottleneck. Approach: per the title, Bbtree claims to be the fastest ordered map, presumably via a cache-friendly B-tree variant. Result: not verified. Why it matters: faster sorted indexes speed up databases and systems code. Jargon: ordered map (key-value store iterable in key order); B-tree (wide-node balanced tree). NOTE: page could not be fetched (network blocked); inferred from title only."
+  "title": "Pushing Bluetooth out to 12 Kilometers",
+  "link": "https://hackaday.com/2026/10/24/pushing-bluetooth-out-to-12-kilometers/",
+  "blurb": "Pushing Bluetooth range out to 12 km — a hardware hack with the build documented."
  }
 ]
