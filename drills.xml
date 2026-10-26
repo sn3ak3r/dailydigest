@@ -1,38 +1,16 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Drill 2026-10-25: reverse a function (rep stosd)</title><link></link><description># Reverse-a-function drill — 2026-10-25
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Crackme: bswap then xor</title><link></link><description>Crackme (Windows x64, arg in ecx):
 
-Target: Windows x86-64 (args in `rcx`, `edx`, `r8d`).
-
-Reverse this short function to equivalent C:
-
-```asm
-mystery:
-    push    rdi
-    mov     rdi, rcx
-    mov     eax, edx
-    mov     ecx, r8d
-    rep stosd
-    pop     rdi
+    mov eax, ecx
+    bswap eax
+    xor eax, 0FFh
+    cmp eax, 123456AAh
+    sete al
+    movzx eax, al
     ret
-```
 
-What does it do, and why does it save `rdi` and shuffle `rcx` around?
+Which value of ecx makes the function return 1? Give it in decimal (and hex).
 
----
-
-## Answer
-
-```c
-void mystery(int *p, int v, int n) {
-    for (int i = 0; i &lt; n; i++)
-        p[i] = v;
-}
-```
-
-An inlined `memset`-style fill of `n` dwords with `v`.
-
-## Explanation
-
-- `rep stosd` hard-wires its operands: store `eax` to `[rdi]`, add 4 to `rdi`, decrement `rcx`, repeat while `rcx != 0`. So the pointer must go to `rdi`, the value to `eax`, the count to `ecx` (the `mov rdi, rcx` must come before `rcx` is overwritten).
-- On Windows x64 `rdi` is callee-saved (non-volatile), so the function pushes/pops it; `rax`, `rcx`, `rdx` are volatile and free to clobber.
-- If `n` is 0, the `rep` does nothing; the direction flag is assumed clear (Windows ABI guarantees this on entry).
-</description><guid isPermaLink='false'>2026-10-25</guid><pubDate>Sun, 25 Oct 2026 02:31:26 +0000</pubDate></item></channel></rss>
+Answer: 1431712786 (0x55563412)
+1. bswap eax reverses the four bytes (endianness swap): 0xAABBCCDD becomes 0xDDCCBBAA. It is its own inverse.
+2. The check needs bswap(ecx) ^ 0xFF == 0x123456AA, so bswap(ecx) = 0x12345655.
+3. Undo the swap by reversing the bytes again: ecx = 0x55563412. The solution is unique, since xor and bswap are bijections.</description><guid isPermaLink='false'>2026-10-26</guid><pubDate>Mon, 26 Oct 2026 02:30:51 +0000</pubDate></item></channel></rss>
