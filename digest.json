@@ -1,52 +1,47 @@
 [
  {
-  "title": "BlackX UEFI bootkit exploits Baton Drop flaw to bypass Secure Boot",
-  "link": "https://www.bleepingcomputer.com/news/security/blackx-uefi-bootkit-exploits-baton-drop-flaw-to-bypass-secure-boot/",
-  "blurb": "**Problem:** Secure Boot is meant to stop unsigned code running before Windows, yet BlackX bootkit compromised fully patched Windows machines at Central Asian diplomatic agencies (likely APT41, per Kaspersky).\n**Approach:** It reuses BlackLotus's exploit of Baton Drop (CVE-2022-21894) to enroll its own trusted keys and load arbitrary EFI files, then loads a kernel driver signed with a revoked certificate that blinds security tools, tampers with ETW logging, and hides its files.\n**Result:** Persistent RAT with cloud-storage C2 plus a Rust plugin loader.\n**Why it matters:** The patch doesn't revoke the vulnerable \"Windows Production PCA 2011\" certificate automatically; admins must do it manually.\n**Glossary:** *Bootkit* – malware running before the OS. *ETW* – Windows event tracing used by defenders. *MOK* – Machine Owner Key, user-trusted boot key. *C2* – attacker command channel."
+  "title": "Two Critical Wasmtime Flaws Could Let Malicious WebAssembly Modules Escape Sandboxes",
+  "link": "https://thehackernews.com/2026/10/two-critical-wasmtime-flaws-could-let.html",
+  "blurb": "Two critical Wasmtime flaws let malicious WebAssembly modules escape the sandbox — matters to anyone embedding Wasm for isolation."
  },
  {
-  "title": "AI coding agents hijacked using AGENTS.md file in Downloads folder",
-  "link": "https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/",
-  "blurb": "Poisoned AGENTS.md in a Downloads folder steers AI coding agents into running attacker instructions — a new agent-hijack vector."
+  "title": "Ulysses: A Security Harness For Synthesizing Verifiable Web Exploits",
+  "link": "https://arxiv.org/abs/2610.31831",
+  "blurb": "**Problem:** Not retrieved — the arXiv page fetch was blocked (proxy 403), so only the title and feed entry were available.\n**Approach:** Per the title, a security harness that synthesizes web exploits that can be verified. Details not confirmed.\n**Result:** Unknown; no abstract read.\n**Why it matters:** Verifiable exploit generation would let automated tools prove a vulnerability is real rather than guess.\n**Glossary:** Harness — scaffolding that runs and checks a tool's output."
  },
  {
-  "title": "Unpatched Tailscale SSH Flaws Could Let a Hacked Device Reach Root on Other Servers",
-  "link": "https://thehackernews.com/2026/10/unpatched-tailscale-ssh-flaws-could-let.html",
-  "blurb": "Unpatched Tailscale SSH flaws let a compromised node escalate to root on other servers in the tailnet."
+  "title": "Fooling LLM Safety Guards into Judging the Wrong Text",
+  "link": "https://arxiv.org/abs/2610.31695",
+  "blurb": "**Problem:** Not retrieved — the arXiv page fetch was blocked (proxy 403), so only the title and feed entry were available.\n**Approach:** Per the title, an attack that makes LLM safety guards evaluate the wrong text. Mechanism not confirmed.\n**Result:** Unknown; no abstract read.\n**Why it matters:** If guards can be steered to judge different content than the model sees, guardrail verdicts become unreliable.\n**Glossary:** Safety guard — a model that screens prompts or outputs for policy violations."
  },
  {
-  "title": "Mass Effect 5 would have let players generate alternate timelines based on their choices in previous games, according to the series' technical director",
-  "link": "https://www.pcgamer.com/games/mass-effect/mass-effect-5-would-have-let-players-generate-alternate-timelines-based-on-their-choices-in-previous-games-according-to-the-series-technical-director/",
-  "blurb": "Cut Mass Effect 5 design: player choices would have generated alternate timelines — rare look at ambitious RPG systems design."
+  "title": "The GameMaker engine series behind Undertale, Hotline Miami and Spelunky is going free for commercial use on PC",
+  "link": "https://www.rockpapershotgun.com/the-gamemaker-engine-series-behind-undertale-hotline-miami-and-spelunky-is-going-free-for-commercial-use-on-pc",
+  "blurb": "GameMaker (Undertale, Hotline Miami, Spelunky) goes free for commercial use on PC — a major indie engine drops its cost barrier."
  },
  {
-  "title": "New Blood CEO confirms it: the worst way to sell immersive sims like Gloomwood and Fallen Aces is to call them immersive sims",
-  "link": "https://www.pcgamer.com/games/sim/new-blood-ceo-confirms-it-the-worst-way-to-sell-immersive-sims-like-gloomwood-and-fallen-aces-is-to-call-them-immersive-sims/",
-  "blurb": "New Blood's CEO on why the immersive-sim niche (Gloomwood, Fallen Aces) sells badly under common launch models — useful indie market data."
+  "title": "32-year-old \"ellipsoid\" horror game Ecstatica gets a PC re-release today, showing us an alternative timeline in which polygonal 3D never became dominant",
+  "link": "https://www.rockpapershotgun.com/32-year-old-ellipsoid-horror-game-ecstatica-gets-a-pc-re-release-today-showing-us-an-alternative-timeline-in-which-polygonal-3d-never-became-dominant",
+  "blurb": "Ecstatica's ellipsoid-based 3D engine gets a PC re-release — a look at a road not taken before polygons won."
  },
  {
-  "title": "Supercurrent enables the reading of quantum information without destroying it",
-  "link": "https://phys.org/news/2026-10-supercurrent-enables-quantum-destroying.html",
-  "blurb": "**Problem:** Reading a qubit directly collapses it; workarounds copy state to extra ancilla qubits, adding hardware and reset overhead.\n**Approach:** Place an Andreev qubit (quantum dot in an InAs nanowire between superconductors) in a loop; its evolution drives an oscillating supercurrent, which a weakly coupled SQUID senses magnetically — no ancillas, no resets.\n**Result:** Theory only (Phys. Rev. B): simulated accuracies of 99.52–99.85%, meeting error-correction thresholds; device not yet built.\n**Why it matters:** Simpler readout could ease scaling quantum processors.\n**Glossary:** *Ancilla* – helper qubit. *SQUID* – ultra-sensitive magnetometer. *Supercurrent* – resistance-free current. *Andreev state* – bound state at a superconductor interface."
- },
- {
-  "title": "Milky Way's disk grew 'upside down,' with younger stars forming in ever-thinner layers",
-  "link": "https://phys.org/news/2026-10-milky-disk-grew-upside-younger.html",
-  "blurb": "Milky Way disk grew 'upside down', with younger stars forming in ever-thinner layers — a galactic-formation result that revises the growth picture."
+  "title": "How Voting Is Like a Klein Bottle",
+  "link": "https://www.quantamagazine.org/how-voting-is-like-a-klein-bottle-20261026/",
+  "blurb": "Quanta explains how the topology of voting systems resembles a Klein bottle — a math result with social-choice implications."
  },
  {
   "title": "SIMD-accelerated computer vision on a $2 microcontroller",
   "link": "https://shraiwi.com/blog/simd-fast-esp32s3/",
-  "blurb": "Computer vision with SIMD on a ~$2 microcontroller — a documented build showing how far cheap silicon stretches."
+  "blurb": "Documented build doing SIMD-accelerated computer vision on a ~$2 ESP32-S3-class microcontroller."
  },
  {
-  "title": "How to run a city builder on 16 MHz",
-  "link": "https://larstofus.com/2025/11/16/how-to-run-a-city-builder-on-12-5-mhz/",
-  "blurb": "A city builder running on a 16 MHz machine — constrained-hardware game engineering with the build documented."
+  "title": "16-bit Windows (Windows 1.x, 2.x, 3.0, 3.1, etc.) on 64-bit Windows",
+  "link": "https://github.com/otya128/winevdm",
+  "blurb": "winevdm runs 16-bit Windows (1.x–3.x) applications on 64-bit Windows via a CPU-emulating VDM — useful Windows-internals reading."
  },
  {
-  "title": "Pushing Bluetooth out to 12 Kilometers",
-  "link": "https://hackaday.com/2026/10/24/pushing-bluetooth-out-to-12-kilometers/",
-  "blurb": "Pushing Bluetooth range out to 12 km — a hardware hack with the build documented."
+  "title": "Hiding Virtualization From Other Software",
+  "link": "https://hackaday.com/2026/10/26/hiding-virtualization-from-other-software/",
+  "blurb": "Hackaday on hiding virtualization from software that tries to detect VMs — anti-detection techniques with RE relevance."
  }
 ]
