@@ -1,1 +1,8 @@
-[{"title": "Crackme: bswap then xor", "guid": "2026-10-26", "blurb": "Crackme (Windows x64, arg in ecx):\n\n    mov eax, ecx\n    bswap eax\n    xor eax, 0FFh\n    cmp eax, 123456AAh\n    sete al\n    movzx eax, al\n    ret\n\nWhich value of ecx makes the function return 1? Give it in decimal (and hex).\n\nAnswer: 1431712786 (0x55563412)\n1. bswap eax reverses the four bytes (endianness swap): 0xAABBCCDD becomes 0xDDCCBBAA. It is its own inverse.\n2. The check needs bswap(ecx) ^ 0xFF == 0x123456AA, so bswap(ecx) = 0x12345655.\n3. Undo the swap by reversing the bytes again: ecx = 0x55563412. The solution is unique, since xor and bswap are bijections.", "link": ""}]
+[
+ {
+  "title": "Decode one instruction \u2014 2026-10-27",
+  "guid": "2026-10-27",
+  "blurb": "Target: Windows x86-64.\n\nDecode this instruction, found between two functions at `0x140001040`:\n\n```\n0F 1F 44 00 00\n```\n\nWhat is the assembly, and what does it do? Why would a compiler emit something this odd?\n\n---\n\n## Answer\n\n`nop dword ptr [rax+rax*1+0x0]` (a 5-byte NOP; changes no registers or flags).\n\n- `0F 1F /0` is the multi-byte NOP: it has a ModRM byte, so it can be sized to any length. Here ModRM `44` = mod 01, reg 000 (/0), rm 100 (SIB follows); SIB `00` = base rax, index rax, scale 1; the disp8 is `00`. The memory operand is never accessed.\n- The assembler or linker uses it as padding to align the next function (here to `0x140001050`, a 16-byte boundary). One 5-byte NOP executes faster than five single-byte `90`s.\n- Other sizes: 2 bytes = `66 90`, 3 = `0F 1F 00`, 4 = `0F 1F 40 00`. Disassemblers often show runs of these between functions.",
+  "link": ""
+ }
+]

@@ -72,3 +72,4 @@
 2026-10-24 | decode-instruction | 0F 8C JL rel32 near conditional jump, two-byte 0F 8x vs short 7x rel8, signed displacement relative to next instruction, SF!=OF
 2026-10-25 | reverse-function | rep stosd fill: implicit rdi/eax/ecx operands, rdi callee-saved on Windows x64 (push/pop), direction flag clear, count 0 is a no-op
 2026-10-26 | crackme | bswap byte-order reversal (endianness swap, self-inverse), xor 0xFF mask then cmp, backward-solving by xor then re-bswap
+2026-10-27 | decode-instruction | 0F 1F /0 multi-byte NOP (nop dword ptr [rax+rax*1+0]), ModRM+SIB+disp8 sized padding, function alignment, 66 90 / 0F 1F 00 / 0F 1F 40 00 variants

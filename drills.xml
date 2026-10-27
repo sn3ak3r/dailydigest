@@ -1,16 +1,19 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Crackme: bswap then xor</title><link></link><description>Crackme (Windows x64, arg in ecx):
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Decode one instruction — 2026-10-27</title><link></link><description>Target: Windows x86-64.
 
-    mov eax, ecx
-    bswap eax
-    xor eax, 0FFh
-    cmp eax, 123456AAh
-    sete al
-    movzx eax, al
-    ret
+Decode this instruction, found between two functions at `0x140001040`:
 
-Which value of ecx makes the function return 1? Give it in decimal (and hex).
+```
+0F 1F 44 00 00
+```
 
-Answer: 1431712786 (0x55563412)
-1. bswap eax reverses the four bytes (endianness swap): 0xAABBCCDD becomes 0xDDCCBBAA. It is its own inverse.
-2. The check needs bswap(ecx) ^ 0xFF == 0x123456AA, so bswap(ecx) = 0x12345655.
-3. Undo the swap by reversing the bytes again: ecx = 0x55563412. The solution is unique, since xor and bswap are bijections.</description><guid isPermaLink='false'>2026-10-26</guid><pubDate>Mon, 26 Oct 2026 02:30:51 +0000</pubDate></item></channel></rss>
+What is the assembly, and what does it do? Why would a compiler emit something this odd?
+
+---
+
+## Answer
+
+`nop dword ptr [rax+rax*1+0x0]` (a 5-byte NOP; changes no registers or flags).
+
+- `0F 1F /0` is the multi-byte NOP: it has a ModRM byte, so it can be sized to any length. Here ModRM `44` = mod 01, reg 000 (/0), rm 100 (SIB follows); SIB `00` = base rax, index rax, scale 1; the disp8 is `00`. The memory operand is never accessed.
+- The assembler or linker uses it as padding to align the next function (here to `0x140001050`, a 16-byte boundary). One 5-byte NOP executes faster than five single-byte `90`s.
+- Other sizes: 2 bytes = `66 90`, 3 = `0F 1F 00`, 4 = `0F 1F 40 00`. Disassemblers often show runs of these between functions.</description><guid isPermaLink='false'>2026-10-27</guid><pubDate>Tue, 27 Oct 2026 02:31:49 +0000</pubDate></item></channel></rss>
