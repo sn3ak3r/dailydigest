@@ -1,8 +1,8 @@
 [
  {
-  "title": "Decode one instruction \u2014 2026-10-27",
-  "guid": "2026-10-27",
-  "blurb": "Target: Windows x86-64.\n\nDecode this instruction, found between two functions at `0x140001040`:\n\n```\n0F 1F 44 00 00\n```\n\nWhat is the assembly, and what does it do? Why would a compiler emit something this odd?\n\n---\n\n## Answer\n\n`nop dword ptr [rax+rax*1+0x0]` (a 5-byte NOP; changes no registers or flags).\n\n- `0F 1F /0` is the multi-byte NOP: it has a ModRM byte, so it can be sized to any length. Here ModRM `44` = mod 01, reg 000 (/0), rm 100 (SIB follows); SIB `00` = base rax, index rax, scale 1; the disp8 is `00`. The memory operand is never accessed.\n- The assembler or linker uses it as padding to align the next function (here to `0x140001050`, a 16-byte boundary). One 5-byte NOP executes faster than five single-byte `90`s.\n- Other sizes: 2 bytes = `66 90`, 3 = `0F 1F 00`, 4 = `0F 1F 40 00`. Disassemblers often show runs of these between functions.",
+  "title": "Reverse-a-function drill — 2026-10-28",
+  "guid": "2026-10-28",
+  "blurb": "Reverse-a-function drill — 2026-10-28\n\nTarget: Windows x86-64 (arg in `ecx`).\n\nReverse this short function to equivalent C:\n\n```asm\nmystery:\n    lea     eax, [rcx-48]\n    cmp     eax, 9\n    setbe   al\n    movzx   eax, al\n    ret\n```\n\nThere is only one comparison and no `&&`. What does it compute, and why does it work?\n\n## Answer\n\n```c\nint mystery(int c) {\n    return c >= '0' && c <= '9';   // isdigit for ASCII\n}\n```\n\n## Explanation\n\n- `lea eax,[rcx-48]` is just a subtract (48 = `'0'`) that leaves flags alone; `c` in `'0'..'9'` becomes 0..9.\n- `setbe` is an *unsigned* test (CF=1 or ZF=1): any `c < 48` wraps to a huge unsigned value (e.g. 47 → 0xFFFFFFFF), so it fails `<= 9` too.\n- One unsigned compare thus checks both bounds: `(unsigned)(c - lo) <= (hi - lo)` is the standard compiler range-check trick.\n",
   "link": ""
  }
 ]
