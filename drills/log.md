@@ -74,3 +74,4 @@
 2026-10-26 | crackme | bswap byte-order reversal (endianness swap, self-inverse), xor 0xFF mask then cmp, backward-solving by xor then re-bswap
 2026-10-27 | decode-instruction | 0F 1F /0 multi-byte NOP (nop dword ptr [rax+rax*1+0]), ModRM+SIB+disp8 sized padding, function alignment, 66 90 / 0F 1F 00 / 0F 1F 40 00 variants
 2026-10-28 | reverse-function | unsigned range-check trick: lea eax,[rcx-48] subtract, cmp 9 + setbe (unsigned CF/ZF) folds two bounds into one compare, isdigit
+2026-10-29 | crackme | ror rotate right (C1 /1, no bits lost vs shr), xor mask then cmp, backward-solving by xor then rol

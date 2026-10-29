@@ -1,8 +1,8 @@
 [
  {
-  "title": "Reverse-a-function drill — 2026-10-28",
-  "guid": "2026-10-28",
-  "blurb": "Reverse-a-function drill — 2026-10-28\n\nTarget: Windows x86-64 (arg in `ecx`).\n\nReverse this short function to equivalent C:\n\n```asm\nmystery:\n    lea     eax, [rcx-48]\n    cmp     eax, 9\n    setbe   al\n    movzx   eax, al\n    ret\n```\n\nThere is only one comparison and no `&&`. What does it compute, and why does it work?\n\n## Answer\n\n```c\nint mystery(int c) {\n    return c >= '0' && c <= '9';   // isdigit for ASCII\n}\n```\n\n## Explanation\n\n- `lea eax,[rcx-48]` is just a subtract (48 = `'0'`) that leaves flags alone; `c` in `'0'..'9'` becomes 0..9.\n- `setbe` is an *unsigned* test (CF=1 or ZF=1): any `c < 48` wraps to a huge unsigned value (e.g. 47 → 0xFFFFFFFF), so it fails `<= 9` too.\n- One unsigned compare thus checks both bounds: `(unsigned)(c - lo) <= (hi - lo)` is the standard compiler range-check trick.\n",
+  "title": "Crackme drill \u2014 2026-10-29",
+  "guid": "2026-10-29",
+  "blurb": "# Crackme: find the input (Windows x64, arg in ecx)\n\n```\n    ror    ecx, 4\n    xor    ecx, 0FFFFh\n    xor    eax, eax\n    cmp    ecx, 1234ABCDh\n    sete   al\n    ret\n```\n\nWhich value of `ecx` makes the function return 1? Give it in hex.\n\nAnswer:\n**Answer:** `0x23454321`\n\n1. `ror ecx, 4` rotates right: the low 4 bits wrap around into the top, so no bits are lost (unlike `shr`). Its inverse is `rol ecx, 4`.\n2. The check needs `ror(ecx,4) ^ 0xFFFF == 0x1234ABCD`, so `ror(ecx,4) = 0x1234ABCD ^ 0xFFFF = 0x12345432`.\n3. Undo the rotation with `rol 4`: `0x12345432` becomes `0x23454321`. The solution is unique, since xor and rotate are both bijections.",
   "link": ""
  }
 ]

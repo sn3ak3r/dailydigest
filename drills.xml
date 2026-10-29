@@ -1,31 +1,19 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse-a-function drill — 2026-10-28</title><link></link><description>Reverse-a-function drill — 2026-10-28
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Crackme drill — 2026-10-29</title><link></link><description># Crackme: find the input (Windows x64, arg in ecx)
 
-Target: Windows x86-64 (arg in `ecx`).
-
-Reverse this short function to equivalent C:
-
-```asm
-mystery:
-    lea     eax, [rcx-48]
-    cmp     eax, 9
-    setbe   al
-    movzx   eax, al
+```
+    ror    ecx, 4
+    xor    ecx, 0FFFFh
+    xor    eax, eax
+    cmp    ecx, 1234ABCDh
+    sete   al
     ret
 ```
 
-There is only one comparison and no `&amp;&amp;`. What does it compute, and why does it work?
+Which value of `ecx` makes the function return 1? Give it in hex.
 
-## Answer
+Answer:
+**Answer:** `0x23454321`
 
-```c
-int mystery(int c) {
-    return c &gt;= &#x27;0&#x27; &amp;&amp; c &lt;= &#x27;9&#x27;;   // isdigit for ASCII
-}
-```
-
-## Explanation
-
-- `lea eax,[rcx-48]` is just a subtract (48 = `&#x27;0&#x27;`) that leaves flags alone; `c` in `&#x27;0&#x27;..&#x27;9&#x27;` becomes 0..9.
-- `setbe` is an *unsigned* test (CF=1 or ZF=1): any `c &lt; 48` wraps to a huge unsigned value (e.g. 47 → 0xFFFFFFFF), so it fails `&lt;= 9` too.
-- One unsigned compare thus checks both bounds: `(unsigned)(c - lo) &lt;= (hi - lo)` is the standard compiler range-check trick.
-</description><guid isPermaLink='false'>2026-10-28</guid><pubDate>Wed, 28 Oct 2026 02:31:14 +0000</pubDate></item></channel></rss>
+1. `ror ecx, 4` rotates right: the low 4 bits wrap around into the top, so no bits are lost (unlike `shr`). Its inverse is `rol ecx, 4`.
+2. The check needs `ror(ecx,4) ^ 0xFFFF == 0x1234ABCD`, so `ror(ecx,4) = 0x1234ABCD ^ 0xFFFF = 0x12345432`.
+3. Undo the rotation with `rol 4`: `0x12345432` becomes `0x23454321`. The solution is unique, since xor and rotate are both bijections.</description><guid isPermaLink='false'>2026-10-29</guid><pubDate>Thu, 29 Oct 2026 02:30:55 +0000</pubDate></item></channel></rss>
