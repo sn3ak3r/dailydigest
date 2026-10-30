@@ -1,52 +1,52 @@
 [
  {
-  "title": "Volt Typhoon Used Covert Silent Train Network in Four Zero-Day Exploitation Campaigns",
-  "link": "https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html",
-  "blurb": "Attribution of a Chinese state actor's covert relay network across four zero-days."
+  "title": "Inside KeyDrift: Analyzing historical UAT-11473 activity on Cisco SD-WAN",
+  "link": "https://blog.talosintelligence.com/uat-11473-keydrift/",
+  "blurb": "**Problem:** Cisco SD-WAN controllers were compromised via CVE-2026-20127 (auth bypass) by UAT-11473, a likely Volt Typhoon-linked actor targeting space, defense and policy orgs. **Approach:** Custom KeyDrift malware persists via modified runit service scripts, uses ptrace to inject PolyFlame (a memory-resident backdoor/relay) into vdaemon processes, and LittleFilch hooks SSL_read to grab data after decryption. **Result:** It harvests peer IPs and a 32-byte key field (likely AES-256 IPsec key material), RSA-encrypts it and sends it out over UDP in DTLS-style records. **Why it matters:** It runs inside trusted controller software, so C2 hides in legitimate control-plane traffic and stolen keys could unlock the data plane. **Glossary:** runit (service supervisor); DTLS (TLS for UDP); OMP (Cisco SD-WAN control protocol); ptrace (Linux process-control call used for injection)."
  },
  {
-  "title": "GTA 6's NPCs have about 600,000 animations, as well as personality traits that take 'demographic and professional' variables into account",
-  "link": "https://www.pcgamer.com/games/grand-theft-auto/gta-6s-npcs-have-about-600-000-animations-as-well-as-personality-traits-that-take-demographic-and-professional-variables-into-account/",
-  "blurb": "Shows the scale of animation/behavior systems in a modern open-world engine."
+  "title": "Researcher Reveals How Logic Bugs Alone Cracked Microsoft Edge in $175,000 Pwn2Own Win",
+  "link": "https://thehackernews.com/2026/10/researcher-reveals-how-logic-bugs-alone.html",
+  "blurb": "Edge compromised through logic bugs alone \u2014 no memory corruption; summary based on headline only (host unreachable)."
  },
  {
-  "title": "\"We basically rewrote the entire State of Decay game\": Undead Labs spent years trying to make State of Decay 3 into a full-blown zombie apocalypse MMO",
-  "link": "https://www.rockpapershotgun.com/we-basically-rewrote-the-entire-state-of-decay-game-undead-labs-spent-years-trying-to-make-state-of-decay-3-into-a-full-blown-zombie-apocalypse-mmo",
-  "blurb": "Studio post-mortem on a multi-year MMO pivot and full rewrite."
+  "title": "Critical 16-Year-Old UEFI Flaw Can Run Code Before Secure Boot on Network-Booting Servers",
+  "link": "https://thehackernews.com/2026/10/critical-16-year-old-uefi-flaw-can-run.html",
+  "blurb": "16-year-old UEFI flaw runs code before Secure Boot on network-booting servers \u2014 firmware-level, hard to patch."
  },
  {
-  "title": "How Spiders Spin \u2018Silk Dope\u2019 Into Nature\u2019s Toughest Material",
-  "link": "https://www.quantamagazine.org/how-spiders-spin-silk-dope-into-natures-toughest-material-20261028/",
-  "blurb": "A mechanism result on how spiders process silk proteins into a high-strength fiber."
+  "title": "Epic Games further doubles down on gen-AI tools for Fortnite, Unreal Engine 6 and more: \"Our engineers are no longer writing the bulk of the code\"",
+  "link": "https://www.eurogamer.net/epic-genai-fortnite-unreal-engine-6-no-longer-writing-code",
+  "blurb": "Epic says engineers no longer write most code; signals how Unreal Engine 6 and Fortnite are being built."
  },
  {
-  "title": "A hidden ocean change near Antarctica could have global consequences",
-  "link": "https://arstechnica.com/science/2026/10/antarctic-sea-ice-loss-could-reshape-weather-far-beyond-the-pole/",
-  "blurb": "Antarctic ocean/sea-ice change with possible far-reaching weather effects."
+  "title": "Valve addresses Steam's AI game cloning problem - by suggesting developers make their games less copyable",
+  "link": "https://www.eurogamer.net/steam-ai-clone-game-problem-valve-response",
+  "blurb": "Valve's answer to AI game clones is for developers to make games harder to copy \u2014 platform policy with engine-level implications."
  },
  {
-  "title": "Qwenputer: A functioning, deterministic RISC-V CPU inside Qwen3.5",
+  "title": "How Do You Take a Picture of a Black Hole?",
+  "link": "https://www.quantamagazine.org/how-do-you-take-a-picture-of-a-black-hole-20261029/",
+  "blurb": "Quanta explainer on how black-hole imaging actually works, from interferometry to reconstruction."
+ },
+ {
+  "title": "Turning a solar power system into its own backup",
+  "link": "https://arstechnica.com/science/2026/10/turning-a-solar-power-system-into-its-own-backup/",
+  "blurb": "Engineering walkthrough of making a home solar system double as its own backup power."
+ },
+ {
+  "title": "A tiny world model running games on a Raspberry Pi Pico 2 W",
+  "link": "https://github.com/SheepSeb/tinyworldformer",
+  "blurb": "A tiny world model generating game frames on a Pico 2 W microcontroller \u2014 extreme-constraint ML build."
+ },
+ {
+  "title": "Qwenputer: a fully functioning, deterministic RISC-V CPU inside Qwen3.5",
   "link": "https://divagr.com/blog/qwenputer",
-  "blurb": "A deterministic RISC-V CPU built inside an LLM's weights \u2014 a novel build."
+  "blurb": "A deterministic RISC-V CPU implemented inside an LLM's weights \u2014 novel build, writeup not fetched."
  },
  {
-  "title": "Does Running an E-Paper Display at 30 FPS Destroy It?",
-  "link": "https://hackaday.com/2026/10/28/does-running-an-e-paper-display-at-30-fps-destroy-it/",
-  "blurb": "Empirical test of e-paper wear at video frame rates."
- },
- {
-  "title": "Billion-query-per-second lookup tables in C++",
-  "link": "https://lemire.me/blog/2026/10/26/billion-query-per-second-lookup-tables-in-c/",
-  "blurb": "Performance engineering write-up on very high-throughput lookup tables in C++."
- },
- {
-  "title": "Forging a Microsoft Edge Full Chain with Logic Bugs Only",
-  "link": "https://blog.orange.tw/posts/2026-10-the-last-proof-of-human-craft-browser-full-chain/",
-  "blurb": "**Problem:** Not verified. **Approach:** Not retrieved \u2014 blog.orange.tw is outside the session's allowed network domains, so only the title was available. No summary is offered rather than guessing. **Result:** Unknown. **Why it matters:** Title suggests a full Microsoft Edge exploit chain built only from logic bugs \u2014 worth reading in full. **Glossary:** Full chain \u2014 sequence of bugs from renderer to sandbox escape; Logic bug \u2014 flaw in program logic, not memory corruption."
- },
- {
-  "title": "BUSTA: Teaching Small Language Models to Reason About Binary Execution",
-  "link": "https://arxiv.org/abs/2610.36288",
-  "blurb": "**Problem:** Not verified. **Approach:** Not retrieved \u2014 arxiv.org is outside the session's allowed network domains, so only the title was available. No summary is offered rather than guessing. **Result:** Unknown. **Why it matters:** Title suggests training small language models to reason about binary execution \u2014 relevant to RE tooling. **Glossary:** Binary execution \u2014 behavior of compiled machine code; SLM \u2014 small language model."
+  "title": "Replicating the Color-Changing Effect of the Lycurgus Cup",
+  "link": "https://hackaday.com/2026/10/29/replicating-the-color-changing-effect-of-the-lycurgus-cup/",
+  "blurb": "Replicating the Lycurgus Cup's color-changing dichroic effect \u2014 a documented materials build."
  }
 ]
