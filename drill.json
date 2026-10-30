@@ -1,8 +1,8 @@
 [
  {
-  "title": "Crackme drill \u2014 2026-10-29",
-  "guid": "2026-10-29",
-  "blurb": "# Crackme: find the input (Windows x64, arg in ecx)\n\n```\n    ror    ecx, 4\n    xor    ecx, 0FFFFh\n    xor    eax, eax\n    cmp    ecx, 1234ABCDh\n    sete   al\n    ret\n```\n\nWhich value of `ecx` makes the function return 1? Give it in hex.\n\nAnswer:\n**Answer:** `0x23454321`\n\n1. `ror ecx, 4` rotates right: the low 4 bits wrap around into the top, so no bits are lost (unlike `shr`). Its inverse is `rol ecx, 4`.\n2. The check needs `ror(ecx,4) ^ 0xFFFF == 0x1234ABCD`, so `ror(ecx,4) = 0x1234ABCD ^ 0xFFFF = 0x12345432`.\n3. Undo the rotation with `rol 4`: `0x12345432` becomes `0x23454321`. The solution is unique, since xor and rotate are both bijections.",
+  "title": "Decode-one-instruction drill \u2014 2026-10-30",
+  "guid": "2026-10-30",
+  "blurb": "# Decode-one-instruction drill \u2014 2026-10-30\n\nTarget: Windows x86-64.\n\nDecode this instruction, found at `0x140001000`:\n\n```\nE8 F0 FF FF FF\n```\n\nWhat is the assembly, where does it go, and what does it do to the stack?\n\n\nAnswer:\n\n`call 0x140000FF5` (a near relative call to a function 11 bytes earlier).\n\n- `E8 rel32` is CALL; the operand `F0FFFFFF` is little-endian `0xFFFFFFF0` = -16. The target is relative to the *next* instruction: `0x140001005 - 16 = 0x140000FF5`.\n- It pushes the return address `0x140001005` (`rsp -= 8`, store at `[rsp]`), then jumps. The callee's `ret` (`C3`) pops it back into `rip`.\n- On Windows x64 the caller must also reserve 32 bytes of shadow space before the call.\n",
   "link": ""
  }
 ]
