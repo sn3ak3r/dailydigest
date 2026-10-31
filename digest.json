@@ -1,52 +1,52 @@
 [
  {
-  "title": "Inside KeyDrift: Analyzing historical UAT-11473 activity on Cisco SD-WAN",
-  "link": "https://blog.talosintelligence.com/uat-11473-keydrift/",
-  "blurb": "**Problem:** Cisco SD-WAN controllers were compromised via CVE-2026-20127 (auth bypass) by UAT-11473, a likely Volt Typhoon-linked actor targeting space, defense and policy orgs. **Approach:** Custom KeyDrift malware persists via modified runit service scripts, uses ptrace to inject PolyFlame (a memory-resident backdoor/relay) into vdaemon processes, and LittleFilch hooks SSL_read to grab data after decryption. **Result:** It harvests peer IPs and a 32-byte key field (likely AES-256 IPsec key material), RSA-encrypts it and sends it out over UDP in DTLS-style records. **Why it matters:** It runs inside trusted controller software, so C2 hides in legitimate control-plane traffic and stolen keys could unlock the data plane. **Glossary:** runit (service supervisor); DTLS (TLS for UDP); OMP (Cisco SD-WAN control protocol); ptrace (Linux process-control call used for injection)."
+  "title": "Hackers exploit Cisco SD-WAN flaw to deploy custom KeyDrift malware",
+  "link": "https://www.bleepingcomputer.com/news/security/hackers-exploit-cisco-sd-wan-flaw-to-deploy-custom-keydrift-malware/",
+  "blurb": "Custom KeyDrift malware deployed via a Cisco SD-WAN flaw; edge-device exploitation with a bespoke implant."
  },
  {
-  "title": "Researcher Reveals How Logic Bugs Alone Cracked Microsoft Edge in $175,000 Pwn2Own Win",
-  "link": "https://thehackernews.com/2026/10/researcher-reveals-how-logic-bugs-alone.html",
-  "blurb": "Edge compromised through logic bugs alone \u2014 no memory corruption; summary based on headline only (host unreachable)."
+  "title": "NIK C2: The new AI-enabled command-and-control framework",
+  "link": "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/",
+  "blurb": "Talos analysis of NIK C2, a new AI-enabled command-and-control framework."
  },
  {
-  "title": "Critical 16-Year-Old UEFI Flaw Can Run Code Before Secure Boot on Network-Booting Servers",
-  "link": "https://thehackernews.com/2026/10/critical-16-year-old-uefi-flaw-can-run.html",
-  "blurb": "16-year-old UEFI flaw runs code before Secure Boot on network-booting servers \u2014 firmware-level, hard to patch."
+  "title": "From if to Oops: Turning a conditional into a key-recovery oracle",
+  "link": "https://arxiv.org/abs/2610.39910",
+  "blurb": "Deep digest unavailable: source host not reachable from this session's network allowlist (not fetched). arXiv: how a plain conditional can become a key-recovery oracle."
  },
  {
-  "title": "Epic Games further doubles down on gen-AI tools for Fortnite, Unreal Engine 6 and more: \"Our engineers are no longer writing the bulk of the code\"",
-  "link": "https://www.eurogamer.net/epic-genai-fortnite-unreal-engine-6-no-longer-writing-code",
-  "blurb": "Epic says engineers no longer write most code; signals how Unreal Engine 6 and Fortnite are being built."
+  "title": "EA reportedly closed BioWare because it was forced to choose between Mass Effect 5 and Star Wars Battlefront 3",
+  "link": "https://www.eurogamer.net/ea-closed-bioware-because-star-wars-battlefront-3",
+  "blurb": "Report: EA closed BioWare to fund Star Wars Battlefront 3 over Mass Effect 5; unconfirmed industry reporting."
  },
  {
-  "title": "Valve addresses Steam's AI game cloning problem - by suggesting developers make their games less copyable",
-  "link": "https://www.eurogamer.net/steam-ai-clone-game-problem-valve-response",
-  "blurb": "Valve's answer to AI game clones is for developers to make games harder to copy \u2014 platform policy with engine-level implications."
+  "title": "Phantom Blade Zero dev says don't get the latest Nvidia drivers",
+  "link": "https://www.pcgamer.com/hardware/phantom-blade-zero-dev-says-dont-get-the-latest-nvidia-drivers/",
+  "blurb": "Phantom Blade Zero dev warns against the latest Nvidia drivers; a concrete technical compatibility issue."
  },
  {
-  "title": "How Do You Take a Picture of a Black Hole?",
-  "link": "https://www.quantamagazine.org/how-do-you-take-a-picture-of-a-black-hole-20261029/",
-  "blurb": "Quanta explainer on how black-hole imaging actually works, from interferometry to reconstruction."
+  "title": "A New Map of \u2018Empty\u2019 Space Challenges a Tranquil Picture of the Galaxy",
+  "link": "https://www.quantamagazine.org/a-new-map-of-empty-space-challenges-a-tranquil-picture-of-the-galaxy-20261030/",
+  "blurb": "Quanta: a new map of 'empty' space challenges the tranquil picture of our galaxy."
  },
  {
-  "title": "Turning a solar power system into its own backup",
-  "link": "https://arstechnica.com/science/2026/10/turning-a-solar-power-system-into-its-own-backup/",
-  "blurb": "Engineering walkthrough of making a home solar system double as its own backup power."
+  "title": "Rare meteorite from Mars gives us a view into its ancient crust",
+  "link": "https://arstechnica.com/science/2026/10/rare-meteorite-from-mars-gives-us-a-view-into-its-ancient-crust/",
+  "blurb": "Ars: a rare Martian meteorite offers a view into Mars's ancient crust."
  },
  {
-  "title": "A tiny world model running games on a Raspberry Pi Pico 2 W",
-  "link": "https://github.com/SheepSeb/tinyworldformer",
-  "blurb": "A tiny world model generating game frames on a Pico 2 W microcontroller \u2014 extreme-constraint ML build."
+  "title": "sanstun: A sans-IO, parallel-friendly WireGuard implementation in Rust",
+  "link": "https://www.firezone.dev/blog/introducing-sanstun",
+  "blurb": "Firezone's sans-IO, parallel-friendly WireGuard implementation in Rust."
  },
  {
-  "title": "Qwenputer: a fully functioning, deterministic RISC-V CPU inside Qwen3.5",
-  "link": "https://divagr.com/blog/qwenputer",
-  "blurb": "A deterministic RISC-V CPU implemented inside an LLM's weights \u2014 novel build, writeup not fetched."
+  "title": "How curl was accidentally Turing-complete for nine months",
+  "link": "https://seriot.ch/computation/curl.html",
+  "blurb": "Write-up on how curl was accidentally Turing-complete for nine months."
  },
  {
-  "title": "Replicating the Color-Changing Effect of the Lycurgus Cup",
-  "link": "https://hackaday.com/2026/10/29/replicating-the-color-changing-effect-of-the-lycurgus-cup/",
-  "blurb": "Replicating the Lycurgus Cup's color-changing dichroic effect \u2014 a documented materials build."
+  "title": "Switch lowering in GCC",
+  "link": "https://xoranth.net/gcc-switch/",
+  "blurb": "Deep digest unavailable: source host not reachable from this session's network allowlist (not fetched). Deep look at how GCC lowers switch statements."
  }
 ]
