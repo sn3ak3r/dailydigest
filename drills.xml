@@ -1,21 +1,30 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Decode-one-instruction drill — 2026-10-30</title><link></link><description># Decode-one-instruction drill — 2026-10-30
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse-a-function drill — 2026-10-31</title><link></link><description># Reverse-a-function drill — 2026-10-31
 
-Target: Windows x86-64.
+Target: Windows x86-64 (args in `ecx`, `edx`).
 
-Decode this instruction, found at `0x140001000`:
+Reverse this short function to equivalent C:
 
+```asm
+mystery:
+    mov     eax, ecx
+    mov     ecx, edx
+    shr     eax, cl
+    and     eax, 1
+    ret
 ```
-E8 F0 FF FF FF
-```
 
-What is the assembly, where does it go, and what does it do to the stack?
+Why does the function copy `edx` into `ecx` before shifting?
 
 
 Answer:
 
-`call 0x140000FF5` (a near relative call to a function 11 bytes earlier).
+```c
+unsigned mystery(unsigned x, unsigned n) {
+    return (x &gt;&gt; n) &amp; 1;   // value of bit n of x
+}
+```
 
-- `E8 rel32` is CALL; the operand `F0FFFFFF` is little-endian `0xFFFFFFF0` = -16. The target is relative to the *next* instruction: `0x140001005 - 16 = 0x140000FF5`.
-- It pushes the return address `0x140001005` (`rsp -= 8`, store at `[rsp]`), then jumps. The callee&#x27;s `ret` (`C3`) pops it back into `rip`.
-- On Windows x64 the caller must also reserve 32 bytes of shadow space before the call.
-</description><guid isPermaLink='false'>2026-10-30</guid><pubDate>Fri, 30 Oct 2026 02:31:26 +0000</pubDate></item></channel></rss>
+- On x86 a variable shift count must live in `cl`; `shr eax, edx` doesn&#x27;t exist, so the 2nd arg (`edx`) is moved into `ecx` after `x` has been saved to `eax`.
+- `shr` is logical (zero-fill), so bit `n` lands in bit 0; `and eax,1` masks off everything above it.
+- The count is masked to 5 bits by the CPU for 32-bit operands, so `n &gt;= 32` behaves like `n &amp; 31`.
+</description><guid isPermaLink='false'>2026-10-31</guid><pubDate>Sat, 31 Oct 2026 02:31:07 +0000</pubDate></item></channel></rss>

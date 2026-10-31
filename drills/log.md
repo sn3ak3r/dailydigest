@@ -76,3 +76,4 @@
 2026-10-28 | reverse-function | unsigned range-check trick: lea eax,[rcx-48] subtract, cmp 9 + setbe (unsigned CF/ZF) folds two bounds into one compare, isdigit
 2026-10-29 | crackme | ror rotate right (C1 /1, no bits lost vs shr), xor mask then cmp, backward-solving by xor then rol
 2026-10-30 | decode-instruction | E8 rel32 near CALL, little-endian negative displacement relative to next instruction, return address push (rsp-=8) and ret, Windows x64 shadow space
+2026-10-31 | reverse-function | variable shift count must be in cl (mov ecx,edx), shr logical zero-fill, and 1 masks bit n, shift count masked to 5 bits (n&31)

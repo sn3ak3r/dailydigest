@@ -1,8 +1,8 @@
 [
  {
-  "title": "Decode-one-instruction drill \u2014 2026-10-30",
-  "guid": "2026-10-30",
-  "blurb": "# Decode-one-instruction drill \u2014 2026-10-30\n\nTarget: Windows x86-64.\n\nDecode this instruction, found at `0x140001000`:\n\n```\nE8 F0 FF FF FF\n```\n\nWhat is the assembly, where does it go, and what does it do to the stack?\n\n\nAnswer:\n\n`call 0x140000FF5` (a near relative call to a function 11 bytes earlier).\n\n- `E8 rel32` is CALL; the operand `F0FFFFFF` is little-endian `0xFFFFFFF0` = -16. The target is relative to the *next* instruction: `0x140001005 - 16 = 0x140000FF5`.\n- It pushes the return address `0x140001005` (`rsp -= 8`, store at `[rsp]`), then jumps. The callee's `ret` (`C3`) pops it back into `rip`.\n- On Windows x64 the caller must also reserve 32 bytes of shadow space before the call.\n",
+  "title": "Reverse-a-function drill \u2014 2026-10-31",
+  "guid": "2026-10-31",
+  "blurb": "# Reverse-a-function drill \u2014 2026-10-31\n\nTarget: Windows x86-64 (args in `ecx`, `edx`).\n\nReverse this short function to equivalent C:\n\n```asm\nmystery:\n    mov     eax, ecx\n    mov     ecx, edx\n    shr     eax, cl\n    and     eax, 1\n    ret\n```\n\nWhy does the function copy `edx` into `ecx` before shifting?\n\n\nAnswer:\n\n```c\nunsigned mystery(unsigned x, unsigned n) {\n    return (x >> n) & 1;   // value of bit n of x\n}\n```\n\n- On x86 a variable shift count must live in `cl`; `shr eax, edx` doesn't exist, so the 2nd arg (`edx`) is moved into `ecx` after `x` has been saved to `eax`.\n- `shr` is logical (zero-fill), so bit `n` lands in bit 0; `and eax,1` masks off everything above it.\n- The count is masked to 5 bits by the CPU for 32-bit operands, so `n >= 32` behaves like `n & 31`.\n",
   "link": ""
  }
 ]
