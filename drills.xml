@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse-a-function drill — 2026-10-31</title><link></link><description># Reverse-a-function drill — 2026-10-31
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse-a-function drill — 2026-11-01</title><link></link><description># Reverse-a-function drill — 2026-11-01
 
 Target: Windows x86-64 (args in `ecx`, `edx`).
 
@@ -6,25 +6,27 @@ Reverse this short function to equivalent C:
 
 ```asm
 mystery:
-    mov     eax, ecx
-    mov     ecx, edx
-    shr     eax, cl
-    and     eax, 1
+    bt      ecx, edx
+    setc    al
+    movzx   eax, al
     ret
 ```
 
-Why does the function copy `edx` into `ecx` before shifting?
+Which flag carries the result of `bt`, and why is `movzx` needed?
 
+---
 
-Answer:
+## Answer
 
 ```c
 unsigned mystery(unsigned x, unsigned n) {
-    return (x &gt;&gt; n) &amp; 1;   // value of bit n of x
+    return (x &gt;&gt; (n &amp; 31)) &amp; 1;   // is bit n of x set?
 }
 ```
 
-- On x86 a variable shift count must live in `cl`; `shr eax, edx` doesn&#x27;t exist, so the 2nd arg (`edx`) is moved into `ecx` after `x` has been saved to `eax`.
-- `shr` is logical (zero-fill), so bit `n` lands in bit 0; `and eax,1` masks off everything above it.
-- The count is masked to 5 bits by the CPU for 32-bit operands, so `n &gt;= 32` behaves like `n &amp; 31`.
-</description><guid isPermaLink='false'>2026-10-31</guid><pubDate>Sat, 31 Oct 2026 02:31:07 +0000</pubDate></item></channel></rss>
+## Explanation
+
+- `bt ecx, edx` copies bit number `edx` of `ecx` into the carry flag (CF) and changes nothing else, so no shift or mask is needed.
+- `setc al` writes only the low byte (0 or 1), so `movzx eax, al` clears the upper bits and returns a clean 32-bit int.
+- With a register operand the bit index is taken mod 32, so `n = 33` tests bit 1.
+</description><guid isPermaLink='false'>2026-11-01</guid><pubDate>Sun, 01 Nov 2026 02:31:06 +0000</pubDate></item></channel></rss>

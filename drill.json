@@ -1,8 +1,8 @@
 [
  {
-  "title": "Reverse-a-function drill \u2014 2026-10-31",
-  "guid": "2026-10-31",
-  "blurb": "# Reverse-a-function drill \u2014 2026-10-31\n\nTarget: Windows x86-64 (args in `ecx`, `edx`).\n\nReverse this short function to equivalent C:\n\n```asm\nmystery:\n    mov     eax, ecx\n    mov     ecx, edx\n    shr     eax, cl\n    and     eax, 1\n    ret\n```\n\nWhy does the function copy `edx` into `ecx` before shifting?\n\n\nAnswer:\n\n```c\nunsigned mystery(unsigned x, unsigned n) {\n    return (x >> n) & 1;   // value of bit n of x\n}\n```\n\n- On x86 a variable shift count must live in `cl`; `shr eax, edx` doesn't exist, so the 2nd arg (`edx`) is moved into `ecx` after `x` has been saved to `eax`.\n- `shr` is logical (zero-fill), so bit `n` lands in bit 0; `and eax,1` masks off everything above it.\n- The count is masked to 5 bits by the CPU for 32-bit operands, so `n >= 32` behaves like `n & 31`.\n",
+  "title": "Reverse-a-function drill \u2014 2026-11-01",
+  "guid": "2026-11-01",
+  "blurb": "# Reverse-a-function drill \u2014 2026-11-01\n\nTarget: Windows x86-64 (args in `ecx`, `edx`).\n\nReverse this short function to equivalent C:\n\n```asm\nmystery:\n    bt      ecx, edx\n    setc    al\n    movzx   eax, al\n    ret\n```\n\nWhich flag carries the result of `bt`, and why is `movzx` needed?\n\n---\n\n## Answer\n\n```c\nunsigned mystery(unsigned x, unsigned n) {\n    return (x >> (n & 31)) & 1;   // is bit n of x set?\n}\n```\n\n## Explanation\n\n- `bt ecx, edx` copies bit number `edx` of `ecx` into the carry flag (CF) and changes nothing else, so no shift or mask is needed.\n- `setc al` writes only the low byte (0 or 1), so `movzx eax, al` clears the upper bits and returns a clean 32-bit int.\n- With a register operand the bit index is taken mod 32, so `n = 33` tests bit 1.\n",
   "link": ""
  }
 ]
