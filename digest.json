@@ -1,47 +1,42 @@
 [
  {
-  "title": "Appraisal by AI: Model-driven victim prioritization in the VOLTA infostealer",
-  "link": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/",
-  "blurb": "**Problem:** Infostealers dump huge piles of credentials; deciding which victims are worth attacking is slow manual work.\n\n**Approach:** VOLTA, a self-deleting Windows stealer, builds a profile of each victim (employer, location, cards, wallets), enriches it with stolen sessions, then sends it via OpenRouter to an LLM prompted as a \"forensic intelligence analyst.\" If the default model (Claude Opus 4.6) refuses, it falls back to Kimi K2, then Gemini 2.5 Flash.\n\n**Result:** A ranked list of valuable assets per victim, exfiltrated in up to three staged archives. Config obfuscation is weak and recoverable by reverse engineering.\n\n**Why it matters:** Cheap builder-model malware can automate victim triage, and refusal-fallback chains may become standard.\n\n**Glossary:** Infostealer: malware harvesting credentials/cookies. Session token: login credential bypassing passwords. Fallback chain: backup models tried on refusal. Builder model: author compiles custom binaries for customers."
+  "title": "NetamLoader Malware Targets Government Windows 10 Systems in Asia via .NET Injection",
+  "link": "https://thehackernews.com/2026/11/netamloader-malware-targets-government.html",
+  "blurb": "New .NET-injection loader targets government Windows 10 machines in Asia; useful for Windows-internals tracking."
  },
  {
-  "title": "Critical Linux kernel flaw allows remote root attacks on MPTCP servers",
-  "link": "https://www.bleepingcomputer.com/news/security/critical-linux-kernel-flaw-allows-remote-root-attacks-on-mptcp-servers/",
-  "blurb": "Remote-root kernel flaw in MPTCP servers; patch-worthy for anyone exposing it."
+  "title": "New Android SMS of Death exploit can remotely crash unpatched phones",
+  "link": "https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/",
+  "blurb": "A single crafted SMS can remotely crash unpatched Android phones."
  },
  {
-  "title": "Attackers Chain Three Ivanti Connect Secure Flaws to Gain Unauthenticated Root Access",
-  "link": "https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html",
-  "blurb": "Three Ivanti Connect Secure bugs chained to unauthenticated root; edge-device exploitation in the wild."
+  "title": "A Shared ChatGPT Link Could Run Attacker Code in Your Session and Read Private Chats",
+  "link": "https://thehackernews.com/2026/10/a-shared-chatgpt-link-could-run.html",
+  "blurb": "Shared ChatGPT links could run attacker code in a victim's session and read private chats."
  },
  {
-  "title": "After almost a decade of work, Alien: Isolation mod tools hit 1.0 with support for 'full custom maps, missions, modes, characters, weapons, animations, sounds, models, textures, an",
-  "link": "https://www.pcgamer.com/games/horror/after-almost-a-decade-of-work-alien-isolation-mod-tools-hit-1-0-with-support-for-full-custom-maps-missions-modes-characters-weapons-animations-sounds-models-textures-and-more/",
-  "blurb": "Alien: Isolation mod tools reach 1.0 after ~10 years, enabling fully custom maps, missions, weapons, models and more."
+  "title": "What remains of canned Portal prequel white whale F-Stop is now fully playable thanks to modders and some big leaks",
+  "link": "https://www.rockpapershotgun.com/what-remains-of-canned-portal-prequel-white-whale-f-stop-is-now-fully-playable-thanks-to-modders-and-some-big-leaks",
+  "blurb": "Cancelled Portal prequel F-Stop is playable again thanks to modders."
  },
  {
-  "title": "id Software co-director says the Doom developer is 'working more closely with MachineGames than ever' after Xbox laid off 'about half of our studio'",
-  "link": "https://www.pcgamer.com/games/fps/id-software-co-director-says-the-doom-developer-is-working-more-closely-with-machinegames-than-ever-after-xbox-laid-off-about-half-of-our-studio/",
-  "blurb": "id Software says it's working closer with MachineGames after Xbox laid off about half the studio; studio-news signal for Doom's future."
+  "title": "Modern Warfare 4 on Switch 2 has much worse input lag than PS5",
+  "link": "https://www.eurogamer.net/modern-warfare-4-switch-2-input-lag-digital-foundry",
+  "blurb": "Digital Foundry measures far worse input lag for MW4 on Switch 2 than PS5."
  },
  {
-  "title": "Seabirds racing home over the ocean can get jet-lagged",
-  "link": "https://arstechnica.com/science/2026/10/seabirds-racing-home-over-the-ocean-can-get-jet-lagged/",
-  "blurb": "Seabirds racing home over the ocean show jet-lag-like effects; a study result on navigation and body clocks."
+  "title": "A Specialised Haskell Processor on FPGA",
+  "link": "https://bathtub-01.github.io/technical/ouros-demo/",
+  "blurb": "A specialised Haskell processor built on an FPGA, with demo."
  },
  {
-  "title": "Rooting an Amazon Echo Dot",
-  "link": "https://hackaday.com/2026/10/31/rooting-an-amazon-echo-dot/",
-  "blurb": "Hackaday teardown/root of an Amazon Echo Dot; documented hardware hacking build."
+  "title": "Beating the compiler at signed 32-bit division",
+  "link": "https://lemire.me/blog/2026/10/31/beating-the-compiler-at-signed-32-bit-division/",
+  "blurb": "Page not fetched (lemire.me blocked by network allowlist), so no summary. From the title: Lemire shows a hand-written signed 32-bit division beating compiler output."
  },
  {
-  "title": "Show HN: A language model that lives in a boot sector",
-  "link": "https://github.com/kerlenton/bootgpt",
-  "blurb": "bootgpt: a tiny language model that runs from a boot sector; extreme-constraint build with code on GitHub."
- },
- {
-  "title": "Speeding up GPU copies by permuting iteration spaces, or, optimising the identity function",
-  "link": "https://futhark-lang.org/blog/2026-10-31-faster-copying.html",
-  "blurb": "Futhark blog on speeding up GPU copies by permuting iteration spaces; optimising the 'identity function' (not fetched)."
+  "title": "Non-Determinism and Overcount on Modern Hardware Performance Counter Implementations",
+  "link": "https://web.eece.maine.edu/~vweaver/projects/deterministic/deterministic_counters.pdf",
+  "blurb": "Paper not fetched (web.eece.maine.edu blocked by network allowlist), so no summary. From the title: it studies non-determinism and overcounting in CPU performance counters."
  }
 ]
