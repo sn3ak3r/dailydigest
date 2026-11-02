@@ -1,32 +1,22 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse-a-function drill — 2026-11-01</title><link></link><description># Reverse-a-function drill — 2026-11-01
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Crackme drill — 2026-11-02</title><link></link><description># Crackme: find the input (Windows x64, arg in ecx)
 
-Target: Windows x86-64 (args in `ecx`, `edx`).
-
-Reverse this short function to equivalent C:
-
-```asm
-mystery:
-    bt      ecx, edx
-    setc    al
-    movzx   eax, al
+```
+    lea    eax, [rcx+rcx*4]
+    neg    eax
+    add    eax, 100
+    cmp    eax, -50
+    sete   al
+    movzx  eax, al
     ret
 ```
 
-Which flag carries the result of `bt`, and why is `movzx` needed?
+Which value of `ecx` makes the function return 1? Give it in decimal.
 
 ---
 
-## Answer
+**Answer:** `30` (0x1E)
 
-```c
-unsigned mystery(unsigned x, unsigned n) {
-    return (x &gt;&gt; (n &amp; 31)) &amp; 1;   // is bit n of x set?
-}
-```
-
-## Explanation
-
-- `bt ecx, edx` copies bit number `edx` of `ecx` into the carry flag (CF) and changes nothing else, so no shift or mask is needed.
-- `setc al` writes only the low byte (0 or 1), so `movzx eax, al` clears the upper bits and returns a clean 32-bit int.
-- With a register operand the bit index is taken mod 32, so `n = 33` tests bit 1.
-</description><guid isPermaLink='false'>2026-11-01</guid><pubDate>Sun, 01 Nov 2026 02:31:06 +0000</pubDate></item></channel></rss>
+1. `lea eax,[rcx+rcx*4]` computes `ecx*5` with no flags touched; `neg` then gives `-5*ecx` (two&#x27;s complement: invert and add 1).
+2. The check needs `-5*ecx + 100 == -50`, so `-5*ecx = -150`.
+3. Dividing by -5 gives `ecx = 30`. Check: 150, negated -150, plus 100 is -50. The solution is unique modulo 2^32, because 5 is odd and so invertible.
+</description><guid isPermaLink='false'>2026-11-02</guid><pubDate>Mon, 02 Nov 2026 02:30:45 +0000</pubDate></item></channel></rss>

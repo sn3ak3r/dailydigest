@@ -78,3 +78,4 @@
 2026-10-30 | decode-instruction | E8 rel32 near CALL, little-endian negative displacement relative to next instruction, return address push (rsp-=8) and ret, Windows x64 shadow space
 2026-10-31 | reverse-function | variable shift count must be in cl (mov ecx,edx), shr logical zero-fill, and 1 masks bit n, shift count masked to 5 bits (n&31)
 2026-11-01 | reverse-function | bt bit-test into CF (no modify), setc al + movzx to widen flag to 0/1, register bit index taken mod 32
+2026-11-02 | crackme | lea scale-by-5 [rcx+rcx*4] (no flags), neg two's complement negate, add then cmp with negative immediate, backward-solving by dividing by -5

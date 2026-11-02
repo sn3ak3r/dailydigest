@@ -1,8 +1,8 @@
 [
  {
-  "title": "Reverse-a-function drill \u2014 2026-11-01",
-  "guid": "2026-11-01",
-  "blurb": "# Reverse-a-function drill \u2014 2026-11-01\n\nTarget: Windows x86-64 (args in `ecx`, `edx`).\n\nReverse this short function to equivalent C:\n\n```asm\nmystery:\n    bt      ecx, edx\n    setc    al\n    movzx   eax, al\n    ret\n```\n\nWhich flag carries the result of `bt`, and why is `movzx` needed?\n\n---\n\n## Answer\n\n```c\nunsigned mystery(unsigned x, unsigned n) {\n    return (x >> (n & 31)) & 1;   // is bit n of x set?\n}\n```\n\n## Explanation\n\n- `bt ecx, edx` copies bit number `edx` of `ecx` into the carry flag (CF) and changes nothing else, so no shift or mask is needed.\n- `setc al` writes only the low byte (0 or 1), so `movzx eax, al` clears the upper bits and returns a clean 32-bit int.\n- With a register operand the bit index is taken mod 32, so `n = 33` tests bit 1.\n",
+  "title": "Crackme drill \u2014 2026-11-02",
+  "guid": "2026-11-02",
+  "blurb": "# Crackme: find the input (Windows x64, arg in ecx)\n\n```\n    lea    eax, [rcx+rcx*4]\n    neg    eax\n    add    eax, 100\n    cmp    eax, -50\n    sete   al\n    movzx  eax, al\n    ret\n```\n\nWhich value of `ecx` makes the function return 1? Give it in decimal.\n\n---\n\n**Answer:** `30` (0x1E)\n\n1. `lea eax,[rcx+rcx*4]` computes `ecx*5` with no flags touched; `neg` then gives `-5*ecx` (two's complement: invert and add 1).\n2. The check needs `-5*ecx + 100 == -50`, so `-5*ecx = -150`.\n3. Dividing by -5 gives `ecx = 30`. Check: 150, negated -150, plus 100 is -50. The solution is unique modulo 2^32, because 5 is odd and so invertible.\n",
   "link": ""
  }
 ]
