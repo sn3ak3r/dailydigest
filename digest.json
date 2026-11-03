@@ -1,42 +1,52 @@
 [
  {
-  "title": "NetamLoader Malware Targets Government Windows 10 Systems in Asia via .NET Injection",
-  "link": "https://thehackernews.com/2026/11/netamloader-malware-targets-government.html",
-  "blurb": "New .NET-injection loader targets government Windows 10 machines in Asia; useful for Windows-internals tracking."
+  "title": "Ivanti patches two more Connect Secure zero-days chained in attacks",
+  "link": "https://www.bleepingcomputer.com/news/security/ivanti-patches-two-more-connect-secure-zero-days-chained-in-attacks/",
+  "blurb": "Chained Connect Secure zero-days mean edge VPNs stay a prime intrusion path; patch now."
  },
  {
-  "title": "New Android SMS of Death exploit can remotely crash unpatched phones",
-  "link": "https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/",
-  "blurb": "A single crafted SMS can remotely crash unpatched Android phones."
+  "title": "Attackers Pose as IT Support on Microsoft Teams, Abuse AD CS to Steal Company Data",
+  "link": "https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html",
+  "blurb": "Teams social engineering plus AD CS abuse is a concrete Windows identity attack chain worth detecting."
  },
  {
-  "title": "A Shared ChatGPT Link Could Run Attacker Code in Your Session and Read Private Chats",
-  "link": "https://thehackernews.com/2026/10/a-shared-chatgpt-link-could-run.html",
-  "blurb": "Shared ChatGPT links could run attacker code in a victim's session and read private chats."
+  "title": "A Rowhammer attack on Fil-C's software capabilities",
+  "link": "https://arxiv.org/abs/2610.33748",
+  "blurb": "Deep digest unavailable: fetch of this URL failed (host blocked by session network policy; allow it to enable digests)."
  },
  {
-  "title": "What remains of canned Portal prequel white whale F-Stop is now fully playable thanks to modders and some big leaks",
-  "link": "https://www.rockpapershotgun.com/what-remains-of-canned-portal-prequel-white-whale-f-stop-is-now-fully-playable-thanks-to-modders-and-some-big-leaks",
-  "blurb": "Cancelled Portal prequel F-Stop is playable again thanks to modders."
+  "title": "Ray tracing memory usage could be reduced by up to 90% thanks to 'most significant' DirectX update",
+  "link": "https://www.pcgamer.com/hardware/memory/ray-tracing-memory-usage-could-be-reduced-by-up-to-90-percent-thanks-to-most-significant-directx-update/",
+  "blurb": "A DirectX update promising up to 90% less ray-tracing memory could change what hardware can run RT."
  },
  {
-  "title": "Modern Warfare 4 on Switch 2 has much worse input lag than PS5",
-  "link": "https://www.eurogamer.net/modern-warfare-4-switch-2-input-lag-digital-foundry",
-  "blurb": "Digital Foundry measures far worse input lag for MW4 on Switch 2 than PS5."
+  "title": "\"We're doing great,\" says id Software boss, despite losing \"about half of our studio\" amid devastating Xbox cuts",
+  "link": "https://www.eurogamer.net/id-software-doing-great-losing-half-the-studio",
+  "blurb": "Studio-level fallout at id Software after layoffs is notable industry news."
  },
  {
-  "title": "A Specialised Haskell Processor on FPGA",
-  "link": "https://bathtub-01.github.io/technical/ouros-demo/",
-  "blurb": "A specialised Haskell processor built on an FPGA, with demo."
+  "title": "Is There Anything Left in the Dream of Cold Fusion?",
+  "link": "https://www.quantamagazine.org/is-there-anything-left-in-the-dream-of-cold-fusion-20261102/",
+  "blurb": "Quanta's look at whether cold fusion research has any credible remaining thread."
  },
  {
-  "title": "Beating the compiler at signed 32-bit division",
-  "link": "https://lemire.me/blog/2026/10/31/beating-the-compiler-at-signed-32-bit-division/",
-  "blurb": "Page not fetched (lemire.me blocked by network allowlist), so no summary. From the title: Lemire shows a hand-written signed 32-bit division beating compiler output."
+  "title": "Most of our measures of a key cognitive process don't agree",
+  "link": "https://arstechnica.com/science/2026/11/most-of-our-measures-of-a-key-cognitive-process-dont-agree/",
+  "blurb": "Different measures of one cognitive process disagree, undermining how the construct is measured."
  },
  {
-  "title": "Non-Determinism and Overcount on Modern Hardware Performance Counter Implementations",
-  "link": "https://web.eece.maine.edu/~vweaver/projects/deterministic/deterministic_counters.pdf",
-  "blurb": "Paper not fetched (web.eece.maine.edu blocked by network allowlist), so no summary. From the title: it studies non-determinism and overcounting in CPU performance counters."
+  "title": "We halved DNS build delay and cut memory use by 85%",
+  "link": "https://blog.cloudflare.com/dns-targeted-zone-builds/",
+  "blurb": "Engineering writeup on halving DNS build delay and cutting memory 85%."
+ },
+ {
+  "title": "Jailbreaking my car's navigation system just so I can change the time",
+  "link": "https://blog.nns.ee/2026/11/02/renault-hack/",
+  "blurb": "Deep digest unavailable: fetch of this URL failed (host blocked by session network policy; allow it to enable digests)."
+ },
+ {
+  "title": "Investigating whether Zener Diodes work for ESD Protection",
+  "link": "https://hackaday.com/2026/11/02/investigating-whether-zener-diodes-work-for-esd-protection/",
+  "blurb": "Documented bench test of whether Zener diodes are adequate ESD protection."
  }
 ]
