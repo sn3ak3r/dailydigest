@@ -1,22 +1,18 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Crackme drill — 2026-11-02</title><link></link><description># Crackme: find the input (Windows x64, arg in ecx)
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Decode one instruction: 0F 4F C2</title><link></link><description>Target: Windows x86-64.
 
-```
-    lea    eax, [rcx+rcx*4]
-    neg    eax
-    add    eax, 100
-    cmp    eax, -50
-    sete   al
-    movzx  eax, al
-    ret
-```
+Decode this instruction:
 
-Which value of `ecx` makes the function return 1? Give it in decimal.
 
----
+0F 4F C2
 
-**Answer:** `30` (0x1E)
 
-1. `lea eax,[rcx+rcx*4]` computes `ecx*5` with no flags touched; `neg` then gives `-5*ecx` (two&#x27;s complement: invert and add 1).
-2. The check needs `-5*ecx + 100 == -50`, so `-5*ecx = -150`.
-3. Dividing by -5 gives `ecx = 30`. Check: 150, negated -150, plus 100 is -50. The solution is unique modulo 2^32, because 5 is odd and so invertible.
-</description><guid isPermaLink='false'>2026-11-02</guid><pubDate>Mon, 02 Nov 2026 02:30:45 +0000</pubDate></item></channel></rss>
+What is the assembly, and what does it do? Where does the result go, and what does it replace branching for?
+
+
+Answer:
+
+cmovg eax, edx
+
+- 0F 4x is the CMOVcc family; the low nibble is the condition code, F = G (greater, signed: ZF=0 and SF=OF). ModRM C2 = 11 000 010: mod=11 register-direct, reg=000 (eax, destination), rm=010 (edx, source).
+- If the condition holds, eax = edx; otherwise eax is unchanged. No jump, no flags modified.
+- After cmp eax, edx this is if (edx &gt; eax) eax = edx; i.e. a branchless signed max.</description><guid isPermaLink='false'>2026-11-03</guid><pubDate>Tue, 03 Nov 2026 02:31:19 +0000</pubDate></item></channel></rss>

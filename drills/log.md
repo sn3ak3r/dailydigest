@@ -79,3 +79,4 @@
 2026-10-31 | reverse-function | variable shift count must be in cl (mov ecx,edx), shr logical zero-fill, and 1 masks bit n, shift count masked to 5 bits (n&31)
 2026-11-01 | reverse-function | bt bit-test into CF (no modify), setc al + movzx to widen flag to 0/1, register bit index taken mod 32
 2026-11-02 | crackme | lea scale-by-5 [rcx+rcx*4] (no flags), neg two's complement negate, add then cmp with negative immediate, backward-solving by dividing by -5
+2026-11-03 | decode-instruction | 0F 4x CMOVcc conditional move (cmovg = 0F 4F), condition nibble, ModRM reg=dest rm=src, branchless signed max, no flags modified

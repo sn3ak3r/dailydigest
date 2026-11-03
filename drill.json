@@ -1,8 +1,8 @@
 [
- {
-  "title": "Crackme drill \u2014 2026-11-02",
-  "guid": "2026-11-02",
-  "blurb": "# Crackme: find the input (Windows x64, arg in ecx)\n\n```\n    lea    eax, [rcx+rcx*4]\n    neg    eax\n    add    eax, 100\n    cmp    eax, -50\n    sete   al\n    movzx  eax, al\n    ret\n```\n\nWhich value of `ecx` makes the function return 1? Give it in decimal.\n\n---\n\n**Answer:** `30` (0x1E)\n\n1. `lea eax,[rcx+rcx*4]` computes `ecx*5` with no flags touched; `neg` then gives `-5*ecx` (two's complement: invert and add 1).\n2. The check needs `-5*ecx + 100 == -50`, so `-5*ecx = -150`.\n3. Dividing by -5 gives `ecx = 30`. Check: 150, negated -150, plus 100 is -50. The solution is unique modulo 2^32, because 5 is odd and so invertible.\n",
-  "link": ""
- }
+  {
+    "title": "Decode one instruction: 0F 4F C2",
+    "guid": "2026-11-03",
+    "blurb": "Target: Windows x86-64.\n\nDecode this instruction:\n\n\n0F 4F C2\n\n\nWhat is the assembly, and what does it do? Where does the result go, and what does it replace branching for?\n\n\nAnswer:\n\ncmovg eax, edx\n\n- 0F 4x is the CMOVcc family; the low nibble is the condition code, F = G (greater, signed: ZF=0 and SF=OF). ModRM C2 = 11 000 010: mod=11 register-direct, reg=000 (eax, destination), rm=010 (edx, source).\n- If the condition holds, eax = edx; otherwise eax is unchanged. No jump, no flags modified.\n- After cmp eax, edx this is if (edx > eax) eax = edx; i.e. a branchless signed max.",
+    "link": ""
+  }
 ]
