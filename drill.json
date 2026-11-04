@@ -1,8 +1,8 @@
 [
-  {
-    "title": "Decode one instruction: 0F 4F C2",
-    "guid": "2026-11-03",
-    "blurb": "Target: Windows x86-64.\n\nDecode this instruction:\n\n\n0F 4F C2\n\n\nWhat is the assembly, and what does it do? Where does the result go, and what does it replace branching for?\n\n\nAnswer:\n\ncmovg eax, edx\n\n- 0F 4x is the CMOVcc family; the low nibble is the condition code, F = G (greater, signed: ZF=0 and SF=OF). ModRM C2 = 11 000 010: mod=11 register-direct, reg=000 (eax, destination), rm=010 (edx, source).\n- If the condition holds, eax = edx; otherwise eax is unchanged. No jump, no flags modified.\n- After cmp eax, edx this is if (edx > eax) eax = edx; i.e. a branchless signed max.",
-    "link": ""
-  }
+ {
+  "title": "Reverse-a-function drill: bsr highest set bit",
+  "guid": "2026-11-04",
+  "blurb": "Target: Windows x86-64 (arg in `ecx`).\n\nReverse this short function to equivalent C:\n\n```asm\nmystery:\n    or      ecx, 1\n    bsr     eax, ecx\n    ret\n```\n\nWhat does it return for 0, 1, 2 and 1000? Why the `or`?\n\nANSWER\n## Answer\n\n```c\nunsigned mystery(unsigned x) {\n    x |= 1;\n    return 31 - __builtin_clz(x);   // index of highest set bit = floor(log2(x))\n}\n```\n\nResults: 0 \u2192 0, 1 \u2192 0, 2 \u2192 1, 1000 \u2192 9.\n\n## Explanation\n\n- `bsr` (0F BD) scans from bit 31 down and returns the index of the highest set bit, i.e. floor(log2(x)).\n- With a zero source, `bsr` sets ZF and leaves the destination undefined, so `or ecx, 1` guarantees a nonzero input.\n- Setting bit 0 never changes the highest set bit of a nonzero x, so only x = 0 is affected (it returns 0).\n",
+  "link": ""
+ }
 ]

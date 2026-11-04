@@ -80,3 +80,4 @@
 2026-11-01 | reverse-function | bt bit-test into CF (no modify), setc al + movzx to widen flag to 0/1, register bit index taken mod 32
 2026-11-02 | crackme | lea scale-by-5 [rcx+rcx*4] (no flags), neg two's complement negate, add then cmp with negative immediate, backward-solving by dividing by -5
 2026-11-03 | decode-instruction | 0F 4x CMOVcc conditional move (cmovg = 0F 4F), condition nibble, ModRM reg=dest rm=src, branchless signed max, no flags modified
+2026-11-04 | reverse-function | bsr bit-scan-reverse (0F BD) highest set bit index = floor(log2), zero-source undefined dest/ZF set, or ecx,1 guard, 31-clz equivalence

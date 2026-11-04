@@ -1,18 +1,31 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Decode one instruction: 0F 4F C2</title><link></link><description>Target: Windows x86-64.
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse-a-function drill: bsr highest set bit</title><link></link><description>Target: Windows x86-64 (arg in `ecx`).
 
-Decode this instruction:
+Reverse this short function to equivalent C:
 
+```asm
+mystery:
+    or      ecx, 1
+    bsr     eax, ecx
+    ret
+```
 
-0F 4F C2
+What does it return for 0, 1, 2 and 1000? Why the `or`?
 
+ANSWER
+## Answer
 
-What is the assembly, and what does it do? Where does the result go, and what does it replace branching for?
+```c
+unsigned mystery(unsigned x) {
+    x |= 1;
+    return 31 - __builtin_clz(x);   // index of highest set bit = floor(log2(x))
+}
+```
 
+Results: 0 → 0, 1 → 0, 2 → 1, 1000 → 9.
 
-Answer:
+## Explanation
 
-cmovg eax, edx
-
-- 0F 4x is the CMOVcc family; the low nibble is the condition code, F = G (greater, signed: ZF=0 and SF=OF). ModRM C2 = 11 000 010: mod=11 register-direct, reg=000 (eax, destination), rm=010 (edx, source).
-- If the condition holds, eax = edx; otherwise eax is unchanged. No jump, no flags modified.
-- After cmp eax, edx this is if (edx &gt; eax) eax = edx; i.e. a branchless signed max.</description><guid isPermaLink='false'>2026-11-03</guid><pubDate>Tue, 03 Nov 2026 02:31:19 +0000</pubDate></item></channel></rss>
+- `bsr` (0F BD) scans from bit 31 down and returns the index of the highest set bit, i.e. floor(log2(x)).
+- With a zero source, `bsr` sets ZF and leaves the destination undefined, so `or ecx, 1` guarantees a nonzero input.
+- Setting bit 0 never changes the highest set bit of a nonzero x, so only x = 0 is affected (it returns 0).
+</description><guid isPermaLink='false'>2026-11-04</guid><pubDate>Wed, 04 Nov 2026 02:31:19 +0000</pubDate></item></channel></rss>
