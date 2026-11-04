@@ -1,52 +1,47 @@
 [
  {
-  "title": "Ivanti patches two more Connect Secure zero-days chained in attacks",
-  "link": "https://www.bleepingcomputer.com/news/security/ivanti-patches-two-more-connect-secure-zero-days-chained-in-attacks/",
-  "blurb": "Chained Connect Secure zero-days mean edge VPNs stay a prime intrusion path; patch now."
+  "title": "Cheap Reverse Engineering and What It Will Do",
+  "link": "https://arxiv.org/abs/2610.35633",
+  "blurb": "DEEP DIGEST UNAVAILABLE: the fetch of this URL failed (host not in the session's allowed network domains), so no digest was written rather than guessing. Headline: Cheap Reverse Engineering and What It Will Do"
  },
  {
-  "title": "Attackers Pose as IT Support on Microsoft Teams, Abuse AD CS to Steal Company Data",
-  "link": "https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html",
-  "blurb": "Teams social engineering plus AD CS abuse is a concrete Windows identity attack chain worth detecting."
+  "title": "Barracuda Flaws Could Be Chained to Bypass Authorization and Gain Root Access",
+  "link": "https://thehackernews.com/2026/11/barracuda-flaws-could-be-chained-to.html",
+  "blurb": "DEEP DIGEST UNAVAILABLE: the fetch of this URL failed (host not in the session's allowed network domains), so no digest was written rather than guessing. Headline: Barracuda Flaws Could Be Chained to Bypass Authorization and Gain Root Access"
  },
  {
-  "title": "A Rowhammer attack on Fil-C's software capabilities",
-  "link": "https://arxiv.org/abs/2610.33748",
-  "blurb": "Deep digest unavailable: fetch of this URL failed (host blocked by session network policy; allow it to enable digests)."
+  "title": "cPGuard Update Channel Hijacked to Backdoor Linux Servers and Collect Password Hashes",
+  "link": "https://thehackernews.com/2026/11/cpguard-update-channel-hijacked-to.html",
+  "blurb": "Hijacked update channel of a server security plugin shows how defensive tooling becomes the backdoor."
  },
  {
-  "title": "Ray tracing memory usage could be reduced by up to 90% thanks to 'most significant' DirectX update",
-  "link": "https://www.pcgamer.com/hardware/memory/ray-tracing-memory-usage-could-be-reduced-by-up-to-90-percent-thanks-to-most-significant-directx-update/",
-  "blurb": "A DirectX update promising up to 90% less ray-tracing memory could change what hardware can run RT."
+  "title": "Control Resonant is Remedy's fastest-selling game to date, tripling the studio's quarterly revenue",
+  "link": "https://www.pcgamer.com/games/action/control-resonant-is-remedys-fastest-selling-game-to-date-tripling-the-studios-quarterly-revenue/",
+  "blurb": "Studio revenue tripled on its fastest-selling release, a signal of how a mid-size studio's big bet paid off."
  },
  {
-  "title": "\"We're doing great,\" says id Software boss, despite losing \"about half of our studio\" amid devastating Xbox cuts",
-  "link": "https://www.eurogamer.net/id-software-doing-great-losing-half-the-studio",
-  "blurb": "Studio-level fallout at id Software after layoffs is notable industry news."
+  "title": "Modders bring Steam Frame build of SteamOS and all of its translation layer goodness to Mac",
+  "link": "https://www.pcgamer.com/software/operating-systems/modders-bring-steam-frame-build-of-steamos-and-all-of-its-translation-layer-goodness-to-mac/",
+  "blurb": "Modders port the Steam Frame SteamOS build and its translation layer to Mac, a notable compatibility-layer hack."
  },
  {
-  "title": "Is There Anything Left in the Dream of Cold Fusion?",
-  "link": "https://www.quantamagazine.org/is-there-anything-left-in-the-dream-of-cold-fusion-20261102/",
-  "blurb": "Quanta's look at whether cold fusion research has any credible remaining thread."
+  "title": "Why large dogs age faster than small ones, and other October research highlights",
+  "link": "https://arstechnica.com/science/2026/11/research-roundup-6-cool-science-stories-we-almost-missed-7/",
+  "blurb": "Monthly roundup of actual research results, including why large dogs age faster than small ones."
  },
  {
-  "title": "Most of our measures of a key cognitive process don't agree",
-  "link": "https://arstechnica.com/science/2026/11/most-of-our-measures-of-a-key-cognitive-process-dont-agree/",
-  "blurb": "Different measures of one cognitive process disagree, undermining how the construct is measured."
- },
- {
-  "title": "We halved DNS build delay and cut memory use by 85%",
-  "link": "https://blog.cloudflare.com/dns-targeted-zone-builds/",
-  "blurb": "Engineering writeup on halving DNS build delay and cutting memory 85%."
+  "title": "Stringman, an $800 open-source room scale gripper robot",
+  "link": "https://neufangled.com/",
+  "blurb": "Open-source, room-scale gripper robot at ~$800 with documented build."
  },
  {
   "title": "Jailbreaking my car's navigation system just so I can change the time",
   "link": "https://blog.nns.ee/2026/11/02/renault-hack/",
-  "blurb": "Deep digest unavailable: fetch of this URL failed (host blocked by session network policy; allow it to enable digests)."
+  "blurb": "Documented teardown of jailbreaking a car's navigation unit just to change the clock."
  },
  {
-  "title": "Investigating whether Zener Diodes work for ESD Protection",
-  "link": "https://hackaday.com/2026/11/02/investigating-whether-zener-diodes-work-for-esd-protection/",
-  "blurb": "Documented bench test of whether Zener diodes are adequate ESD protection."
+  "title": "Could a modern chess engine on a Pentium have defeated Kasparov in 1996?",
+  "link": "https://nicholas.carlini.com/writing/2026/algorithmic-improvements-chess.html",
+  "blurb": "Carlini's writeup on whether algorithmic gains alone let a modern chess engine beat Kasparov on 1996 hardware."
  }
 ]
