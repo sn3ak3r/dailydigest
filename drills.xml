@@ -1,31 +1,21 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Reverse-a-function drill: bsr highest set bit</title><link></link><description>Target: Windows x86-64 (arg in `ecx`).
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Crackme drill: three-operand imul</title><link></link><description>Target: Windows x86-64.
 
-Reverse this short function to equivalent C:
+# Crackme: find the input (Windows x64, arg in ecx)
 
-```asm
-mystery:
-    or      ecx, 1
-    bsr     eax, ecx
+```
+    imul   eax, ecx, 13
+    add    eax, 7
+    cmp    eax, 150
+    sete   al
+    movzx  eax, al
     ret
 ```
 
-What does it return for 0, 1, 2 and 1000? Why the `or`?
+Which value of `ecx` makes the function return 1? Give it in decimal.
 
 ANSWER
-## Answer
+**Answer:** `11` (0xB)
 
-```c
-unsigned mystery(unsigned x) {
-    x |= 1;
-    return 31 - __builtin_clz(x);   // index of highest set bit = floor(log2(x))
-}
-```
-
-Results: 0 → 0, 1 → 0, 2 → 1, 1000 → 9.
-
-## Explanation
-
-- `bsr` (0F BD) scans from bit 31 down and returns the index of the highest set bit, i.e. floor(log2(x)).
-- With a zero source, `bsr` sets ZF and leaves the destination undefined, so `or ecx, 1` guarantees a nonzero input.
-- Setting bit 0 never changes the highest set bit of a nonzero x, so only x = 0 is affected (it returns 0).
-</description><guid isPermaLink='false'>2026-11-04</guid><pubDate>Wed, 04 Nov 2026 02:31:19 +0000</pubDate></item></channel></rss>
+1. `imul eax, ecx, 13` is the three-operand form (opcode 6B /r for imm8): dest = src * immediate, so the source `ecx` is not overwritten. Only the low 32 bits of the product are kept.
+2. The check needs `13*ecx + 7 == 150`, so `13*ecx = 143`.
+3. Dividing gives `ecx = 11`. Check: 143 + 7 = 150. Since 13 is odd it is invertible mod 2^32, so 11 is the only 32-bit solution.</description><guid isPermaLink='false'>2026-11-05</guid><pubDate>Thu, 05 Nov 2026 02:30:39 +0000</pubDate></item></channel></rss>
