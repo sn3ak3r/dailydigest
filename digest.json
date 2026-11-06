@@ -1,52 +1,47 @@
 [
  {
-  "title": "Debian and Ubuntu APT Flaw Lets MitM Attackers Swap Verified Packages and Run Code as Root",
-  "link": "https://thehackernews.com/2026/11/debian-and-ubuntu-apt-flaw-lets-mitm.html",
-  "blurb": "Debian/Ubuntu APT flaw lets a network attacker swap verified packages and run code as root."
+  "title": "Shoot on (Core)Sight: Re-enabling Secure Debug on the RP2350 with Photon-Emission Microscopy and Laser Fault Injection",
+  "link": "https://arxiv.org/abs/2611.06386",
+  "blurb": "Photon-emission microscopy reportedly re-enables secure debug on the RP2350 — a hardware-attack result on a popular microcontroller. (Deep digest unavailable: arxiv.org is not in the session's allowed network domains, so the paper could not be fetched. Based on title only.)"
  },
  {
-  "title": "Xen Hypervisor Flaws Let One Malicious VM Read and Write Any Other VM's Memory",
-  "link": "https://thehackernews.com/2026/11/xen-hypervisor-flaws-let-one-malicious.html",
-  "blurb": "Xen bugs let one malicious VM read and write any other VM's memory."
+  "title": "PIMROP: A Feasibility Study of Return-Oriented Programming on Commercial Processing-in-Memory Architectures",
+  "link": "https://arxiv.org/abs/2611.06036",
+  "blurb": "Feasibility study of return-oriented programming on commercial processing-in-memory hardware — new attack surface for PIM. (Deep digest unavailable: arxiv.org is not in the session's allowed network domains, so the paper could not be fetched. Based on title only.)"
  },
  {
-  "title": "The Native Menace: Host-to-Browser Cross-Boundary Attacks via Native Messaging",
-  "link": "https://arxiv.org/abs/2611.04291",
-  "blurb": "Cross-boundary attacks from host apps to the browser via Native Messaging (arXiv; not deep-digested, arxiv.org blocked by network policy)."
+  "title": "OpenSSH flaw lets attackers log into password-disabled Linux accounts",
+  "link": "https://www.bleepingcomputer.com/news/security/openssh-flaw-lets-attackers-log-into-password-disabled-linux-accounts/",
+  "blurb": "OpenSSH flaw lets attackers log into password-disabled Linux accounts (Alpine without PAM); emergency fix out."
  },
  {
-  "title": "Morrowind's gravity is no longer '0.01% off' in the new release of its fan-made engine, finally making it playable",
-  "link": "https://www.pcgamer.com/games/the-elder-scrolls/morrowinds-gravity-is-no-longer-0-01-percent-off-in-the-new-release-of-its-fan-made-engine-finally-making-it-playable/",
-  "blurb": "OpenMW fixes Morrowind's gravity constant; engine-reimplementation detail."
+  "title": "Experimental project beats Intel in bringing 'real Intel XeSS super resolution' to SteamOS and Proton games on Linux",
+  "link": "https://www.pcgamer.com/hardware/handheld-gaming-pcs/experimental-project-beats-intel-in-bringing-real-intel-xess-super-resolution-to-steamos-and-proton-games-on-linux/",
+  "blurb": "Experimental project brings 'real' Intel XeSS upscaling to SteamOS/Proton games on Linux, ahead of Intel's own."
  },
  {
-  "title": "Guild Wars gets its first major gameplay update in almost 20 years",
-  "link": "https://www.eurogamer.net/guild-wars-1-afterlife-announced-20-years",
-  "blurb": "Guild Wars gets its first major gameplay update in nearly 20 years."
+  "title": "Nexus Mods introduces new AI disclosure rules, but won't ban AI mods outright",
+  "link": "https://www.eurogamer.net/nexus-mods-gen-ai-disclosure-rules",
+  "blurb": "Nexus Mods requires AI disclosure for mods but stops short of a ban, mirroring Valve's approach."
  },
  {
-  "title": "New Research Tests Whether AI Models Know Their Own Thoughts",
-  "link": "https://www.quantamagazine.org/new-research-tests-whether-ai-models-know-their-own-thoughts-20261104/",
-  "blurb": "**Problem:** Can language models notice their own internal states, or do they just echo human talk about minds?\n**Approach:** Researchers inject a concept pattern into a model's activity (steering), then ask whether it noticed an injected thought and what it was about; controls get no injection.\n**Result:** The strongest Claude flagged and named the concept in ~20% of trials, with no false alarms. Follow-up work suggests naming may come from steering alone; detecting \"something is off\" held up.\n**Why it matters:** Whether anomaly detection counts as introspection is disputed; loose use may make the term meaningless.\n**Glossary:** Introspection: reporting on one's own mental states. Steering: amplifying a neural pattern to push outputs toward a concept. Anomaly detection: noticing altered processing without identifying the change. Neural network: interconnected units with trained strengths."
+  "title": "Software squeezes more data out of Webb Telescope for imaging exoplanets",
+  "link": "https://arstechnica.com/science/2026/11/getting-software-to-help-block-out-a-star-so-we-can-see-exoplanets/",
+  "blurb": "Software post-processing squeezes more exoplanet imaging data out of Webb telescope observations."
  },
  {
-  "title": "Uranium cubes reveal why the German nuclear project failed",
-  "link": "https://arstechnica.com/science/2026/11/uranium-cubes-reveal-why-the-german-nuclear-project-failed/",
-  "blurb": "Uranium cube experiments explain why Germany's wartime nuclear project failed."
+  "title": "11 nanoseconds per word: Ridiculously Over-Optimizing Anagrams",
+  "link": "https://wiredream.com/anagram-fun/",
+  "blurb": "Heavily over-optimized anagram search at ~11 ns per word."
  },
  {
-  "title": "Show HN: After a decade of reversing, I got co-op working in DOS Wing Commander",
-  "link": "https://fireflyk64.github.io/wcmulti/",
-  "blurb": "Wing Commander for DOS gets co-op after a decade of reverse engineering."
+  "title": "Obscure audio codec is a perfect fit for the N64",
+  "link": "https://phoboslab.org/log/2026/11/n64-ulc-codec",
+  "blurb": "The ULC audio codec turns out to fit the N64's hardware well."
  },
  {
-  "title": "Hacking the Xbox 360 Hypervisor Part 3: Bad Update Improvements",
-  "link": "https://icode4.coffee/?p=1746",
-  "blurb": "Part 3 of the Xbox 360 hypervisor hacking series: improved bad-update exploit."
- },
- {
-  "title": "It\u2019s DOOM, on a Toy Camera",
-  "link": "https://hackaday.com/2026/11/04/its-doom-on-a-toy-camera/",
-  "blurb": "DOOM ported to a toy camera."
+  "title": "Pitting a Modern Chess Engine on a Pentium PC Against 1996’s Deep Blue",
+  "link": "https://hackaday.com/2026/11/05/pitting-a-modern-chess-engine-on-a-pentium-pc-against-1996s-deep-blue/",
+  "blurb": "Modern chess engine on a Pentium PC pitted against 1996's Deep Blue."
  }
 ]
