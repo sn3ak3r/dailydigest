@@ -82,3 +82,4 @@
 2026-11-03 | decode-instruction | 0F 4x CMOVcc conditional move (cmovg = 0F 4F), condition nibble, ModRM reg=dest rm=src, branchless signed max, no flags modified
 2026-11-04 | reverse-function | bsr bit-scan-reverse (0F BD) highest set bit index = floor(log2), zero-source undefined dest/ZF set, or ecx,1 guard, 31-clz equivalence
 2026-11-05 | crackme | imul r32,r/m32,imm (6B /r) three-operand multiply keeps source intact, add then cmp, backward-solving by dividing (odd multiplier invertible mod 2^32)
+2026-11-06 | decode-instruction | MOV r/m8,imm8 opcode C6 /0 ib, disp8 then imm8 operand order, byte-sized store, ModRM reg field as /0 extension

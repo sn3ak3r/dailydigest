@@ -1,21 +1,14 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Crackme drill: three-operand imul</title><link></link><description>Target: Windows x86-64.
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Decode drill: MOV r/m8, imm8</title><link></link><description>Target: Windows x86-64.
 
-# Crackme: find the input (Windows x64, arg in ecx)
+Decode this instruction:
 
-```
-    imul   eax, ecx, 13
-    add    eax, 7
-    cmp    eax, 150
-    sete   al
-    movzx  eax, al
-    ret
-```
+C6 41 03 41
 
-Which value of `ecx` makes the function return 1? Give it in decimal.
+What is the assembly? Which operand is the immediate, and how many bytes does it write?
 
 ANSWER
-**Answer:** `11` (0xB)
+mov byte ptr [rcx+3], 0x41
 
-1. `imul eax, ecx, 13` is the three-operand form (opcode 6B /r for imm8): dest = src * immediate, so the source `ecx` is not overwritten. Only the low 32 bits of the product are kept.
-2. The check needs `13*ecx + 7 == 150`, so `13*ecx = 143`.
-3. Dividing gives `ecx = 11`. Check: 143 + 7 = 150. Since 13 is odd it is invertible mod 2^32, so 11 is the only 32-bit solution.</description><guid isPermaLink='false'>2026-11-05</guid><pubDate>Thu, 05 Nov 2026 02:30:39 +0000</pubDate></item></channel></rss>
+- C6 /0 ib is MOV r/m8, imm8. ModRM 41 = 01 000 001: mod=01 (disp8 follows), reg=000 (the /0 opcode extension, not a register), rm=001 (rcx base). Then 03 = disp8, 41 = imm8.
+- The immediate always comes last, after the displacement. It writes exactly one byte (&#x27;A&#x27;) to rcx+3; neighbouring bytes are untouched.
+- In C: ((char*)p)[3] = &#x27;A&#x27;; with p in rcx (Windows x64 first argument).</description><guid isPermaLink='false'>2026-11-06</guid><pubDate>Fri, 06 Nov 2026 02:30:48 +0000</pubDate></item></channel></rss>
