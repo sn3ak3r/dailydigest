@@ -1,47 +1,52 @@
 [
  {
-  "title": "Shoot on (Core)Sight: Re-enabling Secure Debug on the RP2350 with Photon-Emission Microscopy and Laser Fault Injection",
-  "link": "https://arxiv.org/abs/2611.06386",
-  "blurb": "Photon-emission microscopy reportedly re-enables secure debug on the RP2350 — a hardware-attack result on a popular microcontroller. (Deep digest unavailable: arxiv.org is not in the session's allowed network domains, so the paper could not be fetched. Based on title only.)"
+  "title": "faulTPM: Exposing AMD fTPMs' Deepest Secrets",
+  "link": "https://arxiv.org/abs/2304.14717",
+  "blurb": "Deep digest not produced: host not in session's allowed network domains. AMD fTPM attack paper (faulTPM) — fault-injection style extraction of secrets from firmware TPMs; relevant to Windows TPM-backed trust. Based on title only."
  },
  {
-  "title": "PIMROP: A Feasibility Study of Return-Oriented Programming on Commercial Processing-in-Memory Architectures",
-  "link": "https://arxiv.org/abs/2611.06036",
-  "blurb": "Feasibility study of return-oriented programming on commercial processing-in-memory hardware — new attack surface for PIM. (Deep digest unavailable: arxiv.org is not in the session's allowed network domains, so the paper could not be fetched. Based on title only.)"
+  "title": "Experts Demonstrate Barracuda Email Security Gateway Chain Enabling Root Access Without Login",
+  "link": "https://thehackernews.com/2026/11/experts-demonstrate-barracuda-email.html",
+  "blurb": "Researchers chain Barracuda Email Security Gateway bugs into unauthenticated root access."
  },
  {
-  "title": "OpenSSH flaw lets attackers log into password-disabled Linux accounts",
-  "link": "https://www.bleepingcomputer.com/news/security/openssh-flaw-lets-attackers-log-into-password-disabled-linux-accounts/",
-  "blurb": "OpenSSH flaw lets attackers log into password-disabled Linux accounts (Alpine without PAM); emergency fix out."
+  "title": "Hackers Hide Linux Backdoor in Control Web Panel Server to Execute Commands Without Logs",
+  "link": "https://thehackernews.com/2026/11/hackers-hide-linux-backdoor-in-control.html",
+  "blurb": "Linux backdoor hidden in Control Web Panel servers runs commands without leaving logs."
  },
  {
-  "title": "Experimental project beats Intel in bringing 'real Intel XeSS super resolution' to SteamOS and Proton games on Linux",
-  "link": "https://www.pcgamer.com/hardware/handheld-gaming-pcs/experimental-project-beats-intel-in-bringing-real-intel-xess-super-resolution-to-steamos-and-proton-games-on-linux/",
-  "blurb": "Experimental project brings 'real' Intel XeSS upscaling to SteamOS/Proton games on Linux, ahead of Intel's own."
+  "title": "Steam gets a boatload of restored Wing Commanders and Ultima ports after EA producer stumbles across cupboard of old tapes",
+  "link": "https://www.rockpapershotgun.com/steam-gets-a-boatload-of-restored-wing-commanders-and-ultima-ports-after-ea-producer-stumbles-across-cupboard-of-old-tapes",
+  "blurb": "EA producer finds old tapes; restored Wing Commander and Ultima ports land on Steam — preservation with industry context."
  },
  {
-  "title": "Nexus Mods introduces new AI disclosure rules, but won't ban AI mods outright",
-  "link": "https://www.eurogamer.net/nexus-mods-gen-ai-disclosure-rules",
-  "blurb": "Nexus Mods requires AI disclosure for mods but stops short of a ban, mirroring Valve's approach."
+  "title": "After a 16-year long dev period, Faraway, a shooting star arcade game about siphoning the energy of other stars, is out now",
+  "link": "https://www.rockpapershotgun.com/after-a-16-year-long-dev-period-faraway-a-shooting-star-arcade-game-about-siphoning-the-energy-of-other-stars-is-out-now",
+  "blurb": "Faraway, an arcade game 16 years in the making, is out now."
  },
  {
-  "title": "Software squeezes more data out of Webb Telescope for imaging exoplanets",
-  "link": "https://arstechnica.com/science/2026/11/getting-software-to-help-block-out-a-star-so-we-can-see-exoplanets/",
-  "blurb": "Software post-processing squeezes more exoplanet imaging data out of Webb telescope observations."
+  "title": "A Strange Quantum Theorem Has Killed Einstein’s Reality",
+  "link": "https://www.quantamagazine.org/a-strange-quantum-theorem-has-killed-einsteins-reality-20261106/",
+  "blurb": "Quanta on a quantum theorem that undercuts Einstein-style local realism."
  },
  {
-  "title": "11 nanoseconds per word: Ridiculously Over-Optimizing Anagrams",
-  "link": "https://wiredream.com/anagram-fun/",
-  "blurb": "Heavily over-optimized anagram search at ~11 ns per word."
+  "title": "Earth's churning mantle may have created the Great Unconformity",
+  "link": "https://arstechnica.com/science/2026/11/earths-churning-mantle-may-have-created-the-great-unconformity/",
+  "blurb": "Ars: churning mantle dynamics proposed as the cause of the Great Unconformity."
  },
  {
-  "title": "Obscure audio codec is a perfect fit for the N64",
-  "link": "https://phoboslab.org/log/2026/11/n64-ulc-codec",
-  "blurb": "The ULC audio codec turns out to fit the N64's hardware well."
+  "title": "Firecracker VM Escape: PwnEscape Part 2",
+  "link": "https://pwn.ai/blog/firecracker-escape",
+  "blurb": "Deep digest not produced: host not in session's allowed network domains. Firecracker microVM escape writeup (PwnEscape Part 2) — hypervisor-level exploit detail. Based on title only."
  },
  {
-  "title": "Pitting a Modern Chess Engine on a Pentium PC Against 1996’s Deep Blue",
-  "link": "https://hackaday.com/2026/11/05/pitting-a-modern-chess-engine-on-a-pentium-pc-against-1996s-deep-blue/",
-  "blurb": "Modern chess engine on a Pentium PC pitted against 1996's Deep Blue."
+  "title": "MousePods Reverse Engineers Head Tracking Data From Stubborn AirPods",
+  "link": "https://hackaday.com/2026/11/06/mousepods-reverse-engineers-head-tracking-data-from-stubborn-airpods/",
+  "blurb": "MousePods reverse-engineers AirPods head-tracking data to use them as a pointer."
+ },
+ {
+  "title": "Using Halftone Images in QR codes Without Upsetting Scanners",
+  "link": "https://hackaday.com/2026/11/06/using-halftone-images-in-qr-codes-without-upsetting-scanners/",
+  "blurb": "Halftone images embedded in QR codes without breaking scanners."
  }
 ]
