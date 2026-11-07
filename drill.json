@@ -1,8 +1,8 @@
 [
  {
-  "title": "Decode drill: MOV r/m8, imm8",
-  "guid": "2026-11-06",
-  "blurb": "Target: Windows x86-64.\n\nDecode this instruction:\n\nC6 41 03 41\n\nWhat is the assembly? Which operand is the immediate, and how many bytes does it write?\n\nANSWER\nmov byte ptr [rcx+3], 0x41\n\n- C6 /0 ib is MOV r/m8, imm8. ModRM 41 = 01 000 001: mod=01 (disp8 follows), reg=000 (the /0 opcode extension, not a register), rm=001 (rcx base). Then 03 = disp8, 41 = imm8.\n- The immediate always comes last, after the displacement. It writes exactly one byte ('A') to rcx+3; neighbouring bytes are untouched.\n- In C: ((char*)p)[3] = 'A'; with p in rcx (Windows x64 first argument).",
+  "title": "Reverse drill: one-operand MUL high half",
+  "guid": "2026-11-07",
+  "blurb": "Target: Windows x86-64 (args in `ecx`, `edx`).\n\nReverse this short function to equivalent C:\n\n\nmystery:\n    mov     eax, ecx\n    mul     edx\n    mov     eax, edx\n    ret\n\n\nWhat does it return for (3, 5), (0x10000, 0x10000), (0xFFFFFFFF, 2) and (0x80000000, 0x80000000)?\n\nANSWER\nAnswer\n\n\nunsigned mystery(unsigned a, unsigned b) {\n    return (unsigned)(((unsigned long long)a * b) >> 32);   // high half of 64-bit product\n}\n\n\nResults: 0, 1, 1, 0x40000000.\n\nExplanation\n\n- One-operand `mul r/m32` (F7 /4) multiplies eax by the operand as unsigned and writes the 64-bit product to edx:eax (high:low); eax is an implicit input.\n- Here the operand is edx itself, read before the result overwrites it, so `mov eax, edx` then returns the high 32 bits, discarding the low half.\n- It sets CF/OF when edx is nonzero (product didn't fit in 32 bits); `imul` has a signed one-operand form.",
   "link": ""
  }
 ]
