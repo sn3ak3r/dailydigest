@@ -1,8 +1,8 @@
 [
  {
-  "title": "Reverse drill: one-operand MUL high half",
-  "guid": "2026-11-07",
-  "blurb": "Target: Windows x86-64 (args in `ecx`, `edx`).\n\nReverse this short function to equivalent C:\n\n\nmystery:\n    mov     eax, ecx\n    mul     edx\n    mov     eax, edx\n    ret\n\n\nWhat does it return for (3, 5), (0x10000, 0x10000), (0xFFFFFFFF, 2) and (0x80000000, 0x80000000)?\n\nANSWER\nAnswer\n\n\nunsigned mystery(unsigned a, unsigned b) {\n    return (unsigned)(((unsigned long long)a * b) >> 32);   // high half of 64-bit product\n}\n\n\nResults: 0, 1, 1, 0x40000000.\n\nExplanation\n\n- One-operand `mul r/m32` (F7 /4) multiplies eax by the operand as unsigned and writes the 64-bit product to edx:eax (high:low); eax is an implicit input.\n- Here the operand is edx itself, read before the result overwrites it, so `mov eax, edx` then returns the high 32 bits, discarding the low half.\n- It sets CF/OF when edx is nonzero (product didn't fit in 32 bits); `imul` has a signed one-operand form.",
+  "title": "Assembly Drill 2026-11-08: crackme",
+  "guid": "2026-11-08",
+  "blurb": "# Crackme: find the input (Windows x64, arg in ecx)\n\n```\n    movsx  eax, cl\n    add    eax, 100\n    cmp    eax, 95\n    sete   al\n    movzx  eax, al\n    ret\n```\n\nWhich low byte of `ecx` (`cl`) makes the function return 1? Give it as a hex byte. (Upper bits of `ecx` are arbitrary.)\n\n\n**Answer:** `0xFB` (251 unsigned, -5 signed)\n\n1. `movsx eax, cl` (0F BE /r) sign-extends the byte to 32 bits, copying bit 7 into bits 8-31; only `cl` matters, the rest of `ecx` is ignored.\n2. The check needs `sext(cl) + 100 == 95`, so `sext(cl) = -5`.\n3. -5 as a byte is 0xFB, and sign-extending it gives 0xFFFFFFFB, so 0xFB works (check: -5 + 100 = 95). Zero-extension (`movzx`) would make this impossible.\n",
   "link": ""
  }
 ]

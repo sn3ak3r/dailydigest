@@ -84,3 +84,4 @@
 2026-11-05 | crackme | imul r32,r/m32,imm (6B /r) three-operand multiply keeps source intact, add then cmp, backward-solving by dividing (odd multiplier invertible mod 2^32)
 2026-11-06 | decode-instruction | MOV r/m8,imm8 opcode C6 /0 ib, disp8 then imm8 operand order, byte-sized store, ModRM reg field as /0 extension
 2026-11-07 | reverse-function | one-operand mul r/m32 (F7 /4) unsigned edx:eax 64-bit product, implicit eax input, high half via mov eax,edx, CF/OF set when edx nonzero
+2026-11-08 | crackme | movsx r32,r/m8 (0F BE) sign-extension of cl, upper ecx bits ignored, add then cmp, backward-solving to negative byte 0xFB vs movzx
