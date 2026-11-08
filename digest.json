@@ -1,52 +1,47 @@
 [
  {
-  "title": "faulTPM: Exposing AMD fTPMs' Deepest Secrets",
-  "link": "https://arxiv.org/abs/2304.14717",
-  "blurb": "Deep digest not produced: host not in session's allowed network domains. AMD fTPM attack paper (faulTPM) — fault-injection style extraction of secrets from firmware TPMs; relevant to Windows TPM-backed trust. Based on title only."
+  "title": "Hackers Target OpenSSH SSHole Flaw Within Hours of Disclosure, Gain Root on Honeypot",
+  "link": "https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html",
+  "blurb": "Exploited within hours of disclosure; root gained on a honeypot \u2014 patch OpenSSH now."
  },
  {
-  "title": "Experts Demonstrate Barracuda Email Security Gateway Chain Enabling Root Access Without Login",
-  "link": "https://thehackernews.com/2026/11/experts-demonstrate-barracuda-email.html",
-  "blurb": "Researchers chain Barracuda Email Security Gateway bugs into unauthenticated root access."
+  "title": "Microsoft Paint RCE Fix Now Available, but Windows Update Won't Deliver It",
+  "link": "https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html",
+  "blurb": "Paint RCE fix exists but Windows Update won't deliver it; manual install needed."
  },
  {
-  "title": "Hackers Hide Linux Backdoor in Control Web Panel Server to Execute Commands Without Logs",
-  "link": "https://thehackernews.com/2026/11/hackers-hide-linux-backdoor-in-control.html",
-  "blurb": "Linux backdoor hidden in Control Web Panel servers runs commands without leaving logs."
+  "title": "Malicious Browser Extensions Could Use Claude Dispatch to Run Code on Users' Computers",
+  "link": "https://thehackernews.com/2026/11/malicious-browser-extensions-could-use.html",
+  "blurb": "Extensions can abuse an AI agent bridge to run code on the host."
  },
  {
-  "title": "Steam gets a boatload of restored Wing Commanders and Ultima ports after EA producer stumbles across cupboard of old tapes",
-  "link": "https://www.rockpapershotgun.com/steam-gets-a-boatload-of-restored-wing-commanders-and-ultima-ports-after-ea-producer-stumbles-across-cupboard-of-old-tapes",
-  "blurb": "EA producer finds old tapes; restored Wing Commander and Ultima ports land on Steam — preservation with industry context."
+  "title": "Former Rockstar Games tech director thinks GTA 6 could be coming to PC sooner than you'd expect to curb AI clones",
+  "link": "https://www.eurogamer.net/grand-theft-auto-6-pc-sooner-than-you-expect-curb-ai-clone",
+  "blurb": "Ex-Rockstar tech director argues a quick GTA 6 PC port limits AI clones."
  },
  {
-  "title": "After a 16-year long dev period, Faraway, a shooting star arcade game about siphoning the energy of other stars, is out now",
-  "link": "https://www.rockpapershotgun.com/after-a-16-year-long-dev-period-faraway-a-shooting-star-arcade-game-about-siphoning-the-energy-of-other-stars-is-out-now",
-  "blurb": "Faraway, an arcade game 16 years in the making, is out now."
+  "title": "Discord is cutting memory usage and speeding up boot times - joins Xbox, Epic, Steam, and more for similar upgrades just this year",
+  "link": "https://www.pcgamer.com/hardware/discord-is-cutting-memory-usage-and-speeding-up-boot-times-joins-xbox-epic-steam-and-more-for-similar-upgrades-just-this-year/",
+  "blurb": "Discord trims memory use and boot time, joining Xbox, Epic and Steam client slimming."
  },
  {
-  "title": "A Strange Quantum Theorem Has Killed Einstein’s Reality",
-  "link": "https://www.quantamagazine.org/a-strange-quantum-theorem-has-killed-einsteins-reality-20261106/",
-  "blurb": "Quanta on a quantum theorem that undercuts Einstein-style local realism."
+  "title": "The Bantu expansion changed Africa. Scientists are still tracing how.",
+  "link": "https://arstechnica.com/science/2026/11/the-migration-that-transformed-africas-languages-genes-and-cultures/",
+  "blurb": "Genetics, linguistics and archaeology still refining how Bantu migrations reshaped Africa."
  },
  {
-  "title": "Earth's churning mantle may have created the Great Unconformity",
-  "link": "https://arstechnica.com/science/2026/11/earths-churning-mantle-may-have-created-the-great-unconformity/",
-  "blurb": "Ars: churning mantle dynamics proposed as the cause of the Great Unconformity."
+  "title": "Proper Linux, On An ESP32",
+  "link": "https://hackaday.com/2026/11/07/proper-linux-on-an-esp32/",
+  "blurb": "Full Linux booting on an ESP32 microcontroller, build documented."
  },
  {
-  "title": "Firecracker VM Escape: PwnEscape Part 2",
-  "link": "https://pwn.ai/blog/firecracker-escape",
-  "blurb": "Deep digest not produced: host not in session's allowed network domains. Firecracker microVM escape writeup (PwnEscape Part 2) — hypervisor-level exploit detail. Based on title only."
+  "title": "Hacking the meta ray-ban smartglasses",
+  "link": "https://p0pcycle.com/2026/11/06/hacking-the-meta-ray-ban-smartglasses/",
+  "blurb": "Writeup on hacking Meta Ray-Ban smartglasses. Deep digest not produced: p0pcycle.com not in allowed network domains."
  },
  {
-  "title": "MousePods Reverse Engineers Head Tracking Data From Stubborn AirPods",
-  "link": "https://hackaday.com/2026/11/06/mousepods-reverse-engineers-head-tracking-data-from-stubborn-airpods/",
-  "blurb": "MousePods reverse-engineers AirPods head-tracking data to use them as a pointer."
- },
- {
-  "title": "Using Halftone Images in QR codes Without Upsetting Scanners",
-  "link": "https://hackaday.com/2026/11/06/using-halftone-images-in-qr-codes-without-upsetting-scanners/",
-  "blurb": "Halftone images embedded in QR codes without breaking scanners."
+  "title": "The Hidden Microcontroller Inside a LoRa chip",
+  "link": "https://hackaday.com/2026/11/07/the-hidden-microcontroller-inside-a-lora-chip/",
+  "blurb": "Problem: LoRa radio chips are treated as fixed-function parts, but Semtech's LR2021 hides an undocumented microcontroller. Approach: Alex Beal reverse engineered that MCU and its firmware interface (with LLM help), then wrote custom firmware loaded into the chip's RAM, so it vanishes on power-down. Result: custom code runs on the radio itself; on-chip FFTs for a waterfall display look feasible, and a host MCU could load it then sleep. Claims of a full mesh node are disputed in comments. Why it matters: turns a black-box transceiver into a programmable one, cutting host load and power. Glossary: LoRa (long-range low-power radio); MCU (microcontroller); FFT (time-to-frequency transform); SDR (radio functions in software)."
  }
 ]
