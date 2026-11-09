@@ -1,8 +1,8 @@
 [
  {
-  "title": "Assembly Drill 2026-11-08: crackme",
-  "guid": "2026-11-08",
-  "blurb": "# Crackme: find the input (Windows x64, arg in ecx)\n\n```\n    movsx  eax, cl\n    add    eax, 100\n    cmp    eax, 95\n    sete   al\n    movzx  eax, al\n    ret\n```\n\nWhich low byte of `ecx` (`cl`) makes the function return 1? Give it as a hex byte. (Upper bits of `ecx` are arbitrary.)\n\n\n**Answer:** `0xFB` (251 unsigned, -5 signed)\n\n1. `movsx eax, cl` (0F BE /r) sign-extends the byte to 32 bits, copying bit 7 into bits 8-31; only `cl` matters, the rest of `ecx` is ignored.\n2. The check needs `sext(cl) + 100 == 95`, so `sext(cl) = -5`.\n3. -5 as a byte is 0xFB, and sign-extending it gives 0xFFFFFFFB, so 0xFB works (check: -5 + 100 = 95). Zero-extension (`movzx`) would make this impossible.\n",
+  "title": "Assembly Drill 2026-11-09: decode-instruction",
+  "guid": "2026-11-09",
+  "blurb": "Target: Windows x86-64.\n\nDecode this instruction, located at address `0x140001000`:\n\n```\nFF 15 F2 0F 00 00\n```\n\nWhat is the assembly? Where in memory is the pointer it reads, and what kind of call is this (direct or indirect)?\n\n\n**Answer:**\n\n`call qword ptr [rip+0xFF2]` \u2014 an indirect call through the pointer stored at `0x140001FF8`.\n\n- `FF /2` is CALL r/m64 (near indirect). ModRM `15` = `00 010 101`: reg=010 is the /2 opcode extension (/0 would be INC), mod=00 with rm=101 means RIP-relative disp32. No REX needed; operand size is 64-bit by default.\n- Disp32 `F2 0F 00 00` is little-endian 0x00000FF2. RIP is the next instruction (0x140001000 + 6 = 0x140001006), so the pointer lives at 0x140001006 + 0xFF2 = 0x140001FF8.\n- This is the usual Windows import call: that slot is an Import Address Table entry, and the CPU loads the API address from it and calls it (unlike E8, the target isn't encoded in the instruction).",
   "link": ""
  }
 ]

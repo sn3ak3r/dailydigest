@@ -1,20 +1,18 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-08: crackme</title><link></link><description># Crackme: find the input (Windows x64, arg in ecx)
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-09: decode-instruction</title><link></link><description>Target: Windows x86-64.
+
+Decode this instruction, located at address `0x140001000`:
 
 ```
-    movsx  eax, cl
-    add    eax, 100
-    cmp    eax, 95
-    sete   al
-    movzx  eax, al
-    ret
+FF 15 F2 0F 00 00
 ```
 
-Which low byte of `ecx` (`cl`) makes the function return 1? Give it as a hex byte. (Upper bits of `ecx` are arbitrary.)
+What is the assembly? Where in memory is the pointer it reads, and what kind of call is this (direct or indirect)?
 
 
-**Answer:** `0xFB` (251 unsigned, -5 signed)
+**Answer:**
 
-1. `movsx eax, cl` (0F BE /r) sign-extends the byte to 32 bits, copying bit 7 into bits 8-31; only `cl` matters, the rest of `ecx` is ignored.
-2. The check needs `sext(cl) + 100 == 95`, so `sext(cl) = -5`.
-3. -5 as a byte is 0xFB, and sign-extending it gives 0xFFFFFFFB, so 0xFB works (check: -5 + 100 = 95). Zero-extension (`movzx`) would make this impossible.
-</description><guid isPermaLink='false'>2026-11-08</guid><pubDate>Sun, 08 Nov 2026 02:30:47 +0000</pubDate></item></channel></rss>
+`call qword ptr [rip+0xFF2]` — an indirect call through the pointer stored at `0x140001FF8`.
+
+- `FF /2` is CALL r/m64 (near indirect). ModRM `15` = `00 010 101`: reg=010 is the /2 opcode extension (/0 would be INC), mod=00 with rm=101 means RIP-relative disp32. No REX needed; operand size is 64-bit by default.
+- Disp32 `F2 0F 00 00` is little-endian 0x00000FF2. RIP is the next instruction (0x140001000 + 6 = 0x140001006), so the pointer lives at 0x140001006 + 0xFF2 = 0x140001FF8.
+- This is the usual Windows import call: that slot is an Import Address Table entry, and the CPU loads the API address from it and calls it (unlike E8, the target isn&#x27;t encoded in the instruction).</description><guid isPermaLink='false'>2026-11-09</guid><pubDate>Mon, 09 Nov 2026 02:31:32 +0000</pubDate></item></channel></rss>

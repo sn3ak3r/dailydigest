@@ -85,3 +85,4 @@
 2026-11-06 | decode-instruction | MOV r/m8,imm8 opcode C6 /0 ib, disp8 then imm8 operand order, byte-sized store, ModRM reg field as /0 extension
 2026-11-07 | reverse-function | one-operand mul r/m32 (F7 /4) unsigned edx:eax 64-bit product, implicit eax input, high half via mov eax,edx, CF/OF set when edx nonzero
 2026-11-08 | crackme | movsx r32,r/m8 (0F BE) sign-extension of cl, upper ecx bits ignored, add then cmp, backward-solving to negative byte 0xFB vs movzx
+2026-11-09 | decode-instruction | FF /2 indirect near CALL r/m64, call qword ptr [rip+disp32] via IAT slot, mod=00 rm=101 RIP-relative, pointer address = next instruction + disp, contrast with E8 direct
