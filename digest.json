@@ -1,47 +1,42 @@
 [
  {
-  "title": "Hackers Target OpenSSH SSHole Flaw Within Hours of Disclosure, Gain Root on Honeypot",
-  "link": "https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html",
-  "blurb": "Exploited within hours of disclosure; root gained on a honeypot \u2014 patch OpenSSH now."
+  "title": "Hackers pull off $133 million French bank heist via service provider",
+  "link": "https://www.bleepingcomputer.com/news/security/hackers-pull-off-133-million-french-bank-heist-via-service-provider/",
+  "blurb": "Attackers stole ~$133M from a French bank through a compromised service provider; supply-chain access again the weak point."
  },
  {
-  "title": "Microsoft Paint RCE Fix Now Available, but Windows Update Won't Deliver It",
-  "link": "https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html",
-  "blurb": "Paint RCE fix exists but Windows Update won't deliver it; manual install needed."
+  "title": "Claude Code's “Don't Ask Again” File Exposes Passwords and Keys in 1,122 Public Copies on GitHub",
+  "link": "https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html",
+  "blurb": "Claude Code's persisted 'Don't Ask Again' permissions file is leaking passwords and keys in 1,122 public GitHub copies; check your commits."
  },
  {
-  "title": "Malicious Browser Extensions Could Use Claude Dispatch to Run Code on Users' Computers",
-  "link": "https://thehackernews.com/2026/11/malicious-browser-extensions-could-use.html",
-  "blurb": "Extensions can abuse an AI agent bridge to run code on the host."
+  "title": "As Wardogs Season 3 looms, Bulkhead claims to have built 'one of the world's most sophisticated anti-cheat systems', assisted by 'machine learning and AI'",
+  "link": "https://www.pcgamer.com/games/fps/as-wardogs-season-3-looms-bulkhead-claims-to-have-built-one-of-the-worlds-most-sophisticated-anti-cheat-systems-assisted-by-machine-learning-and-ai/",
+  "blurb": "Bulkhead says Wardogs' anti-cheat uses machine learning; a 185,000-account ban wave accompanies Season 3."
  },
  {
-  "title": "Former Rockstar Games tech director thinks GTA 6 could be coming to PC sooner than you'd expect to curb AI clones",
-  "link": "https://www.eurogamer.net/grand-theft-auto-6-pc-sooner-than-you-expect-curb-ai-clone",
-  "blurb": "Ex-Rockstar tech director argues a quick GTA 6 PC port limits AI clones."
+  "title": "This massive mod essentially turns Skyrim into a persistent MMO 'where player actions create lasting consequences'",
+  "link": "https://www.pcgamer.com/games/the-elder-scrolls/this-massive-mod-essentially-turns-skyrim-into-a-persistent-mmo-where-player-actions-create-lasting-consequences/",
+  "blurb": "A large Skyrim mod adds persistent, MMO-style shared-world state where player actions have lasting consequences."
  },
  {
-  "title": "Discord is cutting memory usage and speeding up boot times - joins Xbox, Epic, Steam, and more for similar upgrades just this year",
-  "link": "https://www.pcgamer.com/hardware/discord-is-cutting-memory-usage-and-speeding-up-boot-times-joins-xbox-epic-steam-and-more-for-similar-upgrades-just-this-year/",
-  "blurb": "Discord trims memory use and boot time, joining Xbox, Epic and Steam client slimming."
+  "title": "Physicists listened to electrical noise to crack a superconductor mystery",
+  "link": "https://arstechnica.com/science/2026/11/physicists-listened-to-electrical-noise-to-crack-a-superconductor-mystery/",
+  "blurb": "Electrical-noise measurements (shot noise) used to resolve a superconductor puzzle. Deep digest not produced: arstechnica.com not in allowed network domains."
  },
  {
-  "title": "The Bantu expansion changed Africa. Scientists are still tracing how.",
-  "link": "https://arstechnica.com/science/2026/11/the-migration-that-transformed-africas-languages-genes-and-cultures/",
-  "blurb": "Genetics, linguistics and archaeology still refining how Bantu migrations reshaped Africa."
+  "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
+  "link": "https://github.com/synchopate/llama-modchip",
+  "blurb": "Runs a 284B-parameter DeepSeek model on 64GB RAM with no GPU; a build with the method documented."
  },
  {
-  "title": "Proper Linux, On An ESP32",
-  "link": "https://hackaday.com/2026/11/07/proper-linux-on-an-esp32/",
-  "blurb": "Full Linux booting on an ESP32 microcontroller, build documented."
+  "title": "KetchUp – Open-source SketchUp alternative built with Rust and WebGPU",
+  "link": "https://ketchup3d.github.io/app/",
+  "blurb": "Open-source SketchUp-style 3D modeller built with Rust and WebGPU."
  },
  {
-  "title": "Hacking the meta ray-ban smartglasses",
-  "link": "https://p0pcycle.com/2026/11/06/hacking-the-meta-ray-ban-smartglasses/",
-  "blurb": "Writeup on hacking Meta Ray-Ban smartglasses. Deep digest not produced: p0pcycle.com not in allowed network domains."
- },
- {
-  "title": "The Hidden Microcontroller Inside a LoRa chip",
-  "link": "https://hackaday.com/2026/11/07/the-hidden-microcontroller-inside-a-lora-chip/",
-  "blurb": "Problem: LoRa radio chips are treated as fixed-function parts, but Semtech's LR2021 hides an undocumented microcontroller. Approach: Alex Beal reverse engineered that MCU and its firmware interface (with LLM help), then wrote custom firmware loaded into the chip's RAM, so it vanishes on power-down. Result: custom code runs on the radio itself; on-chip FFTs for a waterfall display look feasible, and a host MCU could load it then sleep. Claims of a full mesh node are disputed in comments. Why it matters: turns a black-box transceiver into a programmable one, cutting host load and power. Glossary: LoRa (long-range low-power radio); MCU (microcontroller); FFT (time-to-frequency transform); SDR (radio functions in software)."
+  "title": "PHP2Shell — Deep Dive",
+  "link": "https://djad04.github.io/php2shell-deep-dive/",
+  "blurb": "Technical deep dive into a PHP2Shell attack chain. Deep digest not produced: djad04.github.io not in allowed network domains."
  }
 ]
