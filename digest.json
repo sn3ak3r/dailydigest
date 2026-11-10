@@ -1,42 +1,52 @@
 [
  {
-  "title": "Hackers pull off $133 million French bank heist via service provider",
-  "link": "https://www.bleepingcomputer.com/news/security/hackers-pull-off-133-million-french-bank-heist-via-service-provider/",
-  "blurb": "Attackers stole ~$133M from a French bank through a compromised service provider; supply-chain access again the weak point."
+  "title": "Microsoft Fixes RCE Bug in Windows Paint After Weeks of Confusion",
+  "link": "https://www.darkreading.com/application-security/microsoft-rce-bug-windows-paint-confusion",
+  "blurb": "Windows Paint RCE patched after weeks of conflicting reports; Windows internals bug worth checking your patch level."
  },
  {
-  "title": "Claude Code's “Don't Ask Again” File Exposes Passwords and Keys in 1,122 Public Copies on GitHub",
-  "link": "https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html",
-  "blurb": "Claude Code's persisted 'Don't Ask Again' permissions file is leaking passwords and keys in 1,122 public GitHub copies; check your commits."
+  "title": "Hackers exploit SSHole OpenSSH flaw to breach Linux systems",
+  "link": "https://www.bleepingcomputer.com/news/security/hackers-exploit-sshole-openssh-flaw-to-breach-linux-systems/",
+  "blurb": "Active exploitation of an OpenSSH flaw ('SSHole') to breach Linux hosts; patch/mitigate exposed sshd."
  },
  {
-  "title": "As Wardogs Season 3 looms, Bulkhead claims to have built 'one of the world's most sophisticated anti-cheat systems', assisted by 'machine learning and AI'",
-  "link": "https://www.pcgamer.com/games/fps/as-wardogs-season-3-looms-bulkhead-claims-to-have-built-one-of-the-worlds-most-sophisticated-anti-cheat-systems-assisted-by-machine-learning-and-ai/",
-  "blurb": "Bulkhead says Wardogs' anti-cheat uses machine learning; a 185,000-account ban wave accompanies Season 3."
+  "title": "Great news! Nier: Automata's install size is no longer 7x bigger than it should be (it was 366 GB)",
+  "link": "https://www.pcgamer.com/games/rpg/great-news-nier-automatas-install-size-is-no-longer-7x-bigger-than-it-should-be-it-was-366-gb/",
+  "blurb": "Nier: Automata's install shrinks from 366 GB-class bloat to normal size, a rare asset-packaging fix."
  },
  {
-  "title": "This massive mod essentially turns Skyrim into a persistent MMO 'where player actions create lasting consequences'",
-  "link": "https://www.pcgamer.com/games/the-elder-scrolls/this-massive-mod-essentially-turns-skyrim-into-a-persistent-mmo-where-player-actions-create-lasting-consequences/",
-  "blurb": "A large Skyrim mod adds persistent, MMO-style shared-world state where player actions have lasting consequences."
+  "title": "Swarmbreaker is an uncommonly mesmerising tower defence game in which enemies \"cluster, collide and flow like a fluid\"",
+  "link": "https://www.rockpapershotgun.com/swarmbreaker-is-an-uncommonly-mesmerising-tower-defence-game-in-which-enemies-cluster-collide-and-flow-like-a-fluid",
+  "blurb": "Tower defence where enemies behave like a fluid, a neat indie take on crowd simulation."
  },
  {
-  "title": "Physicists listened to electrical noise to crack a superconductor mystery",
-  "link": "https://arstechnica.com/science/2026/11/physicists-listened-to-electrical-noise-to-crack-a-superconductor-mystery/",
-  "blurb": "Electrical-noise measurements (shot noise) used to resolve a superconductor puzzle. Deep digest not produced: arstechnica.com not in allowed network domains."
+  "title": "Did Life Begin in an RNA World?",
+  "link": "https://www.quantamagazine.org/did-life-begin-in-an-rna-world-20261109/",
+  "blurb": "Quanta examines the evidence for and against an RNA-world origin of life."
  },
  {
-  "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
-  "link": "https://github.com/synchopate/llama-modchip",
-  "blurb": "Runs a 284B-parameter DeepSeek model on 64GB RAM with no GPU; a build with the method documented."
+  "title": "Pentagon mulls placing fleet of military satellites around the Moon",
+  "link": "https://arstechnica.com/space/2026/11/us-military-notionally-interested-in-satellite-constellation-around-moon/",
+  "blurb": "Pentagon floats a satellite constellation around the Moon, signalling cislunar military interest."
  },
  {
-  "title": "KetchUp – Open-source SketchUp alternative built with Rust and WebGPU",
-  "link": "https://ketchup3d.github.io/app/",
-  "blurb": "Open-source SketchUp-style 3D modeller built with Rust and WebGPU."
+  "title": "Reverse Engineering a 1960s Diode-Transistor Logic IC",
+  "link": "https://hackaday.com/2026/11/09/reverse-engineering-a-1960s-diode-transistor-logic-ic/",
+  "blurb": "Hackaday teardown/RE of a 1960s diode-transistor logic IC, documented die-level."
  },
  {
-  "title": "PHP2Shell — Deep Dive",
-  "link": "https://djad04.github.io/php2shell-deep-dive/",
-  "blurb": "Technical deep dive into a PHP2Shell attack chain. Deep digest not produced: djad04.github.io not in allowed network domains."
+  "title": "What is malloc doing, anyway?",
+  "link": "https://benmandrew.com/articles/what-is-malloc-doing-anyway",
+  "blurb": "Walkthrough of what malloc does under the hood, with the build documented."
+ },
+ {
+  "title": "PhotoFinish: Portable Timerless Probing of Microarchitectural Latencies",
+  "link": "https://arxiv.org/abs/2611.09879",
+  "blurb": "Not fetched: host blocked by session network allowlist (arxiv.org). Digest skipped this run; title only: PhotoFinish: Portable Timerless Probing of Microarchitectural Latencies"
+ },
+ {
+  "title": "Sem86: a full-system x86 emulator without hardcoded semantics",
+  "link": "https://liblisa.nl/sem86/",
+  "blurb": "Not fetched: host blocked by session network allowlist (liblisa.nl). Digest skipped this run; title only: Sem86: a full-system x86 emulator without hardcoded semantics"
  }
 ]
