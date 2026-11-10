@@ -1,8 +1,8 @@
 [
  {
-  "title": "Assembly Drill 2026-11-09: decode-instruction",
-  "guid": "2026-11-09",
-  "blurb": "Target: Windows x86-64.\n\nDecode this instruction, located at address `0x140001000`:\n\n```\nFF 15 F2 0F 00 00\n```\n\nWhat is the assembly? Where in memory is the pointer it reads, and what kind of call is this (direct or indirect)?\n\n\n**Answer:**\n\n`call qword ptr [rip+0xFF2]` \u2014 an indirect call through the pointer stored at `0x140001FF8`.\n\n- `FF /2` is CALL r/m64 (near indirect). ModRM `15` = `00 010 101`: reg=010 is the /2 opcode extension (/0 would be INC), mod=00 with rm=101 means RIP-relative disp32. No REX needed; operand size is 64-bit by default.\n- Disp32 `F2 0F 00 00` is little-endian 0x00000FF2. RIP is the next instruction (0x140001000 + 6 = 0x140001006), so the pointer lives at 0x140001006 + 0xFF2 = 0x140001FF8.\n- This is the usual Windows import call: that slot is an Import Address Table entry, and the CPU loads the API address from it and calls it (unlike E8, the target isn't encoded in the instruction).",
+  "title": "Assembly Drill 2026-11-10: reverse-function",
+  "guid": "2026-11-10",
+  "blurb": "Target: Windows x86-64.\n\nReverse this short function to equivalent C:\n\n```asm\nmystery:\n    mov     eax, ecx\n    cdq\n    xor     eax, edx\n    sub     eax, edx\n    ret\n```\n\nWhat does it return for 5, -5, 0 and -2147483647?\n\n---\n\n## Answer\n\n```c\nint mystery(int x) {\n    return x < 0 ? -x : x;   // branchless abs()\n}\n```\n\nResults: 5, 5, 0, 2147483647.\n\n## Explanation\n\n- `cdq` (opcode 99) sign-extends eax into edx: edx = 0 for x >= 0, or 0xFFFFFFFF (-1) for x < 0, i.e. the sign mask.\n- For negative x, `xor` with -1 gives ~x and `sub` of -1 adds 1, so ~x + 1 = -x (two's-complement negate). For non-negative x both steps do nothing.\n- No branch is needed. INT_MIN (0x80000000) stays negative, since +2^31 doesn't fit in an int.",
   "link": ""
  }
 ]
