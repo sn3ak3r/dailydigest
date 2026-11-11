@@ -1,8 +1,8 @@
 [
  {
-  "title": "Assembly Drill 2026-11-10: reverse-function",
-  "guid": "2026-11-10",
-  "blurb": "Target: Windows x86-64.\n\nReverse this short function to equivalent C:\n\n```asm\nmystery:\n    mov     eax, ecx\n    cdq\n    xor     eax, edx\n    sub     eax, edx\n    ret\n```\n\nWhat does it return for 5, -5, 0 and -2147483647?\n\n---\n\n## Answer\n\n```c\nint mystery(int x) {\n    return x < 0 ? -x : x;   // branchless abs()\n}\n```\n\nResults: 5, 5, 0, 2147483647.\n\n## Explanation\n\n- `cdq` (opcode 99) sign-extends eax into edx: edx = 0 for x >= 0, or 0xFFFFFFFF (-1) for x < 0, i.e. the sign mask.\n- For negative x, `xor` with -1 gives ~x and `sub` of -1 adds 1, so ~x + 1 = -x (two's-complement negate). For non-negative x both steps do nothing.\n- No branch is needed. INT_MIN (0x80000000) stays negative, since +2^31 doesn't fit in an int.",
+  "title": "Assembly Drill 2026-11-11: crackme",
+  "guid": "2026-11-11",
+  "blurb": "Target: Windows x86-64.\n\n```\ncheck:\n    lea    eax, [rcx+rdx]\n    cmp    eax, 100\n    jne    fail\n    mov    eax, ecx\n    sub    eax, edx\n    cmp    eax, 20\n    jne    fail\n    mov    eax, 1\n    ret\nfail:\n    xor    eax, eax\n    ret\n```\n\n`check(int a, int b)` takes two arguments. Which `a` (ecx) and `b` (edx) make it return 1?\n\n---\n\n**Answer:** `a = 60`, `b = 40`\n\n1. Windows x64 passes the first integer arg in `ecx` and the second in `edx`; `lea eax, [rcx+rdx]` adds them into a third register without touching either input or the flags.\n2. The two checks give `a + b == 100` and `a - b == 20`; any mismatch jumps to `fail`, where `xor eax, eax` returns 0.\n3. Adding the equations gives `2a = 120`, so `a = 60`, then `b = 100 - 60 = 40` (check: 60 - 40 = 20).",
   "link": ""
  }
 ]

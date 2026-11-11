@@ -1,32 +1,27 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-10: reverse-function</title><link></link><description>Target: Windows x86-64.
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-11: crackme</title><link></link><description>Target: Windows x86-64.
 
-Reverse this short function to equivalent C:
-
-```asm
-mystery:
-    mov     eax, ecx
-    cdq
-    xor     eax, edx
-    sub     eax, edx
+```
+check:
+    lea    eax, [rcx+rdx]
+    cmp    eax, 100
+    jne    fail
+    mov    eax, ecx
+    sub    eax, edx
+    cmp    eax, 20
+    jne    fail
+    mov    eax, 1
+    ret
+fail:
+    xor    eax, eax
     ret
 ```
 
-What does it return for 5, -5, 0 and -2147483647?
+`check(int a, int b)` takes two arguments. Which `a` (ecx) and `b` (edx) make it return 1?
 
 ---
 
-## Answer
+**Answer:** `a = 60`, `b = 40`
 
-```c
-int mystery(int x) {
-    return x &lt; 0 ? -x : x;   // branchless abs()
-}
-```
-
-Results: 5, 5, 0, 2147483647.
-
-## Explanation
-
-- `cdq` (opcode 99) sign-extends eax into edx: edx = 0 for x &gt;= 0, or 0xFFFFFFFF (-1) for x &lt; 0, i.e. the sign mask.
-- For negative x, `xor` with -1 gives ~x and `sub` of -1 adds 1, so ~x + 1 = -x (two&#x27;s-complement negate). For non-negative x both steps do nothing.
-- No branch is needed. INT_MIN (0x80000000) stays negative, since +2^31 doesn&#x27;t fit in an int.</description><guid isPermaLink='false'>2026-11-10</guid><pubDate>Tue, 10 Nov 2026 02:31:24 +0000</pubDate></item></channel></rss>
+1. Windows x64 passes the first integer arg in `ecx` and the second in `edx`; `lea eax, [rcx+rdx]` adds them into a third register without touching either input or the flags.
+2. The two checks give `a + b == 100` and `a - b == 20`; any mismatch jumps to `fail`, where `xor eax, eax` returns 0.
+3. Adding the equations gives `2a = 120`, so `a = 60`, then `b = 100 - 60 = 40` (check: 60 - 40 = 20).</description><guid isPermaLink='false'>2026-11-11</guid><pubDate>Wed, 11 Nov 2026 02:33:50 +0000</pubDate></item></channel></rss>
