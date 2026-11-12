@@ -1,52 +1,52 @@
 [
  {
-  "title": "Turla hackers use new Cereal malware to spy on govt Exchange servers",
-  "link": "https://www.bleepingcomputer.com/news/security/turla-hackers-use-new-ceral-malware-to-spy-on-govt-exchange-servers/",
-  "blurb": "Turla deploys new 'Cereal' malware against government Exchange servers — fresh APT tooling with analysis."
+  "title": "eBPF Rootkits: Why Underground Actors Are Taking Notice",
+  "link": "https://www.bleepingcomputer.com/news/security/ebpf-rootkits-why-underground-actors-are-taking-notice/",
+  "blurb": "Why criminal actors are adopting eBPF for stealthy Linux kernel-level rootkits."
  },
  {
-  "title": "CyberBinGym: Can AI Agents Turn Binary Patches into Real Exploits?",
-  "link": "https://arxiv.org/abs/2611.10723",
-  "blurb": "Not fetched: host blocked by session network allowlist (arxiv.org). Digest skipped this run; title only: CyberBinGym: Can AI Agents Turn Binary Patches into Real Exploits?"
+  "title": "Three China-Nexus Espionage Campaigns Linked Through Sparrow Malware Ecosystem",
+  "link": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html",
+  "blurb": "Shared 'Sparrow' malware tooling ties three China-nexus espionage campaigns together."
  },
  {
-  "title": "Towards LLM-Based Analysis of Virtualization-Obfuscated Code through Automated Data Generation",
-  "link": "https://arxiv.org/abs/2605.09961",
-  "blurb": "Not fetched: host blocked by session network allowlist (arxiv.org). Digest skipped this run; title only: Towards LLM-Based Analysis of Virtualization-Obfuscated Code through Automated Data Generation"
+  "title": "Microsoft’s own upscaler and alternative to FSR just landed on Xbox Ally X handhelds - actually uses an NPU for something useful",
+  "link": "https://www.pcgamer.com/hardware/handheld-gaming-pcs/microsofts-own-upscaler-and-alternative-to-fsr-just-landed-on-xbox-ally-x-handhelds-actually-uses-an-npu-for-something-useful/",
+  "blurb": "Microsoft's NPU-driven upscaler, an FSR alternative, ships on Xbox Ally X handhelds."
  },
  {
-  "title": "Steam's new Steam Deck framerate graphs are good news for handheld players, though I wouldn't fully trust the numbers yet",
-  "link": "https://www.rockpapershotgun.com/steams-new-steam-deck-framerate-graphs-are-good-news-for-handheld-players-though-i-wouldnt-fully-trust-the-numbers-yet",
-  "blurb": "Steam now shows crowd-sourced Steam Deck framerate data per game; useful, but early numbers are noisy."
+  "title": "There were 47 graphics chip makers in 1998. Where did they all go?",
+  "link": "https://www.rockpapershotgun.com/there-were-47-graphics-chip-makers-in-1998-where-did-they-all-go",
+  "blurb": "History of the 1998 GPU boom: how 47 graphics chip makers consolidated down to a few."
  },
  {
-  "title": "‘AMDLSS5’ gets Nvidia’s neural rendering running on AMD graphics cards and claims 64% better performance than other mods",
-  "link": "https://www.pcgamer.com/hardware/graphics-cards/amdlss5-gets-nvidias-neural-rendering-running-on-amd-graphics-cards-and-claims-64-percent-better-performance-than-other-mods/",
-  "blurb": "A mod ports Nvidia-style neural rendering to AMD GPUs, claiming 64% better performance than rival mods."
+  "title": "How a Metabolic Spark Could Have Jump-Started Life",
+  "link": "https://www.quantamagazine.org/what-is-the-metabolism-first-theory-for-the-origin-of-life-20261111/",
+  "blurb": "Quanta on the metabolism-first theory: self-sustaining chemistry may have preceded genes."
  },
  {
-  "title": "The Case for a Bubble at Life’s Start",
-  "link": "https://www.quantamagazine.org/the-case-for-a-bubble-at-lifes-start-20261110/",
-  "blurb": "Quanta on new work arguing life's chemistry may have started inside lipid bubbles/compartments."
+  "title": "IBM to offer access to a dual-processor quantum system in 2027",
+  "link": "https://arstechnica.com/science/2026/11/ibm-to-offer-access-to-a-dual-processor-quantum-system-in-2027/",
+  "blurb": "IBM plans 2027 access to a quantum system with two linked processors (vendor roadmap)."
  },
  {
-  "title": "High oil prices have led to a dip in global carbon emissions",
-  "link": "https://arstechnica.com/science/2026/11/carbon-emissions-are-down-this-year-but-that-probably-wont-last/",
-  "blurb": "Analysis: high oil prices dented 2026 global CO2 emissions, though the drop likely won't last."
+  "title": "A general purpose Apple Silicon layer for x86-64 PCs",
+  "link": "https://github.com/tylertms/Stela",
+  "blurb": "Stela: an open project that adds a general-purpose Apple Silicon layer to x86-64 PCs."
  },
  {
-  "title": "Building a networking switch ASIC chip",
-  "link": "https://essenceia.github.io/projects/expresso/",
-  "blurb": "A documented build of a networking switch ASIC, from architecture through silicon flow."
+  "title": "Hyper-Realistic Sand with WebGL2",
+  "link": "https://av.github.io/safe-sand/",
+  "blurb": "WebGL2 granular sand simulation with realistic rendering, runnable in the browser."
  },
  {
-  "title": "The DRAM interface and the PHY (why a DDR3+ interface must be tuned at boot)",
-  "link": "https://github.com/enjoy-digital/litedram/blob/master/doc/manual/03_dram_interface.md",
-  "blurb": "LiteDRAM manual explains why DDR3+ PHYs need boot-time read/write leveling and calibration."
+  "title": "BypassGym: A Benchmark for Evaluating AI Agents' Endpoint Defense Evasion Capabilities",
+  "link": "https://arxiv.org/abs/2611.13684",
+  "blurb": "Not fetched: host blocked by session network allowlist (arxiv.org). Deep digest skipped this run."
  },
  {
-  "title": "Hacking the Sidekick in 2026",
-  "link": "https://hackaday.com/2026/11/10/hacking-the-sidekick-in-2026/",
-  "blurb": "Reviving and hacking the T-Mobile Sidekick in 2026 — documented hardware/software teardown."
+  "title": "Using voltage glitching to unleash the A100 in my mining card",
+  "link": "https://blog.kate.land/posts/using-voltage-glitching-to-unlock-the-a100/",
+  "blurb": "Not fetched: host blocked by session network allowlist (blog.kate.land). Deep digest skipped this run."
  }
 ]
