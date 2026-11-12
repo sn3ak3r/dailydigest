@@ -1,27 +1,19 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-11: crackme</title><link></link><description>Target: Windows x86-64.
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-12: decode-instruction</title><link></link><description>Target: Windows x86-64.
+
+Decode this instruction, found at the start of a function that takes a struct pointer as its first argument:
 
 ```
-check:
-    lea    eax, [rcx+rdx]
-    cmp    eax, 100
-    jne    fail
-    mov    eax, ecx
-    sub    eax, edx
-    cmp    eax, 20
-    jne    fail
-    mov    eax, 1
-    ret
-fail:
-    xor    eax, eax
-    ret
+F6 41 10 01
 ```
 
-`check(int a, int b)` takes two arguments. Which `a` (ecx) and `b` (edx) make it return 1?
+What is the assembly? What does it compute, and what does it change?
 
 ---
 
-**Answer:** `a = 60`, `b = 40`
+## Answer
 
-1. Windows x64 passes the first integer arg in `ecx` and the second in `edx`; `lea eax, [rcx+rdx]` adds them into a third register without touching either input or the flags.
-2. The two checks give `a + b == 100` and `a - b == 20`; any mismatch jumps to `fail`, where `xor eax, eax` returns 0.
-3. Adding the equations gives `2a = 120`, so `a = 60`, then `b = 100 - 60 = 40` (check: 60 - 40 = 20).</description><guid isPermaLink='false'>2026-11-11</guid><pubDate>Wed, 11 Nov 2026 02:33:50 +0000</pubDate></item></channel></rss>
+`test byte ptr [rcx+0x10], 1` — checks whether bit 0 of the byte at offset 0x10 in the struct is set.
+
+- `F6 /0 ib` is TEST r/m8,imm8. ModRM `41` = `01 000 001`: mod=01 means a disp8 follows, reg=000 is the /0 extension (in group F6, /2 = NOT, /3 = NEG), rm=001 = rcx, the first argument on Windows x64. Then come disp8 `10` and imm8 `01`.
+- TEST does an AND, sets the flags, and throws the result away: memory and registers stay unchanged. ZF=1 means the bit is clear. CF and OF are always cleared.
+- F6 is the byte-sized form, so only one byte is read. It is usually followed by `jz`/`jnz`, like C&#x27;s `if (s-&gt;flags &amp; 1)`.</description><guid isPermaLink='false'>2026-11-12</guid><pubDate>Thu, 12 Nov 2026 02:31:36 +0000</pubDate></item></channel></rss>
