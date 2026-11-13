@@ -89,3 +89,4 @@
 2026-11-10 | reverse-function | cdq sign-extend eax into edx (sign mask 0/-1), xor then sub trick = branchless abs, two's-complement negate via ~x+1, INT_MIN edge case
 2026-11-11 | crackme | two-argument check (ecx + edx second arg), lea [rcx+rdx] non-destructive register add, sub difference, two jne fail paths, xor eax,eax zero return, solving simultaneous equations
 2026-11-12 | decode-instruction | TEST r/m8,imm8 opcode F6 /0 ib (group F6 /2 NOT /3 NEG), mod=01 disp8 then imm8, AND-without-store flag check of a struct bit field, ZF=1 when bit clear
+2026-11-13 | reverse-function | while-loop layout (jmp to bottom condition, cmp/jne back-edge), dec/inc, x & (x-1) clears lowest set bit, Kernighan popcount

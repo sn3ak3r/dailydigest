@@ -1,8 +1,8 @@
 [
  {
-  "title": "Assembly Drill 2026-11-12: decode-instruction",
-  "guid": "2026-11-12",
-  "blurb": "Target: Windows x86-64.\n\nDecode this instruction, found at the start of a function that takes a struct pointer as its first argument:\n\n```\nF6 41 10 01\n```\n\nWhat is the assembly? What does it compute, and what does it change?\n\n---\n\n## Answer\n\n`test byte ptr [rcx+0x10], 1` \u2014 checks whether bit 0 of the byte at offset 0x10 in the struct is set.\n\n- `F6 /0 ib` is TEST r/m8,imm8. ModRM `41` = `01 000 001`: mod=01 means a disp8 follows, reg=000 is the /0 extension (in group F6, /2 = NOT, /3 = NEG), rm=001 = rcx, the first argument on Windows x64. Then come disp8 `10` and imm8 `01`.\n- TEST does an AND, sets the flags, and throws the result away: memory and registers stay unchanged. ZF=1 means the bit is clear. CF and OF are always cleared.\n- F6 is the byte-sized form, so only one byte is read. It is usually followed by `jz`/`jnz`, like C's `if (s->flags & 1)`.",
+  "title": "Assembly Drill 2026-11-13: reverse-function",
+  "guid": "2026-11-13",
+  "blurb": "Target: Windows x86-64 (arg in `ecx`).\n\nReverse this short function to equivalent C:\n\n```asm\nmystery:\n    xor     eax, eax\n    jmp     check\ntop:\n    mov     edx, ecx\n    dec     edx\n    and     ecx, edx\n    inc     eax\ncheck:\n    cmp     ecx, 0\n    jne     top\n    ret\n```\n\nWhat does it return for 0, 1, 12 and 0xFF?\n\n---\n\n## Answer\n\n```c\nint mystery(unsigned x) {\n    int n = 0;\n    while (x != 0) {\n        x &= x - 1;   // clear lowest set bit\n        n++;\n    }\n    return n;          // popcount: number of 1 bits\n}\n```\n\nResults: 0, 1, 2, 8.\n\n## Explanation\n\n- `jmp check` jumps straight to the test at the bottom, so the body can run zero times. That makes it a `while` loop, not `do/while`. Compilers often lay loops out this way.\n- `dec` subtracts 1 (`inc` adds 1). x-1 flips the lowest set bit and every 0 below it, so `x & (x-1)` clears exactly that one bit. For 12 (1100b): 1100 \u2192 1000 \u2192 0, two passes.\n- eax counts the passes, so the result is the number of set bits.",
   "link": ""
  }
 ]
