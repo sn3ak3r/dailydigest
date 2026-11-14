@@ -1,43 +1,26 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-13: reverse-function</title><link></link><description>Target: Windows x86-64 (arg in `ecx`).
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-14: crackme</title><link></link><description>Target: Windows x86-64.
 
-Reverse this short function to equivalent C:
-
-```asm
-mystery:
-    xor     eax, eax
-    jmp     check
-top:
-    mov     edx, ecx
-    dec     edx
-    and     ecx, edx
-    inc     eax
+```
 check:
-    cmp     ecx, 0
-    jne     top
+    mov    eax, ecx
+    xor    eax, 0x5A
+    rol    eax, 4
+    cmp    eax, 0x50000006
+    jne    fail
+    mov    eax, 1
+    ret
+fail:
+    xor    eax, eax
     ret
 ```
 
-What does it return for 0, 1, 12 and 0xFF?
+`rol eax, 4` rotates left by 4 bits: bits shifted out of the top re-enter at the bottom (unlike `shl`, nothing is lost). Which unsigned `x` (ecx) makes `check` return 1?
 
 ---
 
-## Answer
+**Answer:** `x = 0x6500005A` (1694498906)
 
-```c
-int mystery(unsigned x) {
-    int n = 0;
-    while (x != 0) {
-        x &amp;= x - 1;   // clear lowest set bit
-        n++;
-    }
-    return n;          // popcount: number of 1 bits
-}
-```
-
-Results: 0, 1, 2, 8.
-
-## Explanation
-
-- `jmp check` jumps straight to the test at the bottom, so the body can run zero times. That makes it a `while` loop, not `do/while`. Compilers often lay loops out this way.
-- `dec` subtracts 1 (`inc` adds 1). x-1 flips the lowest set bit and every 0 below it, so `x &amp; (x-1)` clears exactly that one bit. For 12 (1100b): 1100 → 1000 → 0, two passes.
-- eax counts the passes, so the result is the number of set bits.</description><guid isPermaLink='false'>2026-11-13</guid><pubDate>Fri, 13 Nov 2026 02:31:36 +0000</pubDate></item></channel></rss>
+1. Work backwards: undo `rol 4` with `ror 4` (rotate right). 0x50000006 → the low nibble `6` wraps to the top, giving 0x65000000.
+2. `xor` is its own inverse: 0x65000000 ^ 0x5A = 0x6500005A.
+3. Check forwards: 0x6500005A ^ 0x5A = 0x65000000; rotating left 4 moves the top `6` round to the bottom → 0x50000006. A `shl` would have dropped that `6`, so the wrap is the whole point.
+</description><guid isPermaLink='false'>2026-11-14</guid><pubDate>Sat, 14 Nov 2026 02:30:48 +0000</pubDate></item></channel></rss>

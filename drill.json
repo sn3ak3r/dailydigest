@@ -1,8 +1,8 @@
 [
  {
-  "title": "Assembly Drill 2026-11-13: reverse-function",
-  "guid": "2026-11-13",
-  "blurb": "Target: Windows x86-64 (arg in `ecx`).\n\nReverse this short function to equivalent C:\n\n```asm\nmystery:\n    xor     eax, eax\n    jmp     check\ntop:\n    mov     edx, ecx\n    dec     edx\n    and     ecx, edx\n    inc     eax\ncheck:\n    cmp     ecx, 0\n    jne     top\n    ret\n```\n\nWhat does it return for 0, 1, 12 and 0xFF?\n\n---\n\n## Answer\n\n```c\nint mystery(unsigned x) {\n    int n = 0;\n    while (x != 0) {\n        x &= x - 1;   // clear lowest set bit\n        n++;\n    }\n    return n;          // popcount: number of 1 bits\n}\n```\n\nResults: 0, 1, 2, 8.\n\n## Explanation\n\n- `jmp check` jumps straight to the test at the bottom, so the body can run zero times. That makes it a `while` loop, not `do/while`. Compilers often lay loops out this way.\n- `dec` subtracts 1 (`inc` adds 1). x-1 flips the lowest set bit and every 0 below it, so `x & (x-1)` clears exactly that one bit. For 12 (1100b): 1100 \u2192 1000 \u2192 0, two passes.\n- eax counts the passes, so the result is the number of set bits.",
+  "title": "Assembly Drill 2026-11-14: crackme",
+  "guid": "2026-11-14",
+  "blurb": "Target: Windows x86-64.\n\n```\ncheck:\n    mov    eax, ecx\n    xor    eax, 0x5A\n    rol    eax, 4\n    cmp    eax, 0x50000006\n    jne    fail\n    mov    eax, 1\n    ret\nfail:\n    xor    eax, eax\n    ret\n```\n\n`rol eax, 4` rotates left by 4 bits: bits shifted out of the top re-enter at the bottom (unlike `shl`, nothing is lost). Which unsigned `x` (ecx) makes `check` return 1?\n\n---\n\n**Answer:** `x = 0x6500005A` (1694498906)\n\n1. Work backwards: undo `rol 4` with `ror 4` (rotate right). 0x50000006 \u2192 the low nibble `6` wraps to the top, giving 0x65000000.\n2. `xor` is its own inverse: 0x65000000 ^ 0x5A = 0x6500005A.\n3. Check forwards: 0x6500005A ^ 0x5A = 0x65000000; rotating left 4 moves the top `6` round to the bottom \u2192 0x50000006. A `shl` would have dropped that `6`, so the wrap is the whole point.\n",
   "link": ""
  }
 ]
