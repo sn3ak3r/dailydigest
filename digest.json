@@ -1,52 +1,52 @@
 [
  {
-  "title": "New N-central Exploits Work Against Patched Servers, Enable Root RCE and Windows SYSTEM Access",
-  "link": "https://thehackernews.com/2026/11/new-n-central-exploits-work-against.html",
-  "blurb": "New N-central exploits bypass existing patches for root RCE and Windows SYSTEM; N-able has taken the platform offline."
+  "title": "Hackers Exploit PHP2Shell Flaws in Check Point Gateways to Deploy TSGA Backdoor and Wipe ESXi Files",
+  "link": "https://thehackernews.com/2026/11/hackers-exploit-php2shell-flaws-in.html",
+  "blurb": "PHP2Shell flaws in Check Point gateways used to plant a TSGA backdoor and wipe VMware ESXi files."
  },
  {
-  "title": "Microsoft Researchers Show AI Agents Can Be Backdoored by Editing Fewer Than 10 Neurons",
-  "link": "https://thehackernews.com/2026/11/microsoft-researchers-show-ai-agents.html",
-  "blurb": "Microsoft research: editing fewer than 10 neurons is enough to plant a backdoor in an AI agent model."
+  "title": "New Mior and Skyfall Attacks Let Rogue Cloud Hosts Steal Secrets From AMD SEV-SNP VMs",
+  "link": "https://thehackernews.com/2026/11/new-mior-and-skyfall-attacks-let-rogue.html",
+  "blurb": "Mior and Skyfall show a malicious cloud host can extract secrets from AMD SEV-SNP confidential VMs."
  },
  {
-  "title": "Lootboxes, pay-to-win, virtual currencies and other blights unto gaming face heavy regulation as the EU tables new Digital Fairness Act",
-  "link": "https://www.rockpapershotgun.com/lootboxes-pay-to-win-virtual-currencies-and-other-blights-unto-gaming-face-heavy-regulation-as-the-eu-tables-new-digital-fairness-act",
-  "blurb": "EU's draft Digital Fairness Act targets lootboxes, pay-to-win and virtual currencies, which could reshape game monetisation."
+  "title": "Look Here, Then Decide: Small Decision Models in a Harness Find Memory-Safety Vulnerabilities at Scale on Commodity GPUs",
+  "link": "https://arxiv.org/abs/2611.16565",
+  "blurb": "Not fetched: host blocked by session network allowlist (arxiv.org). Deep digest skipped this run."
  },
  {
-  "title": "After being laid off by Microsoft, former Doom devs found new Smash TV-influenced FPS studio that isn't \"subject to investor demands\"",
-  "link": "https://www.rockpapershotgun.com/after-being-laid-off-by-microsoft-former-doom-devs-found-new-smash-tv-influenced-fps-studio-that-isnt-subject-to-investor-demands",
-  "blurb": "Ex-id Software devs laid off by Microsoft start an independent, employee-owned FPS studio."
+  "title": "Xbox boss announces Wolfenstein 3 and confirms new game in development at idSoftware despite reported job cut \"bloodbath\"",
+  "link": "https://www.eurogamer.net/wolfenstein-3-new-id-software-game-announced-xbox",
+  "blurb": "Wolfenstein 3 confirmed at MachineGames plus a new id Software game, despite reported Xbox layoffs."
  },
  {
-  "title": "The amazing disappearing exoplanet",
-  "link": "https://arstechnica.com/science/2026/11/the-amazing-disappearing-exoplanet/",
-  "blurb": "Ars covers an exoplanet that seems to have vanished from observations, and what that says about its nature."
+  "title": "As low-effort AI slop continues to flood Steam, yet more developers announce game delays caused by Valve's growing approval backlog",
+  "link": "https://www.eurogamer.net/steam-game-submission-review-backlog-ai-slop-approval-delays",
+  "blurb": "Valve's Steam approval backlog, swollen by AI-generated submissions, is now delaying indie launches."
  },
  {
-  "title": "A New Era for the Dawn of Life",
-  "link": "https://www.quantamagazine.org/a-new-era-for-the-dawn-of-life-20261112/",
-  "blurb": "Quanta on new research changing how scientists date and model the origin of life."
+  "title": "Scientists warn 1.5°C climate change threshold could arrive by 2029",
+  "link": "https://arstechnica.com/science/2026/11/scientists-warn-the-1-5c-climate-change-threshold-could-arrive-by-2029/",
+  "blurb": "Researchers project the 1.5°C warming threshold could be crossed as early as 2029."
  },
  {
-  "title": "Show HN: My $300 embroidery machine needed a subscription, so I built my own app",
-  "link": "https://github.com/simpsoka/zigzag",
-  "blurb": "Open-source app that replaces a subscription-locked app for a $300 embroidery machine."
+  "title": "In elephants, the resilience of communities has its limits",
+  "link": "https://arstechnica.com/science/2026/11/in-elephants-the-resilience-of-communities-has-its-limits/",
+  "blurb": "Study finds elephant social groups recover from disruption only up to a limit."
  },
  {
-  "title": "Building my own ADS-B receiver",
-  "link": "https://kew.edbn.me/blog/adsb-receiver/",
-  "blurb": "Documented build of a home ADS-B aircraft-tracking receiver."
+  "title": "Reverse engineering my Coway air purifier to ditch the cloud",
+  "link": "https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/",
+  "blurb": "Not fetched: host blocked by session network allowlist (scottjg.com). Deep digest skipped this run."
  },
  {
-  "title": "New SignDrop Zero-Day Exploit Turns Windows CLFS Security Feature Into SYSTEM Access",
-  "link": "https://thehackernews.com/2026/11/new-signdrop-zero-day-exploit-turns.html",
-  "blurb": "Not fetched: host blocked by session network allowlist (thehackernews.com). Deep digest skipped this run."
+  "title": "X Window System on the ESP32",
+  "link": "https://hackaday.com/2026/11/13/x-window-system-on-the-esp32/",
+  "blurb": "An X Window System server running on an ESP32 microcontroller."
  },
  {
-  "title": "Turning a 22-year-old Postgres type-confusion primitive into RCE",
-  "link": "https://mehmetince.net/part-3-6-how-i-ended-up-turning-a-22-year-old-postgresql-type-confusion-primitive-into-rce-cve-2026-6460/",
-  "blurb": "Not fetched: host blocked by session network allowlist (mehmetince.net). Deep digest skipped this run."
+  "title": "Using a Toothbrush’s NFC chip to Unlock a Computer",
+  "link": "https://hackaday.com/2026/11/13/using-a-toothbrushs-nfc-chip-to-unlock-a-computer/",
+  "blurb": "Repurposing an electric toothbrush head's NFC chip as a key to unlock a PC."
  }
 ]
