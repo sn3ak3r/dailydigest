@@ -1,26 +1,20 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-14: crackme</title><link></link><description>Target: Windows x86-64.
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-15: decode-instruction</title><link></link><description>Target: Windows x86-64.
+
+Decode this instruction from a function whose first argument is a struct pointer and whose second argument is a `short`:
 
 ```
-check:
-    mov    eax, ecx
-    xor    eax, 0x5A
-    rol    eax, 4
-    cmp    eax, 0x50000006
-    jne    fail
-    mov    eax, 1
-    ret
-fail:
-    xor    eax, eax
-    ret
+66 89 51 08
 ```
 
-`rol eax, 4` rotates left by 4 bits: bits shifted out of the top re-enter at the bottom (unlike `shl`, nothing is lost). Which unsigned `x` (ecx) makes `check` return 1?
+What is the assembly, how many bytes does it write, and what would change if the first byte were missing?
 
 ---
 
-**Answer:** `x = 0x6500005A` (1694498906)
+## Answer
 
-1. Work backwards: undo `rol 4` with `ror 4` (rotate right). 0x50000006 → the low nibble `6` wraps to the top, giving 0x65000000.
-2. `xor` is its own inverse: 0x65000000 ^ 0x5A = 0x6500005A.
-3. Check forwards: 0x6500005A ^ 0x5A = 0x65000000; rotating left 4 moves the top `6` round to the bottom → 0x50000006. A `shl` would have dropped that `6`, so the wrap is the whole point.
-</description><guid isPermaLink='false'>2026-11-14</guid><pubDate>Sat, 14 Nov 2026 02:30:48 +0000</pubDate></item></channel></rss>
+`mov word ptr [rcx+8], dx` — stores the low 16 bits of the second argument into the 2-byte field at offset 8, like `s-&gt;field = value;`.
+
+- `66` is the operand-size override prefix: it turns the default 32-bit operand size into 16 bits. `89 /r` is MOV r/m,r (reg field is the source, rm the destination; `8B` is the reverse direction).
+- ModRM `51` = `01 010 001`: mod=01 means a disp8 follows (`08`), reg=010 = edx, shrunk to dx by the prefix, rm=001 = rcx, the first argument on Windows x64.
+- Exactly 2 bytes are written. Without the `66`, `89 51 08` is `mov dword ptr [rcx+8], edx`, a 4-byte store that would also overwrite the next field.
+</description><guid isPermaLink='false'>2026-11-15</guid><pubDate>Sun, 15 Nov 2026 02:31:39 +0000</pubDate></item></channel></rss>

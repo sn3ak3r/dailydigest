@@ -91,3 +91,4 @@
 2026-11-12 | decode-instruction | TEST r/m8,imm8 opcode F6 /0 ib (group F6 /2 NOT /3 NEG), mod=01 disp8 then imm8, AND-without-store flag check of a struct bit field, ZF=1 when bit clear
 2026-11-13 | reverse-function | while-loop layout (jmp to bottom condition, cmp/jne back-edge), dec/inc, x & (x-1) clears lowest set bit, Kernighan popcount
 2026-11-14 | crackme | xor reg,imm self-inverse, rol rotate-left wraparound (bits re-enter at bottom) vs shl, undoing rol with ror, backward-solving
+2026-11-15 | decode-instruction | 66 operand-size override prefix (32->16 bit), MOV r/m16,r16 opcode 89 /r store direction vs 8B load, mod=01 disp8, word store to struct field vs dword overwrite
