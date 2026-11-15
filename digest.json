@@ -1,52 +1,52 @@
 [
  {
-  "title": "Hackers Exploit PHP2Shell Flaws in Check Point Gateways to Deploy TSGA Backdoor and Wipe ESXi Files",
-  "link": "https://thehackernews.com/2026/11/hackers-exploit-php2shell-flaws-in.html",
-  "blurb": "PHP2Shell flaws in Check Point gateways used to plant a TSGA backdoor and wipe VMware ESXi files."
+  "title": "PostgreSQL Patches 52 Flaws, Including 22-Year-Old Bug Enabling Authenticated RCE",
+  "link": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html",
+  "blurb": "A 22-year-old PostgreSQL bug lets authenticated users reach remote code execution; one of 52 fixes."
  },
  {
-  "title": "New Mior and Skyfall Attacks Let Rogue Cloud Hosts Steal Secrets From AMD SEV-SNP VMs",
-  "link": "https://thehackernews.com/2026/11/new-mior-and-skyfall-attacks-let-rogue.html",
-  "blurb": "Mior and Skyfall show a malicious cloud host can extract secrets from AMD SEV-SNP confidential VMs."
+  "title": "SilentAir Hijacks Asian Telecom Networks to Intercept SMS 2FA Codes and Spy on Taiwanese Users",
+  "link": "https://thehackernews.com/2026/11/silentair-hijacks-asian-telecom.html",
+  "blurb": "SilentAir abuses compromised Asian telecom infrastructure to intercept SMS 2FA codes."
  },
  {
-  "title": "Look Here, Then Decide: Small Decision Models in a Harness Find Memory-Safety Vulnerabilities at Scale on Commodity GPUs",
-  "link": "https://arxiv.org/abs/2611.16565",
-  "blurb": "Not fetched: host blocked by session network allowlist (arxiv.org). Deep digest skipped this run."
+  "title": "Trezor Confirms Hidden Implants in CryptoBilis-Sold Wallets That Can Steal Recovery Phrases",
+  "link": "https://thehackernews.com/2026/11/trezor-confirms-hidden-hardware.html",
+  "blurb": "Hardware implants in resold Trezor wallets can exfiltrate recovery phrases; Trezor ships a fix."
  },
  {
-  "title": "Xbox boss announces Wolfenstein 3 and confirms new game in development at idSoftware despite reported job cut \"bloodbath\"",
-  "link": "https://www.eurogamer.net/wolfenstein-3-new-id-software-game-announced-xbox",
-  "blurb": "Wolfenstein 3 confirmed at MachineGames plus a new id Software game, despite reported Xbox layoffs."
+  "title": "Crimson Desert studio is implementing AI \"throughout our entire development pipeline,\" and expects DokeV to launch in 2028",
+  "link": "https://www.eurogamer.net/crimson-desert-ai-pipeline-dokev-2028",
+  "blurb": "Pearl Abyss says AI now runs through its whole dev pipeline; DokeV slips to 2028."
  },
  {
-  "title": "As low-effort AI slop continues to flood Steam, yet more developers announce game delays caused by Valve's growing approval backlog",
-  "link": "https://www.eurogamer.net/steam-game-submission-review-backlog-ai-slop-approval-delays",
-  "blurb": "Valve's Steam approval backlog, swollen by AI-generated submissions, is now delaying indie launches."
+  "title": "Indiana Jones and the Great Circle once had a Grand Theft Auto-inspired wanted system, because MachineGames was 'afraid' players would kill all the Nazis 'with just guns'",
+  "link": "https://www.pcgamer.com/games/action/indiana-jones-and-the-great-circle-once-had-a-grand-theft-auto-inspired-wanted-system-because-machinegames-was-afraid-players-would-kill-all-the-nazis-with-just-guns/",
+  "blurb": "MachineGames prototyped a GTA-style wanted system for Indiana Jones and the Great Circle."
  },
  {
-  "title": "Scientists warn 1.5°C climate change threshold could arrive by 2029",
-  "link": "https://arstechnica.com/science/2026/11/scientists-warn-the-1-5c-climate-change-threshold-could-arrive-by-2029/",
-  "blurb": "Researchers project the 1.5°C warming threshold could be crossed as early as 2029."
+  "title": "James Webb telescope finds ice older than the star it orbits",
+  "link": "https://arstechnica.com/science/2026/11/james-webb-telescope-finds-ice-older-than-the-star-it-orbits/",
+  "blurb": "JWST spots ice around a young star that predates the star itself, hinting interstellar ices survive disk formation."
  },
  {
-  "title": "In elephants, the resilience of communities has its limits",
-  "link": "https://arstechnica.com/science/2026/11/in-elephants-the-resilience-of-communities-has-its-limits/",
-  "blurb": "Study finds elephant social groups recover from disruption only up to a limit."
+  "title": "It's the end of the world as we know it, per a physicist's 1960 prediction",
+  "link": "https://arstechnica.com/science/2026/11/its-the-end-of-the-world-as-we-know-it-per-a-physicists-1960-prediction/",
+  "blurb": "A 1960 physics prediction about population growth is revisited against today's data."
  },
  {
-  "title": "Reverse engineering my Coway air purifier to ditch the cloud",
-  "link": "https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/",
-  "blurb": "Not fetched: host blocked by session network allowlist (scottjg.com). Deep digest skipped this run."
+  "title": "Show HN: Fursoy – Out-of-order RV64IMAFDV core in SystemVerilog (Linux 6.6)",
+  "link": "https://github.com/FURSOY/fursoy-cpu",
+  "blurb": "Not fetched: host blocked by session network (github.com repo outside session scope). Deep digest skipped this run."
  },
  {
-  "title": "X Window System on the ESP32",
-  "link": "https://hackaday.com/2026/11/13/x-window-system-on-the-esp32/",
-  "blurb": "An X Window System server running on an ESP32 microcontroller."
+  "title": "Creating a self booting ZIP archive",
+  "link": "https://goliath32.com/blog/ziphead.html",
+  "blurb": "Not fetched: host blocked by session network (goliath32.com refused by proxy). Deep digest skipped this run."
  },
  {
-  "title": "Using a Toothbrush’s NFC chip to Unlock a Computer",
-  "link": "https://hackaday.com/2026/11/13/using-a-toothbrushs-nfc-chip-to-unlock-a-computer/",
-  "blurb": "Repurposing an electric toothbrush head's NFC chip as a key to unlock a PC."
+  "title": "Reverse Engineering Score Perfect to Rescue its Files",
+  "link": "https://hackaday.com/2026/11/14/reverse-engineering-score-perfect-to-rescue-its-files/",
+  "blurb": "Reverse engineering the Score Perfect file format to recover a user's old documents."
  }
 ]
