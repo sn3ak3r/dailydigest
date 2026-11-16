@@ -1,52 +1,52 @@
 [
  {
-  "title": "PostgreSQL Patches 52 Flaws, Including 22-Year-Old Bug Enabling Authenticated RCE",
-  "link": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html",
-  "blurb": "A 22-year-old PostgreSQL bug lets authenticated users reach remote code execution; one of 52 fixes."
+  "title": "Attackers Exploit UnrealIRCd Flaw That Enables Server-Level Command Injection",
+  "link": "https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html",
+  "blurb": "Not fetched: thehackernews.com is blocked by the session network policy. Deep digest skipped this run."
  },
  {
-  "title": "SilentAir Hijacks Asian Telecom Networks to Intercept SMS 2FA Codes and Spy on Taiwanese Users",
-  "link": "https://thehackernews.com/2026/11/silentair-hijacks-asian-telecom.html",
-  "blurb": "SilentAir abuses compromised Asian telecom infrastructure to intercept SMS 2FA codes."
+  "title": "Cursor Says Stolen Fireworks AI Key Led to Trojanized Claude Code Extension Incident",
+  "link": "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html",
+  "blurb": "Cursor says a stolen Fireworks AI API key let attackers ship a trojanized Claude Code extension, a supply-chain warning for AI dev tools."
  },
  {
-  "title": "Trezor Confirms Hidden Implants in CryptoBilis-Sold Wallets That Can Steal Recovery Phrases",
-  "link": "https://thehackernews.com/2026/11/trezor-confirms-hidden-hardware.html",
-  "blurb": "Hardware implants in resold Trezor wallets can exfiltrate recovery phrases; Trezor ships a fix."
+  "title": "FBI warns ARTEX AI hacking tool is powering global cyberattacks",
+  "link": "https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/",
+  "blurb": "FBI says the ARTEX AI hacking tool is powering cyberattacks worldwide; a sign that AI-assisted intrusion kits are now common."
  },
  {
-  "title": "Crimson Desert studio is implementing AI \"throughout our entire development pipeline,\" and expects DokeV to launch in 2028",
-  "link": "https://www.eurogamer.net/crimson-desert-ai-pipeline-dokev-2028",
-  "blurb": "Pearl Abyss says AI now runs through its whole dev pipeline; DokeV slips to 2028."
+  "title": "Cyberpunk 2077 mod Torrent adds 3D rain, lightning storms, and tyre spray to Night City",
+  "link": "https://www.eurogamer.net/cyberpunk-2077-torrent-rain-weather-mod",
+  "blurb": "Cyberpunk 2077 mod 'Torrent' adds volumetric 3D rain, lightning storms and tyre spray, showing how far the community has pushed the engine."
  },
  {
-  "title": "Indiana Jones and the Great Circle once had a Grand Theft Auto-inspired wanted system, because MachineGames was 'afraid' players would kill all the Nazis 'with just guns'",
-  "link": "https://www.pcgamer.com/games/action/indiana-jones-and-the-great-circle-once-had-a-grand-theft-auto-inspired-wanted-system-because-machinegames-was-afraid-players-would-kill-all-the-nazis-with-just-guns/",
-  "blurb": "MachineGames prototyped a GTA-style wanted system for Indiana Jones and the Great Circle."
+  "title": "Rasen, out in early access now, is a PvP focused take on Dark Souls that borrows one of fighting games' best techy tricks",
+  "link": "https://www.rockpapershotgun.com/rasen-out-in-early-access-now-is-a-pvp-focused-take-on-dark-souls-that-borrows-one-of-fighting-games-best-techy-tricks",
+  "blurb": "Rasen, a new indie in early access, is a PvP Souls-like that borrows a mechanic from fighting games."
  },
  {
-  "title": "James Webb telescope finds ice older than the star it orbits",
-  "link": "https://arstechnica.com/science/2026/11/james-webb-telescope-finds-ice-older-than-the-star-it-orbits/",
-  "blurb": "JWST spots ice around a young star that predates the star itself, hinting interstellar ices survive disk formation."
+  "title": "How the world’s fires changed while humanity hit pause",
+  "link": "https://arstechnica.com/science/2026/11/how-the-worlds-fires-changed-while-humanity-hit-pause/",
+  "blurb": "Global fire data from the pandemic slowdown shows how human activity shapes where and how fires burn."
  },
  {
-  "title": "It's the end of the world as we know it, per a physicist's 1960 prediction",
-  "link": "https://arstechnica.com/science/2026/11/its-the-end-of-the-world-as-we-know-it-per-a-physicists-1960-prediction/",
-  "blurb": "A 1960 physics prediction about population growth is revisited against today's data."
+  "title": "Vulcan rocket fails during launch, dealing major blow to SpaceX competitors",
+  "link": "https://arstechnica.com/space/2026/11/vulcan-rocket-fails-during-launch-dealing-major-blow-to-spacex-competitors/",
+  "blurb": "ULA's Vulcan failed during launch, losing 40 Amazon satellites and setting back SpaceX's competitors."
  },
  {
-  "title": "Show HN: Fursoy – Out-of-order RV64IMAFDV core in SystemVerilog (Linux 6.6)",
-  "link": "https://github.com/FURSOY/fursoy-cpu",
-  "blurb": "Not fetched: host blocked by session network (github.com repo outside session scope). Deep digest skipped this run."
+  "title": "A NES emulator written in Odin",
+  "link": "https://lucypero.com/lucynes.html",
+  "blurb": "Not fetched: lucypero.com is blocked by the session network policy. Deep digest skipped this run."
  },
  {
-  "title": "Creating a self booting ZIP archive",
-  "link": "https://goliath32.com/blog/ziphead.html",
-  "blurb": "Not fetched: host blocked by session network (goliath32.com refused by proxy). Deep digest skipped this run."
+  "title": "An MP3 Player, Implemented As A Factorio Blueprint",
+  "link": "https://hackaday.com/2026/11/15/an-mp3-player-implemented-as-a-factorio-blueprint/",
+  "blurb": "Someone built a working MP3 decoder and player entirely from Factorio game logic."
  },
  {
-  "title": "Reverse Engineering Score Perfect to Rescue its Files",
-  "link": "https://hackaday.com/2026/11/14/reverse-engineering-score-perfect-to-rescue-its-files/",
-  "blurb": "Reverse engineering the Score Perfect file format to recover a user's old documents."
+  "title": "Bringing a Cloud Based Monitor Home",
+  "link": "https://hackaday.com/2026/11/14/bringing-a-cloud-based-monitor-home/",
+  "blurb": "Reverse-engineering a cloud-dependent monitor so it runs on a local server instead of the vendor's cloud."
  }
 ]
