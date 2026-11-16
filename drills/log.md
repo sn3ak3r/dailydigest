@@ -92,3 +92,4 @@
 2026-11-13 | reverse-function | while-loop layout (jmp to bottom condition, cmp/jne back-edge), dec/inc, x & (x-1) clears lowest set bit, Kernighan popcount
 2026-11-14 | crackme | xor reg,imm self-inverse, rol rotate-left wraparound (bits re-enter at bottom) vs shl, undoing rol with ror, backward-solving
 2026-11-15 | decode-instruction | 66 operand-size override prefix (32->16 bit), MOV r/m16,r16 opcode 89 /r store direction vs 8B load, mod=01 disp8, word store to struct field vs dword overwrite
+2026-11-16 | reverse-function | align-up idiom (x+15) & ~15, and with negative imm -16 as a low-bit clearing mask, add-then-mask turns round-down into round-up

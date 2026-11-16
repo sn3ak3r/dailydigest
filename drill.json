@@ -1,8 +1,8 @@
 [
  {
-  "title": "Assembly Drill 2026-11-15: decode-instruction",
-  "guid": "2026-11-15",
-  "blurb": "Target: Windows x86-64.\n\nDecode this instruction from a function whose first argument is a struct pointer and whose second argument is a `short`:\n\n```\n66 89 51 08\n```\n\nWhat is the assembly, how many bytes does it write, and what would change if the first byte were missing?\n\n---\n\n## Answer\n\n`mov word ptr [rcx+8], dx` \u2014 stores the low 16 bits of the second argument into the 2-byte field at offset 8, like `s->field = value;`.\n\n- `66` is the operand-size override prefix: it turns the default 32-bit operand size into 16 bits. `89 /r` is MOV r/m,r (reg field is the source, rm the destination; `8B` is the reverse direction).\n- ModRM `51` = `01 010 001`: mod=01 means a disp8 follows (`08`), reg=010 = edx, shrunk to dx by the prefix, rm=001 = rcx, the first argument on Windows x64.\n- Exactly 2 bytes are written. Without the `66`, `89 51 08` is `mov dword ptr [rcx+8], edx`, a 4-byte store that would also overwrite the next field.\n",
+  "title": "Assembly Drill 2026-11-16: reverse-function",
+  "guid": "2026-11-16",
+  "blurb": "Target: Windows x86-64 (arg in `ecx`, return in `eax`).\n\nReverse this short function to equivalent C:\n\n```asm\nmystery:\n    lea     eax, [rcx+15]\n    and     eax, -16\n    ret\n```\n\nWhat does it return for 0, 1, 16, 17 and 40?\n\n---\n\n## Answer\n\n```c\nunsigned mystery(unsigned x) {\n    return (x + 15) & ~15u;   // round x up to a multiple of 16\n}\n```\n\nResults: 0, 16, 16, 32, 48.\n\n## Explanation\n\n- `lea eax, [rcx+15]` just computes x+15 into eax; nothing is read from memory.\n- `-16` is 0xFFFFFFF0 in two's complement, the same as `~15`: all bits set except the low 4. ANDing with it clears those 4 bits, rounding down to a multiple of 16.\n- Adding 15 first turns \"round down\" into \"round up\": exact multiples stay put, anything else moves to the next one. Allocators and stack setup use this align-up idiom constantly.\n",
   "link": ""
  }
 ]
