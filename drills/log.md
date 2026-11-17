@@ -93,3 +93,4 @@
 2026-11-14 | crackme | xor reg,imm self-inverse, rol rotate-left wraparound (bits re-enter at bottom) vs shl, undoing rol with ror, backward-solving
 2026-11-15 | decode-instruction | 66 operand-size override prefix (32->16 bit), MOV r/m16,r16 opcode 89 /r store direction vs 8B load, mod=01 disp8, word store to struct field vs dword overwrite
 2026-11-16 | reverse-function | align-up idiom (x+15) & ~15, and with negative imm -16 as a low-bit clearing mask, add-then-mask turns round-down into round-up
+2026-11-17 | crackme | movzx r32,r/m16 (0F B7) low-word zero-extension, shr 16 extracts high word, splitting a dword into two 16-bit halves, two-condition check, recombining halves

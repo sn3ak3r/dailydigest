@@ -1,31 +1,28 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-16: reverse-function</title><link></link><description>Target: Windows x86-64 (arg in `ecx`, return in `eax`).
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-17: crackme</title><link></link><description># Crackme: find the input (Windows x64, arg in ecx)
 
-Reverse this short function to equivalent C:
-
-```asm
-mystery:
-    lea     eax, [rcx+15]
-    and     eax, -16
+```
+check:
+    movzx  eax, cx          ; 0F B7: low 16 bits, zero-extended
+    shr    ecx, 16          ; high 16 bits slide down
+    cmp    ecx, 0xC0DE
+    jne    fail
+    add    eax, ecx
+    cmp    eax, 0x11111
+    jne    fail
+    mov    eax, 1
+    ret
+fail:
+    xor    eax, eax
     ret
 ```
 
-What does it return for 0, 1, 16, 17 and 40?
+`cx` is the low 16 bits (a &quot;word&quot;) of `ecx`. `movzx eax, cx` copies that word into `eax` and fills the upper 16 bits with zeros. Which unsigned `x` (ecx) makes `check` return 1?
 
 ---
 
-## Answer
+**Answer:** `x = 0xC0DE5033` (3235794995)
 
-```c
-unsigned mystery(unsigned x) {
-    return (x + 15) &amp; ~15u;   // round x up to a multiple of 16
-}
-```
-
-Results: 0, 16, 16, 32, 48.
-
-## Explanation
-
-- `lea eax, [rcx+15]` just computes x+15 into eax; nothing is read from memory.
-- `-16` is 0xFFFFFFF0 in two&#x27;s complement, the same as `~15`: all bits set except the low 4. ANDing with it clears those 4 bits, rounding down to a multiple of 16.
-- Adding 15 first turns &quot;round down&quot; into &quot;round up&quot;: exact multiples stay put, anything else moves to the next one. Allocators and stack setup use this align-up idiom constantly.
-</description><guid isPermaLink='false'>2026-11-16</guid><pubDate>Mon, 16 Nov 2026 02:30:55 +0000</pubDate></item></channel></rss>
+1. The function splits `x` into two words: `eax` = low half, `ecx` = high half (`shr 16` discards the low bits). The first `cmp` pins the high half to 0xC0DE.
+2. Then low + 0xC0DE must equal 0x11111, so low = 0x11111 − 0xC0DE = 0x5033. The sum is 32-bit, so nothing wraps.
+3. Glue the halves back together: high word 0xC0DE, low word 0x5033 → 0xC0DE5033.
+</description><guid isPermaLink='false'>2026-11-17</guid><pubDate>Tue, 17 Nov 2026 02:30:53 +0000</pubDate></item></channel></rss>
