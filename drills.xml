@@ -1,22 +1,35 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-18: decode-instruction</title><link></link><description># Decode-one-instruction drill — 2026-11-18
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-19: reverse-function</title><link></link><description># Reverse-a-function drill — 2026-11-19
 
-Target: Windows x86-64.
+Target: Windows x86-64 (args in `ecx`, `edx`; return in `eax`).
 
-A function takes two 64-bit integers (`rcx`, `rdx`). After `mov rax, rcx`, the next instruction is:
+Reverse this short function to equivalent C:
 
+```asm
+mystery:
+    add     ecx, edx
+    mov     eax, -1
+    cmovnc  eax, ecx
+    ret
 ```
-48 0F AF C2
-```
 
-What is the assembly, which register gets the result, and how does it differ from the one-operand `mul` you saw on 11-07?
+What does it return for (10, 20) and for (0xFFFFFFF0, 0x20)?
 
 ---
 
 ## Answer
 
-`imul rax, rdx` — `rax = rax * rdx`, keeping only the low 64 bits. With the `mov`, the function is `return a * b;`.
+```c
+unsigned mystery(unsigned a, unsigned b) {
+    unsigned sum = a + b;
+    return (sum &lt; a) ? 0xFFFFFFFFu : sum;   // saturating unsigned add
+}
+```
 
-- `48` is REX.W (64-bit operands). `0F AF /r` is the two-byte opcode for two-operand IMUL r, r/m: the reg field is the destination and also the first factor.
-- ModRM `C2` = `11 000 010`: mod=11 means register-direct, reg=000 = rax (destination), rm=010 = rdx (source).
-- Unlike `mul`, nothing is written to `rdx`: the high half is thrown away, and you can choose any destination register. The low 64 bits are the same for signed and unsigned inputs, so compilers emit `imul` for every plain `a * b`.
-</description><guid isPermaLink='false'>2026-11-18</guid><pubDate>Wed, 18 Nov 2026 02:31:17 +0000</pubDate></item></channel></rss>
+Results: 30, and 0xFFFFFFFF (the true sum 0x1_0000_0010 doesn&#x27;t fit in 32 bits).
+
+## Explanation
+
+- `add` sets the carry flag (CF) when the *unsigned* result wraps past 2^32; that&#x27;s the overflow signal here, not OF (which is for signed).
+- `mov eax, -1` loads the &quot;max&quot; fallback. `mov` never changes flags, so CF from the `add` survives to the next instruction.
+- `cmovnc` (&quot;move if no carry&quot;) overwrites eax with the sum only when nothing wrapped; otherwise eax stays 0xFFFFFFFF. Result: the sum clamps at UINT_MAX instead of wrapping, with no branch.
+</description><guid isPermaLink='false'>2026-11-19</guid><pubDate>Thu, 19 Nov 2026 02:30:58 +0000</pubDate></item></channel></rss>
