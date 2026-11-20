@@ -1,35 +1,29 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-19: reverse-function</title><link></link><description># Reverse-a-function drill — 2026-11-19
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-20: crackme</title><link></link><description># Crackme: find the password (Windows x64, arg in rcx)
 
-Target: Windows x86-64 (args in `ecx`, `edx`; return in `eax`).
+`rcx` holds a pointer to a null-terminated ASCII string.
 
-Reverse this short function to equivalent C:
-
-```asm
-mystery:
-    add     ecx, edx
-    mov     eax, -1
-    cmovnc  eax, ecx
+```
+check:
+    movzx  eax, word ptr [rcx]   ; load 2 bytes at once
+    xor    eax, 0x2020
+    cmp    eax, 0x6B6F
+    jne    fail
+    cmp    byte ptr [rcx+2], 0
+    jne    fail
+    mov    eax, 1
+    ret
+fail:
+    xor    eax, eax
     ret
 ```
 
-What does it return for (10, 20) and for (0xFFFFFFF0, 0x20)?
+`word ptr [rcx]` reads the first two characters as one 16-bit number. x86 is little-endian: the byte at the lower address (the first character) becomes the *low* byte of the number. Which string makes `check` return 1?
 
 ---
 
-## Answer
+**Answer:** `&quot;OK&quot;`
 
-```c
-unsigned mystery(unsigned a, unsigned b) {
-    unsigned sum = a + b;
-    return (sum &lt; a) ? 0xFFFFFFFFu : sum;   // saturating unsigned add
-}
-```
-
-Results: 30, and 0xFFFFFFFF (the true sum 0x1_0000_0010 doesn&#x27;t fit in 32 bits).
-
-## Explanation
-
-- `add` sets the carry flag (CF) when the *unsigned* result wraps past 2^32; that&#x27;s the overflow signal here, not OF (which is for signed).
-- `mov eax, -1` loads the &quot;max&quot; fallback. `mov` never changes flags, so CF from the `add` survives to the next instruction.
-- `cmovnc` (&quot;move if no carry&quot;) overwrites eax with the sum only when nothing wrapped; otherwise eax stays 0xFFFFFFFF. Result: the sum clamps at UINT_MAX instead of wrapping, with no branch.
-</description><guid isPermaLink='false'>2026-11-19</guid><pubDate>Thu, 19 Nov 2026 02:30:58 +0000</pubDate></item></channel></rss>
+1. Undo the xor (it&#x27;s self-inverse): 0x6B6F ^ 0x2020 = 0x4B4F, so the loaded word must be 0x4B4F.
+2. Little-endian: low byte 0x4F (&#x27;O&#x27;) is the first character, high byte 0x4B (&#x27;K&#x27;) is the second — reading the hex left to right gives &quot;KO&quot;, which is backwards.
+3. The `[rcx+2] == 0` check forces exactly two characters. (Bonus: xor 0x20 flips ASCII case, so the constant 0x6B6F is just &quot;ok&quot; in lowercase.)
+</description><guid isPermaLink='false'>2026-11-20</guid><pubDate>Fri, 20 Nov 2026 02:30:52 +0000</pubDate></item></channel></rss>

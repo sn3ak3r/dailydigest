@@ -1,8 +1,8 @@
 [
  {
-  "title": "Assembly Drill 2026-11-19: reverse-function",
-  "guid": "2026-11-19",
-  "blurb": "# Reverse-a-function drill \u2014 2026-11-19\n\nTarget: Windows x86-64 (args in `ecx`, `edx`; return in `eax`).\n\nReverse this short function to equivalent C:\n\n```asm\nmystery:\n    add     ecx, edx\n    mov     eax, -1\n    cmovnc  eax, ecx\n    ret\n```\n\nWhat does it return for (10, 20) and for (0xFFFFFFF0, 0x20)?\n\n---\n\n## Answer\n\n```c\nunsigned mystery(unsigned a, unsigned b) {\n    unsigned sum = a + b;\n    return (sum < a) ? 0xFFFFFFFFu : sum;   // saturating unsigned add\n}\n```\n\nResults: 30, and 0xFFFFFFFF (the true sum 0x1_0000_0010 doesn't fit in 32 bits).\n\n## Explanation\n\n- `add` sets the carry flag (CF) when the *unsigned* result wraps past 2^32; that's the overflow signal here, not OF (which is for signed).\n- `mov eax, -1` loads the \"max\" fallback. `mov` never changes flags, so CF from the `add` survives to the next instruction.\n- `cmovnc` (\"move if no carry\") overwrites eax with the sum only when nothing wrapped; otherwise eax stays 0xFFFFFFFF. Result: the sum clamps at UINT_MAX instead of wrapping, with no branch.\n",
+  "title": "Assembly Drill 2026-11-20: crackme",
+  "guid": "2026-11-20",
+  "blurb": "# Crackme: find the password (Windows x64, arg in rcx)\n\n`rcx` holds a pointer to a null-terminated ASCII string.\n\n```\ncheck:\n    movzx  eax, word ptr [rcx]   ; load 2 bytes at once\n    xor    eax, 0x2020\n    cmp    eax, 0x6B6F\n    jne    fail\n    cmp    byte ptr [rcx+2], 0\n    jne    fail\n    mov    eax, 1\n    ret\nfail:\n    xor    eax, eax\n    ret\n```\n\n`word ptr [rcx]` reads the first two characters as one 16-bit number. x86 is little-endian: the byte at the lower address (the first character) becomes the *low* byte of the number. Which string makes `check` return 1?\n\n---\n\n**Answer:** `\"OK\"`\n\n1. Undo the xor (it's self-inverse): 0x6B6F ^ 0x2020 = 0x4B4F, so the loaded word must be 0x4B4F.\n2. Little-endian: low byte 0x4F ('O') is the first character, high byte 0x4B ('K') is the second \u2014 reading the hex left to right gives \"KO\", which is backwards.\n3. The `[rcx+2] == 0` check forces exactly two characters. (Bonus: xor 0x20 flips ASCII case, so the constant 0x6B6F is just \"ok\" in lowercase.)\n",
   "link": ""
  }
 ]

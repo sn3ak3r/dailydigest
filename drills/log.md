@@ -96,3 +96,4 @@
 2026-11-17 | crackme | movzx r32,r/m16 (0F B7) low-word zero-extension, shr 16 extracts high word, splitting a dword into two 16-bit halves, two-condition check, recombining halves
 2026-11-18 | decode-instruction | two-operand IMUL r64,r/m64 (0F AF /r), REX.W, register-direct ModRM with reg as destination, low-64-bit truncated product vs one-operand mul writing rdx:rax
 2026-11-19 | reverse-function | add sets CF on unsigned wraparound (vs OF for signed), mov preserves flags, cmovnc conditional move on carry, branchless saturating unsigned add clamping at UINT_MAX
+2026-11-20 | crackme | little-endian word load (movzx r32, word ptr [rcx]) reading two string chars as one number, xor 0x20 ASCII case flip, null-terminator length check at [rcx+2]
