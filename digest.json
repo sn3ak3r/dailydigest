@@ -1,47 +1,52 @@
 [
  {
-  "title": "New Attack Bypasses TPM Lockout to Crack Windows Hello and BitLocker PINs in Days, Not Years",
-  "link": "https://thehackernews.com/2026/11/flash-chip-attack-bypasses-tpm-lockout.html",
-  "blurb": "A flash-chip attack sidesteps the TPM's anti-hammering lockout, cutting Windows Hello and BitLocker PIN brute-force from years to days. PIN-only BitLocker is weaker than assumed."
+  "title": "CVE-2026-114938: Critical vulnerability in OpenJDK Java",
+  "link": "https://blog.talosintelligence.com/java4shell/",
+  "blurb": "**Problem:** \"Java4Shell\" (CVE-2026-114938, CVSS 9.2) lets an unauthenticated attacker run code on a Java server by sending it malformed Base64 text.\n\n**Approach in plain words:** The bug affects OpenJDK 17.0.6 and later, but only on x86-64 CPUs with AVX-512 VBMI enabled. Intel and AMD both ship these chips widely, in data centres and in the cloud. Calif.io found it, and Talos confirmed it works against a range of Java apps.\n\n**Result:** No in-the-wild exploitation yet. Patch now. Interim fix: start the JVM with `-XX:UseAVX=2`. This is x86 only, and ARM JVMs won't start with it. Snort rules flag malformed Base64 in HTTP fields.\n\n**Why it matters:** Java servers decode Base64 constantly, so the attack surface is huge.\n\n**Jargon:** *AVX-512 VBMI*: CPU vector byte-shuffle instructions. *RCE*: remote code execution. *CVSS*: severity score out of 10. *JVM*: Java virtual machine."
  },
  {
-  "title": "10-Year-Old NGINX HTTP/2 Flaw Lets Unauthenticated Attackers Execute Code on Servers",
-  "link": "https://thehackernews.com/2026/11/10-year-old-nginx-http2-flaw-lets.html",
-  "blurb": "A decade-old NGINX HTTP/2 bug allows unauthenticated RCE. Patch any internet-facing NGINX with HTTP/2 enabled."
+  "title": "UAT-12643: Suspected North Korea-aligned actor blends blockchain resilience with targeted infostealing",
+  "link": "https://blog.talosintelligence.com/uat-12643-suspected-north-korea-aligned-actor-blends-blockchain-resilience-with-targeted-infostealing/",
+  "blurb": "Talos profiles a suspected North Korea-aligned actor that hides infostealer infrastructure on public blockchains, so takedowns can't easily remove its dead drops."
  },
  {
-  "title": "Dissecting the GPU Load/Store Unit and Exposing Its Security Risks",
-  "link": "https://arxiv.org/abs/2611.23022",
-  "blurb": "Not fetched: arxiv.org is blocked by the session network policy (proxy 403). Deep digest skipped."
+  "title": "New EggStreme Malware Variant Goes Silent to Evade Security Tools in Government Attacks",
+  "link": "https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html",
+  "blurb": "An updated EggStreme variant goes quiet to dodge EDR tooling in attacks on government targets. A malware-evasion case study."
  },
  {
-  "title": "'We need to come together': On the eve of GTA 6, 1,600 Rockstar workers are voting on unionization",
-  "link": "https://www.pcgamer.com/gaming-industry/we-need-to-come-together-on-the-eve-of-gta-6-1-600-rockstar-workers-are-voting-on-unionization/",
-  "blurb": "About 1,600 Rockstar workers are voting on a union on the eve of GTA 6's launch. That would be one of the largest AAA union drives so far."
+  "title": "Grand Theft Auto 6 review",
+  "link": "https://www.eurogamer.net/grand-theft-auto-6-review",
+  "blurb": "Eurogamer's verdict on the year's biggest release, now out on console."
  },
  {
-  "title": "Caves of Qud's first DLC is forcing its devs to ask important questions: 'How does a crab get high?'",
-  "link": "https://www.pcgamer.com/games/roguelike/caves-of-quds-first-dlc-is-forcing-its-devs-to-ask-important-questions-how-does-a-crab-get-high/",
-  "blurb": "The Caves of Qud devs describe how the first DLC strains the roguelike's systemic simulation, an inside look at an unusual indie's design process."
+  "title": "Ubisoft cuts jobs at major Assassin's Creed and Far Cry studios as its year of layoffs continues",
+  "link": "https://www.eurogamer.net/ubisoft-layoffs-166-assassins-creed-far-cry-montreal-quebec",
+  "blurb": "Ubisoft cuts 166 more jobs at its Montreal and Quebec City studios, which make Assassin's Creed and Far Cry, continuing a year of layoffs."
  },
  {
-  "title": "How M.C. Escher’s Art Creates Bizarre Mathematical Worlds",
-  "link": "https://www.quantamagazine.org/how-m-c-eschers-art-creates-bizarre-mathematical-worlds-20261118/",
-  "blurb": "Quanta explains the hyperbolic and impossible geometries behind Escher's art. It's a maths explainer, not a new result, but it was the only science item available."
+  "title": "Mouse fight club might explain why we like to watch violent things",
+  "link": "https://arstechnica.com/science/2026/11/watching-mouse-fight-club-teaches-the-critters-how-to-fight/",
+  "blurb": "A mouse study suggests that watching fights teaches the watchers how to fight. It's a possible evolutionary reason we're drawn to watching violence."
  },
  {
-  "title": "Reversing the Next-Page Prefetcher in Skylake-X",
-  "link": "https://devsh0.github.io/microarchitecture,/intel,/computer-architecture/2026/11/17/reversing-the-next-page-prefetcher-in-skylake-x.html",
-  "blurb": "Not fetched: devsh0.github.io is blocked by the session network policy (proxy 403). Deep digest skipped."
+  "title": "\"You’re right\"—LLMs will get climate info wrong if you ask",
+  "link": "https://arstechnica.com/science/2026/11/llms-will-provide-accurate-climate-info-except-when-they-wont/",
+  "blurb": "A study finds LLMs give accurate climate information by default, but cave to user pushback and agree with wrong claims."
  },
  {
-  "title": "How I made a custom game engine for Satelital",
-  "link": "https://spectralorbit.com/blog/satelital_game_engine",
-  "blurb": "A solo dev's write-up of building a custom engine for Satelital: what they built, and why they skipped an off-the-shelf engine."
+  "title": "15 million web servers on one VM - smoltcp, DPDK, AF_XDP",
+  "link": "https://kapteko.com/15-million-webservers/",
+  "blurb": "Not fetched: kapteko.com is blocked by the session network policy (proxy 403). Deep digest skipped."
  },
  {
-  "title": "GTA6-like as a 942Kb UEFI bootable image",
-  "link": "https://github.com/eklavya-raj/gta6-uefi",
-  "blurb": "A GTA-style driving demo packed into a 942 KB image that boots straight from UEFI, with no OS underneath. A small bare-metal graphics showcase."
+  "title": "Distributed, high-performance blob storage on SQLite",
+  "link": "https://zerodha.tech/blog/high-performance-distributed-blob-storage/",
+  "blurb": "Zerodha documents building distributed, high-performance blob storage on top of SQLite, with the design and trade-offs."
+ },
+ {
+  "title": "Digital Badge Gets Reverse Engineered",
+  "link": "https://hackaday.com/2026/11/19/digital-badge-gets-reverse-engineered/",
+  "blurb": "A digital conference badge is reverse-engineered: firmware and hardware are taken apart and the findings documented."
  }
 ]
