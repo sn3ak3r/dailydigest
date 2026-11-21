@@ -1,29 +1,22 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-20: crackme</title><link></link><description># Crackme: find the password (Windows x64, arg in rcx)
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-21: decode-instruction</title><link></link><description># Decode-one-instruction drill — 2026-11-21
 
-`rcx` holds a pointer to a null-terminated ASCII string.
+Target: Windows x86-64.
+
+A function receives a signed 32-bit `int` in `ecx`. You see:
 
 ```
-check:
-    movzx  eax, word ptr [rcx]   ; load 2 bytes at once
-    xor    eax, 0x2020
-    cmp    eax, 0x6B6F
-    jne    fail
-    cmp    byte ptr [rcx+2], 0
-    jne    fail
-    mov    eax, 1
-    ret
-fail:
-    xor    eax, eax
-    ret
+D1 F9
 ```
 
-`word ptr [rcx]` reads the first two characters as one 16-bit number. x86 is little-endian: the byte at the lower address (the first character) becomes the *low* byte of the number. Which string makes `check` return 1?
+There&#x27;s no immediate byte. Decode it. Then: if `ecx` holds -7, what does it hold afterwards? Is that the same as C&#x27;s `-7 / 2`?
 
 ---
 
-**Answer:** `&quot;OK&quot;`
+## Answer
 
-1. Undo the xor (it&#x27;s self-inverse): 0x6B6F ^ 0x2020 = 0x4B4F, so the loaded word must be 0x4B4F.
-2. Little-endian: low byte 0x4F (&#x27;O&#x27;) is the first character, high byte 0x4B (&#x27;K&#x27;) is the second — reading the hex left to right gives &quot;KO&quot;, which is backwards.
-3. The `[rcx+2] == 0` check forces exactly two characters. (Bonus: xor 0x20 flips ASCII case, so the constant 0x6B6F is just &quot;ok&quot; in lowercase.)
-</description><guid isPermaLink='false'>2026-11-20</guid><pubDate>Fri, 20 Nov 2026 02:30:52 +0000</pubDate></item></channel></rss>
+`sar ecx, 1`: arithmetic shift right by one. -7 becomes **-4**, but C&#x27;s `-7 / 2` is **-3**.
+
+- `D1` is the shift group&#x27;s &quot;by 1&quot; form, so the count 1 is built into the opcode and needs no imm8 (compare `C1 /4 ib`, the SHL form you decoded earlier). ModRM `F9` = `11 111 001`: mod=11 means register-direct, reg=111 is the opcode extension **/7 = SAR**, rm=001 = ecx.
+- SAR copies the sign bit into the top bit, so negative numbers stay negative. That makes it divide by 2 *rounding toward −∞*. `/5 = SHR` (`D1 E9`) fills with 0 instead, so it&#x27;s an unsigned divide.
+- C rounds toward zero, so for signed `x / 2` compilers first add 1 to negative values (often with `shr eax,31` / `add`) and then `sar`. A bare `sar` usually means `&gt;&gt; 1` in the source, or that the compiler proved the value is never negative.
+</description><guid isPermaLink='false'>2026-11-21</guid><pubDate>Sat, 21 Nov 2026 02:30:56 +0000</pubDate></item></channel></rss>
