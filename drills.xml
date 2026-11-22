@@ -1,22 +1,36 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-21: decode-instruction</title><link></link><description># Decode-one-instruction drill — 2026-11-21
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-22: reverse-function</title><link></link><description># Reverse-a-function drill — 2026-11-22
 
-Target: Windows x86-64.
+Target: Windows x86-64 (arg in `ecx`; return in `eax`).
 
-A function receives a signed 32-bit `int` in `ecx`. You see:
+Reverse this short function to equivalent C. There&#x27;s no `div` anywhere, yet it divides:
 
+```asm
+mystery:
+    mov     eax, ecx
+    mov     edx, 0AAAAAAABh
+    mul     edx              ; edx:eax = eax * edx (unsigned)
+    shr     edx, 1
+    mov     eax, edx
+    ret
 ```
-D1 F9
-```
 
-There&#x27;s no immediate byte. Decode it. Then: if `ecx` holds -7, what does it hold afterwards? Is that the same as C&#x27;s `-7 / 2`?
+What does it return for 10 and for 100?
 
 ---
 
 ## Answer
 
-`sar ecx, 1`: arithmetic shift right by one. -7 becomes **-4**, but C&#x27;s `-7 / 2` is **-3**.
+```c
+unsigned mystery(unsigned x) {
+    return x / 3;
+}
+```
 
-- `D1` is the shift group&#x27;s &quot;by 1&quot; form, so the count 1 is built into the opcode and needs no imm8 (compare `C1 /4 ib`, the SHL form you decoded earlier). ModRM `F9` = `11 111 001`: mod=11 means register-direct, reg=111 is the opcode extension **/7 = SAR**, rm=001 = ecx.
-- SAR copies the sign bit into the top bit, so negative numbers stay negative. That makes it divide by 2 *rounding toward −∞*. `/5 = SHR` (`D1 E9`) fills with 0 instead, so it&#x27;s an unsigned divide.
-- C rounds toward zero, so for signed `x / 2` compilers first add 1 to negative values (often with `shr eax,31` / `add`) and then `sar`. A bare `sar` usually means `&gt;&gt; 1` in the source, or that the compiler proved the value is never negative.
-</description><guid isPermaLink='false'>2026-11-21</guid><pubDate>Sat, 21 Nov 2026 02:30:56 +0000</pubDate></item></channel></rss>
+Results: 3 and 33.
+
+## Explanation
+
+- `div` is slow, so compilers replace division by a constant with a multiply by a &quot;magic number&quot;: 0xAAAAAAAB ≈ 2^33 / 3 (rounded up).
+- One-operand `mul` puts the 64-bit product in edx:eax. Taking only edx is already `&gt;&gt; 32`; `shr edx, 1` adds one more, so the total is `(x * 0xAAAAAAAB) &gt;&gt; 33`, which is x × (2^33/3) / 2^33 = x/3.
+- The magic is rounded up just enough that the result matches the true floor of x/3 for every 32-bit unsigned x. When you see `mul` by a strange constant followed by a shift of edx, work out 2^(32+shift) / constant to find the divisor.
+</description><guid isPermaLink='false'>2026-11-22</guid><pubDate>Sun, 22 Nov 2026 02:31:34 +0000</pubDate></item></channel></rss>
