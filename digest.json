@@ -1,47 +1,47 @@
 [
  {
-  "title": "Microsoft Entra Connect Health flaw exploited to steal tenant data",
-  "link": "https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/",
-  "blurb": "A flaw in Microsoft's hybrid-identity health agent is being actively exploited to pull tenant data, putting on-prem/cloud identity sync in the firing line."
+  "title": "Attackers' AI Agents Found a Zero-Day in Medical-Imaging Software and Gained Root Access",
+  "link": "https://thehackernews.com/2026/11/attackers-ai-agents-found-zero-day-in.html",
+  "blurb": "Attackers used autonomous AI agents to discover and exploit a medical-imaging zero-day to root — offensive bug-hunting automation is now in the wild."
  },
  {
-  "title": "Linux KVM Flaw CVE-2026-99312 Lets Guest VMs Access Host Memory on AMD Hosts",
-  "link": "https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html",
-  "blurb": "A guest-to-host memory access bug in KVM on AMD breaks the core isolation promise of shared cloud hosts."
+  "title": "Hackers exploit GL.iNet cloud flaw to infect routers, KVM devices",
+  "link": "https://www.bleepingcomputer.com/news/security/hackers-exploit-glinet-cloud-flaw-to-infect-routers-kvm-devices/",
+  "blurb": "A GL.iNet cloud-service flaw is being used to push malware onto routers and KVM-over-IP boxes, a foothold straight into admin networks."
  },
  {
-  "title": "China's 'Armory Castle' Lays Siege to VMware vCenter Zero-Day",
-  "link": "https://www.darkreading.com/cyberattacks-data-breaches/china-armory-castle-vmware-vcenter-zero-day",
-  "blurb": "A China-linked group is exploiting an unpatched vCenter bug for admin access; vCenter compromise means control of every VM it manages."
+  "title": "GTA 6 needed a dedicated team to make sure all its different body types could share animations: 'It was a huge team effort'",
+  "link": "https://www.pcgamer.com/games/grand-theft-auto/gta-6-needed-a-dedicated-team-to-make-sure-all-its-different-body-types-could-share-animations-it-was-a-huge-team-effort/",
+  "blurb": "Rockstar describes the animation-retargeting work needed so many body types share one motion set — a rare look at open-world pipeline cost."
  },
  {
-  "title": "Amid a year of layoffs, Ubisoft yank the cover off Motherbrain, their new studio \"focused on AI for gameplay innovation\"",
-  "link": "https://www.rockpapershotgun.com/amid-a-year-of-layoffs-ubisoft-yank-the-cover-off-motherbrain-their-new-studio-focused-on-ai-for-gameplay-innovation",
-  "blurb": "Ubisoft spins its AI-gameplay R&D team into a standalone subsidiary, signalling where a major publisher is putting money amid cuts."
+  "title": "Unreal Engine 6 to jettison key scripting feature earlier than planned in favor of AI coding",
+  "link": "https://www.pcgamer.com/gaming-industry/unreal-engine-6-to-jettison-key-scripting-feature-earlier-than-planned-in-favor-of-ai-coding/",
+  "blurb": "Epic is cutting a core UE6 scripting feature earlier than planned and steering devs to AI-assisted code, reshaping how engine teams prototype."
  },
  {
-  "title": "\"Everyone agrees it's more fun this way\": Toby Fox won't tell his team how Deltarune ends until they've built enough of it",
-  "link": "https://www.rockpapershotgun.com/everyone-agrees-its-more-fun-this-way-toby-fox-wont-tell-his-team-how-deltarune-ends-until-theyve-built-enough-of-it",
-  "blurb": "A rare look at an indie lead deliberately withholding the ending from his own team as a production technique; chapter 6 is structurally complete."
+  "title": "“Race realism” isn’t realistic—and it isn’t good science",
+  "link": "https://arstechnica.com/science/2026/11/race-realism-isnt-realistic-and-it-isnt-good-science/",
+  "blurb": "A critique of 'race realism' claims against current population genetics — useful context, though opinion rather than a new result."
  },
  {
-  "title": "Army delays detonating \"catastrophically hazardous\" lead azide amid fear, anger",
-  "link": "https://arstechnica.com/science/2026/11/outrage-questions-swirl-as-army-delays-blowing-up-stockpile-of-toxic-lead-azide/",
-  "blurb": "How to safely dispose of a degraded primary-explosive stockpile is a real chemistry and public-health problem, now stalled by local opposition."
+  "title": "I joined the NTP Pool, but not with my Stratum 1 Pi",
+  "link": "https://www.jeffgeerling.com/blog/2026/i-joined-the-ntp-pool/",
+  "blurb": "Jeff Geerling documents joining the public NTP Pool and why his GPS-disciplined Pi wasn't the server he used — practical timekeeping ops."
  },
  {
-  "title": "NixOS bring-up on an Alibaba RISC-V board",
-  "link": "https://feyor.sh/blog/nixos-bringup-on-an-alibaba-riscv-board/",
-  "blurb": "Deep digest unavailable: fetch of feyor.sh failed (host not in this session's network allowlist). From the headline: a documented write-up of getting NixOS booting on an Alibaba (T-Head/XuanTie) RISC-V board, a hands-on account of porting a full distro to new hardware."
+  "title": "My Monitor Was Cutting My Download Speed by 75%",
+  "link": "https://blog.tymscar.com/posts/studiodisplayethernet/",
+  "blurb": "A debugging write-up tracing a 75% download-speed loss to a monitor's built-in Ethernet — a reminder to suspect the hardware path."
  },
  {
-  "title": "How I Got Postgres into a Single Binary",
-  "link": "https://progrium.xyz/articles/2026/single-binary-postgres",
-  "blurb": "Deep digest unavailable: fetch of progrium.xyz failed (host not in this session's network allowlist). From the headline: a build log of packaging PostgreSQL as one self-contained executable, which would make embedding or shipping Postgres as simple as copying a file."
+  "title": "Researchers Demonstrate Ghostscript Sandbox-Escape RCE via Crafted File Uploads in Popular Apps",
+  "link": "https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html",
+  "blurb": "Deep digest unavailable: fetch of thehackernews.com was refused by this session's network proxy (403). From the headline: researchers showed a Ghostscript sandbox escape reachable through crafted file uploads, giving remote code execution in popular apps that pass uploads to Ghostscript for thumbnails or conversion."
  },
  {
-  "title": "Show HN: Zero C# – C# without a runtime or GC",
-  "link": "https://onurgumus.github.io/zero-csharp/index.html",
-  "blurb": "A C# toolchain that compiles without the .NET runtime or garbage collector, aiming C# at bare-metal and tiny-binary targets."
+  "title": "Building a Single-Chip USB GPU",
+  "link": "https://hackaday.com/2026/11/22/building-a-single-chip-usb-gpu/",
+  "blurb": "**Problem:** Can you make a working video adapter from nearly nothing? **Approach:** bitluni built a USB-to-analog-video converter on one tiny PCB around a ~20-cent CH570 microcontroller. The USB-C plug and RCA plug are both shaped from the board itself. A crystal keeps timing locked to the TV's refresh; hot code runs from SRAM because flash was too slow; PWM synthesizes the analog signal. **Result:** It enumerates as a USB serial device and shows greyscale text and simple graphics — usable as a serial terminal. A TV even picked up the PWM leaking from a jumper wire, hinting at PAL colour via overclocked SPI. **Why it matters:** Shows how far tight timing and clever PCB design stretch a bare MCU. **Glossary:** *CDC* — USB serial class; *PWM* — rapid on/off switching averaged into a voltage; *SRAM* — fast on-chip RAM; *PAL* — analog colour TV standard."
  }
 ]
