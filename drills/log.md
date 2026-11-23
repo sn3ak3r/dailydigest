@@ -99,3 +99,4 @@
 2026-11-20 | crackme | little-endian word load (movzx r32, word ptr [rcx]) reading two string chars as one number, xor 0x20 ASCII case flip, null-terminator length check at [rcx+2]
 2026-11-21 | decode-instruction | shift-by-one form D1 /7 SAR r/m32 (no imm8, vs C1 ib), ModRM reg=111 extension, arithmetic vs logical (D1 /5 SHR) shift, sign-fill rounds toward -inf vs C signed division toward zero
 2026-11-22 | reverse-function | division by constant via magic-number multiply (0xAAAAAAAB = ceil(2^33/3)), one-operand mul high half in edx as >>32, extra shr, recovering divisor as 2^(32+s)/magic
+2026-11-23 | crackme | shr-by-1 then xor with original (Gray code x ^ (x>>1)), self-referential mixing, bit-by-bit top-down solving where each bit = result bit ^ x bit above, shr zero-fill top bit passes through
