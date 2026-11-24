@@ -1,47 +1,47 @@
 [
  {
-  "title": "Attackers' AI Agents Found a Zero-Day in Medical-Imaging Software and Gained Root Access",
-  "link": "https://thehackernews.com/2026/11/attackers-ai-agents-found-zero-day-in.html",
-  "blurb": "Attackers used autonomous AI agents to discover and exploit a medical-imaging zero-day to root — offensive bug-hunting automation is now in the wild."
+  "title": "Webworm Suspected of Modifying SoftEther VPN to Evade Detection and Hide Remote Access",
+  "link": "https://thehackernews.com/2026/11/webworm-suspected-of-modifying.html",
+  "blurb": "Report that the Webworm group modified SoftEther VPN to hide remote access and evade detection: legitimate tunneling software repurposed as a stealthy backdoor."
  },
  {
-  "title": "Hackers exploit GL.iNet cloud flaw to infect routers, KVM devices",
-  "link": "https://www.bleepingcomputer.com/news/security/hackers-exploit-glinet-cloud-flaw-to-infect-routers-kvm-devices/",
-  "blurb": "A GL.iNet cloud-service flaw is being used to push malware onto routers and KVM-over-IP boxes, a foothold straight into admin networks."
+  "title": "Nightdive's Thief remaster will make the most \"infamous\" Thief Gold level a little less maddening, by \"just kind of pointing the player in the right direction\"",
+  "link": "https://www.rockpapershotgun.com/nightdives-thief-remaster-will-make-the-most-infamous-thief-gold-level-a-little-less-maddening-by-just-kind-of-pointing-the-player-in-the-right-direction",
+  "blurb": "Nightdive's Thief remaster quietly adds guidance to the most notorious Thief Gold level, a look at how remasters revise level design."
  },
  {
-  "title": "GTA 6 needed a dedicated team to make sure all its different body types could share animations: 'It was a huge team effort'",
-  "link": "https://www.pcgamer.com/games/grand-theft-auto/gta-6-needed-a-dedicated-team-to-make-sure-all-its-different-body-types-could-share-animations-it-was-a-huge-team-effort/",
-  "blurb": "Rockstar describes the animation-retargeting work needed so many body types share one motion set — a rare look at open-world pipeline cost."
+  "title": "Nvidia release hotfix for latest graphics card driver battering SSDs with excessive writes, but it looks like reverting may still be the better option",
+  "link": "https://www.rockpapershotgun.com/nvidia-release-hotfix-for-latest-graphics-card-driver-battering-ssds-with-excessive-writes-but-it-looks-like-reverting-may-still-be-the-better-option",
+  "blurb": "Nvidia's latest GPU driver was causing excessive SSD writes. The hotfix may not fully cure it, so rolling back is still the safer option."
  },
  {
-  "title": "Unreal Engine 6 to jettison key scripting feature earlier than planned in favor of AI coding",
-  "link": "https://www.pcgamer.com/gaming-industry/unreal-engine-6-to-jettison-key-scripting-feature-earlier-than-planned-in-favor-of-ai-coding/",
-  "blurb": "Epic is cutting a core UE6 scripting feature earlier than planned and steering devs to AI-assisted code, reshaping how engine teams prototype."
+  "title": "The Incredible, Elegant DNA Repair System Makes Gene Editing Work",
+  "link": "https://www.quantamagazine.org/the-incredible-elegant-dna-repair-system-makes-gene-editing-work-20261123/",
+  "blurb": "Explainer on the DNA repair mechanism that gene editing depends on, and why editing outcomes hinge on how cells fix breaks."
  },
  {
-  "title": "“Race realism” isn’t realistic—and it isn’t good science",
-  "link": "https://arstechnica.com/science/2026/11/race-realism-isnt-realistic-and-it-isnt-good-science/",
-  "blurb": "A critique of 'race realism' claims against current population genetics — useful context, though opinion rather than a new result."
+  "title": "Freeing the iPod Nano 5G",
+  "link": "https://viktorkrapivin.com/blog/nano5g-priv-prvd",
+  "blurb": "Write-up on unlocking the iPod Nano 5G, freeing old hardware to run code its maker never allowed."
  },
  {
-  "title": "I joined the NTP Pool, but not with my Stratum 1 Pi",
-  "link": "https://www.jeffgeerling.com/blog/2026/i-joined-the-ntp-pool/",
-  "blurb": "Jeff Geerling documents joining the public NTP Pool and why his GPS-disciplined Pi wasn't the server he used — practical timekeeping ops."
+  "title": "Building a wireless network adapter for the Super Nintendo",
+  "link": "https://hackaday.com/2026/11/23/building-a-wireless-network-adapter-for-the-super-nintendo/",
+  "blurb": "A home-built wireless network adapter for the Super Nintendo, connecting a 1990s console to modern networks."
  },
  {
-  "title": "My Monitor Was Cutting My Download Speed by 75%",
-  "link": "https://blog.tymscar.com/posts/studiodisplayethernet/",
-  "blurb": "A debugging write-up tracing a 75% download-speed loss to a monitor's built-in Ethernet — a reminder to suspect the hardware path."
+  "title": "Nospeaker ─ Make your MacBook's trackpad talk using its haptic motor",
+  "link": "https://github.com/os6/nospeaker",
+  "blurb": "Open-source tool that makes the MacBook trackpad's haptic motor play audio. A clever reuse of the hardware."
  },
  {
-  "title": "Researchers Demonstrate Ghostscript Sandbox-Escape RCE via Crafted File Uploads in Popular Apps",
-  "link": "https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html",
-  "blurb": "Deep digest unavailable: fetch of thehackernews.com was refused by this session's network proxy (403). From the headline: researchers showed a Ghostscript sandbox escape reachable through crafted file uploads, giving remote code execution in popular apps that pass uploads to Ghostscript for thumbnails or conversion."
+  "title": "BinXSight: Fast Binary Program Summarization via Hierarchical Modular Decomposition",
+  "link": "https://arxiv.org/abs/2611.27816",
+  "blurb": "Deep digest unavailable: the fetch of this arXiv page was blocked by the session's network proxy (arxiv.org is not on the allowlist). Based on the title alone: proposes faster summarization of stripped binaries by breaking a program into a hierarchy of modules and summarizing bottom-up, aimed at speeding reverse engineering. The abstract was not read, so method details, results and glossary are omitted rather than guessed."
  },
  {
-  "title": "Building a Single-Chip USB GPU",
-  "link": "https://hackaday.com/2026/11/22/building-a-single-chip-usb-gpu/",
-  "blurb": "**Problem:** Can you make a working video adapter from nearly nothing? **Approach:** bitluni built a USB-to-analog-video converter on one tiny PCB around a ~20-cent CH570 microcontroller. The USB-C plug and RCA plug are both shaped from the board itself. A crystal keeps timing locked to the TV's refresh; hot code runs from SRAM because flash was too slow; PWM synthesizes the analog signal. **Result:** It enumerates as a USB serial device and shows greyscale text and simple graphics — usable as a serial terminal. A TV even picked up the PWM leaking from a jumper wire, hinting at PAL colour via overclocked SPI. **Why it matters:** Shows how far tight timing and clever PCB design stretch a bare MCU. **Glossary:** *CDC* — USB serial class; *PWM* — rapid on/off switching averaged into a voltage; *SRAM* — fast on-chip RAM; *PAL* — analog colour TV standard."
+  "title": "Living off the Local Model: Abusing Browser-Embedded Language Models for Post-Exploitation",
+  "link": "https://arxiv.org/abs/2611.25086",
+  "blurb": "Deep digest unavailable: the fetch of this arXiv page was blocked by the session's network proxy (arxiv.org is not on the allowlist). Based on the title alone: shows how language models built into browsers can be abused after an attacker gets in, using the victim's own on-device model as a tool (the 'living off the land' pattern). The abstract was not read, so method details, results and glossary are omitted rather than guessed."
  }
 ]
