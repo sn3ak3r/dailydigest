@@ -1,30 +1,22 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-23: crackme</title><link></link><description># Crackme: find the number (Windows x64, arg in ecx)
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-24: decode-instruction</title><link></link><description># Decode-one-instruction drill — 2026-11-24
 
-`ecx` holds an unsigned 32-bit number.
+Target: Windows x86-64.
+
+A function receives a 32-bit flags word in `ecx`. Right before a `jc` (jump if carry) you see:
 
 ```
-check:
-    mov    eax, ecx      ; eax = copy of x
-    shr    eax, 1        ; eax = x &gt;&gt; 1 (shift right, top bit filled with 0)
-    xor    eax, ecx      ; eax = (x &gt;&gt; 1) ^ x
-    cmp    eax, 0Fh
-    jne    fail
-    mov    eax, 1
-    ret
-fail:
-    xor    eax, eax
-    ret
+0F BA E1 05
 ```
 
-What value of `x` makes `check` return 1?
-
-Hint: this one is not a simple &quot;undo each step backwards&quot;. The xor mixes `x` with a shifted copy of *itself*, so work in binary, one bit at a time, starting from the top.
+Decode it. If `ecx` holds `0x24`, is the jump taken? What C expression is being tested?
 
 ---
 
-**Answer:** `x = 10` (0b1010)
+## Answer
 
-1. Each result bit is `x[i] ^ x[i+1]`, i.e. the bit XORed with its left-hand neighbour. The top bit has a 0 to its left (shr fills with 0), so it passes through unchanged.
-2. Target 0b1111: every bit above bit 3 is 0, so x has nothing above bit 3, and bit 3 = 1. Moving down, each next bit = the result bit XOR the x bit just above it: 1^1=0, 1^0=1, 1^1=0, giving 1010.
-3. Check: 1010 ^ 0101 = 1111 = 0Fh. (`x ^ (x &gt;&gt; 1)` is the &quot;Gray code&quot; of x, and the answer is unique.)
-</description><guid isPermaLink='false'>2026-11-23</guid><pubDate>Mon, 23 Nov 2026 02:31:01 +0000</pubDate></item></channel></rss>
+`bt ecx, 5`: bit test. `0x24` = `100100b`, so bit 5 is 1. That sets **CF=1** and the `jc` **is taken**. The C is `if (flags &amp; (1 &lt;&lt; 5))`, i.e. `flags &amp; 0x20`.
+
+- `0F` is the two-byte escape you&#x27;ve seen before, and `BA` is the bit-test group that takes an imm8 bit number. ModRM `E1` = `11 100 001`: mod=11 means register-direct, reg=100 is the opcode extension **/4 = BT**, and rm=001 is ecx. The last byte, `05`, is the bit index.
+- BT copies the chosen bit into the carry flag and leaves `ecx` unchanged. Unlike `test`, it doesn&#x27;t use ZF, which is why the branch after it is `jc`/`jnc` rather than `je`/`jne`.
+- The same group also writes the bit back after testing it: `/5 BTS` sets it, `/6 BTR` clears it and `/7 BTC` flips it. That&#x27;s how `flags |= 0x20` can show up as `0F BA E9 05`.
+</description><guid isPermaLink='false'>2026-11-24</guid><pubDate>Tue, 24 Nov 2026 02:30:52 +0000</pubDate></item></channel></rss>
