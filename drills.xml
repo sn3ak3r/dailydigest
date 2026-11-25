@@ -1,22 +1,37 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-24: decode-instruction</title><link></link><description># Decode-one-instruction drill — 2026-11-24
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-25: reverse-function</title><link></link><description># Reverse-a-function drill — 2026-11-25
 
-Target: Windows x86-64.
+Target: Windows x86-64 (arg in `ecx`; return in `eax`).
 
-A function receives a 32-bit flags word in `ecx`. Right before a `jc` (jump if carry) you see:
+Reverse this short function to equivalent C. One `test`, two different answers pulled out of the same flags:
 
+```asm
+mystery:
+    xor     eax, eax
+    xor     edx, edx
+    test    ecx, ecx
+    setg    al               ; al = 1 if ecx &gt; 0 (signed)
+    setl    dl               ; dl = 1 if ecx &lt; 0 (signed)
+    sub     eax, edx
+    ret
 ```
-0F BA E1 05
-```
 
-Decode it. If `ecx` holds `0x24`, is the jump taken? What C expression is being tested?
+What does it return for 42, 0 and -7?
 
 ---
 
 ## Answer
 
-`bt ecx, 5`: bit test. `0x24` = `100100b`, so bit 5 is 1. That sets **CF=1** and the `jc` **is taken**. The C is `if (flags &amp; (1 &lt;&lt; 5))`, i.e. `flags &amp; 0x20`.
+```c
+int mystery(int x) {
+    return (x &gt; 0) - (x &lt; 0);
+}
+```
 
-- `0F` is the two-byte escape you&#x27;ve seen before, and `BA` is the bit-test group that takes an imm8 bit number. ModRM `E1` = `11 100 001`: mod=11 means register-direct, reg=100 is the opcode extension **/4 = BT**, and rm=001 is ecx. The last byte, `05`, is the bit index.
-- BT copies the chosen bit into the carry flag and leaves `ecx` unchanged. Unlike `test`, it doesn&#x27;t use ZF, which is why the branch after it is `jc`/`jnc` rather than `je`/`jne`.
-- The same group also writes the bit back after testing it: `/5 BTS` sets it, `/6 BTR` clears it and `/7 BTC` flips it. That&#x27;s how `flags |= 0x20` can show up as `0F BA E9 05`.
-</description><guid isPermaLink='false'>2026-11-24</guid><pubDate>Tue, 24 Nov 2026 02:30:52 +0000</pubDate></item></channel></rss>
+Results: 1, 0 and -1. It&#x27;s the &quot;sign&quot; function, the same pattern as a branchless qsort comparator `(a &gt; b) - (a &lt; b)`.
+
+## Explanation
+
+- `test ecx, ecx` ANDs ecx with itself just to set flags, so it acts like `cmp ecx, 0`. Both `setg` and `setl` read those flags, and neither changes them, so one test answers two questions.
+- `setcc` writes only one byte, so eax and edx are zeroed **before** the `test`. Doing it after would wipe the flags, since `xor` sets them.
+- g/l are the signed conditions (a/b are the unsigned ones). Subtracting the two 0/1 results gives 1, 0 or -1 without a single jump.
+</description><guid isPermaLink='false'>2026-11-25</guid><pubDate>Wed, 25 Nov 2026 02:31:09 +0000</pubDate></item></channel></rss>
