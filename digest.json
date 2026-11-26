@@ -1,52 +1,52 @@
 [
  {
-  "title": "Queuing for Secrets: Model-Based Remote Timing Attacks",
-  "link": "https://arxiv.org/abs/2611.30513",
-  "blurb": "Deep digest unavailable: the fetch of this arXiv page was blocked by the session's network proxy (403). Title only: models how a remote server queues requests to pull secret-dependent timing signals out of network jitter. Abstract not read, so approach, results and glossary are omitted rather than guessed."
+  "title": "Aftershock: Yesterday's Linux Kernel Bugs, Tomorrow's Android Exploits",
+  "link": "https://arxiv.org/abs/2611.31547",
+  "blurb": "Deep digest unavailable: fetching this page failed because the session's network policy blocks arxiv.org. Title only: a study of how Linux kernel bugs that are already fixed upstream remain exploitable on Android devices. Source not read, so approach, results and glossary are left out rather than guessed."
  },
  {
-  "title": "Google Researcher Shows How a Single Bit Change in .NET Files Bypassed Windows Code Integrity",
-  "link": "https://thehackernews.com/2026/11/google-researcher-shows-how-single-bit.html",
-  "blurb": "Windows Code Integrity bypassed by flipping a single bit in a .NET file. Rare signing-trust detail from a Google researcher."
+  "title": "Drupal Fail2Install Exploit Details Emerge as Critical RCE Flaw Faces Active Exploitation",
+  "link": "https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html",
+  "blurb": "Exploit details for Drupal's Fail2Install RCE are now public while attackers actively exploit it, so unpatched sites are at immediate risk."
  },
  {
-  "title": "Iran-Aligned Volant Manticore Uses IPFS-Based KuboShell Backdoor in Espionage Campaigns",
-  "link": "https://thehackernews.com/2026/11/iran-aligned-volant-manticore-uses-ipfs.html",
-  "blurb": "KuboShell backdoor uses IPFS for command and control, so blocking one server doesn't cut it off."
+  "title": "Attackers Target .NET Developers With Poisoned Job Assessments",
+  "link": "https://www.darkreading.com/threat-intelligence/attackers-net-developers-poisoned-job-assessments",
+  "blurb": "Malware delivered through fake job-assessment projects aimed at .NET developers, which turns a hiring step into an initial-access route."
  },
  {
-  "title": "Bitmap Brothers' iconic, robotic RTS game Z is unofficially back thanks to an open source, 3D remake",
-  "link": "https://www.rockpapershotgun.com/bitmap-brothers-iconic-robotic-rts-game-z-is-unofficially-back-thanks-to-an-open-source-3d-remake",
-  "blurb": "Open-source 3D remake of Bitmap Brothers' RTS Z: a fan engine rebuild of a classic."
+  "title": "Delivering \"a more modern Garry's Mod\" is the goal of spiritual successor S&box's revamped sandbox mode, as classic GMod's workshop addon system returns",
+  "link": "https://www.rockpapershotgun.com/delivering-a-more-modern-garrys-mod-is-the-goal-of-spiritual-successor-sboxs-revamped-sandbox-mode-as-classic-gmods-workshop-addon-system-returns",
+  "blurb": "S&box's reworked sandbox mode brings back a GMod-style Workshop addon system, part of the effort to build a modern Garry's Mod on a new engine."
  },
  {
-  "title": "The race to port GTA 6 to PC, explained",
-  "link": "https://www.pcgamer.com/games/grand-theft-auto/gta-6-recomp-explained/",
-  "blurb": "Explainer on static recompilation and the community push to get the leaked GTA 6 Xbox build running natively on PC."
+  "title": "Inside Retro Reset, the \"really inspirational\" father and son project teaching kids about classic games hardware from aboard a converted bus",
+  "link": "https://www.rockpapershotgun.com/inside-retro-reset-the-really-inspirational-father-and-son-project-teaching-kids-about-classic-games-hardware-from-aboard-a-converted-bus",
+  "blurb": "A father-and-son project teaches kids about classic games hardware from inside a converted bus."
  },
  {
-  "title": "Homo erectus lived in the rainforest alongside Denisovans",
-  "link": "https://arstechnica.com/science/2026/11/homo-erectus-lived-in-the-rainforest-alongside-denisovans/",
-  "blurb": "Fossil evidence puts Homo erectus in rainforest habitats alongside Denisovans, so early humans used a wider range of environments than assumed."
+  "title": "Novel Experiments Expand the Hunt for ‘Ultralight’ Dark Matter",
+  "link": "https://www.quantamagazine.org/novel-experiments-expand-the-hunt-for-ultralight-dark-matter-20261125/",
+  "blurb": "New experimental approaches widen the parameter space searched for ultralight dark matter candidates."
  },
  {
-  "title": "How brewers can protect beers from smoke-tainted hops",
-  "link": "https://arstechnica.com/science/2026/11/how-brewers-can-protect-beers-from-smoke-tainted-hops/",
-  "blurb": "Research on reducing smoke-taint compounds that wildfire smoke leaves in hops before they spoil the beer."
+  "title": "European spacecraft finds chaotic scene after asteroid deflection experiment",
+  "link": "https://arstechnica.com/space/2026/11/europes-hera-mission-returns-to-the-chaotic-scene-of-a-cosmic-smashup/",
+  "blurb": "ESA's Hera spacecraft revisits the target of NASA's DART impact and finds a chaotic aftermath, giving direct data on how deflection worked."
  },
  {
-  "title": "I checked Clojure's core with Lean and found 17 unreported bugs",
-  "link": "https://s.conao3.com/blog/2026/e4f733",
-  "blurb": "Deep digest unavailable: the fetch of this write-up was blocked by the session's network proxy (403). Title only: the author modelled parts of Clojure's core library in the Lean proof assistant and reports 17 previously unreported bugs. Post not read, so method, bug classes and glossary are omitted rather than guessed."
+  "title": "Windows Loudness Equalization, reverse-engineered and ported to PipeWire",
+  "link": "https://github.com/xoxorwr/pw-loudness-eq",
+  "blurb": "Deep digest unavailable: fetching this page failed because the session's network policy blocks github.com. Title only: Windows' Loudness Equalization audio effect, reverse-engineered and reimplemented as a PipeWire filter for Linux. Source not read, so approach, results and glossary are left out rather than guessed."
  },
  {
-  "title": "Designing A Passively Morphing Quadcopter that can Fly Through Gaps",
-  "link": "https://hackaday.com/2026/11/24/designing-a-passively-morphing-quadcopter-that-can-fly-through-gaps/",
-  "blurb": "Quadcopter frame that folds passively on contact to squeeze through gaps, with the design documented."
+  "title": "Porting Rockbox to an undocumented $9 AliExpress 'YP3' MP3 player with LLMs",
+  "link": "https://jayd.ml/2026/11/14/rockbox-on-yp3.html",
+  "blurb": "Build log porting Rockbox firmware to an undocumented $9 AliExpress MP3 player, with LLMs used to help with the reverse engineering."
  },
  {
-  "title": "Splitting USB-C: USB 3 and USB 2 on one port",
-  "link": "https://www.frankchiarulli.com/blog/splitting-usb-c/",
-  "blurb": "Hardware write-up splitting one USB-C port's USB 3 and USB 2 lanes to serve two devices."
+  "title": "Deploying a payphone on a tiny Pacific Island",
+  "link": "https://nickvsnetworking.com/deploying-a-payphone-on-a-tiny-pacific-island-for-fun-and-zero-profit/",
+  "blurb": "Write-up of installing a working payphone on a small Pacific island as a telecom hobby project."
  }
 ]
