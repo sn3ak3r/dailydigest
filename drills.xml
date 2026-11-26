@@ -1,37 +1,32 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-25: reverse-function</title><link></link><description># Reverse-a-function drill — 2026-11-25
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-26: crackme</title><link></link><description># Crackme: find the number (Windows x64, arg in ecx)
 
-Target: Windows x86-64 (arg in `ecx`; return in `eax`).
+`ecx` holds an unsigned 32-bit number `x`.
 
-Reverse this short function to equivalent C. One `test`, two different answers pulled out of the same flags:
-
-```asm
-mystery:
-    xor     eax, eax
-    xor     edx, edx
-    test    ecx, ecx
-    setg    al               ; al = 1 if ecx &gt; 0 (signed)
-    setl    dl               ; dl = 1 if ecx &lt; 0 (signed)
-    sub     eax, edx
+```
+check:
+    cmp    ecx, 0FFh     ; compare x with 255
+    ja     fail          ; unsigned: jump if x &gt; 255
+    mov    eax, ecx      ; eax = x
+    imul   eax, ecx      ; eax = x * x
+    add    eax, ecx      ; eax = x*x + x
+    cmp    eax, 6Eh      ; 6Eh = 110
+    jne    fail
+    mov    eax, 1
+    ret
+fail:
+    xor    eax, eax
     ret
 ```
 
-What does it return for 42, 0 and -7?
+What value of `x` makes `check` return 1?
+
+Hint: earlier crackmes let you undo each step backwards. Here `x` is multiplied by *itself*, so you can&#x27;t just divide. Estimate, then test.
 
 ---
 
-## Answer
+**Answer:** `x = 10` (0Ah)
 
-```c
-int mystery(int x) {
-    return (x &gt; 0) - (x &lt; 0);
-}
-```
-
-Results: 1, 0 and -1. It&#x27;s the &quot;sign&quot; function, the same pattern as a branchless qsort comparator `(a &gt; b) - (a &lt; b)`.
-
-## Explanation
-
-- `test ecx, ecx` ANDs ecx with itself just to set flags, so it acts like `cmp ecx, 0`. Both `setg` and `setl` read those flags, and neither changes them, so one test answers two questions.
-- `setcc` writes only one byte, so eax and edx are zeroed **before** the `test`. Doing it after would wipe the flags, since `xor` sets them.
-- g/l are the signed conditions (a/b are the unsigned ones). Subtracting the two 0/1 results gives 1, 0 or -1 without a single jump.
-</description><guid isPermaLink='false'>2026-11-25</guid><pubDate>Wed, 25 Nov 2026 02:31:09 +0000</pubDate></item></channel></rss>
+1. `imul eax, ecx` multiplies eax by ecx, so the check is `x*x + x == 110`, which is `x*(x+1) == 110`. That&#x27;s a quadratic, so you can&#x27;t solve it step by step backwards.
+2. √110 ≈ 10.5, so try two neighbours: 10 × 11 = 110. ✓
+3. The `ja` guard matters: without it, `x = -11` (0FFFFFFF5h) also works, since (-11)(-10) = 110 and the 32-bit math wraps. As an unsigned number that&#x27;s huge, so `ja` (unsigned &quot;above&quot;) rejects it and 10 is the only answer.
+</description><guid isPermaLink='false'>2026-11-26</guid><pubDate>Thu, 26 Nov 2026 02:31:03 +0000</pubDate></item></channel></rss>

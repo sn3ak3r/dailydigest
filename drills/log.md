@@ -102,3 +102,4 @@
 2026-11-23 | crackme | shr-by-1 then xor with original (Gray code x ^ (x>>1)), self-referential mixing, bit-by-bit top-down solving where each bit = result bit ^ x bit above, shr zero-fill top bit passes through
 2026-11-24 | decode-instruction | BT r/m32,imm8 via 0F BA /4 ib (group /5 BTS /6 BTR /7 BTC), register-direct ModRM, bit copied into CF not ZF, jc/jnc branch on single flag bit
 2026-11-25 | reverse-function | setg/setl signed setcc pair reading one test's flags, xor-zero before test (setcc writes only a byte, xor clobbers flags), subtracting two booleans for branchless sign() -1/0/1, qsort comparator idiom
+2026-11-26 | crackme | imul reg,reg squaring (x*x, non-invertible so no backward-solving), quadratic x*(x+1) solved by estimating near the square root, unsigned ja upper-bound guard excluding the wrapped negative root -11
