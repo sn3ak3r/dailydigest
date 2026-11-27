@@ -103,3 +103,4 @@
 2026-11-24 | decode-instruction | BT r/m32,imm8 via 0F BA /4 ib (group /5 BTS /6 BTR /7 BTC), register-direct ModRM, bit copied into CF not ZF, jc/jnc branch on single flag bit
 2026-11-25 | reverse-function | setg/setl signed setcc pair reading one test's flags, xor-zero before test (setcc writes only a byte, xor clobbers flags), subtracting two booleans for branchless sign() -1/0/1, qsort comparator idiom
 2026-11-26 | crackme | imul reg,reg squaring (x*x, non-invertible so no backward-solving), quadratic x*(x+1) solved by estimating near the square root, unsigned ja upper-bound guard excluding the wrapped negative root -11
+2026-11-27 | decode-instruction | Group-1 opcode 81 /4 id AND r/m32,imm32 full 4-byte immediate vs 83 sign-extended imm8 range -128..127, little-endian imm32, & 0xFFF page-offset mask

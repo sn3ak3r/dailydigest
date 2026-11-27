@@ -1,32 +1,22 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-26: crackme</title><link></link><description># Crackme: find the number (Windows x64, arg in ecx)
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-27: decode-instruction</title><link></link><description># Decode-one-instruction drill — 2026-11-27
 
-`ecx` holds an unsigned 32-bit number `x`.
+Target: Windows x86-64.
+
+A function gets a pointer-sized address whose low 32 bits are in `ecx`. You see:
 
 ```
-check:
-    cmp    ecx, 0FFh     ; compare x with 255
-    ja     fail          ; unsigned: jump if x &gt; 255
-    mov    eax, ecx      ; eax = x
-    imul   eax, ecx      ; eax = x * x
-    add    eax, ecx      ; eax = x*x + x
-    cmp    eax, 6Eh      ; 6Eh = 110
-    jne    fail
-    mov    eax, 1
-    ret
-fail:
-    xor    eax, eax
-    ret
+81 E1 FF 0F 00 00
 ```
 
-What value of `x` makes `check` return 1?
-
-Hint: earlier crackmes let you undo each step backwards. Here `x` is multiplied by *itself*, so you can&#x27;t just divide. Estimate, then test.
+Decode it. If `ecx` holds `0x7FF6A123`, what&#x27;s in `ecx` afterwards? And why didn&#x27;t the compiler use the shorter `83` form you saw back on 2026-09-06?
 
 ---
 
-**Answer:** `x = 10` (0Ah)
+## Answer
 
-1. `imul eax, ecx` multiplies eax by ecx, so the check is `x*x + x == 110`, which is `x*(x+1) == 110`. That&#x27;s a quadratic, so you can&#x27;t solve it step by step backwards.
-2. √110 ≈ 10.5, so try two neighbours: 10 × 11 = 110. ✓
-3. The `ja` guard matters: without it, `x = -11` (0FFFFFFF5h) also works, since (-11)(-10) = 110 and the 32-bit math wraps. As an unsigned number that&#x27;s huge, so `ja` (unsigned &quot;above&quot;) rejects it and 10 is the only answer.
-</description><guid isPermaLink='false'>2026-11-26</guid><pubDate>Thu, 26 Nov 2026 02:31:03 +0000</pubDate></item></channel></rss>
+`and ecx, 0FFFh`. Afterwards `ecx` = **`0x123`**. In C that&#x27;s `addr &amp; 0xFFF`, the byte offset inside a 4 KB page.
+
+- `81` is the Group-1 opcode with a full **imm32**. ModRM `E1` = `11 100 001`: mod=11 means register-direct, reg=100 is the extension **/4 = AND** (/0 ADD, /1 OR, /5 SUB, /7 CMP), and rm=001 is ecx. The four bytes `FF 0F 00 00` are read little-endian as `0x00000FFF`.
+- `83` stores a single byte and sign-extends it, so it can only encode -128..127. `0xFFF` doesn&#x27;t fit, so the compiler needs the 4-byte immediate. A mask like `-16` (`0xFFFFFFF0`) does fit, which is why the align-down idiom is just `83 E1 F0`.
+- AND keeps only the bits that are 1 in the mask, here the low 12. `0x7FF6A123 &amp; 0xFFF` = `0x123`.
+</description><guid isPermaLink='false'>2026-11-27</guid><pubDate>Fri, 27 Nov 2026 02:31:23 +0000</pubDate></item></channel></rss>
