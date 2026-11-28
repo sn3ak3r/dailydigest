@@ -1,8 +1,8 @@
 [
  {
-  "title": "Assembly Drill 2026-11-27: decode-instruction",
-  "guid": "2026-11-27",
-  "blurb": "# Decode-one-instruction drill \u2014 2026-11-27\n\nTarget: Windows x86-64.\n\nA function gets a pointer-sized address whose low 32 bits are in `ecx`. You see:\n\n```\n81 E1 FF 0F 00 00\n```\n\nDecode it. If `ecx` holds `0x7FF6A123`, what's in `ecx` afterwards? And why didn't the compiler use the shorter `83` form you saw back on 2026-09-06?\n\n---\n\n## Answer\n\n`and ecx, 0FFFh`. Afterwards `ecx` = **`0x123`**. In C that's `addr & 0xFFF`, the byte offset inside a 4 KB page.\n\n- `81` is the Group-1 opcode with a full **imm32**. ModRM `E1` = `11 100 001`: mod=11 means register-direct, reg=100 is the extension **/4 = AND** (/0 ADD, /1 OR, /5 SUB, /7 CMP), and rm=001 is ecx. The four bytes `FF 0F 00 00` are read little-endian as `0x00000FFF`.\n- `83` stores a single byte and sign-extends it, so it can only encode -128..127. `0xFFF` doesn't fit, so the compiler needs the 4-byte immediate. A mask like `-16` (`0xFFFFFFF0`) does fit, which is why the align-down idiom is just `83 E1 F0`.\n- AND keeps only the bits that are 1 in the mask, here the low 12. `0x7FF6A123 & 0xFFF` = `0x123`.\n",
+  "title": "Assembly Drill 2026-11-28: reverse-function",
+  "guid": "2026-11-28",
+  "blurb": "# Reverse-a-function drill \u2014 2026-11-28\n\nTarget: Windows x86-64 (unsigned arg in `ecx`; return in `eax`).\n\nReverse this function to equivalent C. Two new things here: `shr` drops a bit into the carry flag, and `adc` (\"add with carry\") adds that flag back in.\n\n```asm\nmystery:\n    mov     eax, ecx\n    shr     eax, 1           ; CF = the bit shifted out (old bit 0)\n    adc     eax, 0           ; eax = eax + 0 + CF\n    ret\n```\n\nWhat does it return for 7, 8 and 0xFFFFFFFF?\n\n---\n\n## Answer\n\n```c\nunsigned mystery(unsigned x) {\n    return (x >> 1) + (x & 1);   // x / 2, rounding halves up\n}\n```\n\nResults: 4, 4 and 0x80000000.\n\n## Explanation\n\n- The last bit a shift pushes out lands in CF. For `shr eax, 1` that's the old bit 0, so CF = 1 exactly when x is odd.\n- `adc eax, 0` adds nothing except the carry, so odd inputs get +1: 7 \u2192 3 + 1 = 4, 8 \u2192 4 + 0 = 4.\n- It's the same as `(x + 1) / 2` but can't overflow. For 0xFFFFFFFF, `x + 1` wraps to 0, while this gives 0x7FFFFFFF + 1 = 0x80000000.\n",
   "link": ""
  }
 ]

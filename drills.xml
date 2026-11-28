@@ -1,22 +1,34 @@
-<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-27: decode-instruction</title><link></link><description># Decode-one-instruction drill — 2026-11-27
+<?xml version='1.0' encoding='UTF-8'?><rss version='2.0'><channel><title>Assembly Drill</title><link>https://example.com</link><description>Daily assembly drill</description><item><title>Assembly Drill 2026-11-28: reverse-function</title><link></link><description># Reverse-a-function drill — 2026-11-28
 
-Target: Windows x86-64.
+Target: Windows x86-64 (unsigned arg in `ecx`; return in `eax`).
 
-A function gets a pointer-sized address whose low 32 bits are in `ecx`. You see:
+Reverse this function to equivalent C. Two new things here: `shr` drops a bit into the carry flag, and `adc` (&quot;add with carry&quot;) adds that flag back in.
 
+```asm
+mystery:
+    mov     eax, ecx
+    shr     eax, 1           ; CF = the bit shifted out (old bit 0)
+    adc     eax, 0           ; eax = eax + 0 + CF
+    ret
 ```
-81 E1 FF 0F 00 00
-```
 
-Decode it. If `ecx` holds `0x7FF6A123`, what&#x27;s in `ecx` afterwards? And why didn&#x27;t the compiler use the shorter `83` form you saw back on 2026-09-06?
+What does it return for 7, 8 and 0xFFFFFFFF?
 
 ---
 
 ## Answer
 
-`and ecx, 0FFFh`. Afterwards `ecx` = **`0x123`**. In C that&#x27;s `addr &amp; 0xFFF`, the byte offset inside a 4 KB page.
+```c
+unsigned mystery(unsigned x) {
+    return (x &gt;&gt; 1) + (x &amp; 1);   // x / 2, rounding halves up
+}
+```
 
-- `81` is the Group-1 opcode with a full **imm32**. ModRM `E1` = `11 100 001`: mod=11 means register-direct, reg=100 is the extension **/4 = AND** (/0 ADD, /1 OR, /5 SUB, /7 CMP), and rm=001 is ecx. The four bytes `FF 0F 00 00` are read little-endian as `0x00000FFF`.
-- `83` stores a single byte and sign-extends it, so it can only encode -128..127. `0xFFF` doesn&#x27;t fit, so the compiler needs the 4-byte immediate. A mask like `-16` (`0xFFFFFFF0`) does fit, which is why the align-down idiom is just `83 E1 F0`.
-- AND keeps only the bits that are 1 in the mask, here the low 12. `0x7FF6A123 &amp; 0xFFF` = `0x123`.
-</description><guid isPermaLink='false'>2026-11-27</guid><pubDate>Fri, 27 Nov 2026 02:31:23 +0000</pubDate></item></channel></rss>
+Results: 4, 4 and 0x80000000.
+
+## Explanation
+
+- The last bit a shift pushes out lands in CF. For `shr eax, 1` that&#x27;s the old bit 0, so CF = 1 exactly when x is odd.
+- `adc eax, 0` adds nothing except the carry, so odd inputs get +1: 7 → 3 + 1 = 4, 8 → 4 + 0 = 4.
+- It&#x27;s the same as `(x + 1) / 2` but can&#x27;t overflow. For 0xFFFFFFFF, `x + 1` wraps to 0, while this gives 0x7FFFFFFF + 1 = 0x80000000.
+</description><guid isPermaLink='false'>2026-11-28</guid><pubDate>Sat, 28 Nov 2026 02:31:01 +0000</pubDate></item></channel></rss>
